@@ -29,14 +29,78 @@ def text_similarity(a: str, b: str) -> float:
     return SequenceMatcher(None, normalize_text(a), normalize_text(b)).ratio()
 
 
+def token_overlap_similarity(gold_text: str, extracted_text: str) -> float:
+    """Compute token-level overlap between gold and extracted text.
+
+    Designed for cases where gold has short spans (e.g. PET: "sents")
+    and extracted has full descriptions (e.g. "MPON sends the dismissal").
+    Uses fuzzy token matching to handle inflection and typos, then computes
+    token F1 (harmonic mean of precision and recall on matched tokens).
+    """
+    g_norm = normalize_text(gold_text)
+    e_norm = normalize_text(extracted_text)
+    g_tokens = g_norm.split()
+    e_tokens = e_norm.split()
+
+    if not g_tokens or not e_tokens:
+        return 0.0
+
+    # Fuzzy token matching: each gold token can match an extracted token
+    # if SequenceMatcher ratio >= 0.75 (handles typos like sents/sends)
+    g_matched = 0
+    e_matched_indices = set()
+    for gt in g_tokens:
+        best_ratio = 0.0
+        best_idx = -1
+        for idx, et in enumerate(e_tokens):
+            r = SequenceMatcher(None, gt, et).ratio()
+            if r > best_ratio:
+                best_ratio = r
+                best_idx = idx
+        if best_ratio >= 0.75:
+            g_matched += 1
+            e_matched_indices.add(best_idx)
+
+    if g_matched == 0:
+        # Fallback: check if gold (short) is a substring of extracted
+        if g_norm in e_norm:
+            return 0.8
+        # Also check fuzzy substring for single-word gold
+        if len(g_tokens) == 1:
+            for et in e_tokens:
+                if SequenceMatcher(None, g_tokens[0], et).ratio() >= 0.7:
+                    return 0.6
+        return 0.0
+
+    # For very short gold (1-2 tokens), use recall-dominated scoring.
+    # PET gold spans are just verb highlights; if we found the verb in
+    # our full description, that counts as a strong match.
+    if len(g_tokens) <= 2:
+        return 0.5 + 0.3 * (g_matched / len(g_tokens))  # 0.65-0.80
+
+    precision = len(e_matched_indices) / len(e_tokens)
+    recall = g_matched / len(g_tokens)
+    return 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
+
+
 def match_nodes(
-    gold_nodes: list[dict], extracted_nodes: list[dict], threshold: float = 0.5
+    gold_nodes: list[dict],
+    extracted_nodes: list[dict],
+    threshold: float = 0.5,
+    similarity_fn=None,
 ) -> tuple[list[tuple], list[dict], list[dict]]:
     """Match extracted nodes to gold nodes using text similarity.
+
+    Args:
+        similarity_fn: Optional similarity function(gold_text, ext_text) -> float.
+                       Defaults to text_similarity (SequenceMatcher).
 
     Returns:
         (matched_pairs, unmatched_gold, unmatched_extracted)
     """
+    if similarity_fn is None:
+        similarity_fn = text_similarity
+
     matched = []
     used_gold = set()
     used_extracted = set()
@@ -45,7 +109,7 @@ def match_nodes(
     scores = []
     for i, gn in enumerate(gold_nodes):
         for j, en in enumerate(extracted_nodes):
-            sim = text_similarity(gn["text"], en["text"])
+            sim = similarity_fn(gn["text"], en["text"])
             if sim >= threshold:
                 scores.append((sim, i, j))
 
@@ -64,14 +128,14 @@ def match_nodes(
 
 
 def evaluate_nodes(
-    gold: dict, extracted: dict, threshold: float = 0.5
+    gold: dict, extracted: dict, threshold: float = 0.5, similarity_fn=None,
 ) -> dict:
     """Evaluate node extraction quality."""
     gold_nodes = gold["nodes"]
     ext_nodes = extracted["nodes"]
 
     matched, unmatched_gold, unmatched_ext = match_nodes(
-        gold_nodes, ext_nodes, threshold
+        gold_nodes, ext_nodes, threshold, similarity_fn=similarity_fn,
     )
 
     tp = len(matched)
@@ -107,7 +171,7 @@ def evaluate_nodes(
 
 
 def evaluate_edges(
-    gold: dict, extracted: dict, node_threshold: float = 0.5
+    gold: dict, extracted: dict, node_threshold: float = 0.5, similarity_fn=None,
 ) -> dict:
     """Evaluate edge extraction quality.
 
@@ -119,7 +183,8 @@ def evaluate_edges(
     ext_nodes = extracted["nodes"]
 
     # First match nodes to create an ID mapping
-    matched, _, _ = match_nodes(gold_nodes, ext_nodes, node_threshold)
+    matched, _, _ = match_nodes(gold_nodes, ext_nodes, node_threshold,
+                                similarity_fn=similarity_fn)
 
     # Build mapping: gold_node_id -> extracted_node_id
     id_map = {}
@@ -246,7 +311,7 @@ def full_evaluation(gold: dict, extracted: dict) -> dict:
 
 
 def evaluate_graph_level(
-    gold: dict, extracted: dict, node_threshold: float = 0.5
+    gold: dict, extracted: dict, node_threshold: float = 0.5, similarity_fn=None,
 ) -> dict:
     """Graph-level evaluation metrics.
 
@@ -257,7 +322,8 @@ def evaluate_graph_level(
     gold_nodes = gold["nodes"]
     ext_nodes = extracted["nodes"]
 
-    matched, _, _ = match_nodes(gold_nodes, ext_nodes, node_threshold)
+    matched, _, _ = match_nodes(gold_nodes, ext_nodes, node_threshold,
+                                similarity_fn=similarity_fn)
     id_map = {gn["id"]: en["id"] for gn, en, _ in matched}
 
     # Branching accuracy: for matched decision nodes, check outgoing edge count

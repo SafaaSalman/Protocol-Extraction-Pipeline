@@ -10,6 +10,7 @@ from __future__ import annotations
 import base64
 import json
 import os
+import re
 from pathlib import Path
 from typing import Optional
 
@@ -17,6 +18,43 @@ from openai import OpenAI
 
 from src.ingestion.pdf_ingest import DocumentContent, render_page_image
 from src.extraction.section_detector import ProtocolSection
+
+
+def _safe_json_loads(raw: str) -> dict:
+    """Parse JSON, fixing common LLM output issues (invalid escapes, etc.)."""
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        pass
+
+    # Strip markdown code fences if present
+    cleaned = raw.strip()
+    if cleaned.startswith("```"):
+        cleaned = re.sub(r"^```(?:json)?\s*\n?", "", cleaned)
+        cleaned = re.sub(r"\n?```\s*$", "", cleaned)
+        try:
+            return json.loads(cleaned)
+        except json.JSONDecodeError:
+            pass
+
+    # Fix invalid unicode escapes: replace \uXXXX where XXXX isn't valid hex
+    fixed = re.sub(
+        r'\\u(?![0-9a-fA-F]{4})[^"\\]*',
+        lambda m: m.group(0).replace('\\u', '\\\\u'),
+        raw,
+    )
+    try:
+        return json.loads(fixed)
+    except json.JSONDecodeError:
+        pass
+
+    # Last resort: try to extract first { ... } block
+    brace_start = raw.find("{")
+    brace_end = raw.rfind("}")
+    if brace_start >= 0 and brace_end > brace_start:
+        return json.loads(raw[brace_start:brace_end + 1])
+
+    raise json.JSONDecodeError("Could not parse LLM JSON output", raw, 0)
 
 
 SYSTEM_PROMPT = """\
@@ -301,7 +339,7 @@ def extract_protocol(
     )
 
     raw = response.choices[0].message.content
-    result = json.loads(raw)
+    result = _safe_json_loads(raw)
 
     # Attach usage metadata
     result["_extraction_meta"] = {
@@ -357,7 +395,7 @@ def extract_protocol_from_text(
     )
 
     raw = response.choices[0].message.content
-    result = json.loads(raw)
+    result = _safe_json_loads(raw)
 
     result["_extraction_meta"] = {
         "model": model,
@@ -465,7 +503,7 @@ def extract_protocol_multimodal(
     )
 
     raw = response.choices[0].message.content
-    result = json.loads(raw)
+    result = _safe_json_loads(raw)
 
     result["_extraction_meta"] = {
         "model": model,
@@ -615,7 +653,12 @@ def review_edges(
     )
 
     raw = response.choices[0].message.content
-    reviewed = json.loads(raw)
+    if not raw or not raw.strip():
+        return extracted  # Edge review returned empty, keep original
+    try:
+        reviewed = _safe_json_loads(raw)
+    except (json.JSONDecodeError, ValueError):
+        return extracted  # Edge review returned unparseable JSON, keep original
 
     # Safeguard: only accept the reviewed version if it doesn't introduce
     # more structural issues than the original
