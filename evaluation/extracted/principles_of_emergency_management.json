@@ -1,0 +1,153 @@
+{
+  "protocol_id": "principles_of_emergency_management",
+  "title": "Principles of Emergency Management",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    10
+  ],
+  "protocol_type": "table",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "State Strategic Control Priorities",
+    "Fire Preparedness",
+    "Agencies Working Together as One Integrated Team"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Principles of Emergency Management",
+      "evidence": {
+        "page": 10,
+        "source_text": "Principles of Emergency Management"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Primacy of life: Protection and preservation of human life takes priority",
+      "evidence": {
+        "page": 10,
+        "source_text": "Primacy of life - The protection and preservation of human life, including the lives of both agency personnel and those of the community, takes priority over all other considerations."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Community centric: Focus on impact, outcomes, and support to the community",
+      "evidence": {
+        "page": 10,
+        "source_text": "Community centric - The community and individual community members will be at the core of everything we do. Focussing on the impact, outcomes and support to the community underpins decision making and actions undertaken in planning and responding to all hazards."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Unified: Work together to achieve common objectives as one team",
+      "evidence": {
+        "page": 10,
+        "source_text": "Unified - Working together to achieve common objectives as one team with the community, government and business before, during and after emergencies."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Progressive: Anticipation and continual improvement to predict and respond",
+      "evidence": {
+        "page": 10,
+        "source_text": "Progressive - Anticipation, foresight and continual improvement to predict, prepare, plan and respond to likely, unexpected and worst case scenarios."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Risk driven: Actions and investments are prioritised by risk",
+      "evidence": {
+        "page": 10,
+        "source_text": "Risk driven - Our actions and investments are prioritised by risk. Sound risk management, involving risk assessment (identification, analysis and evaluation), treatment and ongoing monitoring, is applied to the assigning of priorities and resources."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Integrated and collaborative: Unity of effort towards shared outcomes",
+      "evidence": {
+        "page": 10,
+        "source_text": "Integrated and collaborative - Unity of effort towards achieving shared outcomes founded on a willingness to work together, share responsibility and act with respect, integrity and trust developed through teamwork and strong relationships."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Flexible: Adapt and apply creative approaches to solve challenges",
+      "evidence": {
+        "page": 10,
+        "source_text": "Flexible - Being agile and adapting and applying creative and innovative approaches in responding to and solving the challenges of emergencies."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Communicating information: Provide clear, targeted information for effective management",
+      "evidence": {
+        "page": 10,
+        "source_text": "Communicating information - Providing clear, targeted and tailored information to those that need it and those at risk."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "end",
+      "text": "Principles applied to emergency management",
+      "evidence": {
+        "page": 10,
+        "source_text": "These principles are not in priority order; they are all critical to the effective management of emergencies."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5586,
+    "completion_tokens": 1148,
+    "total_tokens": 6734,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: State Context > Principles of Emergency Management\nRelated sections in this category: State Strategic Control Priorities, Fire Preparedness, Agencies Working Together as One Integrated Team"
+}

@@ -1,0 +1,157 @@
+{
+  "protocol_id": "dynamic_risk_assessment",
+  "title": "Dynamic Risk Assessment",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    73,
+    74
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Safe Person Approach",
+    "Safety First Approach",
+    "OHS Incident Reporting",
+    "LACES",
+    "WATCHOUT",
+    "Red Flag Warnings",
+    "Fireground Information Update",
+    "Hydration",
+    "Fatigue",
+    "Smoke"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate Dynamic Risk Assessment",
+      "evidence": {
+        "page": 73,
+        "source_text": "Dynamic Risk Assessment (DRA) (see figure 10 ) is a simple risk assessment process..."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Evaluate the situation, tasks, and persons at risk",
+      "evidence": {
+        "page": 74,
+        "source_text": "Evaluate The Situation, Tasks and Persons at Risk"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Select systems of work",
+      "evidence": {
+        "page": 74,
+        "source_text": "Select systems of work"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Assess the chosen systems of work",
+      "evidence": {
+        "page": 74,
+        "source_text": "Assess the chosen systems of work"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "decision",
+      "text": "Are the risks proportional to the benefits?",
+      "evidence": {
+        "page": 74,
+        "source_text": "Decide: Are the risk proportional to the benefits?"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Modify: Can additional control measures be introduced?",
+      "evidence": {
+        "page": 74,
+        "source_text": "Modify: Can additional control measures be introduced?"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "decision",
+      "text": "Proceed with task?",
+      "evidence": {
+        "page": 74,
+        "source_text": "Proceed with task?"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "end",
+      "text": "Task proceeds safely",
+      "evidence": {
+        "page": 74,
+        "source_text": "If the benefits outweigh the risks the task can proceed."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "end",
+      "text": "Do not proceed with task",
+      "evidence": {
+        "page": 74,
+        "source_text": "If the risks outweigh the benefits, DO NOT proceed with the tasks..."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6",
+      "condition": "No"
+    },
+    {
+      "from": "n5",
+      "to": "n8",
+      "condition": "Yes"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8",
+      "condition": "Yes"
+    },
+    {
+      "from": "n7",
+      "to": "n9",
+      "condition": "No"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 8042,
+    "completion_tokens": 918,
+    "total_tokens": 8960,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  }
+}

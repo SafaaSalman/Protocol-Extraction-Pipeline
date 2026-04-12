@@ -1,0 +1,123 @@
+{
+  "protocol_id": "triage_01",
+  "title": "Multi-Casualty Triage System",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [132],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": [],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Multi-casualty incident: begin triage",
+      "evidence": { "page": 132, "source_text": "Multi-Casualty Triage System" }
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "text": "Can the patient walk?",
+      "evidence": { "page": 132, "source_text": "All walking wounded; treatment can be delayed." }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Classify GREEN (Minor): Walking wounded, treatment can be delayed",
+      "evidence": { "page": 132, "source_text": "Green Minor All walking wounded; treatment can be delayed." }
+    },
+    {
+      "id": "n4",
+      "type": "decision",
+      "text": "Is the patient breathing?",
+      "evidence": { "page": 132, "source_text": "No respirations after repositioning airway." }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Reposition airway",
+      "evidence": { "page": 132, "source_text": "No respirations after repositioning airway." }
+    },
+    {
+      "id": "n6",
+      "type": "decision",
+      "text": "Breathing after repositioning airway?",
+      "evidence": { "page": 132, "source_text": "No respirations after repositioning airway." }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Classify BLACK (Deceased/Dying): Dead or injuries not compatible with life",
+      "evidence": { "page": 132, "source_text": "Black Deceased/Dying Dead or with injuries not compatible with life. No respirations after repositioning airway." }
+    },
+    {
+      "id": "n8",
+      "type": "decision",
+      "text": "Are respirations more than 30/minute?",
+      "evidence": { "page": 132, "source_text": "respirations more than 30/minute." }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Classify RED (Immediate): Serious, life-threatening injury. Breathing but unconscious, respirations >30/min",
+      "evidence": { "page": 132, "source_text": "Red Immediate Serious, life-threatening injury. Breathing but unconscious; respirations more than 30/minute." }
+    },
+    {
+      "id": "n10",
+      "type": "decision",
+      "text": "Is radial pulse present and capillary refill less than 2 seconds?",
+      "evidence": { "page": 132, "source_text": "Radial pulse absent, capillary refill more than 2 seconds." }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Classify RED (Immediate): Radial pulse absent, capillary refill >2 seconds",
+      "evidence": { "page": 132, "source_text": "Radial pulse absent, capillary refill more than 2 seconds." }
+    },
+    {
+      "id": "n12",
+      "type": "decision",
+      "text": "Can the patient follow simple commands?",
+      "evidence": { "page": 132, "source_text": "Or can\u2019t follow simple commands." }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Classify RED (Immediate): Cannot follow simple commands",
+      "evidence": { "page": 132, "source_text": "Or can\u2019t follow simple commands." }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Classify YELLOW (Delayed): Respirations <30/min, radial pulse present, capillary refill <2 seconds, can follow simple commands. Treatment and transport delayed",
+      "evidence": { "page": 132, "source_text": "Yellow Delayed Treatment and transport delayed. Respirations less than 30/minute. Radial pulse present, capillary refill less than 2 seconds. And can follow simple commands." }
+    },
+    {
+      "id": "n15",
+      "type": "end",
+      "text": "Triage classification complete",
+      "evidence": { "page": 132, "source_text": "Multi-Casualty Triage System" }
+    }
+  ],
+  "edges": [
+    { "from": "n1", "to": "n2" },
+    { "from": "n2", "to": "n3", "condition": "Yes (can walk)" },
+    { "from": "n2", "to": "n4", "condition": "No (cannot walk)" },
+    { "from": "n3", "to": "n15" },
+    { "from": "n4", "to": "n5", "condition": "No (not breathing)" },
+    { "from": "n4", "to": "n8", "condition": "Yes (breathing)" },
+    { "from": "n5", "to": "n6" },
+    { "from": "n6", "to": "n7", "condition": "No (still not breathing)" },
+    { "from": "n6", "to": "n8", "condition": "Yes (breathing after reposition)" },
+    { "from": "n7", "to": "n15" },
+    { "from": "n8", "to": "n9", "condition": "Yes (respirations >30/min)" },
+    { "from": "n8", "to": "n10", "condition": "No (respirations <30/min)" },
+    { "from": "n9", "to": "n15" },
+    { "from": "n10", "to": "n11", "condition": "No (pulse absent or refill >2s)" },
+    { "from": "n10", "to": "n12", "condition": "Yes (pulse present, refill <2s)" },
+    { "from": "n11", "to": "n15" },
+    { "from": "n12", "to": "n13", "condition": "No (cannot follow commands)" },
+    { "from": "n12", "to": "n14", "condition": "Yes (can follow commands)" },
+    { "from": "n13", "to": "n15" },
+    { "from": "n14", "to": "n15" }
+  ]
+}

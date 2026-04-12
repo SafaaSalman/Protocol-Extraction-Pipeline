@@ -1,0 +1,188 @@
+{
+  "protocol_id": "paracargo_operations_safety",
+  "title": "Paracargo Operations Safety",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    87
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Aviation User Checklist",
+    "Aviation Watch Out Situations",
+    "Helicopter Passenger Briefing and PPE",
+    "Helicopter Landing Area Selection",
+    "One-Way Helispot",
+    "Two-Way Helispot",
+    "Longline Mission",
+    "Helicopter Hand Signals",
+    "Weight Estimates",
+    "Directing Retardant and Bucket Drops"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Paracargo operations safety protocol initiated",
+      "evidence": {
+        "page": 87,
+        "source_text": "Paracargo Operations Safety"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Mark the target area with a large X using visible flagging in an open or cleared area",
+      "evidence": {
+        "page": 87,
+        "source_text": "Mark the target area with a large X using visible flagging in an open or cleared area."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Ensure the drop site is roughly an acre in size, suitable locations include helispots, ridge tops, and meadows",
+      "evidence": {
+        "page": 87,
+        "source_text": "The drop site should be roughly an acre in size, depending on terrain and vegetation. Most helispots, ridge tops, and meadows work well."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Ensure camps are at least 600\u0019 from target area",
+      "evidence": {
+        "page": 87,
+        "source_text": "Camps should be at least 600\u0019 from target area."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Clear all persons, vehicles, and animals from the drop site prior to arrival of the cargo aircraft",
+      "evidence": {
+        "page": 87,
+        "source_text": "All persons, vehicles, and animals should be cleared from the drop site prior to arrival of the cargo aircraft."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Assign an individual in charge at the drop site",
+      "evidence": {
+        "page": 87,
+        "source_text": "An individual should be in charge at the drop site."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Alert all personnel around the drop site that cargo operations are about to begin",
+      "evidence": {
+        "page": 87,
+        "source_text": "The individual in charge should alert all personnel around the drop site that cargo operations are about to begin."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Relay information to cargo aircraft: confirm drop location, winds at ground level, specific hazards, and readiness to receive cargo",
+      "evidence": {
+        "page": 87,
+        "source_text": "The individual in charge should relay the following information to the cargo aircraft: Confirm drop location. Winds at ground level. Any specific hazards in the area. Individuals on the ground are clear and ready to receive cargo."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Ensure all personnel are heads up in case a parachute doesn\u0019t open",
+      "evidence": {
+        "page": 87,
+        "source_text": "All personnel in the vicinity should be heads up in the rare event that a parachute doesn\u0019t open."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Keep all personnel clear of the drop site until paracargo operations are complete",
+      "evidence": {
+        "page": 87,
+        "source_text": "All personnel should remain clear of the drop site until paracargo operations are complete."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Treat cargo parachutes with care and return them to their respective bases at the earliest convenience",
+      "evidence": {
+        "page": 87,
+        "source_text": "Treat cargo parachutes with care and return them to their respective bases at the earliest convenience."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "end",
+      "text": "Paracargo operations safety protocol complete",
+      "evidence": {
+        "page": 87,
+        "source_text": "Treat cargo parachutes with care and return them to their respective bases at the earliest convenience."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5434,
+    "completion_tokens": 1366,
+    "total_tokens": 6800,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: AVIATION > Paracargo Operations Safety\nRelated sections in this category: Aviation User Checklist, Aviation Watch Out Situations, Helicopter Passenger Briefing and PPE, Helicopter Landing Area Selection, One-Way Helispot, Two-Way Helispot, Longline Mission, Helicopter Hand Signals, Weight Estimates, Directing Retardant and Bucket Drops",
+  "_validated": true,
+  "_correction_summary": "Reordered steps to match the sequence in the source text."
+}

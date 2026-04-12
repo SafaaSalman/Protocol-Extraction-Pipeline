@@ -1,0 +1,96 @@
+{
+  "protocol_id": "operations_officer_01",
+  "title": "Operations Officer",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    35
+  ],
+  "protocol_type": "reference",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "AIIMS Principles and Concepts",
+    "AIIMS Structure",
+    "Incident Controller",
+    "Deputy Incident Controller",
+    "Division Commanders",
+    "Sector Commanders",
+    "Incident Objective",
+    "Incident Action Planning",
+    "Incident Communications Planning",
+    "Briefings",
+    "transfer of control section on page 37"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Operations Officer role initiated",
+      "evidence": {
+        "page": 35,
+        "source_text": "Operations Officer"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Implement the strategies to resolve the incident",
+      "evidence": {
+        "page": 35,
+        "source_text": "implement the strategies to resolve the incident"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Manage all activities undertaken directly to resolve the incident",
+      "evidence": {
+        "page": 35,
+        "source_text": "manage all activities that are undertaken directly to resolve the incident"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Manage all resources (people and equipment) assigned to the Operations Section",
+      "evidence": {
+        "page": 35,
+        "source_text": "manage all resources (people and equipment) assigned to the Operations Section."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "end",
+      "text": "Operations Officer duties completed",
+      "evidence": {
+        "page": 35,
+        "source_text": "Operations Officer"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5606,
+    "completion_tokens": 549,
+    "total_tokens": 6155,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Incident Management > Operations Officer\nRelated sections in this category: AIIMS Principles and Concepts, AIIMS Structure, Incident Controller, Deputy Incident Controller, Division Commanders, Sector Commanders, Incident Objective, Incident Action Planning, Incident Communications Planning, Briefings"
+}

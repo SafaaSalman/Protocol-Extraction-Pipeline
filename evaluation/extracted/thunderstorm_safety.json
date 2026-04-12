@@ -1,0 +1,254 @@
+{
+  "protocol_id": "thunderstorm_safety_01",
+  "title": "Thunderstorm Safety",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    33
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "How to Properly Refuse Risk",
+    "Hazard Tree Safety",
+    "Powerline Safety",
+    "Roadside Response Safety",
+    "Unexploded Ordnance Safety",
+    "Oil and Gas Site Safety",
+    "Smoke Hazards and Mitigation",
+    "Smoke and Transportation Safety",
+    "Last Resort Survival"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Thunderstorm approaching",
+      "evidence": {
+        "page": 33,
+        "source_text": "Approaching thunderstorms may be noted by a sudden reverse in wind direction, a noticeable rise in wind speed, and a sharp drop in temperature."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "text": "Take storm precautions as soon as you hear thunder",
+      "evidence": {
+        "page": 33,
+        "source_text": "Take the storm precautions below as soon as you hear thunder, not when the storm is upon you."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Take shelter in a vehicle or building if possible",
+      "evidence": {
+        "page": 33,
+        "source_text": "Take shelter in a vehicle or building if possible."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "If outdoors, find a low spot away from tall trees, wire fences, utility lines, and other elevated conductive objects",
+      "evidence": {
+        "page": 33,
+        "source_text": "If outdoors, find a low spot away from tall trees, wire fences, utility lines, and other elevated conductive objects."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Pick a place that is not subject to flooding",
+      "evidence": {
+        "page": 33,
+        "source_text": "Pick a place that is not subject to flooding."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "If in the woods, move to an area with shorter trees",
+      "evidence": {
+        "page": 33,
+        "source_text": "If in the woods, move to an area with shorter trees."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "If only isolated trees are nearby, keep your distance twice the tree height",
+      "evidence": {
+        "page": 33,
+        "source_text": "If only isolated trees are nearby, keep your distance twice the tree height."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "If in open country, crouch low with feet together, minimizing contact with the ground",
+      "evidence": {
+        "page": 33,
+        "source_text": "If in open country, crouch low with feet together, minimizing contact with the ground."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Use a pack to sit on, but never lie on the ground",
+      "evidence": {
+        "page": 33,
+        "source_text": "You can use a pack to sit on, but never lie on the ground."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "If you feel your skin tingle or your hair stand on end, immediately crouch low to the ground",
+      "evidence": {
+        "page": 33,
+        "source_text": "If you feel your skin tingle or your hair stand on end, immediately crouch low to the ground."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Make yourself the smallest possible target and minimize your contact with the ground",
+      "evidence": {
+        "page": 33,
+        "source_text": "Make yourself the smallest possible target and minimize your contact with the ground."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Don’t group together",
+      "evidence": {
+        "page": 33,
+        "source_text": "Don’t group together."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Don’t stay on ridge tops, in wide open areas, or near ledges or rock outcroppings",
+      "evidence": {
+        "page": 33,
+        "source_text": "Don’t stay on ridge tops, in wide open areas, or near ledges or rock outcroppings."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Don’t operate landline telephones, machinery, or electric motors",
+      "evidence": {
+        "page": 33,
+        "source_text": "Don’t operate landline telephones, machinery, or electric motors."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Don’t handle metal hand tools or flammable materials in open containers",
+      "evidence": {
+        "page": 33,
+        "source_text": "Don’t handle metal hand tools or flammable materials in open containers."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Do not resume work in exposed areas until 30 minutes after storm activity has passed",
+      "evidence": {
+        "page": 33,
+        "source_text": "Do not resume work in exposed areas until 30 minutes after storm activity has passed."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "end",
+      "text": "Thunderstorm safety measures complete",
+      "evidence": {
+        "page": 33,
+        "source_text": "Do not resume work in exposed areas until 30 minutes after storm activity has passed."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": "Shelter available"
+    },
+    {
+      "from": "n2",
+      "to": "n4",
+      "condition": "Shelter not available"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5529,
+    "completion_tokens": 1761,
+    "total_tokens": 7290,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: SPECIFIC HAZARDS > Thunderstorm Safety\nRelated sections in this category: How to Properly Refuse Risk, Hazard Tree Safety, Powerline Safety, Roadside Response Safety, Unexploded Ordnance Safety, Oil and Gas Site Safety, Smoke Hazards and Mitigation, Smoke and Transportation Safety, Last Resort Survival",
+  "_validated": true,
+  "_correction_summary": "Reordered nodes to reflect parallel actions for hazard control. Added a decision node for choosing between taking shelter in a vehicle/building or finding a low spot outdoors."
+}

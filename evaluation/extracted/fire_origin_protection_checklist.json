@@ -1,0 +1,305 @@
+{
+  "protocol_id": "fire_origin_protection_checklist",
+  "title": "Fire Origin Protection Checklist",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    118
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Strategy \u0013 Direct Attack",
+    "Strategy \u0013 Indirect Attack",
+    "Fireline Location",
+    "Chainsaw Operations",
+    "Working with Heavy Equipment",
+    "Water Delivery Information",
+    "NWCG Engine Typing Standard",
+    "NWCG Water Tender Typing Standards",
+    "High Pressure Pump Information",
+    "Troubleshooting a High Pressure Pump"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate Fire Origin Protection Checklist",
+      "evidence": {
+        "page": 118,
+        "source_text": "Fire Origin Protection Checklist"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Request wildland fire investigator or law enforcement",
+      "evidence": {
+        "page": 118,
+        "source_text": "Request wildland fire investigator or law enforcement."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Locate and protect fire origin",
+      "evidence": {
+        "page": 118,
+        "source_text": "Locate and protect fire origin."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Do not contaminate area of origin or evidence with trash, cigarette butts, or foot and tire traffic",
+      "evidence": {
+        "page": 118,
+        "source_text": "Do not contaminate area of origin or evidence with trash, cigarette butts, or foot and tire traffic."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Avoid suppression impacts to origin area, including charred vegetation",
+      "evidence": {
+        "page": 118,
+        "source_text": "Avoid suppression impacts to origin area, including charred vegetation:"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Use fog nozzle",
+      "evidence": {
+        "page": 118,
+        "source_text": "Use fog nozzle."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Establish containment lines to protect area",
+      "evidence": {
+        "page": 118,
+        "source_text": "Establish containment lines to protect area."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Allow heavier fuels to burn down",
+      "evidence": {
+        "page": 118,
+        "source_text": "Allow heavier fuels to burn down."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Focus on securing the fire perimeter until investigations are complete",
+      "evidence": {
+        "page": 118,
+        "source_text": "Focus on securing the fire perimeter until investigations are complete."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Make notes of all actions and findings",
+      "evidence": {
+        "page": 118,
+        "source_text": "Make notes of all your actions and findings:"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Identify and ask responsible party and witnesses to remain on scene until fire investigator arrives",
+      "evidence": {
+        "page": 118,
+        "source_text": "Identify and ask the responsible party and witnesses to remain on scene until fire investigator arrives."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Record name and identification of reporting party",
+      "evidence": {
+        "page": 118,
+        "source_text": "Name and identification of reporting party."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Record en route observations, including people or vehicles and smoke column color and direction",
+      "evidence": {
+        "page": 118,
+        "source_text": "En route observations. Include people or vehicles and smoke column color and direction."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Record first resources on scene",
+      "evidence": {
+        "page": 118,
+        "source_text": "First resources on scene."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Record name and identification of persons or vehicles in vicinity of fire origin",
+      "evidence": {
+        "page": 118,
+        "source_text": "Name and identification of persons or vehicles in vicinity of fire origin."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Record weather observations",
+      "evidence": {
+        "page": 118,
+        "source_text": "Weather observations."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "action",
+      "text": "Protect physical evidence. Do not remove unless necessary to prevent destruction",
+      "evidence": {
+        "page": 118,
+        "source_text": "Protect physical evidence. Do not remove unless necessary to prevent destruction."
+      }
+    },
+    {
+      "id": "n18",
+      "type": "action",
+      "text": "Take photographs, including close-up views of fire origin area and evidence, if able",
+      "evidence": {
+        "page": 118,
+        "source_text": "Take photographs, including close-up views of fire origin area and evidence, if able."
+      }
+    },
+    {
+      "id": "n19",
+      "type": "action",
+      "text": "Turn over all notes, information, and physical evidence to fire investigator or law enforcement",
+      "evidence": {
+        "page": 118,
+        "source_text": "Turn over all notes, information, and physical evidence to fire investigator or law enforcement."
+      }
+    },
+    {
+      "id": "n20",
+      "type": "action",
+      "text": "Follow local procedures and policy regarding reporting of cause information",
+      "evidence": {
+        "page": 118,
+        "source_text": "Follow local procedures and policy regarding reporting of cause information."
+      }
+    },
+    {
+      "id": "n21",
+      "type": "end",
+      "text": "Fire origin protection checklist complete",
+      "evidence": {
+        "page": 118,
+        "source_text": "Follow local procedures and policy regarding reporting of cause information."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18"
+    },
+    {
+      "from": "n18",
+      "to": "n19"
+    },
+    {
+      "from": "n19",
+      "to": "n20"
+    },
+    {
+      "from": "n20",
+      "to": "n21"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5433,
+    "completion_tokens": 1958,
+    "total_tokens": 7391,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: OTHER REFERENCES > Fire Origin Protection Checklist\nRelated sections in this category: Strategy – Direct Attack, Strategy – Indirect Attack, Fireline Location, Chainsaw Operations, Working with Heavy Equipment, Water Delivery Information, NWCG Engine Typing Standard, NWCG Water Tender Typing Standards, High Pressure Pump Information, Troubleshooting a High Pressure Pump",
+  "_validated": true,
+  "_correction_summary": "Split the note-taking step into individual actions and reordered steps to ensure 'Locate and protect fire origin' occurs before detailed note-taking."
+}

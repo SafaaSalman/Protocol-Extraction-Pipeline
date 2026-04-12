@@ -1,0 +1,134 @@
+{
+  "protocol_id": "aircraft_mishap_response_actions",
+  "title": "Aircraft Mishap Response Actions",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    94
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Aviation User Checklist",
+    "Aviation Watch Out Situations",
+    "Helicopter Passenger Briefing and PPE",
+    "Helicopter Landing Area Selection",
+    "One-Way Helispot",
+    "Two-Way Helispot",
+    "Longline Mission",
+    "Helicopter Hand Signals",
+    "Paracargo Operations Safety",
+    "Weight Estimates"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate aircraft mishap response",
+      "evidence": {
+        "page": 94,
+        "source_text": "Aircraft Mishap Response Actions"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Preserve life",
+      "evidence": {
+        "page": 94,
+        "source_text": "Preserve life."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Extricate injured occupants and extinguish fires",
+      "evidence": {
+        "page": 94,
+        "source_text": "Do whatever is necessary to extricate injured occupants and to extinguish fires."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Secure the area",
+      "evidence": {
+        "page": 94,
+        "source_text": "Secure the area."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Document and/or photograph location of debris disturbed for rescue/fire suppression",
+      "evidence": {
+        "page": 94,
+        "source_text": "Document and/or photograph the location of any debris that must be disturbed in order to carry out rescue and/or fire suppression activities."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Identify witnesses and get contact information",
+      "evidence": {
+        "page": 94,
+        "source_text": "Identify witnesses and get contact information."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Exercise site safety precautions: use protective devices/clothing, exercise caution",
+      "evidence": {
+        "page": 94,
+        "source_text": "It’s important to exercise good judgment, use available protective devices and clothing, and use extreme caution when working in the wreckage."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "end",
+      "text": "Complete aircraft mishap response actions",
+      "evidence": {
+        "page": 94,
+        "source_text": "Time is extremely critical when responding to an emergency. Immediate positive action is necessary; delay may affect someone’s survival."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5377,
+    "completion_tokens": 851,
+    "total_tokens": 6228,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: AVIATION > Aircraft Mishap Response Actions\nRelated sections in this category: Aviation User Checklist, Aviation Watch Out Situations, Helicopter Passenger Briefing and PPE, Helicopter Landing Area Selection, One-Way Helispot, Two-Way Helispot, Longline Mission, Helicopter Hand Signals, Paracargo Operations Safety, Weight Estimates"
+}

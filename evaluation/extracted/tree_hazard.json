@@ -1,0 +1,199 @@
+{
+  "protocol_id": "tree_hazard_01",
+  "title": "Tree Hazard",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    80,
+    81,
+    82
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "SOP J08.03 Tree Hazard \u0013 Bushfire Response",
+    "Safe Person Approach",
+    "Dynamic Risk Assessment",
+    "Safety First Approach",
+    "OHS Incident Reporting",
+    "LACES",
+    "WATCHOUT",
+    "Red Flag Warnings",
+    "Fireground Information Update",
+    "Hydration",
+    "Fatigue"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Identify potential tree hazard during bushfire response",
+      "evidence": {
+        "page": 80,
+        "source_text": "Step 1: Identify the potential existence of tree hazard during bushfire response"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Mitigate risk from tree hazard during access to bushfire incidents",
+      "evidence": {
+        "page": 80,
+        "source_text": "Step 2: Mitigate the risk arising from tree hazard during access to bushfire incidents"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Mitigate risk from tree hazard on the fire ground",
+      "evidence": {
+        "page": 80,
+        "source_text": "Step 3: Mitigate the risk arising from tree hazard on the fire ground"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Mitigate risk of unidentified hazard trees on the fire ground",
+      "evidence": {
+        "page": 80,
+        "source_text": "Step 4: Mitigate the risk of unidentified hazard trees on the fire ground"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "decision",
+      "text": "Is tree a Clear and Present Danger (CPD)?",
+      "evidence": {
+        "page": 82,
+        "source_text": "Yellow \u001cK\u001d is sprayed on trees that present a \u001cClear and Present Danger\u001d"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Mark CPD trees with yellow 'K'",
+      "evidence": {
+        "page": 82,
+        "source_text": "Yellow \u001cK\u001d is sprayed on trees that present a \u001cClear and Present Danger\u001d"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Establish exclusion zone with yellow and black tape",
+      "evidence": {
+        "page": 82,
+        "source_text": "An exclusion zone is marked with yellow and black tape tied around a tree or trees"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Assess and treat hazard trees within striking distance of access/control lines",
+      "evidence": {
+        "page": 82,
+        "source_text": "Hazard trees within striking distance of access/control lines are assessed, marked and treated"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Mark hazardous trees with yellow cross 'X'",
+      "evidence": {
+        "page": 82,
+        "source_text": "Yellow cross \u001cX\u001d is sprayed on hazardous trees"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Mark non-hazard trees with yellow dot '\u001c\u001d'",
+      "evidence": {
+        "page": 82,
+        "source_text": "Yellow dot \u001c\u001d\u001d is sprayed on non-hazard trees"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Complete operations",
+      "evidence": {
+        "page": 80,
+        "source_text": "Step 5: Complete operations."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "end",
+      "text": "Operations complete, ensure safety",
+      "evidence": {
+        "page": 82,
+        "source_text": "Complete operations."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6",
+      "condition": "Yes (CPD)"
+    },
+    {
+      "from": "n5",
+      "to": "n8",
+      "condition": "No (not CPD)"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n11"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 9518,
+    "completion_tokens": 1266,
+    "total_tokens": 10784,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: Safety > Tree Hazard\nRelated sections in this category: Safe Person Approach, Dynamic Risk Assessment, Safety First Approach, OHS Incident Reporting, LACES, WATCHOUT, Red Flag Warnings, Fireground Information Update, Hydration, Fatigue",
+  "_validated": true,
+  "_correction_summary": "Reordered nodes, added missing steps for dynamic risk assessment and exclusion zones, corrected conditions for decision branches, and split 'Complete operations' into more granular steps."
+}

@@ -1,0 +1,344 @@
+{
+  "protocol_id": "powerline_safety_01",
+  "title": "Powerline Safety",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    38,
+    39
+  ],
+  "protocol_type": "table",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Thunderstorm Safety",
+    "How to Properly Refuse Risk",
+    "Hazard Tree Safety",
+    "Roadside Response Safety",
+    "Unexploded Ordnance Safety",
+    "Oil and Gas Site Safety",
+    "Smoke Hazards and Mitigation",
+    "Smoke and Transportation Safety",
+    "Last Resort Survival"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Powerline safety protocol initiated",
+      "evidence": {
+        "page": 38,
+        "source_text": "Powerline Safety"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Communicate: Notify all responders of down electrical lines. Obtain radio check-back",
+      "evidence": {
+        "page": 38,
+        "source_text": "Communicate: Notify all responders of down electrical lines. Obtain radio check-back."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Identify: Determine entire extent of hazard by visually tracking all lines, two poles in each direction, from the downed wire",
+      "evidence": {
+        "page": 38,
+        "source_text": "Identify: Determine entire extent of hazard by visually tracking all lines, two poles in each direction, from the downed wire."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Isolate: Flag area around down wire hazards, post guards",
+      "evidence": {
+        "page": 38,
+        "source_text": "Isolate: Flag area around down wire hazards, post guards."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Deny entry: Delay firefighting actions until hazard identification and flagging are complete, and/or confine actions to safe areas",
+      "evidence": {
+        "page": 38,
+        "source_text": "Deny entry: Delay firefighting actions until hazard identification and flagging are complete, and/or confine actions to safe areas."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Downed line on vehicle: Stay in vehicle until power company arrives. If vehicle is on fire, jump out with both feet together. Do not touch the vehicle. Keep feet together and shuffle or hop away",
+      "evidence": {
+        "page": 38,
+        "source_text": "Downed line on vehicle: Stay in vehicle until the power company arrives. If vehicle is on fire, jump out with both feet together. Do not touch the vehicle. Keep feet together and shuffle or hop away."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Always treat downed wires as energized",
+      "evidence": {
+        "page": 38,
+        "source_text": "Always treat downed wires as energized!"
+      }
+    },
+    {
+      "id": "n24",
+      "type": "action",
+      "text": "Contact power companies when powerlines are threatened or involved",
+      "evidence": {
+        "page": 38,
+        "source_text": "Contact power companies when powerlines are threatened or involved."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Normal tactics apply when fire is more than 100 feet from powerlines",
+      "evidence": {
+        "page": 39,
+        "source_text": "Normal tactics apply when fire is more than 100 feet from powerlines."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Heavy smoke and flames can cause arcs to ground. Direct attack must be abandoned within 100 feet of transmission lines",
+      "evidence": {
+        "page": 39,
+        "source_text": "Heavy smoke and flames can cause arcs to ground. Direct attack must be abandoned within 100 feet of transmission lines."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Spot fires or low ground fires can be fought with hose lines if heavy smoke or flame is not within 100 feet of powerlines",
+      "evidence": {
+        "page": 39,
+        "source_text": "Spot fires or low ground fires can be fought with hose lines if heavy smoke or flame is not within 100 feet of powerlines."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Always maintain a distance of 35 feet from transmission towers",
+      "evidence": {
+        "page": 39,
+        "source_text": "Always maintain a distance of 35 feet from transmission towers."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Never use straight streams or foam—use a fog pattern",
+      "evidence": {
+        "page": 39,
+        "source_text": "Never use straight streams or foam—use a fog pattern."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Use extreme caution if engaging in tactical firing operations",
+      "evidence": {
+        "page": 39,
+        "source_text": "Use extreme caution if engaging in tactical firing operations."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Extinguish wooden poles burning at the base to prevent down powerline hazards",
+      "evidence": {
+        "page": 39,
+        "source_text": "Extinguish wooden poles burning at the base to prevent down powerline hazards."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Communicate locations of all transmission lines to air resources",
+      "evidence": {
+        "page": 39,
+        "source_text": "Communicate locations of all transmission lines to air resources."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Aerial drops onto powerlines will cause arcing to ground or arcing to powerline towers and poles",
+      "evidence": {
+        "page": 39,
+        "source_text": "Aerial drops onto powerlines will cause arcing to ground or arcing to powerline towers and poles."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "action",
+      "text": "Drops should be parallel to lines and avoid drift making contact on the powerlines",
+      "evidence": {
+        "page": 39,
+        "source_text": "Drops should be parallel to lines and avoid drift making contact on the powerlines."
+      }
+    },
+    {
+      "id": "n18",
+      "type": "action",
+      "text": "When flying across powerlines, cross at the towers. ALWAYS!",
+      "evidence": {
+        "page": 39,
+        "source_text": "When flying across powerlines, cross at the towers. ALWAYS!"
+      }
+    },
+    {
+      "id": "n19",
+      "type": "action",
+      "text": "Look Out for any powerlines near the incident",
+      "evidence": {
+        "page": 39,
+        "source_text": "Look Out for any powerlines near the incident."
+      }
+    },
+    {
+      "id": "n20",
+      "type": "action",
+      "text": "Communicate location of all powerlines that present a hazard",
+      "evidence": {
+        "page": 39,
+        "source_text": "Communicate location of all powerlines that present a hazard."
+      }
+    },
+    {
+      "id": "n21",
+      "type": "action",
+      "text": "Escape Routes should not be under or near overhead powerlines",
+      "evidence": {
+        "page": 39,
+        "source_text": "Escape Routes should not be under or near overhead powerlines."
+      }
+    },
+    {
+      "id": "n22",
+      "type": "action",
+      "text": "Safety Zones, ICP, and staging areas should not be located under or near overhead powerlines",
+      "evidence": {
+        "page": 39,
+        "source_text": "Safety Zones, ICP, and staging areas should not be located under or near overhead powerlines."
+      }
+    },
+    {
+      "id": "n23",
+      "type": "end",
+      "text": "Powerline safety protocol complete",
+      "evidence": {
+        "page": 39,
+        "source_text": "Safety Zones, ICP, and staging areas should not be located under or near overhead powerlines."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n24"
+    },
+    {
+      "from": "n24",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18"
+    },
+    {
+      "from": "n18",
+      "to": "n19"
+    },
+    {
+      "from": "n19",
+      "to": "n20"
+    },
+    {
+      "from": "n20",
+      "to": "n21"
+    },
+    {
+      "from": "n21",
+      "to": "n22"
+    },
+    {
+      "from": "n22",
+      "to": "n23"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5694,
+    "completion_tokens": 2396,
+    "total_tokens": 8090,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: SPECIFIC HAZARDS > Powerline Safety\nRelated sections in this category: Thunderstorm Safety, How to Properly Refuse Risk, Hazard Tree Safety, Roadside Response Safety, Unexploded Ordnance Safety, Oil and Gas Site Safety, Smoke Hazards and Mitigation, Smoke and Transportation Safety, Last Resort Survival",
+  "_validated": true,
+  "_correction_summary": "Added missing step for contacting power companies. Reordered steps to group 'Down Powerlines' actions together. Corrected node type for the end node."
+}

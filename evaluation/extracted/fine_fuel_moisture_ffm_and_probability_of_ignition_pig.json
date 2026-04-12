@@ -1,0 +1,135 @@
+{
+  "protocol_id": "fine_fuel_moisture_and_probability_of_ignition",
+  "title": "Fine Fuel Moisture (FFM) and Probability of Ignition (PIG)",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    60,
+    61,
+    62,
+    63,
+    64
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Table A (page 45)",
+    "Table B, C, or D"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Begin FFM and PIG assessment",
+      "evidence": {
+        "page": 60,
+        "source_text": "Fine Fuel Moisture (FFM) and Probability of Ignition (PIG)"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Estimate reference fuel moisture using Table A (page 45)",
+      "evidence": {
+        "page": 60,
+        "source_text": "1. With table A (page 45), estimate reference fuel moisture."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Choose Table B, C, or D for FM correction based on month",
+      "evidence": {
+        "page": 60,
+        "source_text": "2. Choose Table B, C, or D from following pages for estimating FM correction based on the month of the year."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Determine FM correction based on local factors (shading, aspect, slope, time of day, elevation difference)",
+      "evidence": {
+        "page": 60,
+        "source_text": "With selected table, determine FM correction based on local factors (shading as more or less than 50%, aspect and slope, time of day, and elevation difference)."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Add Reference Fuel Moisture and Correction Factor",
+      "evidence": {
+        "page": 60,
+        "source_text": "3. Add Ref. Fuel Moisture (1) and Correction Factor (2)."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Estimate PIG from temperature and FFM",
+      "evidence": {
+        "page": 60,
+        "source_text": "4. Estimate PIG from temp and FFM."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "For nighttime estimates, use Table A to obtain Reference Fuel Moisture Value and add 5",
+      "evidence": {
+        "page": 61,
+        "source_text": "For Nighttime Estimates: • Use Table A to obtain a Reference Fuel Moisture Value. • Add 5 to the value that you get in Table A. This is your nighttime fuel moisture."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "end",
+      "text": "Complete FFM and PIG assessment",
+      "evidence": {
+        "page": 60,
+        "source_text": "PIG helps assess hourly and day-to-day changes in expected fire behavior."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n8"
+    },
+    {
+      "from": "n2",
+      "to": "n7",
+      "condition": "Nighttime"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5684,
+    "completion_tokens": 952,
+    "total_tokens": 6636,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: FIRE ENVIRONMENT > Fine Fuel Moisture (FFM) and  Probability of Ignition (PIG)\nRelated sections in this category: Fire Assessment Process, Look Up, Down, and Around, Interpret the Smoke Column, Fire Danger Ratings and Interpretations, Critical Fire Weather, Important Winds for Interpreting Forecasts, Visual Estimate of Surface Windspeed, Fine Fuel Moisture and Fire Behavior, Fire Behavior Observations & Interpretations, In Your Fire Weather Forecast"
+}

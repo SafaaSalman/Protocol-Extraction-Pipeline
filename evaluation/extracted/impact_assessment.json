@@ -1,0 +1,232 @@
+{
+  "protocol_id": "impact_assessment_01",
+  "title": "Impact Assessment",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    58
+  ],
+  "protocol_type": "reference",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "AIIMS Principles and Concepts",
+    "AIIMS Structure",
+    "Incident Controller",
+    "Deputy Incident Controller",
+    "Operations Officer",
+    "Division Commanders",
+    "Sector Commanders",
+    "Incident Objective",
+    "Incident Action Planning",
+    "Incident Communications Planning",
+    "EM Knowledge for the Impact Assessment Guidelines"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate and manage Initial Impact Assessment (IIA)",
+      "evidence": {
+        "page": 58,
+        "source_text": "The incident controller is responsible for initiating and managing an initial impact assessment (IIA) and authorising the release of collected information."
+      }
+    },
+    {
+      "id": "n1a",
+      "type": "action",
+      "text": "Authorize release of collected information",
+      "evidence": {
+        "page": 58,
+        "source_text": "The incident controller is responsible for initiating and managing an initial impact assessment (IIA) and authorising the release of collected information."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "text": "Determine requirement for Initial Impact Assessment (IIA)",
+      "evidence": {
+        "page": 58,
+        "source_text": "Triggers to determine the requirement for IIA should be considered in accordance with the state strategic control priorities."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Consider triggers for IIA: injured/deceased persons, residential damage, damage to infrastructure, community facilities, primary production impact",
+      "evidence": {
+        "page": 58,
+        "source_text": "Some practical examples include: injured/deceased persons, residential damage, damage to essential infrastructure, damage to facilities of community significance, identification of primary production impact."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Manage IIA process with flexibility and adapt to circumstances",
+      "evidence": {
+        "page": 58,
+        "source_text": "IIA arrangements are designed to allow for flexibility in their application as it often occur in a dynamic environment."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Make IIA information available to IEMT and recovery role",
+      "evidence": {
+        "page": 58,
+        "source_text": "Information collected in the IIA stage will be progressively made available to the IEMT and nominated recovery role."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "decision",
+      "text": "Scale and complexity of event",
+      "evidence": {
+        "page": 58,
+        "source_text": "Dependent on the scale and complexity of the event the Incident Controller may:"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Use existing IMT and field resources",
+      "evidence": {
+        "page": 58,
+        "source_text": "choose to use existing IMT and field based resources"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Establish specific functional unit within IMT/IEMT for IIA",
+      "evidence": {
+        "page": 58,
+        "source_text": "establish a specific functional unit within the IMT/IEMT to support the IIA process."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Request additional resources for IIA",
+      "evidence": {
+        "page": 58,
+        "source_text": "request additional resource/s to assist in conducting and managing IIA"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Request establishment of regional team if required",
+      "evidence": {
+        "page": 58,
+        "source_text": "request the establishment of a regional team, where required."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Facilitate transition from IIA to Secondary Impact Assessment (SIA)",
+      "evidence": {
+        "page": 58,
+        "source_text": "The Incident Controller is required to facilitate the transition from IIA to SIA."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Ensure impacted area is safe for non-responder personnel for SIA",
+      "evidence": {
+        "page": 58,
+        "source_text": "For SIA to commence, the Incident Controller needs to be satisfied the impacted area is safe for non-responder personnel to operate in."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "end",
+      "text": "Coordinate SIA with nominated recovery role",
+      "evidence": {
+        "page": 58,
+        "source_text": "Coordination of SIA is the responsibility of the nominated recovery role."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n1a"
+    },
+    {
+      "from": "n1a",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": "Triggers indicate need for IIA"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7",
+      "condition": "Use existing resources"
+    },
+    {
+      "from": "n6",
+      "to": "n8",
+      "condition": "Establish functional unit"
+    },
+    {
+      "from": "n6",
+      "to": "n9",
+      "condition": "Request additional resources"
+    },
+    {
+      "from": "n6",
+      "to": "n10",
+      "condition": "Establish regional team"
+    },
+    {
+      "from": "n7",
+      "to": "n11"
+    },
+    {
+      "from": "n8",
+      "to": "n11"
+    },
+    {
+      "from": "n9",
+      "to": "n11"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5592,
+    "completion_tokens": 1405,
+    "total_tokens": 6997,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Incident Management > Impact Assessment\nRelated sections in this category: AIIMS Principles and Concepts, AIIMS Structure, Incident Controller, Deputy Incident Controller, Operations Officer, Division Commanders, Sector Commanders, Incident Objective, Incident Action Planning, Incident Communications Planning",
+  "_validated": true,
+  "_correction_summary": "Added missing step for authorizing release of information. Corrected conditions and branching for decision node n6. Adjusted order of actions n8, n9, and n10 to reflect parallel options."
+}

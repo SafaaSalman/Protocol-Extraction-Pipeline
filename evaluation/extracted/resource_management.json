@@ -1,0 +1,251 @@
+{
+  "protocol_id": "resource_management",
+  "title": "Resource Management",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    29
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Preparedness Arrangements",
+    "Readiness Arrangements",
+    "Response Arrangements"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Resource management process initiated",
+      "evidence": {
+        "page": 29,
+        "source_text": "Resource Management"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Incident Controller provides direction to Agency Commanders on resource allocation",
+      "evidence": {
+        "page": 29,
+        "source_text": "The Incident Controller is responsible for providing direction to the Agency Commanders of the agencies responding to the incident on where the agency resources are to work and the function they are to perform."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Agency Commanders task agency personnel and ensure safe systems of work",
+      "evidence": {
+        "page": 29,
+        "source_text": "Agency Commanders are responsible for tasking their agency personnel and for ensuring they follow safe systems of work."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "decision",
+      "text": "Are additional local resources needed?",
+      "evidence": {
+        "page": 29,
+        "source_text": "The Incident Controller should initially request additional local resources through Agency Commanders."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Request additional local resources through Agency Commanders",
+      "evidence": {
+        "page": 29,
+        "source_text": "The Incident Controller should initially request additional local resources through Agency Commanders."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "decision",
+      "text": "Are local resources sufficient?",
+      "evidence": {
+        "page": 29,
+        "source_text": "Where agencies are unable to provide sufficient resources from the local area, the Incident Controller should seek additional resources through the Regional Controller."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Seek additional resources through the Regional Controller",
+      "evidence": {
+        "page": 29,
+        "source_text": "Where agencies are unable to provide sufficient resources from the local area, the Incident Controller should seek additional resources through the Regional Controller."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Regional Controller prioritizes resource deployment across the Region",
+      "evidence": {
+        "page": 29,
+        "source_text": "The Regional Controller, in consultation with Regional Agency Commanders, will prioritise resource deployment across the Region."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Regional Controller reallocates resources within the Region",
+      "evidence": {
+        "page": 29,
+        "source_text": "This may include reallocating resources within their Region."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "decision",
+      "text": "Can the Region supply the required resources?",
+      "evidence": {
+        "page": 29,
+        "source_text": "Where the Region is unable to supply the resources required, the Regional Controller will seek resources from the State Response Controller."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Seek resources from the State Response Controller",
+      "evidence": {
+        "page": 29,
+        "source_text": "Where the Region is unable to supply the resources required, the Regional Controller will seek resources from the State Response Controller."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "State Response Controller prioritizes resource deployment across the state",
+      "evidence": {
+        "page": 29,
+        "source_text": "The State Response Controller, in consultation with State Agency Commanders, will prioritise resource deployment across the state and seek additional resources as required."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Seek other local support agency resources through IERC or MERC",
+      "evidence": {
+        "page": 29,
+        "source_text": "Other local support agency resources are sought through the IERC or MERC in the first instance."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "MERC escalates unfilled requests to RERC, then to EMC through SPLO",
+      "evidence": {
+        "page": 29,
+        "source_text": "The MERC will escalate unfilled requests to the RERC, who will escalate unfilled requests to the EMC through the Senior Police Liaison Officer (SPLO)."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "EMC sources resources from other states, Commonwealth, and overseas",
+      "evidence": {
+        "page": 29,
+        "source_text": "The EMC is responsible for sourcing resources from other states, the Commonwealth and from overseas and for authorising the deployment of Victorian response resources interstate and overseas."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "end",
+      "text": "Resource management process complete",
+      "evidence": {
+        "page": 29,
+        "source_text": "This arrangement excludes resources obtained through established cross-border arrangements for first response."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5",
+      "condition": "Yes (additional resources needed)"
+    },
+    {
+      "from": "n4",
+      "to": "n6",
+      "condition": "No (no additional resources needed)"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7",
+      "condition": "No (insufficient local resources)"
+    },
+    {
+      "from": "n6",
+      "to": "n8",
+      "condition": "Yes (sufficient local resources)"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11",
+      "condition": "No (Region cannot supply)"
+    },
+    {
+      "from": "n10",
+      "to": "n12",
+      "condition": "Yes (Region can supply)"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5440,
+    "completion_tokens": 1664,
+    "total_tokens": 7104,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Readiness and Response to Bushfire > Resource Management\nRelated sections in this category: Preparedness Arrangements, Readiness Arrangements, Response Arrangements",
+  "_validated": true,
+  "_correction_summary": "Added missing step for reallocating resources within the Region. Corrected conditions for decision nodes n4, n6, and n9."
+}

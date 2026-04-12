@@ -1,0 +1,344 @@
+{
+  "protocol_id": "mfb_response_capability",
+  "title": "MFB Response Capability",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    59
+  ],
+  "protocol_type": "table",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "AIIMS Principles and Concepts",
+    "AIIMS Structure",
+    "Incident Controller",
+    "Deputy Incident Controller",
+    "Operations Officer",
+    "Division Commanders",
+    "Sector Commanders",
+    "Incident Objective",
+    "Incident Action Planning",
+    "Incident Communications Planning"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "MFB Response Capability Overview",
+      "evidence": {
+        "page": 59,
+        "source_text": "MFB Response Capability"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Request MFB resources through the SCC",
+      "evidence": {
+        "page": 59,
+        "source_text": "MFB resources should be requested through the SCC."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "MFB can assist with emergency responses",
+      "evidence": {
+        "page": 59,
+        "source_text": "MFB can assist with the following emergency responses:"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Provide strike teams with level 2 wildfire qualifications",
+      "evidence": {
+        "page": 59,
+        "source_text": "Strike teams, consisting of firefighters with level 2 wildfire qualifications"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Provide specialist task forces",
+      "evidence": {
+        "page": 59,
+        "source_text": "specialist task forces"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Step up to CFA stations",
+      "evidence": {
+        "page": 59,
+        "source_text": "step up to CFA stations"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Provide asset protection",
+      "evidence": {
+        "page": 59,
+        "source_text": "asset protection"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Protect Neighbourhood Safer Places, refuges, and critical infrastructure",
+      "evidence": {
+        "page": 59,
+        "source_text": "protection of Neighbourhood Safer Places, refuges and critical infrastructure"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Consolidate control lines on roadsides",
+      "evidence": {
+        "page": 59,
+        "source_text": "consolidation of control lines on roadsides"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Provide fill points",
+      "evidence": {
+        "page": 59,
+        "source_text": "fill points"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Perform blacking-out along hard standing surfaces",
+      "evidence": {
+        "page": 59,
+        "source_text": "blacking-out along hard standing surfaces"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Conduct Initial Impact Assessment",
+      "evidence": {
+        "page": 59,
+        "source_text": "Initial Impact Assessment"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Provide incident management support",
+      "evidence": {
+        "page": 59,
+        "source_text": "MFB can also be requested to provide the following incident management support:"
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Fill IMT positions",
+      "evidence": {
+        "page": 59,
+        "source_text": "IMT positions"
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Provide administration support (e.g., Geospatial Information Services)",
+      "evidence": {
+        "page": 59,
+        "source_text": "administration support (i.e. Geospatial Information Services)"
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Provide scientific services",
+      "evidence": {
+        "page": 59,
+        "source_text": "scientific services."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "decision",
+      "text": "MFB unable to assist in certain activities",
+      "evidence": {
+        "page": 59,
+        "source_text": "The MFB are unable to assist in the following activities:"
+      }
+    },
+    {
+      "id": "n18",
+      "type": "action",
+      "text": "Driving off road or on dozer tracks",
+      "evidence": {
+        "page": 59,
+        "source_text": "driving off road or on dozer tracks"
+      }
+    },
+    {
+      "id": "n19",
+      "type": "action",
+      "text": "Cross-crewing",
+      "evidence": {
+        "page": 59,
+        "source_text": "cross-crewing"
+      }
+    },
+    {
+      "id": "n20",
+      "type": "action",
+      "text": "Separating strike teams",
+      "evidence": {
+        "page": 59,
+        "source_text": "separating strike teams"
+      }
+    },
+    {
+      "id": "n21",
+      "type": "action",
+      "text": "Back-burning",
+      "evidence": {
+        "page": 59,
+        "source_text": "back-burning"
+      }
+    },
+    {
+      "id": "n22",
+      "type": "action",
+      "text": "Tree-felling",
+      "evidence": {
+        "page": 59,
+        "source_text": "tree-felling"
+      }
+    },
+    {
+      "id": "n23",
+      "type": "action",
+      "text": "Class ‘A’ foam application",
+      "evidence": {
+        "page": 59,
+        "source_text": "Class ‘A’ foam application."
+      }
+    },
+    {
+      "id": "n24",
+      "type": "end",
+      "text": "MFB response capability overview complete",
+      "evidence": {
+        "page": 59,
+        "source_text": "The MFB are unable to assist in the following activities:"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n3",
+      "to": "n5"
+    },
+    {
+      "from": "n3",
+      "to": "n6"
+    },
+    {
+      "from": "n3",
+      "to": "n7"
+    },
+    {
+      "from": "n3",
+      "to": "n8"
+    },
+    {
+      "from": "n3",
+      "to": "n9"
+    },
+    {
+      "from": "n3",
+      "to": "n10"
+    },
+    {
+      "from": "n3",
+      "to": "n11"
+    },
+    {
+      "from": "n3",
+      "to": "n12"
+    },
+    {
+      "from": "n3",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n13",
+      "to": "n15"
+    },
+    {
+      "from": "n13",
+      "to": "n16"
+    },
+    {
+      "from": "n3",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18"
+    },
+    {
+      "from": "n17",
+      "to": "n19"
+    },
+    {
+      "from": "n17",
+      "to": "n20"
+    },
+    {
+      "from": "n17",
+      "to": "n21"
+    },
+    {
+      "from": "n17",
+      "to": "n22"
+    },
+    {
+      "from": "n17",
+      "to": "n23"
+    },
+    {
+      "from": "n17",
+      "to": "n24"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5416,
+    "completion_tokens": 2001,
+    "total_tokens": 7417,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Incident Management > MFB Response Capability\nRelated sections in this category: AIIMS Principles and Concepts, AIIMS Structure, Incident Controller, Deputy Incident Controller, Operations Officer, Division Commanders, Sector Commanders, Incident Objective, Incident Action Planning, Incident Communications Planning",
+  "_validated": true,
+  "_correction_summary": "Changed node n17 to a decision node and adjusted the connections to reflect the correct sequence and branching. Added an end node for the decision branch."
+}

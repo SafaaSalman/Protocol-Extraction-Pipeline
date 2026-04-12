@@ -1,0 +1,149 @@
+{
+  "protocol_id": "safety_first_approach",
+  "title": "Safety First Approach",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    75
+  ],
+  "protocol_type": "process",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Safe Person Approach",
+    "Dynamic Risk Assessment",
+    "OHS Incident Reporting",
+    "LACES",
+    "WATCHOUT",
+    "Red Flag Warnings",
+    "Fireground Information Update",
+    "Hydration",
+    "Fatigue",
+    "Smoke"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate Safety First Approach",
+      "evidence": {
+        "page": 75,
+        "source_text": "Safety First Approach"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Adopt the Safe Person Approach (SPA) and use the Dynamic Risk Assessment (DRA) process to minimize risk",
+      "evidence": {
+        "page": 75,
+        "source_text": "By adopting the SPA and using the DRA process you can minimise the risk of injury to self and others."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Deploy lookouts (fixed, aerial, or mobile) to maintain risk awareness and provide timely advice on escape routes and safety zones",
+      "evidence": {
+        "page": 75,
+        "source_text": "Lookouts | A fixed, aerial or mobile lookout shall be deployed to maintain a clear appreciation of risks and to provide timely advice of the need to use of escape routes and safety zones."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Ensure firefighters are aware of changes in fire behaviour due to fuel, weather, topography, and other hazards",
+      "evidence": {
+        "page": 75,
+        "source_text": "Awareness | Firefighters shall be aware of the impact of changes in fire behaviour including those resulting from variations to fuel, weather and topography and of other fireground hazards."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Follow the Communications Plan and communicate with crew and surrounding crews to address safety issues",
+      "evidence": {
+        "page": 75,
+        "source_text": "Communications | All fire crews shall follow the Communications Plan, communicate with your crew and surrounding crews to discuss and address safety issues."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Agree on at least two escape routes and ensure they are known to all personnel; continually review their suitability",
+      "evidence": {
+        "page": 75,
+        "source_text": "Escape Routes | At least two escape routes should be agreed and made known to all relevant personnel. The suitability of an escape route should be continually reviewed to ensure it remains effective."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Identify safety zones and ensure they are known to all firefighters; consider escape time and zone size as fire behaviour changes",
+      "evidence": {
+        "page": 75,
+        "source_text": "Safety Zones | Safety zones should be identified and made known to all relevant firefighters. Firefighters need to consider escape time and safety zone size requirements that will change as fire behaviour changes."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Report OHS incidents via the chain of command and agency's reporting system",
+      "evidence": {
+        "page": 75,
+        "source_text": "This does not replace the need to immediately communicate these incidents via the chain of command. Personnel will be required to report OHS incidents via their own agency’s reporting system."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "end",
+      "text": "Safety First Approach implemented",
+      "evidence": {
+        "page": 75,
+        "source_text": "Safety First Approach"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5893,
+    "completion_tokens": 881,
+    "total_tokens": 6774,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Safety > Safety First Approach\nRelated sections in this category: Safe Person Approach, Dynamic Risk Assessment, OHS Incident Reporting, LACES, WATCHOUT, Red Flag Warnings, Fireground Information Update, Hydration, Fatigue, Smoke",
+  "_validated": true,
+  "_correction_summary": "Added missing steps for OHS Incident Reporting and Dynamic Risk Assessment. Corrected protocol type."
+}

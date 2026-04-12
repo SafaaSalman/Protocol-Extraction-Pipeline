@@ -1,0 +1,182 @@
+{
+  "protocol_id": "dynamic_risk_assessment_01",
+  "title": "Dynamic Risk Assessment",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    73,
+    74
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Safe Person Approach",
+    "Safety First Approach",
+    "OHS Incident Reporting",
+    "LACES",
+    "WATCHOUT",
+    "Red Flag Warnings",
+    "Fireground Information Update",
+    "Hydration",
+    "Fatigue",
+    "Smoke"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate Dynamic Risk Assessment",
+      "evidence": {
+        "page": 73,
+        "source_text": "Dynamic Risk Assessment (DRA) (see figure 10 ) is a simple risk assessment process..."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Evaluate the situation, tasks, and persons at risk",
+      "evidence": {
+        "page": 74,
+        "source_text": "Evaluate The Situation, Tasks and Persons at Risk"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Determine the tasks and identify the associated hazards",
+      "evidence": {
+        "page": 74,
+        "source_text": "Determine the tasks and identify the associated hazards to determine the risk for the situation."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Select systems of work",
+      "evidence": {
+        "page": 74,
+        "source_text": "Select systems of work"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Assess the chosen systems of work",
+      "evidence": {
+        "page": 74,
+        "source_text": "Assess the chosen systems of work"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "decision",
+      "text": "Are the risks proportional to the benefits?",
+      "evidence": {
+        "page": 74,
+        "source_text": "Decide: Are the risk proportional to the benefits?"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Assess whether the benefits outweigh the consequences",
+      "evidence": {
+        "page": 74,
+        "source_text": "Determine whether the risks of the tasks are proportional to the benefits by assessing whether the benefit of carrying out the tasks outweigh the consequences if the risk was to occur."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Modify: Introduce additional control measures",
+      "evidence": {
+        "page": 74,
+        "source_text": "When the risk of the system of work is not proportional to the benefits introduce risk controls using the risk control hierarchy of elimination, substitution, engineering controls, administrative controls, personal protective equipment (PPE)."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "decision",
+      "text": "Proceed with task?",
+      "evidence": {
+        "page": 74,
+        "source_text": "Proceed with task?"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "end",
+      "text": "Task proceeds safely",
+      "evidence": {
+        "page": 74,
+        "source_text": "If the benefits outweigh the risks the task can proceed."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "end",
+      "text": "Do not proceed with task",
+      "evidence": {
+        "page": 74,
+        "source_text": "If the risks outweigh the benefits, DO NOT proceed with the tasks..."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7",
+      "condition": "Yes"
+    },
+    {
+      "from": "n6",
+      "to": "n8",
+      "condition": "No"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10",
+      "condition": "Yes"
+    },
+    {
+      "from": "n9",
+      "to": "n11",
+      "condition": "No"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 8042,
+    "completion_tokens": 920,
+    "total_tokens": 8962,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: Safety > Dynamic Risk Assessment\nRelated sections in this category: Safe Person Approach, Safety First Approach, OHS Incident Reporting, LACES, WATCHOUT, Red Flag Warnings, Fireground Information Update, Hydration, Fatigue, Smoke",
+  "_validated": true,
+  "_correction_summary": "Added missing steps related to hazard identification, benefit assessment, and risk control introduction. Corrected node type for n6."
+}

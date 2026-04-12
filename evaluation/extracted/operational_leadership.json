@@ -1,0 +1,123 @@
+{
+  "protocol_id": "operational_leadership_01",
+  "title": "Operational Leadership",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    8
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Operational leadership initiated",
+      "evidence": {
+        "page": 8,
+        "source_text": "Operational Leadership"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Take charge of assigned resources",
+      "evidence": {
+        "page": 8,
+        "source_text": "TAKE CHARGE of assigned resources."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Assess situation by gaining intel",
+      "evidence": {
+        "page": 8,
+        "source_text": "ASSESS SITUATION by gaining intel."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Motivate firefighters with a 'can do safely' attitude",
+      "evidence": {
+        "page": 8,
+        "source_text": "MOTIVATE firefighters with a \u001ccan do safely\u001d attitude."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Demonstrate initiative by taking action in the absence of orders",
+      "evidence": {
+        "page": 8,
+        "source_text": "DEMONSTRATE INITIATIVE by taking action in the absence of orders."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Communicate by giving specific instructions and asking for feedback",
+      "evidence": {
+        "page": 8,
+        "source_text": "COMMUNICATE by giving specific instructions and asking for feedback."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Supervise at the scene of action",
+      "evidence": {
+        "page": 8,
+        "source_text": "SUPERVISE at the scene of action."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "end",
+      "text": "Operational leadership actions complete",
+      "evidence": {
+        "page": 8,
+        "source_text": "In confusing and uncertain situations, a good operational leader will:"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5240,
+    "completion_tokens": 743,
+    "total_tokens": 5983,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Operational Leadership > Operational Leadership"
+}

@@ -1,0 +1,168 @@
+{
+  "protocol_id": "multi_casualty_triage_system",
+  "title": "Multi-Casualty Triage System",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    132
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 0.9,
+  "cross_references": [],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Begin triage assessment",
+      "evidence": {
+        "page": 132,
+        "source_text": "Multi-Casualty Triage System"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "text": "Is the patient breathing?",
+      "evidence": {
+        "page": 132,
+        "source_text": "No respirations after repositioning airway."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "end",
+      "text": "Black - Deceased/Dying: No respirations after repositioning airway",
+      "evidence": {
+        "page": 132,
+        "source_text": "Black Deceased/ Dying Dead or with injuries not compatible with life. No respirations after repositioning airway."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "decision",
+      "text": "Is the patient walking wounded?",
+      "evidence": {
+        "page": 132,
+        "source_text": "All walking wounded; treatment can be delayed."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "end",
+      "text": "Green - Minor: All walking wounded; treatment can be delayed",
+      "evidence": {
+        "page": 132,
+        "source_text": "Green Minor All walking wounded; treatment can be delayed."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "decision",
+      "text": "Respirations more than 30/minute?",
+      "evidence": {
+        "page": 132,
+        "source_text": "Breathing but unconscious; respirations more than 30/minute."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "end",
+      "text": "Red - Immediate: Serious, life-threatening injury",
+      "evidence": {
+        "page": 132,
+        "source_text": "Red Immediate Serious, life-threatening injury. Breathing but unconscious; respirations more than 30/minute."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "decision",
+      "text": "Radial pulse present and capillary refill less than 2 seconds?",
+      "evidence": {
+        "page": 132,
+        "source_text": "Radial pulse present, capillary refill less than 2 seconds."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "decision",
+      "text": "Can follow simple commands?",
+      "evidence": {
+        "page": 132,
+        "source_text": "And can follow simple commands."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "end",
+      "text": "Yellow - Delayed: Treatment and transport delayed",
+      "evidence": {
+        "page": 132,
+        "source_text": "Yellow Delayed Treatment and transport delayed."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": "No"
+    },
+    {
+      "from": "n2",
+      "to": "n4",
+      "condition": "Yes"
+    },
+    {
+      "from": "n4",
+      "to": "n5",
+      "condition": "Yes"
+    },
+    {
+      "from": "n4",
+      "to": "n6",
+      "condition": "No"
+    },
+    {
+      "from": "n6",
+      "to": "n7",
+      "condition": "Yes"
+    },
+    {
+      "from": "n6",
+      "to": "n8",
+      "condition": "No"
+    },
+    {
+      "from": "n8",
+      "to": "n9",
+      "condition": "Yes"
+    },
+    {
+      "from": "n8",
+      "to": "n7",
+      "condition": "No"
+    },
+    {
+      "from": "n9",
+      "to": "n10",
+      "condition": "Yes"
+    },
+    {
+      "from": "n9",
+      "to": "n7",
+      "condition": "No"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 6424,
+    "completion_tokens": 1054,
+    "total_tokens": 7478,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  }
+}

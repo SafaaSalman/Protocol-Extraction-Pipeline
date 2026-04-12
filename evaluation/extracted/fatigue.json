@@ -1,0 +1,144 @@
+{
+  "protocol_id": "fatigue_management_01",
+  "title": "Fatigue",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    79
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Safe Person Approach",
+    "Dynamic Risk Assessment",
+    "Safety First Approach",
+    "OHS Incident Reporting",
+    "LACES",
+    "WATCHOUT",
+    "Red Flag Warnings",
+    "Fireground Information Update",
+    "Hydration",
+    "Smoke"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Identify potential fatigue risk",
+      "evidence": {
+        "page": 79,
+        "source_text": "Fatigue, in both its acute and cumulative forms, can present a real risk to safety and performance at bushfire incidents if not recognised and appropriately managed."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "text": "Is fatigue recognized?",
+      "evidence": {
+        "page": 79,
+        "source_text": "if not recognised and appropriately managed."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Manage fatigue of others within sphere of influence",
+      "evidence": {
+        "page": 79,
+        "source_text": "In addition to managing the fatigue of others within their sphere of influence, firefighters and incident management personnel need to actively manage their own fatigue."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Actively manage own fatigue, especially when driving or using machinery",
+      "evidence": {
+        "page": 79,
+        "source_text": "firefighters and incident management personnel need to actively manage their own fatigue, particularly in relation to driving vehicles and equipment and machinery use."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Adhere to existing agency protocols related to fatigue management",
+      "evidence": {
+        "page": 79,
+        "source_text": "Agency personnel should adhere to existing agency protocols related to fatigue management."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Report any observation of OHS incidents (including near-misses)",
+      "evidence": {
+        "page": 79,
+        "source_text": "report any observation of OHS incidents (including near-misses)."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "end",
+      "text": "Fatigue managed and reported",
+      "evidence": {
+        "page": 79,
+        "source_text": "report any observation of OHS incidents (including near-misses)."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Take steps to recognize fatigue",
+      "evidence": {
+        "page": 79,
+        "source_text": "Fatigue, in both its acute and cumulative forms, can present a real risk to safety and performance at bushfire incidents if not recognised and appropriately managed."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": "Yes"
+    },
+    {
+      "from": "n2",
+      "to": "n8",
+      "condition": "No"
+    },
+    {
+      "from": "n8",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 6727,
+    "completion_tokens": 812,
+    "total_tokens": 7539,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: Safety > Fatigue\nRelated sections in this category: Safe Person Approach, Dynamic Risk Assessment, Safety First Approach, OHS Incident Reporting, LACES, WATCHOUT, Red Flag Warnings, Fireground Information Update, Hydration, Smoke",
+  "_validated": true,
+  "_correction_summary": "Corrected the decision condition and added a missing step for unrecognized fatigue."
+}

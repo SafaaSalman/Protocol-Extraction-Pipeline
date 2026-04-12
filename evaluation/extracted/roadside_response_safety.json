@@ -1,0 +1,206 @@
+{
+  "protocol_id": "roadside_response_safety",
+  "title": "Roadside Response Safety",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    40
+  ],
+  "protocol_type": "parallel",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Thunderstorm Safety",
+    "How to Properly Refuse Risk",
+    "Hazard Tree Safety",
+    "Powerline Safety",
+    "Unexploded Ordnance Safety",
+    "Oil and Gas Site Safety",
+    "Smoke Hazards and Mitigation",
+    "Smoke and Transportation Safety",
+    "Last Resort Survival"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Roadside response initiated",
+      "evidence": {
+        "page": 40,
+        "source_text": "Roadside Response Safety"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Contact jurisdictional law enforcement agency if traffic flow is affected",
+      "evidence": {
+        "page": 40,
+        "source_text": "Any time traffic flow is affected by the incident, contact the jurisdictional law enforcement agency for assistance."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Conduct operations as far from traffic lanes as possible",
+      "evidence": {
+        "page": 40,
+        "source_text": "Conduct all operations as far from traffic lanes as possible."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Wear high visibility vests when working in traffic and not involved in fire suppression",
+      "evidence": {
+        "page": 40,
+        "source_text": "When working in traffic and not involved in fire suppression activities, high visibility vests must be worn."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Park vehicles on the same side of the roadway",
+      "evidence": {
+        "page": 40,
+        "source_text": "Park vehicles on the same side of the roadway."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Exit the vehicle away from the roadway whenever possible",
+      "evidence": {
+        "page": 40,
+        "source_text": "Exit the vehicle away from the roadway whenever possible."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Post lookouts to watch for and control traffic in both directions",
+      "evidence": {
+        "page": 40,
+        "source_text": "Post lookouts to watch for and control traffic in both directions."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Utilize road flares or other traffic warning signs",
+      "evidence": {
+        "page": 40,
+        "source_text": "Utilize road flares or other traffic warning signs."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Operate pumps from the non-traffic side or from the cab of the fire apparatus",
+      "evidence": {
+        "page": 40,
+        "source_text": "Operate pumps from the non-traffic side or from the cab of the fire apparatus."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Keep all hose, fire tools, and equipment out of traffic lanes",
+      "evidence": {
+        "page": 40,
+        "source_text": "Keep all hose, fire tools, and equipment out of traffic lanes."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "end",
+      "text": "Roadside response safety measures complete",
+      "evidence": {
+        "page": 40,
+        "source_text": "Keep all hose, fire tools, and equipment out of traffic lanes."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n1",
+      "to": "n3"
+    },
+    {
+      "from": "n1",
+      "to": "n4"
+    },
+    {
+      "from": "n1",
+      "to": "n5"
+    },
+    {
+      "from": "n1",
+      "to": "n6"
+    },
+    {
+      "from": "n1",
+      "to": "n7"
+    },
+    {
+      "from": "n1",
+      "to": "n8"
+    },
+    {
+      "from": "n1",
+      "to": "n9"
+    },
+    {
+      "from": "n1",
+      "to": "n10"
+    },
+    {
+      "from": "n2",
+      "to": "n11"
+    },
+    {
+      "from": "n3",
+      "to": "n11"
+    },
+    {
+      "from": "n4",
+      "to": "n11"
+    },
+    {
+      "from": "n5",
+      "to": "n11"
+    },
+    {
+      "from": "n6",
+      "to": "n11"
+    },
+    {
+      "from": "n7",
+      "to": "n11"
+    },
+    {
+      "from": "n8",
+      "to": "n11"
+    },
+    {
+      "from": "n9",
+      "to": "n11"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5324,
+    "completion_tokens": 1126,
+    "total_tokens": 6450,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: SPECIFIC HAZARDS > Roadside Response Safety\nRelated sections in this category: Thunderstorm Safety, How to Properly Refuse Risk, Hazard Tree Safety, Powerline Safety, Unexploded Ordnance Safety, Oil and Gas Site Safety, Smoke Hazards and Mitigation, Smoke and Transportation Safety, Last Resort Survival",
+  "_validated": true,
+  "_correction_summary": "Changed the protocol type to 'parallel' to reflect that the actions can be performed in any order."
+}

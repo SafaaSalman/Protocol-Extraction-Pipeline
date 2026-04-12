@@ -1,0 +1,154 @@
+{
+  "protocol_id": "patient_assessment_01",
+  "title": "Patient Assessment",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [124],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": ["CPR (page 111)"],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Patient Assessment initiated",
+      "evidence": { "page": 124, "source_text": "Patient Assessment" }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Initial Patient Assessment: General impression of patient",
+      "evidence": { "page": 124, "source_text": "Initial Patient Assessment \u2022 General impression of patient" }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Major bleeding control",
+      "evidence": { "page": 124, "source_text": "\u2022 Major bleeding control" }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Check Airway",
+      "evidence": { "page": 124, "source_text": "\u2022 Airway" }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Check Breathing",
+      "evidence": { "page": 124, "source_text": "\u2022 Breathing" }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Check Circulation",
+      "evidence": { "page": 124, "source_text": "\u2022 Circulation" }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Check wrist or neck pulse",
+      "evidence": { "page": 124, "source_text": "\u2022 Wrist or neck pulse" }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Gather Patient Information: chief complaint, age and weight",
+      "evidence": { "page": 124, "source_text": "Patient Information \u2022 Chief complaint \u2022 Age and weight" }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Assess Level of Consciousness: Alert / Verbal / Pain / Unresponsive",
+      "evidence": { "page": 124, "source_text": "Level of Consciousness \u2022 Alert and oriented \u2022 Verbal (responds to voice) \u2022 Pain (responds to painful stimuli) \u2022 Unresponsive" }
+    },
+    {
+      "id": "n10",
+      "type": "decision",
+      "text": "Is the patient breathing?",
+      "evidence": { "page": 124, "source_text": "Breathing \u2022 Normal \u2022 Difficult/labored breathing \u2022 Not breathing? \u2013 Start rescue breathing." }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Start rescue breathing",
+      "evidence": { "page": 124, "source_text": "Not breathing? \u2013 Start rescue breathing." }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Record breathing status: Normal or Difficult/labored",
+      "evidence": { "page": 124, "source_text": "\u2022 Normal \u2022 Difficult/labored breathing" }
+    },
+    {
+      "id": "n13",
+      "type": "decision",
+      "text": "Is pulse present?",
+      "evidence": { "page": 124, "source_text": "Pulse \u2022 Present \u2022 Absent \u2013 Start CPR (page 111)" }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Start CPR (see page 111)",
+      "evidence": { "page": 124, "source_text": "Absent \u2013 Start CPR (page 111)" }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Assess Skin Color: Normal / Pale / Bluish / Flushed-red",
+      "evidence": { "page": 124, "source_text": "Skin Color \u2022 Normal \u2022 Pale \u2022 Bluish \u2022 Flushed/red" }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Assess Skin Moisture: Normal / Dry / Moist-clammy / Profuse sweating",
+      "evidence": { "page": 124, "source_text": "Skin Moisture \u2022 Normal \u2022 Dry \u2022 Moist/clammy \u2022 Profuse sweating" }
+    },
+    {
+      "id": "n17",
+      "type": "action",
+      "text": "Assess Skin Temperature: Normal-warm / Hot / Cool / Cold",
+      "evidence": { "page": 124, "source_text": "Skin Temperature \u2022 Normal/warm \u2022 Hot \u2022 Cool \u2022 Cold" }
+    },
+    {
+      "id": "n18",
+      "type": "action",
+      "text": "Assess Pupils: Equal or unequal? Reactive to light? Fixed or slow response? Dilated or constricted?",
+      "evidence": { "page": 124, "source_text": "Pupils \u2022 Equal or unequal? \u2022 Reactive to light \u2022 Fixed or slow response \u2022 Dilated or constricted" }
+    },
+    {
+      "id": "n19",
+      "type": "action",
+      "text": "Make a transport decision",
+      "evidence": { "page": 124, "source_text": "Make a transport decision." }
+    },
+    {
+      "id": "n20",
+      "type": "end",
+      "text": "Transport decision made",
+      "evidence": { "page": 124, "source_text": "Make a transport decision." }
+    }
+  ],
+  "edges": [
+    { "from": "n1", "to": "n2" },
+    { "from": "n2", "to": "n3" },
+    { "from": "n3", "to": "n4" },
+    { "from": "n4", "to": "n5" },
+    { "from": "n5", "to": "n6" },
+    { "from": "n6", "to": "n7" },
+    { "from": "n7", "to": "n8" },
+    { "from": "n8", "to": "n9" },
+    { "from": "n9", "to": "n10" },
+    { "from": "n10", "to": "n11", "condition": "Not breathing" },
+    { "from": "n10", "to": "n12", "condition": "Breathing (normal or labored)" },
+    { "from": "n11", "to": "n13" },
+    { "from": "n12", "to": "n13" },
+    { "from": "n13", "to": "n14", "condition": "Absent" },
+    { "from": "n13", "to": "n15", "condition": "Present" },
+    { "from": "n14", "to": "n15" },
+    { "from": "n15", "to": "n16" },
+    { "from": "n16", "to": "n17" },
+    { "from": "n17", "to": "n18" },
+    { "from": "n18", "to": "n19" },
+    { "from": "n19", "to": "n20" }
+  ]
+}

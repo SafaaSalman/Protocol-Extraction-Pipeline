@@ -1,0 +1,172 @@
+{
+  "protocol_id": "fatality_procedures_01",
+  "title": "Fatality Procedures",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    133
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Medical Incident Report, page 120"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Fatality procedures initiated",
+      "evidence": {
+        "page": 133,
+        "source_text": "Fatality Procedures"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Never broadcast patient\u0019s name on the radio or release to anyone except authorities",
+      "evidence": {
+        "page": 133,
+        "source_text": "Never broadcast patient\u0019s name on the radio or release to anyone except authorities."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Do not allow unauthorized picture taking or release of pictures",
+      "evidence": {
+        "page": 133,
+        "source_text": "Do not allow unauthorized picture taking or release of pictures."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Determine if the body is in a location where it could be burned or destroyed",
+      "evidence": {
+        "page": 133,
+        "source_text": "Do not move the body unless it is in a location where it could be burned or otherwise destroyed."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Mark body location if movement is necessary",
+      "evidence": {
+        "page": 133,
+        "source_text": "If movement is necessary, mark body location."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Secure accident scene",
+      "evidence": {
+        "page": 133,
+        "source_text": "Secure accident scene."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Notify Incident Commander (IC)",
+      "evidence": {
+        "page": 133,
+        "source_text": "Notify IC, who will:"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "IC assigns individual to supervise evacuation if needed and secure scene after evacuation",
+      "evidence": {
+        "page": 133,
+        "source_text": "Assign an individual to supervise evacuation in the event evacuation is needed, (See Medical Incident Report, page 120) and secure the scene after evacuation is complete."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "IC assigns individual to get facts, witness statements, and preserve evidence until investigation",
+      "evidence": {
+        "page": 133,
+        "source_text": "Assign an individual to get facts and witness statements and preserve evidence, such as PPE involved in the incident (helmet, Nomex, chaps, etc.), until investigation can be taken over by the Safety Officer or appointed investigating team."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "IC notifies Agency Administrator",
+      "evidence": {
+        "page": 133,
+        "source_text": "Notify Agency Administrator."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "end",
+      "text": "Fatality procedures complete",
+      "evidence": {
+        "page": 133,
+        "source_text": "Notify Agency Administrator."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5",
+      "condition": "Body could be burned or destroyed"
+    },
+    {
+      "from": "n5",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n6"
+    },
+    {
+      "from": "n4",
+      "to": "n6",
+      "condition": "Body safe from destruction"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5340,
+    "completion_tokens": 1034,
+    "total_tokens": 6374,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: EMERGENCY MEDICAL CARE > Fatality Procedures\nRelated sections in this category: Emergency Medical Care Guidelines, Patient Assessment, Specific Treatments, CPR, Heat-Related Injury, Burn Injuries, Multi-Casualty Triage System, Helicopter Extraction Operations, Medical Incident Report",
+  "_validated": true,
+  "_correction_summary": "Added a separate action for securing the accident scene and changed the decision node to an action node."
+}

@@ -1,0 +1,198 @@
+{
+  "protocol_id": "structure_hazard_marking_system",
+  "title": "Structure Hazard Marking System",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    75,
+    76
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Vehicle Accident Operations",
+    "HazMat Incident Operations",
+    "HazMat Isolation Distances",
+    "HazMat Classification for Fixed Facilities",
+    "Local Disaster Response",
+    "All Hazard Incident Response"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Assess structure condition",
+      "evidence": {
+        "page": 75,
+        "source_text": "Never enter a damaged structure unless trained, equipped, and authorized."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "text": "Condition of structure",
+      "evidence": {
+        "page": 75,
+        "source_text": "You may find a 2\u0019 x 2\u0019 box at the entrance to indicate the condition of the structure."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Structure is safe for SAR with minor damage or fully collapsed",
+      "evidence": {
+        "page": 75,
+        "source_text": "Structure is safe for Search and Rescue (SAR) with minor damage, or structure is fully collapsed."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Structure is significantly damaged with some safe areas",
+      "evidence": {
+        "page": 75,
+        "source_text": "Structure is significantly damaged with some safe areas, but other areas which need to be shored up or braced."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Structure is unsafe and may collapse suddenly",
+      "evidence": {
+        "page": 75,
+        "source_text": "Structure is unsafe and may collapse suddenly."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Mark entrance direction with arrow",
+      "evidence": {
+        "page": 75,
+        "source_text": "Entrance is located in direction of the arrow."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Identify hazardous materials present",
+      "evidence": {
+        "page": 75,
+        "source_text": "HM Hazardous material is present."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Mark specialist ID, time, date, and hazardous materials",
+      "evidence": {
+        "page": 75,
+        "source_text": "This information should be found outside the upper right portion of the box: Specialist ID, Time and date of assessment, Hazardous materials identified"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Mark structure with SAR team status",
+      "evidence": {
+        "page": 75,
+        "source_text": "Single slash (2\u0019 long) indicates SAR Team is currently in structure conducting operations."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Mark structure as SAR team has left",
+      "evidence": {
+        "page": 75,
+        "source_text": "Cross/slash (2\u0019 x 2\u0019) indicates SAR Team has left structure/area."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Mark details in four quadrants of cross slash",
+      "evidence": {
+        "page": 76,
+        "source_text": "This information should be found in the four quadrants of the cross slash: Left quadrant = SAR Team ID, Upper quadrant = Time and date team left structure, Right quadrant = Personnel hazards, Lower quadrant = Number of patients still inside structure"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "end",
+      "text": "Structure marking complete",
+      "evidence": {
+        "page": 76,
+        "source_text": "This information should be found in the four quadrants of the cross slash."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": "Safe for SAR"
+    },
+    {
+      "from": "n2",
+      "to": "n4",
+      "condition": "Significantly damaged"
+    },
+    {
+      "from": "n2",
+      "to": "n5",
+      "condition": "Unsafe"
+    },
+    {
+      "from": "n3",
+      "to": "n6"
+    },
+    {
+      "from": "n4",
+      "to": "n6"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 7760,
+    "completion_tokens": 1058,
+    "total_tokens": 8818,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: ALL HAZARD RESPONSE > Structure Hazard Marking System\nRelated sections in this category: Vehicle Accident Operations, HazMat Incident Operations, HazMat Isolation Distances, HazMat Classification for Fixed Facilities, Local Disaster Response, All Hazard Incident Response",
+  "_validated": true,
+  "_correction_summary": "Added missing steps for marking specialist ID, time, date, and hazardous materials. Included details for marking in the four quadrants of the cross slash. Adjusted the order of marking actions."
+}

@@ -1,0 +1,259 @@
+{
+  "protocol_id": "hazard_tree_safety",
+  "title": "Hazard Tree Safety",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    36,
+    37
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Thunderstorm Safety",
+    "How to Properly Refuse Risk",
+    "Powerline Safety",
+    "Roadside Response Safety",
+    "Unexploded Ordnance Safety",
+    "Oil and Gas Site Safety",
+    "Smoke Hazards and Mitigation",
+    "Smoke and Transportation Safety",
+    "Last Resort Survival"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Identify hazard trees",
+      "evidence": {
+        "page": 36,
+        "source_text": "Hazard trees, both dead snags and live green trees, are one of the most common risks encountered on the fireline."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Scan overhead frequently to identify leaning trees",
+      "evidence": {
+        "page": 36,
+        "source_text": "All firefighters should frequently scan overhead to identify any trees that are leaning over their work area."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Assess situation awareness and environment",
+      "evidence": {
+        "page": 36,
+        "source_text": "Situation Awareness Environment:  Current and forecasted winds.  Night operations.  Steep slopes.  Diseased or bug-kill areas.  Number and height of hazard trees.  Anticipated burn-down time.  Potential for trees to domino."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Identify hazard tree indicators",
+      "evidence": {
+        "page": 36,
+        "source_text": "Hazard tree indicators:  Trees burning for any period of time.  High-risk tree species (rot and shallow roots).  Numerous downed trees.  Dead, broken, or burning tops, and limbs overhead.  Accumulation of downed limbs.  Absence of needles, bark, or limbs.  Leaning or hung-up trees."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Eliminate hazards with qualified personnel or equipment",
+      "evidence": {
+        "page": 37,
+        "source_text": "Eliminate the hazards with qualified sawyers, blasters/explosives, or heavy equipment."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Designate No Work Zones to avoid hazards",
+      "evidence": {
+        "page": 37,
+        "source_text": "Avoid hazards by designating No Work Zones (flag, sign, map, and communicate)."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Modify tactics or fireline location to avoid high-risk areas",
+      "evidence": {
+        "page": 37,
+        "source_text": "Modify suppression tactics or fireline location to avoid high-risk areas."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Post lookouts to secure high-risk areas",
+      "evidence": {
+        "page": 37,
+        "source_text": "Post lookouts to help secure high-risk areas."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Utilize road/traffic controls in high-risk areas",
+      "evidence": {
+        "page": 37,
+        "source_text": "Utilize road/traffic controls in high-risk areas."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Fireproof potential hazard trees to prevent ignition",
+      "evidence": {
+        "page": 37,
+        "source_text": "Fireproof potential hazard trees to prevent ignition."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Keep clear of bucket drops near trees/snags",
+      "evidence": {
+        "page": 37,
+        "source_text": "Keep clear of bucket drops near trees/snags."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Reposition firefighters in response to high winds",
+      "evidence": {
+        "page": 37,
+        "source_text": "Reposition firefighters to secure areas in response to high winds in forecast."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Provide timely feedback regarding hazard trees",
+      "evidence": {
+        "page": 37,
+        "source_text": "Provide timely feedback to others regarding any hazard trees."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Assess, control, and monitor hazard trees along roads and campsites",
+      "evidence": {
+        "page": 37,
+        "source_text": "In addition to suppression and mop up operations, assess, control, and monitor hazard trees along roads and when selecting break areas or campsites."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "end",
+      "text": "Complete hazard tree safety protocol",
+      "evidence": {
+        "page": 37,
+        "source_text": "In addition to suppression and mop up operations, assess, control, and monitor hazard trees along roads and when selecting break areas or campsites."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n4",
+      "to": "n6"
+    },
+    {
+      "from": "n4",
+      "to": "n7"
+    },
+    {
+      "from": "n4",
+      "to": "n8"
+    },
+    {
+      "from": "n4",
+      "to": "n9"
+    },
+    {
+      "from": "n4",
+      "to": "n10"
+    },
+    {
+      "from": "n4",
+      "to": "n11"
+    },
+    {
+      "from": "n4",
+      "to": "n12"
+    },
+    {
+      "from": "n4",
+      "to": "n13"
+    },
+    {
+      "from": "n5",
+      "to": "n14"
+    },
+    {
+      "from": "n6",
+      "to": "n14"
+    },
+    {
+      "from": "n7",
+      "to": "n14"
+    },
+    {
+      "from": "n8",
+      "to": "n14"
+    },
+    {
+      "from": "n9",
+      "to": "n14"
+    },
+    {
+      "from": "n10",
+      "to": "n14"
+    },
+    {
+      "from": "n11",
+      "to": "n14"
+    },
+    {
+      "from": "n12",
+      "to": "n14"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5557,
+    "completion_tokens": 1483,
+    "total_tokens": 7040,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: SPECIFIC HAZARDS > Hazard Tree Safety\nRelated sections in this category: Thunderstorm Safety, How to Properly Refuse Risk, Powerline Safety, Roadside Response Safety, Unexploded Ordnance Safety, Oil and Gas Site Safety, Smoke Hazards and Mitigation, Smoke and Transportation Safety, Last Resort Survival",
+  "_validated": true,
+  "_correction_summary": "Added a missing step for monitoring hazard trees along roads and campsites. Adjusted the order to reflect parallel actions for hazard control."
+}

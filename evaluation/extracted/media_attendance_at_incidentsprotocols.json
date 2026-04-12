@@ -1,0 +1,202 @@
+{
+  "protocol_id": "media_attendance_at_incidents",
+  "title": "Media Attendance at Incidents/Protocols",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    70,
+    71
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Fire Danger Ratings",
+    "Provision of Warnings to the Community",
+    "Warnings Levels and Templates",
+    "Community Meetings",
+    "Warning Methods",
+    "Community Sirens",
+    "Community Fire Refuges"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Media representative wishes to attend incident",
+      "evidence": {
+        "page": 70,
+        "source_text": "Media representatives wishing to attend an incident are required to contact the control agency and attain permission to enter the fireground."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Contact control agency for permission to enter fireground",
+      "evidence": {
+        "page": 70,
+        "source_text": "Media representatives wishing to attend an incident are required to contact the control agency and attain permission to enter the fireground."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "decision",
+      "text": "Does media representative have current media accreditation card and approved PPE?",
+      "evidence": {
+        "page": 70,
+        "source_text": "In order to work with fire agencies at bushfires, all media representatives are required to have: A current media accreditation card... Fire agency approved PPE..."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "decision",
+      "text": "Has Incident Controller deemed it safe and practicable for media to attend?",
+      "evidence": {
+        "page": 71,
+        "source_text": "The Incident Controller will grant permission to attend the incident, particularly the fire ground, only if it has been deemed safe and practicable to do so..."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Articulate specific conditions for media attendance",
+      "evidence": {
+        "page": 71,
+        "source_text": "Upon deeming it safe and appropriate for media representatives to attend the incident, the control agency will articulate the specific conditions for that attendance..."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Refer media representative to Public Information Officer or Media Officer",
+      "evidence": {
+        "page": 71,
+        "source_text": "refer the media representative to the Public Information Officer or Media Officer."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Media Officer provides safety briefing and communication arrangements",
+      "evidence": {
+        "page": 71,
+        "source_text": "The Media Officer will ensure that media representatives receive a safety briefing prior to entering the fire ground and that appropriate communication arrangements are in place."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "decision",
+      "text": "Is media representative complying with instructions?",
+      "evidence": {
+        "page": 71,
+        "source_text": "While on the fire ground, media representatives are required to comply with any instruction provided to them by the Media Officer, PIO, Incident Controller or Victoria Police."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Remove media representative from fireground",
+      "evidence": {
+        "page": 71,
+        "source_text": "Victoria Police Officers may remove media representatives from the fire ground who are endangering their own lives or the lives of others."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "end",
+      "text": "Media representative attends incident under specified conditions",
+      "evidence": {
+        "page": 71,
+        "source_text": "Upon deeming it safe and appropriate for media representatives to attend the incident..."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "end",
+      "text": "Media accreditation withdrawn for non-compliance",
+      "evidence": {
+        "page": 71,
+        "source_text": "Media accreditation may be withdrawn and media representatives may be escorted from the fire ground and not permitted to return..."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Ensure immediate departure from fireground if instructed",
+      "evidence": {
+        "page": 71,
+        "source_text": "This includes immediate departure from the fire ground, should this be deemed a necessary safety measure."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4",
+      "condition": "Yes"
+    },
+    {
+      "from": "n3",
+      "to": "n11",
+      "condition": "No accreditation or PPE"
+    },
+    {
+      "from": "n4",
+      "to": "n5",
+      "condition": "Yes"
+    },
+    {
+      "from": "n4",
+      "to": "n11",
+      "condition": "Not safe or practicable"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n10",
+      "condition": "Yes"
+    },
+    {
+      "from": "n8",
+      "to": "n12",
+      "condition": "No"
+    },
+    {
+      "from": "n12",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n11"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 8164,
+    "completion_tokens": 1294,
+    "total_tokens": 9458,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: Public Information > Media Attendance at Incidents/Protocols\nRelated sections in this category: Fire Danger Ratings, Provision of Warnings to the Community, Warnings Levels and Templates, Community Meetings, Warning Methods, Community Sirens, Community Fire Refuges",
+  "_validated": true,
+  "_correction_summary": "Added missing step for immediate departure compliance, corrected conditions for decisions, and reordered nodes for logical sequence."
+}

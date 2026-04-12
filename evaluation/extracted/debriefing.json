@@ -1,0 +1,155 @@
+{
+  "protocol_id": "debriefing_01",
+  "title": "Debriefing",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    85,
+    86
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Individual Observations",
+    "Monitoring",
+    "Reviews",
+    "Fire Investigation"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Debriefing process initiated after incident",
+      "evidence": {
+        "page": 85,
+        "source_text": "Debriefs typically occur shortly after the conclusion of a specific incident, shift, campaign or event"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Ensure understanding of all aspects of the operation or emergency",
+      "evidence": {
+        "page": 85,
+        "source_text": "ensure participating individuals and agencies understand all aspects of what happened during an operation or emergency"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Identify what went well and areas for improvement",
+      "evidence": {
+        "page": 85,
+        "source_text": "identify what went well and areas for improvement in order to improve the efficiency, effectiveness and safety of future planning and future operational response activities."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Conduct After Action Review (AAR)",
+      "evidence": {
+        "page": 85,
+        "source_text": "Local debriefing using the After Action Review (AAR) process is a way to debrief crews back at the station, work centre or staging area at the end of a shift, tour of duty, fire or incident."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Complete AAR in four steps: What was planned? What really happened? Why did it happen? What can we do better for next time?",
+      "evidence": {
+        "page": 86,
+        "source_text": "An AAR can be completed in four simple steps: 1. What was planned? 2. What really happened? 3. Why did it happen? 4. What can we do better for next time?"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Ensure identified lessons are actioned, shared, and monitored",
+      "evidence": {
+        "page": 86,
+        "source_text": "Local leaders shall ensure that identified lessons are actioned, shared and monitored to ensure they lead to the behaviour and organisational change required for learning."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Conduct formal debriefs for broader learning",
+      "evidence": {
+        "page": 86,
+        "source_text": "Formal debriefs are more structured and focus on broader areas of potential learning."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Capture lessons from emergencies and suggest treatment options",
+      "evidence": {
+        "page": 86,
+        "source_text": "For non-major emergencies, the control agency is responsible for capturing lessons from emergencies, suggesting treatment options to the relevant accountable agencies and monitoring remedial actions."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Organize operational debrief with participating agencies for major emergencies",
+      "evidence": {
+        "page": 86,
+        "source_text": "For major emergencies, the MERC or RERC is responsible for ensuring the control agency for the emergency has undertaken this process, including organising an operational debrief with participating agencies as soon as practicable after cessation of response activities."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "end",
+      "text": "Debriefing process complete",
+      "evidence": {
+        "page": 86,
+        "source_text": "Debriefs can also include community, business, or industry groups, where relevant."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5952,
+    "completion_tokens": 1153,
+    "total_tokens": 7105,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Post Incident and Learning Actions > Debriefing\nRelated sections in this category: Individual Observations, Monitoring, Reviews, Fire Investigation"
+}

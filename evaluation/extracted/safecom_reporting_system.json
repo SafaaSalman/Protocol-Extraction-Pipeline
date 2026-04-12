@@ -1,0 +1,149 @@
+{
+  "protocol_id": "safecom_reporting_system",
+  "title": "SAFECOM Reporting System",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    95
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Aviation User Checklist",
+    "Aviation Watch Out Situations",
+    "Helicopter Passenger Briefing and PPE",
+    "Helicopter Landing Area Selection",
+    "One-Way Helispot",
+    "Two-Way Helispot",
+    "Longline Mission",
+    "Helicopter Hand Signals",
+    "Paracargo Operations Safety",
+    "Weight Estimates"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "SAFECOM Reporting System initiated",
+      "evidence": {
+        "page": 95,
+        "source_text": "SAFECOM Reporting System"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Use SAFECOM system for accident prevention by reporting any condition, observance, act, maintenance problem, or circumstance with potential to cause aviation accident",
+      "evidence": {
+        "page": 95,
+        "source_text": "The purpose of the SAFECOM system is accident prevention. It is a tool used to encourage the reporting of any condition, observance, act, maintenance problem, or circumstance that has the potential to cause an aviation or aviation-related accident."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Report positive safety actions and mishap prevention measures using SAFECOM",
+      "evidence": {
+        "page": 95,
+        "source_text": "It can also be used for reporting positive safety actions and mishap prevention measures."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Address problems and issues at the local level and share problems and solutions system wide",
+      "evidence": {
+        "page": 95,
+        "source_text": "Submitting a SAFECOM is not a substitute for on-the-spot correction(s) to a safety concern. While it is imperative that problems and issues be addressed at the local level, it is beneficial to share problems and solutions system wide."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Ensure SAFECOM system is not used for initiating punitive actions",
+      "evidence": {
+        "page": 95,
+        "source_text": "The SAFECOM system is not intended for initiating punitive actions."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "SAFECOM managers protect personal data and sanitize SAFECOMs before public posting",
+      "evidence": {
+        "page": 95,
+        "source_text": "SAFECOM managers are responsible for protecting personal data and sanitizing SAFECOMs prior to posting to the public."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Submit SAFECOMs at https://www.safecom.gov/",
+      "evidence": {
+        "page": 95,
+        "source_text": "Submit SAFECOMs at https://www.safecom.gov/."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Report any interagency aircraft mishap to 1-888-464-7427 (1-888-4MISHAP)",
+      "evidence": {
+        "page": 95,
+        "source_text": "Report any interagency aircraft mishap to: 1-888-464-7427 (1-888-4MISHAP)."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "end",
+      "text": "SAFECOM reporting complete",
+      "evidence": {
+        "page": 95,
+        "source_text": "Report any interagency aircraft mishap to: 1-888-464-7427 (1-888-4MISHAP)."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5387,
+    "completion_tokens": 1114,
+    "total_tokens": 6501,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: AVIATION > SAFECOM Reporting System\nRelated sections in this category: Aviation User Checklist, Aviation Watch Out Situations, Helicopter Passenger Briefing and PPE, Helicopter Landing Area Selection, One-Way Helispot, Two-Way Helispot, Longline Mission, Helicopter Hand Signals, Paracargo Operations Safety, Weight Estimates",
+  "_validated": true,
+  "_correction_summary": "Reordered nodes to reflect logical sequence, added missing step about on-the-spot corrections, and clarified the end node."
+}

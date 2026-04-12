@@ -1,0 +1,248 @@
+{
+  "protocol_id": "longline_mission_01",
+  "title": "Longline Mission",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    85
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Aviation User Checklist",
+    "Aviation Watch Out Situations",
+    "Helicopter Passenger Briefing and PPE",
+    "Helicopter Landing Area Selection",
+    "One-Way Helispot",
+    "Two-Way Helispot",
+    "Helicopter Hand Signals",
+    "Paracargo Operations Safety",
+    "Weight Estimates",
+    "Directing Retardant and Bucket Drops"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Longline mission initiated",
+      "evidence": {
+        "page": 85,
+        "source_text": "Longline Mission"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Ensure all individuals are trained in longline operations",
+      "evidence": {
+        "page": 85,
+        "source_text": "All individuals involved in longline missions will have been trained in longline operations."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Communicate load delivery or pickup location to pilot",
+      "evidence": {
+        "page": 85,
+        "source_text": "If you are on the receiving end or backhaul end of a longline load, you must be able to communicate to the pilot where you want the load delivered or picked up."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Use a signal mirror to identify position to pilot",
+      "evidence": {
+        "page": 85,
+        "source_text": "Use a signal mirror to identify your position to the pilot."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Ensure drop-off/pick-up area is open and free of obstacles",
+      "evidence": {
+        "page": 85,
+        "source_text": "The drop-off/pick-up area should be as open and free of obstacles as possible."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Contact pilot by radio and provide load and site information",
+      "evidence": {
+        "page": 85,
+        "source_text": "Once you have contacted the pilot by radio, provide specific load and site information (cargo weight, any hazardous materials, wind speed and direction, etc.)."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Mark drop-off spot with flagging (large X on the ground)",
+      "evidence": {
+        "page": 85,
+        "source_text": "Mark the drop-off spot with flagging (large X on the ground) if possible."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Keep pilot informed of load status",
+      "evidence": {
+        "page": 85,
+        "source_text": "Keep pilot informed of load status (height above the ground, clear of obstacles, etc.)."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Let the hook land on the ground before attaching load",
+      "evidence": {
+        "page": 85,
+        "source_text": "Let the hook land on the ground before attaching load."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "decision",
+      "text": "Did the electrical release release the load?",
+      "evidence": {
+        "page": 85,
+        "source_text": "If the electrical release does not release the load, you must manually release it; wait until the hook lands on the ground before releasing."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Manually release the load after hook lands on the ground",
+      "evidence": {
+        "page": 85,
+        "source_text": "you must manually release it; wait until the hook lands on the ground before releasing."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Connect a swivel to the cargo/longline hook",
+      "evidence": {
+        "page": 85,
+        "source_text": "A swivel must be connected to the cargo/longline hook. NO EXCEPTIONS!"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Request swivels when requesting nets",
+      "evidence": {
+        "page": 85,
+        "source_text": "When you request nets, request swivels also."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Load cargo net with heavy items in the center, light items on top. Tape all boxes and loose items",
+      "evidence": {
+        "page": 85,
+        "source_text": "Load cargo net with heavy items in the center, light items on top. Tape all boxes and loose items."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Pull purse strings of cargo net to equal length and attach a swivel to steel rings",
+      "evidence": {
+        "page": 85,
+        "source_text": "Pull the purse strings of the cargo net to equal length and attach a swivel to the steel rings."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "end",
+      "text": "Longline mission complete",
+      "evidence": {
+        "page": 85,
+        "source_text": "It\u0019s not necessary to cross the purse strings with an overhand wrap."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11",
+      "condition": "No"
+    },
+    {
+      "from": "n10",
+      "to": "n12",
+      "condition": "Yes"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 6658,
+    "completion_tokens": 1618,
+    "total_tokens": 8276,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: AVIATION > Longline Mission\nRelated sections in this category: Aviation User Checklist, Aviation Watch Out Situations, Helicopter Passenger Briefing and PPE, Helicopter Landing Area Selection, One-Way Helispot, Two-Way Helispot, Helicopter Hand Signals, Paracargo Operations Safety, Weight Estimates, Directing Retardant and Bucket Drops",
+  "_validated": true,
+  "_correction_summary": "Added missing step to request swivels and corrected the decision node conditions."
+}

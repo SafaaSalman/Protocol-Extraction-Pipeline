@@ -1,0 +1,173 @@
+{
+  "protocol_id": "common_denominators_of_fire_behavior_on_tragedy_fires",
+  "title": "Common Denominators of Fire Behavior on Tragedy Fires",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    19
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Risk Management Process",
+    "Planning for Medical Emergencies",
+    "Common Tactical Hazards",
+    "LCES",
+    "Safety Zones",
+    "Downhill Fireline Construction Checklist",
+    "Indicators of Incident Complexity",
+    "Wildland Urban Interface (WUI) Firefighting"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Identify common denominators of fire behavior on tragedy fires",
+      "evidence": {
+        "page": 19,
+        "source_text": "Common Denominators of Fire Behavior on Tragedy Fires"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Recognize fires often occur on relatively small fires or deceptively quiet areas of large fires",
+      "evidence": {
+        "page": 19,
+        "source_text": "1. On relatively small fires or deceptively quiet areas of large fires."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Recognize fires often occur in relatively light fuels, such as grass, herbaceous fuels, and light brush",
+      "evidence": {
+        "page": 19,
+        "source_text": "2. In relatively light fuels, such as grass, herbaceous fuels, and light brush."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Be aware of unexpected shifts in wind direction or wind speed",
+      "evidence": {
+        "page": 19,
+        "source_text": "3. When there is an unexpected shift in wind direction or in wind speed."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Monitor fire response to topographic conditions and uphill runs",
+      "evidence": {
+        "page": 19,
+        "source_text": "4. When fire responds to topographic conditions and runs uphill."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Be cautious during critical burn period between 1400 and 1700",
+      "evidence": {
+        "page": 19,
+        "source_text": "5. During critical burn period between 1400 and 1700."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Consider alignment of topography and wind during critical burning period as a trigger point to reevaluate tactics",
+      "evidence": {
+        "page": 19,
+        "source_text": "Alignment of topography and wind during the critical burning period should be considered a trigger point to reevaluate tactics."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Understand blowup to burnover conditions can occur in less than 60 minutes, as little as 5 minutes",
+      "evidence": {
+        "page": 19,
+        "source_text": "Blowup to burnover conditions generally occur in less than 60 minutes and can be as little as 5 minutes."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Consider a tactical pause around 1400 to reevaluate situation awareness of topography, weather, and fuel",
+      "evidence": {
+        "page": 19,
+        "source_text": "A tactical pause may be prudent around 1400 for reevaluating your situation awareness of topography, weather, and fuel."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Complete evaluation of common denominators and adjust tactics as necessary",
+      "evidence": {
+        "page": 19,
+        "source_text": "A tactical pause may be prudent around 1400 for reevaluating your situation awareness of topography, weather, and fuel."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "end",
+      "text": "End of protocol",
+      "evidence": {
+        "page": 19,
+        "source_text": "A tactical pause may be prudent around 1400 for reevaluating your situation awareness of topography, weather, and fuel."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5387,
+    "completion_tokens": 1155,
+    "total_tokens": 6542,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: OPERATIONAL ENGAGEMENT > Common Denominators of Fire Behavior on Tragedy Fires\nRelated sections in this category: Risk Management Process, Planning for Medical Emergencies, Common Tactical Hazards, LCES, Safety Zones, Downhill Fireline Construction Checklist, Indicators of Incident Complexity, Wildland Urban Interface (WUI) Firefighting",
+  "_validated": true,
+  "_correction_summary": "Changed node n10 from 'end' to 'action' and added a new end node to complete the protocol."
+}

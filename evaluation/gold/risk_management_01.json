@@ -1,0 +1,114 @@
+{
+  "protocol_id": "risk_management_01",
+  "title": "Risk Management Process",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [17],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": [],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Risk Management Process initiated",
+      "evidence": { "page": 17, "source_text": "Risk Management Process" }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Identify Hazards (Situation Awareness): Gather information on objectives, communication, who's in charge, previous fire behavior, weather forecast, local factors",
+      "evidence": { "page": 17, "source_text": "Identify Hazards (Situation Awareness) \u2022 Gather Information" }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Scout the Fire",
+      "evidence": { "page": 17, "source_text": "\u2022 Scout the Fire" }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Assess Hazards: Estimate potential fire behavior hazards using Look Up, Down, and Around indicators",
+      "evidence": { "page": 17, "source_text": "Assess Hazards \u2022 Estimate Potential Fire Behavior Hazards" }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Identify Tactical Hazards: Watch Outs. Consider what other safety hazards may exist as conditions change. Consider probability versus severity",
+      "evidence": { "page": 17, "source_text": "\u2022 Identify Tactical Hazards \u2022 As conditions change, what other safety hazards are likely to exist? \u2022 Consider probability versus severity?" }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Develop Controls: Firefighting Orders, LCES, Anchor Point, Downhill Checklist, Engineering/Administrative controls, PPE, Educational, Avoidance, Emergency Medevac Procedures/Plan",
+      "evidence": { "page": 17, "source_text": "Develop Controls and Make Risk Decisions \u2022 Develop control measures that reduce risk" }
+    },
+    {
+      "id": "n7",
+      "type": "decision",
+      "text": "Are controls in place to mitigate risk?",
+      "evidence": { "page": 17, "source_text": "\u2022 Are controls in place to mitigate risk?" }
+    },
+    {
+      "id": "n8",
+      "type": "decision",
+      "text": "Are selected tactics based on expected fire behavior?",
+      "evidence": { "page": 17, "source_text": "\u2022 Are selected tactics based on expected fire behavior?" }
+    },
+    {
+      "id": "n9",
+      "type": "decision",
+      "text": "Have instructions been given and understood?",
+      "evidence": { "page": 17, "source_text": "\u2022 Have instructions been given and understood?" }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Consider risk versus gain",
+      "evidence": { "page": 17, "source_text": "\u2022 Consider risk versus gain" }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Implement Controls: Ensure controls are in place and being implemented by personnel. Ensure controls are integrated into operational plan and understood at all levels",
+      "evidence": { "page": 17, "source_text": "Implement Controls \u2022 Ensure controls are in place and being implemented by personnel. \u2022 Ensure controls are integrated into operational plan and understood at all levels." }
+    },
+    {
+      "id": "n12",
+      "type": "decision",
+      "text": "Are controls adequately mitigating the hazards?",
+      "evidence": { "page": 17, "source_text": "Supervise and Evaluate \u2022 Are controls adequately mitigating the hazards?" }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Reassess situation: Consider human factors (low experience, distracted, fatigue/stress, unsafe attitude) and situational changes (what is changing, are strategy/tactics working)",
+      "evidence": { "page": 17, "source_text": "Reassess and consider: - Human Factors ... - The Situation" }
+    },
+    {
+      "id": "n14",
+      "type": "end",
+      "text": "Controls effective, continue operations. If situation changes significantly, restart at appropriate step",
+      "evidence": { "page": 17, "source_text": "If the situation changes significantly, restart Risk Management Process at the appropriate step." }
+    }
+  ],
+  "edges": [
+    { "from": "n1", "to": "n2" },
+    { "from": "n2", "to": "n3" },
+    { "from": "n3", "to": "n4" },
+    { "from": "n4", "to": "n5" },
+    { "from": "n5", "to": "n6" },
+    { "from": "n6", "to": "n7" },
+    { "from": "n7", "to": "n13", "condition": "No" },
+    { "from": "n7", "to": "n8", "condition": "Yes" },
+    { "from": "n8", "to": "n13", "condition": "No" },
+    { "from": "n8", "to": "n9", "condition": "Yes" },
+    { "from": "n9", "to": "n13", "condition": "No" },
+    { "from": "n9", "to": "n10", "condition": "Yes" },
+    { "from": "n10", "to": "n11" },
+    { "from": "n11", "to": "n12" },
+    { "from": "n12", "to": "n13", "condition": "No" },
+    { "from": "n12", "to": "n14", "condition": "Yes" },
+    { "from": "n13", "to": "n2" }
+  ]
+}

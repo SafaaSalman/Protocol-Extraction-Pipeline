@@ -1,0 +1,262 @@
+{
+  "protocol_id": "local_disaster_response_01",
+  "title": "Local Disaster Response",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    73
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Vehicle Accident Operations",
+    "HazMat Incident Operations",
+    "HazMat Isolation Distances",
+    "HazMat Classification for Fixed Facilities",
+    "All Hazard Incident Response",
+    "Structure Hazard Marking System"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Local disaster response initiated",
+      "evidence": {
+        "page": 73,
+        "source_text": "Local Disaster Response"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Assess crew for injuries",
+      "evidence": {
+        "page": 73,
+        "source_text": " Assess crew for injuries."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Move apparatus out of station if possible",
+      "evidence": {
+        "page": 73,
+        "source_text": " Move apparatus out of station if possible."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Determine if phones are working",
+      "evidence": {
+        "page": 73,
+        "source_text": " Determine if phones are working."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Check for power",
+      "evidence": {
+        "page": 73,
+        "source_text": " Check for power."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Assess the station for damage",
+      "evidence": {
+        "page": 73,
+        "source_text": " Assess the station for damage."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Monitor phone and radio for dispatch information",
+      "evidence": {
+        "page": 73,
+        "source_text": " Monitor phone and radio for dispatch information."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Report by radio to dispatch or IC if established",
+      "evidence": {
+        "page": 73,
+        "source_text": " Report by radio to dispatch or IC if established."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Initiate a windshield survey of first response area",
+      "evidence": {
+        "page": 73,
+        "source_text": " Initiate a windshield survey of first response area."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "decision",
+      "text": "Windshield survey observations",
+      "evidence": {
+        "page": 73,
+        "source_text": " Do not fully commit to any incident."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Prioritize incidents with respect to life, hazard, and property",
+      "evidence": {
+        "page": 73,
+        "source_text": "- Prioritize incidents with respect to life, hazard, and property."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Note any damage to infrastructure (roads, bridges, etc.)",
+      "evidence": {
+        "page": 73,
+        "source_text": "- Note any damage to infrastructure (roads, bridges, etc.)."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Check for hazardous utility situations (gas, electric, water)",
+      "evidence": {
+        "page": 73,
+        "source_text": "- Check for hazardous utility situations (gas, electric, water)."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Note structural instability/collapse of any buildings",
+      "evidence": {
+        "page": 73,
+        "source_text": "- Note structural instability/collapse of any buildings."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Expect malfunctioning automatic alarms",
+      "evidence": {
+        "page": 73,
+        "source_text": "- Expect malfunctioning automatic alarms."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Use negative reporting. Only report things out of the ordinary",
+      "evidence": {
+        "page": 73,
+        "source_text": "- Use negative reporting. Only report things out of the ordinary."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "action",
+      "text": "Follow local disaster plans",
+      "evidence": {
+        "page": 73,
+        "source_text": " Follow local disaster plans."
+      }
+    },
+    {
+      "id": "n18",
+      "type": "end",
+      "text": "Local disaster response actions completed",
+      "evidence": {
+        "page": 73,
+        "source_text": " Follow local disaster plans."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n10",
+      "to": "n12"
+    },
+    {
+      "from": "n10",
+      "to": "n13"
+    },
+    {
+      "from": "n10",
+      "to": "n14"
+    },
+    {
+      "from": "n10",
+      "to": "n15"
+    },
+    {
+      "from": "n10",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5311,
+    "completion_tokens": 1589,
+    "total_tokens": 6900,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: ALL HAZARD RESPONSE > Local Disaster Response\nRelated sections in this category: Vehicle Accident Operations, HazMat Incident Operations, HazMat Isolation Distances, HazMat Classification for Fixed Facilities, All Hazard Incident Response, Structure Hazard Marking System",
+  "_validated": true,
+  "_correction_summary": "Reorganized steps related to the windshield survey to be part of a single decision node with branches for different observations."
+}

@@ -1,0 +1,208 @@
+{
+  "protocol_id": "aquatic_invasive_species_01",
+  "title": "Aquatic Invasive Species",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    117
+  ],
+  "protocol_type": "non-sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "NWCG Invasive Species Subcommittee Guide to Preventing Aquatic Invasive Species Transport by Wildland Fire Operations, PMS 444",
+    "local area or agency direction"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Minimize potential transmission of aquatic invasive species",
+      "evidence": {
+        "page": 117,
+        "source_text": "To minimize potential transmission of aquatic invasive species, it is recommended that you:"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Consult with local resources, biologists, READ/Fs about known aquatic invasive species locations",
+      "evidence": {
+        "page": 117,
+        "source_text": "Consult with local resources, biologists, READ/Fs about known aquatic invasive species locations."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Draft/fill tanks from municipal or treated water sources when possible",
+      "evidence": {
+        "page": 117,
+        "source_text": "Draft/fill tanks from municipal or treated water sources when possible."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Avoid transfers of water between drainages/unconnected waters",
+      "evidence": {
+        "page": 117,
+        "source_text": "Avoid transfers of water between drainages/unconnected waters."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "When drafting, avoid sucking organic and bottom material from a water source",
+      "evidence": {
+        "page": 117,
+        "source_text": "When drafting, avoid sucking organic and bottom material from a water source."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Use single water source if possible. Allow time for equipment decontamination/drying",
+      "evidence": {
+        "page": 117,
+        "source_text": "Use single water source if possible. Allow time for equipment decontamination/drying."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Remove all organic material/mud from equipment/gear external surfaces when possible",
+      "evidence": {
+        "page": 117,
+        "source_text": "Remove all organic material/mud from equipment/gear external surfaces when possible."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Carry spare, clean, dry helicopter buckets, draft hoses, and foot valves to switch out with used ones when moving to a new water source",
+      "evidence": {
+        "page": 117,
+        "source_text": "Carry spare, clean, dry helicopter buckets, draft hoses, and foot valves to switch out with used ones when moving to a new water source."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Decontaminate/dry the wet gear while spares are being used",
+      "evidence": {
+        "page": 117,
+        "source_text": "Decontaminate/dry the wet gear while spares are being used."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Adhere to corrosion requirements for aluminum on aircraft fuselages or water delivery components when using chemicals",
+      "evidence": {
+        "page": 117,
+        "source_text": "Adhere to corrosion requirements for aluminum on aircraft fuselages or water delivery components such as helicopter buckets and foot valves when using chemicals."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "decision",
+      "text": "Did gear contact untreated water?",
+      "evidence": {
+        "page": 117,
+        "source_text": "If gear contacts untreated water, decontaminate gear before moving to new drainages."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Decontaminate gear before moving to new drainages",
+      "evidence": {
+        "page": 117,
+        "source_text": "If gear contacts untreated water, decontaminate gear before moving to new drainages."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Water delivery equipment and accessories that do not transfer tank water to waterbodies do not need to be disinfected",
+      "evidence": {
+        "page": 117,
+        "source_text": "Water delivery equipment and accessories that do not transfer tank water to waterbodies do not need to be disinfected (e.g., fireline hoses, wye valves, nozzles)."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "end",
+      "text": "Refer to NWCG Invasive Species Subcommittee Guide or local area/agency direction for further guidance",
+      "evidence": {
+        "page": 117,
+        "source_text": "For further direction refer to NWCG Invasive Species Subcommittee Guide to Preventing Aquatic Invasive Species Transport by Wildland Fire Operations, PMS 444, or local area or agency direction."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n1",
+      "to": "n3"
+    },
+    {
+      "from": "n1",
+      "to": "n4"
+    },
+    {
+      "from": "n1",
+      "to": "n5"
+    },
+    {
+      "from": "n1",
+      "to": "n6"
+    },
+    {
+      "from": "n1",
+      "to": "n7"
+    },
+    {
+      "from": "n1",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n1",
+      "to": "n10"
+    },
+    {
+      "from": "n1",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12",
+      "condition": "Yes"
+    },
+    {
+      "from": "n11",
+      "to": "n13",
+      "condition": "No"
+    },
+    {
+      "from": "n1",
+      "to": "n14"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5508,
+    "completion_tokens": 1451,
+    "total_tokens": 6959,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: OTHER REFERENCES > Aquatic Invasive Species\nRelated sections in this category: Strategy – Direct Attack, Strategy – Indirect Attack, Fireline Location, Chainsaw Operations, Working with Heavy Equipment, Water Delivery Information, NWCG Engine Typing Standard, NWCG Water Tender Typing Standards, High Pressure Pump Information, Troubleshooting a High Pressure Pump",
+  "_validated": true,
+  "_correction_summary": "Reordered nodes to reflect non-sequential nature of actions and added a decision point for untreated water contact."
+}

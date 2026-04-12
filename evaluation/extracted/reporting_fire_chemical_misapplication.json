@@ -1,0 +1,123 @@
+{
+  "protocol_id": "reporting_fire_chemical_misapplication",
+  "title": "Reporting Fire Chemical Misapplication",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    116
+  ],
+  "protocol_type": "reference",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Strategy \u0013 Direct Attack",
+    "Strategy \u0013 Indirect Attack",
+    "Fireline Location",
+    "Chainsaw Operations",
+    "Working with Heavy Equipment",
+    "Water Delivery Information",
+    "NWCG Engine Typing Standard",
+    "NWCG Water Tender Typing Standards",
+    "High Pressure Pump Information",
+    "Troubleshooting a High Pressure Pump"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Identify potential fire chemical misapplication",
+      "evidence": {
+        "page": 116,
+        "source_text": "Reporting Fire Chemical Misapplication"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Report misapplication of fire chemicals into waterways, 300-foot riparian buffer zones, threatened and endangered species habitat, or mapped avoidance areas",
+      "evidence": {
+        "page": 116,
+        "source_text": "Some agencies require\u001favoidance and reporting for all wildland fire chemical misapplications into waterways, 300-foot riparian buffer zones, threatened and endangered species habitat, or\u001fmapped avoidance areas."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Inform your supervisor and/or READ/F if fire chemicals may have been misapplied",
+      "evidence": {
+        "page": 116,
+        "source_text": "Inform your supervisor and/or READ/F if you encounter fire chemicals which may have been misapplied into any of these locations."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Avoid application of fire chemicals into waterways",
+      "evidence": {
+        "page": 116,
+        "source_text": "it is very important to avoid application of fire chemicals into waterways"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Maintain familiarity with agency and local jurisdiction policies for aerial and ground delivery of wildland fire chemicals",
+      "evidence": {
+        "page": 116,
+        "source_text": "maintain familiarity\u001fwith agency and local jurisdiction policies for aerial and ground delivery of wildland fire chemicals."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Understand that a waterway is any body of water including lakes, rivers, streams, and ponds",
+      "evidence": {
+        "page": 116,
+        "source_text": "A waterway is any body of water including lakes, rivers, streams, and ponds \u0013 whether or not they contain aquatic life."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "end",
+      "text": "Follow 2009 Interagency Federal Policy for Aerial Delivery of Wildland Fire Chemicals near Waterways for additional details and exceptions",
+      "evidence": {
+        "page": 116,
+        "source_text": "The 2009 Interagency Federal Policy for Aerial Delivery of Wildland Fire Chemicals near Waterways provides additional details, including exceptions."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5377,
+    "completion_tokens": 777,
+    "total_tokens": 6154,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: OTHER REFERENCES > Reporting Fire Chemical Misapplication\nRelated sections in this category: Strategy – Direct Attack, Strategy – Indirect Attack, Fireline Location, Chainsaw Operations, Working with Heavy Equipment, Water Delivery Information, NWCG Engine Typing Standard, NWCG Water Tender Typing Standards, High Pressure Pump Information, Troubleshooting a High Pressure Pump",
+  "_validated": true,
+  "_correction_summary": "Reordered nodes to reflect logical sequence and added a missing step defining a waterway."
+}

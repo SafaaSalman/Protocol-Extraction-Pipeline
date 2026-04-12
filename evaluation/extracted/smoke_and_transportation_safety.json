@@ -1,0 +1,160 @@
+{
+  "protocol_id": "smoke_and_transportation_safety",
+  "title": "Smoke and Transportation Safety",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    45
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Road and Smoke Safety Guide, PMS 477",
+    "NWCG Roads, Smoke, and Safety video"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Smoke and Transportation Safety protocol initiated",
+      "evidence": {
+        "page": 45,
+        "source_text": "Smoke and Transportation Safety"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Assess safety risks to personnel and public posed by smoke on roads",
+      "evidence": {
+        "page": 45,
+        "source_text": "1. Assess safety risks to personnel and public posed by smoke on roads."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Evaluate potential of smoke to impact roadways up to 10 miles away during initial attack and/or daily sizeup on extended attack",
+      "evidence": {
+        "page": 45,
+        "source_text": "During initial attack and/or daily sizeup on extended attack, evaluate the potential of smoke to impact roadways up to 10 miles away."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Identify drainages/topographic features that may allow for smoke to impact roadways during the night and early morning",
+      "evidence": {
+        "page": 45,
+        "source_text": "Identify drainages/topographic features that may allow for smoke to impact roadways during the night and early morning."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "decision",
+      "text": "Monitor key weather variables: Surface Temperature, Relative Humidity, Surface Wind Speed, Cloud Cover",
+      "evidence": {
+        "page": 45,
+        "source_text": "2. Thresholds that, when combined with smoke, indicate potential for reduced roadway visibility."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Mitigate when roadway visibility is expected to be impacted",
+      "evidence": {
+        "page": 45,
+        "source_text": "3. Hazard Control\nMitigate when roadway visibility is expected to be impacted."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Consider use of smoke observers, smoke signs, reduced speed limit, drone car, lead car, lane closure, or entire road closure",
+      "evidence": {
+        "page": 45,
+        "source_text": "Depending on thresholds projected and risk assessment, consider use of smoke observers, smoke signs, reduced speed limit, drone car, lead car, lane closure, or, if necessary, entire road closure."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Notify appropriate authorities",
+      "evidence": {
+        "page": 45,
+        "source_text": "Notify appropriate authorities."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Consider use of local, regional, or national air resource or meteorological specialists (Air Resource Advisors [THSP], Incident Meteorologist [IMET])",
+      "evidence": {
+        "page": 45,
+        "source_text": "Consider use of local, regional, or national air resource or meteorological specialists (Air Resource Advisors [THSP], Incident Meteorologist [IMET])."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "end",
+      "text": "Smoke and Transportation Safety protocol complete",
+      "evidence": {
+        "page": 45,
+        "source_text": "For in-depth information, see Road and Smoke Safety Guide, PMS 477, and NWCG Roads, Smoke, and Safety video."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6",
+      "condition": "Watch Out"
+    },
+    {
+      "from": "n5",
+      "to": "n6",
+      "condition": "Critical"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5576,
+    "completion_tokens": 1120,
+    "total_tokens": 6696,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: SPECIFIC HAZARDS > Smoke and Transportation Safety\nRelated sections in this category: Thunderstorm Safety, How to Properly Refuse Risk, Hazard Tree Safety, Powerline Safety, Roadside Response Safety, Unexploded Ordnance Safety, Oil and Gas Site Safety, Smoke Hazards and Mitigation, Last Resort Survival",
+  "_validated": true,
+  "_correction_summary": "Added a decision node for weather thresholds with branches for 'Watch Out' and 'Critical' conditions."
+}

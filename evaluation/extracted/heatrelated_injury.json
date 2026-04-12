@@ -1,0 +1,173 @@
+{
+  "protocol_id": "heat_related_injury_01",
+  "title": "Heat-Related Injury",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    128,
+    129
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Emergency Medical Care Guidelines",
+    "Patient Assessment",
+    "Specific Treatments",
+    "CPR",
+    "Burn Injuries",
+    "Multi-Casualty Triage System",
+    "Fatality Procedures",
+    "Helicopter Extraction Operations",
+    "Medical Incident Report"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Heat-related injury suspected",
+      "evidence": {
+        "page": 128,
+        "source_text": "Steps to take if an HRI is suspected:"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Cool the body as quickly as possible, then treat other conditions",
+      "evidence": {
+        "page": 128,
+        "source_text": "Cool the body as quickly as possible, then treat other conditions."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Adjust cooling levels based on severity",
+      "evidence": {
+        "page": 128,
+        "source_text": "Cooling levels will depend on severity"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Reduce work output",
+      "evidence": {
+        "page": 129,
+        "source_text": "Reduction of work output"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Remove from sources of heat",
+      "evidence": {
+        "page": 129,
+        "source_text": "Removal from sources of heat"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Implement proper nutrition and hydration strategies",
+      "evidence": {
+        "page": 129,
+        "source_text": "Proper nutrition and hydration strategies"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Consider individual differences in heat tolerance and daily variations",
+      "evidence": {
+        "page": 129,
+        "source_text": "Ability to handle heat is different between individuals and varies on a daily basis."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Maintain low skin temperature to allow heat transfer from the body",
+      "evidence": {
+        "page": 129,
+        "source_text": "Maintain low skin temperature when possible, as it allows heat transfer from the body."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Avoid pack weights exceeding 25% of body weight",
+      "evidence": {
+        "page": 129,
+        "source_text": "Pack weights exceeding 25% of body weight add to the demand of an activity."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Ensure work expectations match physical fitness levels to reduce HRI risk",
+      "evidence": {
+        "page": 129,
+        "source_text": "Work expectations above physical fitness levels can increase risk of an HRI."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "end",
+      "text": "HRI management and mitigation complete",
+      "evidence": {
+        "page": 129,
+        "source_text": "Work expectations above physical fitness levels can increase risk of an HRI."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5585,
+    "completion_tokens": 1069,
+    "total_tokens": 6654,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: EMERGENCY MEDICAL CARE > Heat-Related Injury\nRelated sections in this category: Emergency Medical Care Guidelines, Patient Assessment, Specific Treatments, CPR, Burn Injuries, Multi-Casualty Triage System, Fatality Procedures, Helicopter Extraction Operations, Medical Incident Report"
+}

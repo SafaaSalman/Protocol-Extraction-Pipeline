@@ -1,0 +1,220 @@
+{
+  "protocol_id": "burn_injuries_02",
+  "title": "Burn Injuries",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    130,
+    131
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Emergency Medical Care Guidelines",
+    "Patient Assessment",
+    "Specific Treatments",
+    "CPR",
+    "Heat-Related Injury",
+    "Multi-Casualty Triage System",
+    "Fatality Procedures",
+    "Helicopter Extraction Operations",
+    "Medical Incident Report"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Burn injury identified",
+      "evidence": {
+        "page": 130,
+        "source_text": "Burn Injuries"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Initiate medical evacuation immediately",
+      "evidence": {
+        "page": 130,
+        "source_text": "INITIATE MEDICAL EVACUATION IMMEDIATELY."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Remove person from heat source while looking for signs of burned airway (singed facial/nasal hairs, soot or burns around nose/mouth, black sooty sputum)",
+      "evidence": {
+        "page": 130,
+        "source_text": "Remove person from heat source while looking for signs of a burned airway (e.g., singed facial or nasal hairs, soot or burns around or in nose, mouth, black sooty sputum, etc.)."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Apply cool, clear water over burned area. Do not soak or use cold water/ice packs (risk of hypothermia)",
+      "evidence": {
+        "page": 130,
+        "source_text": "Apply cool, clear water over burned area. Do not soak person or use cold water and ice packs, as this may cause hypothermia."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Examine for other injuries: provide basic first aid, monitor ABCs, treat for shock (keep warm, feet elevated), provide oxygen if available and trained",
+      "evidence": {
+        "page": 130,
+        "source_text": "Examine for other injuries. - Provide basic first aid. - Monitor airway, breathing, circulation (ABCs). - Treat for shock by keeping person warm, feet elevated. - Provide oxygen, if available and trained to administer."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Assess degree of burn and area affected: First Degree (Superficial) - red, mild to moderate pain; Second Degree (Partial Thickness) - red/raw, blistered, swollen, painful; Third Degree (Full Thickness) - whitish, charred, or translucent, no pin prick sensation",
+      "evidence": {
+        "page": 130,
+        "source_text": "Assess degree of burn and area affected."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Estimate burn area using Rule of Palms: patient's palm = 1% of body surface",
+      "evidence": {
+        "page": 131,
+        "source_text": "Rule of Palms: Patient\u0019s palm = 1% of their body surface. Estimate how many times the patient\u0019s palm could be placed over the burned areas to estimate the % of body that has been burned."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Cut away only burned clothing. Do not cut away clothing stuck to burned skin. Remove jewelry near injured area",
+      "evidence": {
+        "page": 131,
+        "source_text": "Cut away only burned clothing. Do not cut away clothing stuck to burned skin. Remove jewelry near injured area."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "decision",
+      "text": "Is burn severe or covering large area of the body?",
+      "evidence": {
+        "page": 131,
+        "source_text": "For severe burns or burns covering large area of the body:"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Loosely cover burned area with clean, dry dressing. If unavailable, use mylar blankets, plastic wrap, or clean blankets/clothing",
+      "evidence": {
+        "page": 131,
+        "source_text": "Loosely cover burned area with clean, dry dressing if available. If dressings are unavailable, mylar blankets, plastic wrap, or clean blankets or clothing can be used."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Loosely wrap burned area with clean, dry dressing, moisten with clean water, apply dry dressing on top",
+      "evidence": {
+        "page": 131,
+        "source_text": "Loosely wrap burned area with clean, dry dressing, and moisten with clean water, and apply dry dressing on top."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Monitor ABCs",
+      "evidence": {
+        "page": 131,
+        "source_text": "Monitor ABCs."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Keep patient warm and dry. DO NOT use wet dressings or blankets. Avoid hypothermia and overheating",
+      "evidence": {
+        "page": 131,
+        "source_text": "Keep patient warm and dry. DO NOT use wet dressings or blankets. Avoid hypothermia and overheating."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "end",
+      "text": "Burn treatment complete, await evacuation",
+      "evidence": {
+        "page": 131,
+        "source_text": "Avoid hypothermia and overheating."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n11",
+      "condition": "No (not severe/large area)"
+    },
+    {
+      "from": "n9",
+      "to": "n10",
+      "condition": "Yes (severe or large area)"
+    },
+    {
+      "from": "n10",
+      "to": "n12"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5623,
+    "completion_tokens": 1716,
+    "total_tokens": 7339,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: EMERGENCY MEDICAL CARE > Burn Injuries\nRelated sections in this category: Emergency Medical Care Guidelines, Patient Assessment, Specific Treatments, CPR, Heat-Related Injury, Multi-Casualty Triage System, Fatality Procedures, Helicopter Extraction Operations, Medical Incident Report",
+  "_validated": true,
+  "_correction_summary": "Corrected the conditions for nodes n10 and n11 and adjusted the protocol to reflect the correct application of dressings based on burn severity."
+}

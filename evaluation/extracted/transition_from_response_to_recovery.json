@@ -1,0 +1,187 @@
+{
+  "protocol_id": "transition_from_response_to_recovery",
+  "title": "Transition from response to recovery",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    88
+  ],
+  "protocol_type": "reference",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Relief and Recovery Coordination",
+    "Emergency Relief and Recovery public information sources",
+    "An Agreement For Transition Of Coordination Arrangements From Response To Recovery"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Begin planning for recovery coordination simultaneously with response",
+      "evidence": {
+        "page": 88,
+        "source_text": "Planning for recovery coordination will commence simultaneously with response."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "text": "Consider key factors impacting transition timing",
+      "evidence": {
+        "page": 88,
+        "source_text": "The decision relating to the timing of the formal transition of response to recovery coordination will be impacted by a number of key considerations, including:"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Assess nature of hazard/threat and risk of recurrence",
+      "evidence": {
+        "page": 88,
+        "source_text": "the nature of the hazard/threat and whether there is a risk of a recurring threat"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Evaluate extent of impact on communities for potential prolonged transition",
+      "evidence": {
+        "page": 88,
+        "source_text": "the extent of impact on communities, as this may determine if a prolonged transition period needs to be implemented"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Determine extent and level of impact and needs associated with the incident",
+      "evidence": {
+        "page": 88,
+        "source_text": "the extent of and known level of impact and needs associated with the incident"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Consider extent of emergency relief required by affected communities",
+      "evidence": {
+        "page": 88,
+        "source_text": "the considerations for the extent of emergency relief required by affected communities"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Assess resources required for effective recovery arrangements",
+      "evidence": {
+        "page": 88,
+        "source_text": "the considerations for the resources required for effective recovery arrangements."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Determine transition structure and handover requirements",
+      "evidence": {
+        "page": 88,
+        "source_text": "The transition structure and handover requirements to establish formal recovery coordination arrangements will be determined by the Incident Controller, the Incident Emergency Response Coordinator and Municipal Recovery Manager, in consultation with the Regional and/or State Recovery Coordinators when appropriate."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Establish transition period for prolonged campaign incidents",
+      "evidence": {
+        "page": 88,
+        "source_text": "In a prolonged campaign incident, a transition period will be established to allow sufficient time for briefing, resource planning and implementation of immediate recovery services."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "reference",
+      "text": "Refer to An Agreement For Transition Of Coordination Arrangements From Response To Recovery for schedule of transition actions",
+      "evidence": {
+        "page": 88,
+        "source_text": "A schedule of transition actions required is available in the document An Agreement For Transition Of Coordination Arrangements From Response To Recovery, which can be obtained from Regional or State Recovery Coordinators."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "end",
+      "text": "Transition to recovery coordination complete",
+      "evidence": {
+        "page": 88,
+        "source_text": "Relief and Recovery Coordination"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": "Consideration: nature of hazard/threat"
+    },
+    {
+      "from": "n2",
+      "to": "n4",
+      "condition": "Consideration: extent of impact on communities"
+    },
+    {
+      "from": "n2",
+      "to": "n5",
+      "condition": "Consideration: extent and level of impact"
+    },
+    {
+      "from": "n2",
+      "to": "n6",
+      "condition": "Consideration: extent of emergency relief"
+    },
+    {
+      "from": "n2",
+      "to": "n7",
+      "condition": "Consideration: resources required"
+    },
+    {
+      "from": "n3",
+      "to": "n8"
+    },
+    {
+      "from": "n4",
+      "to": "n8"
+    },
+    {
+      "from": "n5",
+      "to": "n8"
+    },
+    {
+      "from": "n6",
+      "to": "n8"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5493,
+    "completion_tokens": 1311,
+    "total_tokens": 6804,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Relief and Recovery > Transition from response to recovery\nRelated sections in this category: Relief and Recovery Coordination, Emergency Relief and Recovery public information sources"
+}

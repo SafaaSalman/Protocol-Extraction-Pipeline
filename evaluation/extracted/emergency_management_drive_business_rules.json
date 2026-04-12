@@ -1,0 +1,116 @@
+{
+  "protocol_id": "emergency_management_drive_business_rules",
+  "title": "Emergency Management Drive Business Rules",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    61
+  ],
+  "protocol_type": "reference",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Emergency Management Portal",
+    "Resource Requesting",
+    "Library in EM-COP"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Introduction to Emergency Management Drive (R:)",
+      "evidence": {
+        "page": 61,
+        "source_text": "The \u001cEmergency Management Drive (R:)\u001d is a state-wide shared network drive available to a number of emergency service agencies including CFA, DELWP, MFB and VICSES."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Purpose of R Drive: Create, share, manage, and store non-application bound operational information",
+      "evidence": {
+        "page": 61,
+        "source_text": "The purpose of this drive is to enable personnel to create, share, manage and store non-application bound operational information."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Documents to maintain on R Drive: IAP, communication plans, options analysis, media releases, photos, completed/published maps",
+      "evidence": {
+        "page": 61,
+        "source_text": "Documents that should have a copy maintained on the \u0018R\u0019 drive include (but not limited to) completed incident documentation such as: IAP, communication plans, options analysis, media releases, photos, completed/published maps."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "R Drive usage restriction: Incident management purposes only",
+      "evidence": {
+        "page": 61,
+        "source_text": "The R Drive is to be used for incident management purposes only."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Do not use R Drive for personal or shared project documents",
+      "evidence": {
+        "page": 61,
+        "source_text": "It should not be used to store personal documents or shared project related documents."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Refer to Library in EM-COP for specific guidance on usage and business rules",
+      "evidence": {
+        "page": 61,
+        "source_text": "For specific guidance on usage and business rules, particularly in relation to the 30-Response folder, refer to the Library in EM-COP:"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "end",
+      "text": "End of Emergency Management Drive Business Rules",
+      "evidence": {
+        "page": 61,
+        "source_text": "Agencies maintain separate drives for agency specific purposes."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5450,
+    "completion_tokens": 746,
+    "total_tokens": 6196,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Information Systems > Emergency Management Drive Business Rules\nRelated sections in this category: Emergency Management Portal, Resource Requesting",
+  "_validated": true,
+  "_correction_summary": "Added a missing step about R Drive usage restrictions and corrected the node type for n6."
+}

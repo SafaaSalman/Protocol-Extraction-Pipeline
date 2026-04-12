@@ -1,0 +1,177 @@
+{
+  "protocol_id": "ohs_incident_reporting",
+  "title": "OHS Incident Reporting and LACES Process",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    75
+  ],
+  "protocol_type": "process",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "SOP J08.01 - OH&S Incident Response - Class 1 Emergencies",
+    "Table 8 - LACES",
+    "Safe Person Approach",
+    "Dynamic Risk Assessment",
+    "Safety First Approach",
+    "LACES",
+    "WATCHOUT",
+    "Red Flag Warnings",
+    "Fireground Information Update",
+    "Hydration",
+    "Fatigue",
+    "Smoke"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "OHS Incident Reporting initiated",
+      "evidence": {
+        "page": 75,
+        "source_text": "OHS Incident Reporting"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Use OHS Incident Report Card (salmon coloured) to record incidents, injuries, near misses, and hazards",
+      "evidence": {
+        "page": 75,
+        "source_text": "The OHS Incident Report Card (salmon coloured) is used to record incidents, injuries, near misses and hazards at bushfires."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Provide completed card to Logistics Officer or medical services unit leader",
+      "evidence": {
+        "page": 75,
+        "source_text": "The completed card is to be provided to the Logistics Officer, (or medical services unit leader if in place)."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Immediately communicate incidents via chain of command",
+      "evidence": {
+        "page": 75,
+        "source_text": "This does not replace the need to immediately communicate these incidents via the chain of command."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Report OHS incidents via own agency’s reporting system",
+      "evidence": {
+        "page": 75,
+        "source_text": "Personnel will be required to report OHS incidents via their own agency’s reporting system."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Deploy lookouts to maintain risk awareness and provide timely advice",
+      "evidence": {
+        "page": 75,
+        "source_text": "A fixed, aerial or mobile lookout shall be deployed to maintain a clear appreciation of risks and to provide timely advice of the need to use of escape routes and safety zones."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Ensure firefighters are aware of changes in fire behaviour and hazards",
+      "evidence": {
+        "page": 75,
+        "source_text": "Firefighters shall be aware of the impact of changes in fire behaviour including those resulting from variations to fuel, weather and topography and of other fireground hazards."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Follow Communications Plan and address safety issues",
+      "evidence": {
+        "page": 75,
+        "source_text": "All fire crews shall follow the Communications Plan, communicate with your crew and surrounding crews to discuss and address safety issues."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Agree on and review at least two escape routes",
+      "evidence": {
+        "page": 75,
+        "source_text": "At least two escape routes should be agreed and made known to all relevant personnel. The suitability of an escape route should be continually reviewed to ensure it remains effective."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Identify and communicate safety zones",
+      "evidence": {
+        "page": 75,
+        "source_text": "Safety zones should be identified and made known to all relevant firefighters. Firefighters need to consider escape time and safety zone size requirements that will change as fire behaviour changes."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "end",
+      "text": "OHS Incident Reporting and LACES process complete",
+      "evidence": {
+        "page": 75,
+        "source_text": "SOP J08.01 - OH&S Incident Response - Class 1 Emergencies provide further information."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5894,
+    "completion_tokens": 724,
+    "total_tokens": 6618,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Safety > OHS Incident Reporting\nRelated sections in this category: Safe Person Approach, Dynamic Risk Assessment, Safety First Approach, LACES, WATCHOUT, Red Flag Warnings, Fireground Information Update, Hydration, Fatigue, Smoke",
+  "_validated": true,
+  "_correction_summary": "Added missing LACES process steps and corrected the protocol type."
+}

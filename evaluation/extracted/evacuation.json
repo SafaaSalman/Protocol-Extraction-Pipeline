@@ -1,0 +1,215 @@
+{
+  "protocol_id": "evacuation_01",
+  "title": "Evacuation",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    54,
+    55,
+    56,
+    57
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "AIIMS Principles and Concepts",
+    "AIIMS Structure",
+    "Incident Controller",
+    "Deputy Incident Controller",
+    "Operations Officer",
+    "Division Commanders",
+    "Sector Commanders",
+    "Incident Objective",
+    "Incident Action Planning",
+    "Incident Communications Planning"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Evacuation process initiated",
+      "evidence": {
+        "page": 54,
+        "source_text": "Evacuation"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Decision to evacuate",
+      "evidence": {
+        "page": 55,
+        "source_text": "1. Decision to evacuate"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Warning or recommendation to persons likely to be affected by an emergency",
+      "evidence": {
+        "page": 55,
+        "source_text": "2. Warning or recommendation to persons likely to be affected by an emergency"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Withdrawal of an affected community",
+      "evidence": {
+        "page": 55,
+        "source_text": "3. Withdrawal of an affected community"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Sheltering of persons evacuated",
+      "evidence": {
+        "page": 55,
+        "source_text": "4. Sheltering of persons evacuated"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Return of affected persons",
+      "evidence": {
+        "page": 55,
+        "source_text": "5. Return of affected persons"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Incident Controller authorizes and issues evacuation messages",
+      "evidence": {
+        "page": 55,
+        "source_text": "The Incident Controller is responsible for authorising and issuing evacuation messages to the community"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Consultation with Victoria Police, IEMT, and other experts",
+      "evidence": {
+        "page": 55,
+        "source_text": "should be made in consultation with Victoria Police, IEMT and other expert advice where available"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Communicate decision to Victoria Police Commander",
+      "evidence": {
+        "page": 55,
+        "source_text": "the Incident Controller is required to immediately communicate this decision to the Victoria Police Commander"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Maintain ongoing liaison with Victoria Police",
+      "evidence": {
+        "page": 56,
+        "source_text": "Maintain ongoing liaison with Victoria Police once the evacuation process has commenced"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Victoria Police manages withdrawal, shelter, and return stages",
+      "evidence": {
+        "page": 56,
+        "source_text": "Manage the withdrawal, shelter and return stages of the evacuation in consultation with the Incident Controller and Health Commander"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Registration of evacuees with Red Cross",
+      "evidence": {
+        "page": 57,
+        "source_text": "Registration of evacuees (with Red Cross)"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Provide security at ERCs",
+      "evidence": {
+        "page": 57,
+        "source_text": "Provision of security at ERCs"
+      }
+    },
+    {
+      "id": "n14",
+      "type": "end",
+      "text": "Evacuation process complete",
+      "evidence": {
+        "page": 57,
+        "source_text": "Table 5 – Evacuation Roles and Responsibilities"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 7340,
+    "completion_tokens": 1328,
+    "total_tokens": 8668,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Incident Management > Evacuation\nRelated sections in this category: AIIMS Principles and Concepts, AIIMS Structure, Incident Controller, Deputy Incident Controller, Operations Officer, Division Commanders, Sector Commanders, Incident Objective, Incident Action Planning, Incident Communications Planning"
+}

@@ -1,0 +1,113 @@
+{
+  "protocol_id": "tiers_of_emergency_response_management",
+  "title": "Tiers of Emergency Response Management",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    13
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Major Emergencies",
+    "Emergency Management Commissioner",
+    "Control, Command and Coordination",
+    "State Response Controller",
+    "State Emergency Response Plan (SERP)",
+    "State Emergency Relief and Recovery Plan",
+    "EMMV"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate emergency response management",
+      "evidence": {
+        "page": 13,
+        "source_text": "Tiers of Emergency Response Management"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Operate at three tiers: incident, region, and state",
+      "evidence": {
+        "page": 13,
+        "source_text": "Victorian emergency response management operates at three tiers; incident, region and state."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "decision",
+      "text": "Is there a forecast of extreme weather or intelligence of a large scale emergency?",
+      "evidence": {
+        "page": 13,
+        "source_text": "such as where there is: a forecast of extreme weather; or intelligence or information of any anticipated large scale emergency affecting life or property."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Activate regional and state tier arrangements for major emergencies",
+      "evidence": {
+        "page": 13,
+        "source_text": "Regional and state tier arrangements are activated where a major emergency has occurred or is anticipated to occur."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Activate regional and state tier arrangements on a continuing basis",
+      "evidence": {
+        "page": 13,
+        "source_text": "Where emergencies can be reasonably expected over a period of time, the regional and state tier arrangements may be activated on a continuing basis."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "end",
+      "text": "Emergency response management in place",
+      "evidence": {
+        "page": 13,
+        "source_text": "regional and state tier arrangements may be activated on a continuing basis."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4",
+      "condition": "Yes (forecast or intelligence present)"
+    },
+    {
+      "from": "n3",
+      "to": "n6",
+      "condition": "No (no forecast or intelligence)"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5455,
+    "completion_tokens": 697,
+    "total_tokens": 6152,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Victorian Emergency Management Arrangements > Tiers of Emergency Response Management\nRelated sections in this category: Major Emergencies, Emergency Management Commissioner, Control, Command and Coordination, State Response Controller",
+  "_validated": true,
+  "_correction_summary": "Added a missing 'No' branch to the decision node n4 and reordered nodes to reflect the correct sequence of actions and decisions."
+}

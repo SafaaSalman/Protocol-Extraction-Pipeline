@@ -1,0 +1,145 @@
+{
+  "protocol_id": "support_for_emc_and_state_response_controller",
+  "title": "Support for the EMC and State Response Controller",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    21,
+    22
+  ],
+  "protocol_type": "reference",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Definitions",
+    "Objective for Bushfire Management in Victoria",
+    "Control Arrangements for Bushfire",
+    "Support for the Line-of-Control",
+    "Support for the Regional Controller",
+    "Support for the Incident Controller",
+    "Command"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Support for the EMC and State Response Controller",
+      "evidence": {
+        "page": 21,
+        "source_text": "Support for the EMC and State Response Controller"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Establish State Control Team (SCT)",
+      "evidence": {
+        "page": 21,
+        "source_text": "The EMC, supported by the State Response Controller, may establish a SCT to provide advice on a strategic approach to the readiness for and response to Class 1 emergencies."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "State Control Team (SCT) Composition",
+      "evidence": {
+        "page": 21,
+        "source_text": "The SCT usually comprises: EMC, State Response Controller, State Agency Commanders for CFA, DELWP, MFB and VICSES, Senior Police Liaison Officer (SPLO), State Consequence Manager (SCM), State Relief and Recovery Manager and/or DHHS State Liaison Officer, State Health Commander, an Executive Officer."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Provide advice in key areas",
+      "evidence": {
+        "page": 21,
+        "source_text": "The SCT provides advice to the EMC and State Response Controller in the following areas: readiness levels, appointments to the line-of-control, communication of warnings and information to the community, operational and strategic risks and consequences, including those to life and property, resourcing priorities, provision of information and situation reports to other agencies and government, the need for interstate, Commonwealth and international support, support for the functioning of the State Control Centre, the functioning and operation of systems and technology to support incident management."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Establish State Coordination Team (SCoT)",
+      "evidence": {
+        "page": 22,
+        "source_text": "The EMC may establish a State Coordination Team (SCoT) to oversee the coordination functions and responsibilities of the EMC and to set the strategic context of the readiness, response, relief and recovery to Class 1 and Class 2 emergencies."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "State Coordination Team (SCoT) Composition",
+      "evidence": {
+        "page": 22,
+        "source_text": "The SCoT usually comprises: EMC, Senior Police Liaison Officer (SPLO), State Relief and Recovery Manager, DHHS State Liaison Officer (DHHS SLO), State Response Controller (SRC), Chief Health Officer (CHO), State Health Coordinator, State Consequence Manager (SCM)."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Form State Emergency Management Team (SEMT)",
+      "evidence": {
+        "page": 22,
+        "source_text": "If an emergency, either anticipated or occurring, requires activation of a state tier response control structure, the EMC may form the SEMT, comprising senior representatives from response, recovery and other agencies."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Role of SEMT",
+      "evidence": {
+        "page": 22,
+        "source_text": "The role of the SEMT is to: facilitate a discussion to enable agencies to develop a consistent situational awareness regarding the emergencies affecting the state, identify strategic state risks and consequences and plan the actions of agencies to manage these risks and consequences, support the EMC to develop a state strategic plan for the management of the emergency, outlining high level actions of all agencies."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "end",
+      "text": "Support structure established and operational",
+      "evidence": {
+        "page": 22,
+        "source_text": "support the EMC to develop a state strategic plan for the management of the emergency, outlining high level actions of all agencies."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5850,
+    "completion_tokens": 1243,
+    "total_tokens": 7093,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Control and Command Arrangements for Bushfire > Support for the EMC and State Response Controller\nRelated sections in this category: Definitions, Objective for Bushfire Management in Victoria, Control Arrangements for Bushfire, Support for the Line-of-Control, Support for the Regional Controller, Support for the Incident Controller, Command"
+}

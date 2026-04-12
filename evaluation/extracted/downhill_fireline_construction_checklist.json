@@ -1,0 +1,186 @@
+{
+  "protocol_id": "downhill_fireline_construction_checklist",
+  "title": "Downhill Fireline Construction Checklist",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    23
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Risk Management Process",
+    "Planning for Medical Emergencies",
+    "Common Denominators of Fire Behavior on Tragedy Fires",
+    "Common Tactical Hazards",
+    "LCES",
+    "Safety Zones",
+    "Indicators of Incident Complexity",
+    "Wildland Urban Interface (WUI) Firefighting"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate downhill fireline construction",
+      "evidence": {
+        "page": 23,
+        "source_text": "Downhill fireline construction is hazardous in steep terrain, fast-burning fuels, or rapidly changing weather. It should not be attempted unless there is no tactical alternative."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Discuss assignments with crew supervisor(s) and fireline overhead prior to committing crew(s). Responsible overhead individual stays with job until completed (TFLD or ICT4 qualified at minimum)",
+      "evidence": {
+        "page": 23,
+        "source_text": "1. Discuss assignments with crew supervisor(s) and fireline overhead prior to committing crew(s). Responsible overhead individual stays with job until completed (Task Force Leader [TFLD] or Incident Commander Type 4 [ICT4] qualified at minimum)."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Decision is made after proposed fireline has been scouted by supervisor(s) of involved crew(s)",
+      "evidence": {
+        "page": 23,
+        "source_text": "2. Decision is made after proposed fireline has been scouted by supervisor(s) of involved crew(s)."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Coordinate LCES for all personnel involved",
+      "evidence": {
+        "page": 23,
+        "source_text": "3. Coordinate LCES for all personnel involved."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Crew supervisor(s) in direct contact with lookout who can see the fire",
+      "evidence": {
+        "page": 23,
+        "source_text": " Crew supervisor(s) in direct contact with lookout who can see the fire."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Establish communication between all crews",
+      "evidence": {
+        "page": 23,
+        "source_text": " Establish communication between all crews."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Ensure rapid access to safety zone(s) in case fire crosses below crew(s)",
+      "evidence": {
+        "page": 23,
+        "source_text": " Rapid access to safety zone(s) in case fire crosses below crew(s)."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Use direct attack whenever possible. If not possible, complete fireline between anchor points before being fired out",
+      "evidence": {
+        "page": 23,
+        "source_text": "4. Use direct attack whenever possible. If not possible, the fireline should be completed between anchor points before being fired out."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Ensure fireline will not lie in or adjacent to a chute or chimney",
+      "evidence": {
+        "page": 23,
+        "source_text": "5. Fireline will not lie in or adjacent to a chute or chimney."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Anchor starting point for crew(s) building fireline down from the top",
+      "evidence": {
+        "page": 23,
+        "source_text": "6. Starting point will be anchored for crew(s) building fireline down from the top."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Monitor bottom of fire; if potential exists for the fire to spread, take action to secure the fire edge",
+      "evidence": {
+        "page": 23,
+        "source_text": "7. Monitor bottom of fire; if potential exists for the fire to spread, take action to secure the fire edge."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "end",
+      "text": "Downhill fireline construction complete",
+      "evidence": {
+        "page": 23,
+        "source_text": "7. Monitor bottom of fire; if potential exists for the fire to spread, take action to secure the fire edge."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n4",
+      "to": "n6"
+    },
+    {
+      "from": "n4",
+      "to": "n7"
+    },
+    {
+      "from": "n4",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5457,
+    "completion_tokens": 1378,
+    "total_tokens": 6835,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: OPERATIONAL ENGAGEMENT > Downhill Fireline Construction Checklist\nRelated sections in this category: Risk Management Process, Planning for Medical Emergencies, Common Denominators of Fire Behavior on Tragedy Fires, Common Tactical Hazards, LCES, Safety Zones, Indicators of Incident Complexity, Wildland Urban Interface (WUI) Firefighting",
+  "_validated": true,
+  "_correction_summary": "Reorganized nodes n5, n6, and n7 as sub-actions under n4 to reflect their role in coordinating LCES."
+}

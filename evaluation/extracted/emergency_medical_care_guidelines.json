@@ -1,0 +1,229 @@
+{
+  "protocol_id": "emergency_medical_care_guidelines",
+  "title": "Emergency Medical Care Guidelines",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    123
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Medical Incident Report on page 120"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate Emergency Medical Care",
+      "evidence": {
+        "page": 123,
+        "source_text": "Emergency Medical Care Guidelines"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Do only what you are trained and authorized to do. Keep records of what you do for the patient",
+      "evidence": {
+        "page": 123,
+        "source_text": "Legality: Do only what you are trained and authorized to do. Keep records of what you do for the patient."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Use PPE (pocket mask, waterproof gloves, goggles) if contact with body fluids is possible",
+      "evidence": {
+        "page": 123,
+        "source_text": "Use PPE (pocket mask, waterproof gloves, goggles) if contact with body fluids is possible."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Prevent further injury by removing from danger",
+      "evidence": {
+        "page": 123,
+        "source_text": "Prevent further injury by removing from danger."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Rapid assessment: Airway, Breathing, Circulation, and life-threatening injuries",
+      "evidence": {
+        "page": 123,
+        "source_text": "Rapid assessment: Airway, Breathing, Circulation, and life-threatening injuries."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Thorough exam: Look for method of injury. Check for deformities, contusions, abrasions, punctures, burns, tenderness, lacerations, or swelling",
+      "evidence": {
+        "page": 123,
+        "source_text": "Thorough exam: Look for method of injury. Check for deformities, contusions, abrasions, punctures, burns, tenderness, lacerations, or swelling."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Stabilize patient",
+      "evidence": {
+        "page": 123,
+        "source_text": "Stabilize patient."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Transport decision: air or ground extraction",
+      "evidence": {
+        "page": 123,
+        "source_text": "Transport decision: air or ground extraction."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Document on-scene observations and treatment (send with patient)",
+      "evidence": {
+        "page": 123,
+        "source_text": "Document on-scene observations and treatment (send with patient)."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Report all injuries to direct supervisor",
+      "evidence": {
+        "page": 123,
+        "source_text": "All injuries must be reported to direct supervisor."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "In case of medical emergency, contact incident supervisor or communications dispatcher, and use the Medical Incident Report on page 120",
+      "evidence": {
+        "page": 123,
+        "source_text": "In case of medical emergency, contact incident supervisor or communications dispatcher, and use the Medical Incident Report on page 120."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Medevac is an Incident Within an Incident (IWI). One person needs to become the on-scene IC and transfer command later if necessary",
+      "evidence": {
+        "page": 123,
+        "source_text": "Medevac is an Incident Within an Incident (IWI). One person needs to become the on-scene IC and transfer command later if necessary."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Identify nature of incident, number injured, patient assessment(s), and location (geographic and GPS coordinates)",
+      "evidence": {
+        "page": 123,
+        "source_text": "Identify nature of incident, number injured, patient assessment(s), and location (geographic and GPS coordinates)."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Do not use patient name(s) on the radio",
+      "evidence": {
+        "page": 123,
+        "source_text": "Do not use patient name(s) on the radio."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Determine transport plan (limited visibility or darkness may delay or negate air transport)",
+      "evidence": {
+        "page": 123,
+        "source_text": "Determine transport plan (limited visibility or darkness may delay or negate air transport)."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "end",
+      "text": "Emergency medical care guidelines completed",
+      "evidence": {
+        "page": 123,
+        "source_text": "Determine transport plan (limited visibility or darkness may delay or negate air transport)."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5466,
+    "completion_tokens": 1634,
+    "total_tokens": 7100,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: EMERGENCY MEDICAL CARE > Emergency Medical Care Guidelines\nRelated sections in this category: Patient Assessment, Specific Treatments, CPR, Heat-Related Injury, Burn Injuries, Multi-Casualty Triage System, Fatality Procedures, Helicopter Extraction Operations, Medical Incident Report"
+}

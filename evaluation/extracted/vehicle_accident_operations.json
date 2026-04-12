@@ -1,0 +1,275 @@
+{
+  "protocol_id": "vehicle_accident_operations_01",
+  "title": "Vehicle Accident Operations",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    69
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "HazMat Incident Operations",
+    "HazMat Isolation Distances",
+    "HazMat Classification for Fixed Facilities",
+    "Local Disaster Response",
+    "All Hazard Incident Response",
+    "Structure Hazard Marking System"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Vehicle accident operations initiated",
+      "evidence": {
+        "page": 69,
+        "source_text": "Vehicle Accident Operations"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Report on Conditions: Hazards (fuel, electrical, traffic, access, etc.)",
+      "evidence": {
+        "page": 69,
+        "source_text": "Report on Conditions  Hazards (fuel, electrical, traffic, access, etc.)."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Report on Conditions: Need for law enforcement, ambulance, helicopter, tow truck, extrication tools",
+      "evidence": {
+        "page": 69,
+        "source_text": " Need for law enforcement, ambulance, helicopter, tow truck, extrication tools."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Report on Conditions: Injuries (number of patients, severity)",
+      "evidence": {
+        "page": 69,
+        "source_text": " Injuries (number of patients, severity)."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Report on Conditions: Vehicles (number, type)",
+      "evidence": {
+        "page": 69,
+        "source_text": " Vehicles (number, type)."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Establish Traffic Control",
+      "evidence": {
+        "page": 69,
+        "source_text": "Establish Traffic Control"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Place apparatus between oncoming traffic and rescuers. Keep exhaust from pointing at scene and patients",
+      "evidence": {
+        "page": 69,
+        "source_text": "Place apparatus between oncoming traffic and rescuers. Keep exhaust from pointing at scene and patients."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Place warning devices",
+      "evidence": {
+        "page": 69,
+        "source_text": " Place warning devices."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Establish positive communications",
+      "evidence": {
+        "page": 69,
+        "source_text": " Establish positive communications."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Consider the use of high visibility vests",
+      "evidence": {
+        "page": 69,
+        "source_text": " Consider the use of high visibility vests."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Assess Fire Hazard or Potential",
+      "evidence": {
+        "page": 69,
+        "source_text": "Assess Fire Hazard or Potential"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Take suppression action as needed if trained, equipped, and authorized",
+      "evidence": {
+        "page": 69,
+        "source_text": "Take suppression action as needed if trained, equipped, and authorized."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Be aware of fuels running downslope",
+      "evidence": {
+        "page": 69,
+        "source_text": " Be aware of fuels running downslope."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Perform Patient Assessment",
+      "evidence": {
+        "page": 69,
+        "source_text": "Perform Patient Assessment"
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Provide first aid or triage assessment",
+      "evidence": {
+        "page": 69,
+        "source_text": "Provide first aid or triage assessment."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "If there are fatalities, do not give names or other information over radio that would reveal identity, and do not move body",
+      "evidence": {
+        "page": 69,
+        "source_text": " If there are fatalities, do not give names or other information over radio that would reveal identity, and do not move body."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "action",
+      "text": "Keep dispatcher advised of changes",
+      "evidence": {
+        "page": 69,
+        "source_text": "Keep dispatcher advised of changes."
+      }
+    },
+    {
+      "id": "n18",
+      "type": "action",
+      "text": "Document all actions taken",
+      "evidence": {
+        "page": 69,
+        "source_text": "Document all actions taken."
+      }
+    },
+    {
+      "id": "n19",
+      "type": "end",
+      "text": "Vehicle accident operations complete",
+      "evidence": {
+        "page": 69,
+        "source_text": "Document all actions taken."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18"
+    },
+    {
+      "from": "n18",
+      "to": "n19"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5365,
+    "completion_tokens": 1553,
+    "total_tokens": 6918,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: ALL HAZARD RESPONSE > Vehicle Accident Operations\nRelated sections in this category: HazMat Incident Operations, HazMat Isolation Distances, HazMat Classification for Fixed Facilities, Local Disaster Response, All Hazard Incident Response, Structure Hazard Marking System",
+  "_validated": true,
+  "_correction_summary": "Added missing action nodes for 'Establish Traffic Control', 'Assess Fire Hazard or Potential', and 'Perform Patient Assessment' to reflect the structure of the source text."
+}

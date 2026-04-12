@@ -1,0 +1,160 @@
+{
+  "protocol_id": "safety_zones_01",
+  "title": "Safety Zones",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    22
+  ],
+  "protocol_type": "table",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Risk Management Process",
+    "Planning for Medical Emergencies",
+    "Common Denominators of Fire Behavior on Tragedy Fires",
+    "Common Tactical Hazards",
+    "LCES",
+    "Downhill Fireline Construction Checklist",
+    "Indicators of Incident Complexity",
+    "Wildland Urban Interface (WUI) Firefighting"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Determine need for safety zone",
+      "evidence": {
+        "page": 22,
+        "source_text": "Safety Zones"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Take advantage of heat barriers (lee side of ridges, large rocks, solid structures)",
+      "evidence": {
+        "page": 22,
+        "source_text": "Take advantage of heat barriers such as lee side of ridges, large rocks, or solid structures."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Burn out safety zones prior to fire front arrival when possible",
+      "evidence": {
+        "page": 22,
+        "source_text": "When possible, burn out safety zones prior to arrival of the fire front."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Avoid locations upslope, downwind, chimneys, saddles, narrow canyons, steep escape routes",
+      "evidence": {
+        "page": 22,
+        "source_text": "Avoid locations that are upslope or downwind from the fire, chimneys, saddles, narrow canyons, and steep, uphill escape routes."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Ensure safety zones are not intended for structure protection",
+      "evidence": {
+        "page": 22,
+        "source_text": "Not intended for structure protection."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Calculate separation distance: at least four times the maximum continuous flame height",
+      "evidence": {
+        "page": 22,
+        "source_text": "Separation distance between the firefighter and the flames should be at least four times the maximum continuous flame height."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Calculate flame height vs. separation distance and area in acres",
+      "evidence": {
+        "page": 22,
+        "source_text": "Flame Height\n10\u0019\n20\u0019\n50\u0019\n100\u0019\n200\u0019\n\nSeparation Distance (firefighters to flames)\n40\u0019\n80\u0019\n200\u0019\n400\u0019\n800\u0019\n\nArea in Acres*\n1/10 acre\n\u0012 acre\n3 acres\n12 acres\n46 acres"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Adjust calculations for wind and slope: larger separation distances required",
+      "evidence": {
+        "page": 22,
+        "source_text": "Since calculations assume no wind and no slope, safety zones downwind or upslope from the fire will require larger separation distances."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Calculate area in acres for a 3-person engine crew",
+      "evidence": {
+        "page": 22,
+        "source_text": "Area in acres is calculated to allow for distance separation on all sides for a 3-person engine crew (1 acre is approximately the size of a football field, or 208’ by 208’)."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "end",
+      "text": "Safety zone established",
+      "evidence": {
+        "page": 22,
+        "source_text": "Safety Zones"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5499,
+    "completion_tokens": 1039,
+    "total_tokens": 6538,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: OPERATIONAL ENGAGEMENT > Safety Zones\nRelated sections in this category: Risk Management Process, Planning for Medical Emergencies, Common Denominators of Fire Behavior on Tragedy Fires, Common Tactical Hazards, LCES, Downhill Fireline Construction Checklist, Indicators of Incident Complexity, Wildland Urban Interface (WUI) Firefighting",
+  "_validated": true,
+  "_correction_summary": "Changed node n7 type from 'table' to 'action'. Added a missing step for calculating area in acres for a 3-person engine crew."
+}

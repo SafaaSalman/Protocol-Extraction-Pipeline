@@ -1,0 +1,212 @@
+{
+  "protocol_id": "helicopter_extraction_operations",
+  "title": "Helicopter Extraction Operations",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    134,
+    135
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Medical Incident Report (page 120)"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate helicopter extraction operations",
+      "evidence": {
+        "page": 134,
+        "source_text": "Helicopter Extraction Operations"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "On-scene EMT or Medical Incident IC determines/requests medical extraction and coordinates order through IMT or local dispatch",
+      "evidence": {
+        "page": 134,
+        "source_text": "On-scene EMT or Medical Incident IC determines/requests that medical extraction is required and coordinates the order through the Incident Management Team (IMT) or local dispatch."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Use the Medical Incident Report (page 120). Include patient weight and name of on-scene radio contact",
+      "evidence": {
+        "page": 134,
+        "source_text": "Use the Medical Incident Report (page 120). Include the patient weight and name of on-scene radio contact."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Establish communications with incoming aircrew. Provide information: known hazards, terrain, wind speed/direction, patient update",
+      "evidence": {
+        "page": 134,
+        "source_text": "Establish communications with incoming aircrew. Provide the following information: known hazards, terrain, wind speed/direction, patient update."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Choose extraction site away from fireline or black edge",
+      "evidence": {
+        "page": 134,
+        "source_text": "Choose extraction site away from fireline or black edge."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Ensure area is clear of non-essential items and personnel. Follow aircrew directions",
+      "evidence": {
+        "page": 134,
+        "source_text": "Ensure the area is clear of non-essential items and personnel. Follow the directions of the aircrew."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Consider rotor wash effects on overhead hazards and blowing dust/debris creating brown out conditions",
+      "evidence": {
+        "page": 134,
+        "source_text": "Rotor wash may affect overhead hazards and blowing dust/debris can create brown out conditions."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Utilize aerial supervision for coordinating aviation medevac missions",
+      "evidence": {
+        "page": 135,
+        "source_text": "Aerial Supervision is valuable for coordinating aviation medevac missions."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "decision",
+      "text": "Can the helicopter be used safely?",
+      "evidence": {
+        "page": 135,
+        "source_text": "The aircrew will make the final assessment regarding the safety of the mission."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Have contingency plan if helicopter cannot be used",
+      "evidence": {
+        "page": 135,
+        "source_text": "Always have a contingency plan in case a helicopter cannot be used."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Follow basic fireline and aviation safety procedures regardless of emergency",
+      "evidence": {
+        "page": 135,
+        "source_text": "Regardless of the emergency, follow basic fireline and aviation safety procedures."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "information",
+      "text": "Rescue Hoist: A cable winching device mounted to the helicopter that is capable of lowering/raising persons attached to the cable",
+      "evidence": {
+        "page": 135,
+        "source_text": "Rescue Hoist: A cable winching device mounted to the helicopter that is capable of lowering/raising persons attached to the cable."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "information",
+      "text": "Short-Haul: To transport one or more persons suspended on a fixed line beneath a helicopter to a safe landing area",
+      "evidence": {
+        "page": 135,
+        "source_text": "Short-Haul: To transport one or more persons suspended on a fixed line beneath a helicopter. The intent is to transport persons a short distance (short-haul), normally from a limited or inaccessible location to a safe landing area."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "end",
+      "text": "Helicopter extraction operation complete",
+      "evidence": {
+        "page": 135,
+        "source_text": "The intent is to transport persons a short distance (short-haul), normally from a limited or inaccessible location to a safe landing area."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10",
+      "condition": "No"
+    },
+    {
+      "from": "n9",
+      "to": "n11",
+      "condition": "Yes"
+    },
+    {
+      "from": "n10",
+      "to": "n14"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5581,
+    "completion_tokens": 1432,
+    "total_tokens": 7013,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: EMERGENCY MEDICAL CARE > Helicopter Extraction Operations\nRelated sections in this category: Emergency Medical Care Guidelines, Patient Assessment, Specific Treatments, CPR, Heat-Related Injury, Burn Injuries, Multi-Casualty Triage System, Fatality Procedures, Medical Incident Report",
+  "_validated": true,
+  "_correction_summary": "Corrected node types for n11 and n12, added a decision point for helicopter safety, and reordered the safety procedure step."
+}

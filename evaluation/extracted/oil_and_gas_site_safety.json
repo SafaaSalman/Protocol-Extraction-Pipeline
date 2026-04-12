@@ -1,0 +1,253 @@
+{
+  "protocol_id": "oil_and_gas_site_safety",
+  "title": "Oil and Gas Site Safety",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    42,
+    43
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Thunderstorm Safety",
+    "How to Properly Refuse Risk",
+    "Hazard Tree Safety",
+    "Powerline Safety",
+    "Roadside Response Safety",
+    "Unexploded Ordnance Safety",
+    "Smoke Hazards and Mitigation",
+    "Smoke and Transportation Safety",
+    "Last Resort Survival"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Responding to incident with oil and gas fields/coal seams",
+      "evidence": {
+        "page": 42,
+        "source_text": "When responding to an incident with oil and gas fields and/or coal seams, you must receive the appropriate training or a briefing before your operational assignment."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Receive appropriate training or briefing before operational assignment",
+      "evidence": {
+        "page": 42,
+        "source_text": "you must receive the appropriate training or a briefing before your operational assignment."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Be aware of Methane (CH4) characteristics: toxic, flammable, odorless, colorless",
+      "evidence": {
+        "page": 42,
+        "source_text": "Methane (CH4): Toxic, flammable, odorless, and colorless."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Beware of enclosed buildings/vehicles if Methane gas is suspected",
+      "evidence": {
+        "page": 42,
+        "source_text": "Beware of enclosed buildings/vehicles if gas is suspected."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Be aware of Hydrogen Sulfide Gas (H2S) characteristics: highly toxic, flammable, colorless",
+      "evidence": {
+        "page": 42,
+        "source_text": "Hydrogen Sulfide Gas (H2S): Highly toxic, flammable, and colorless gas."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Do not depend on sense of smell for H2S warning",
+      "evidence": {
+        "page": 43,
+        "source_text": "Do not depend on sense of smell for warning."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Ensure contact with appropriate authorities before suppression activities",
+      "evidence": {
+        "page": 43,
+        "source_text": "Ensure contact is made with the appropriate authorities before engaging in suppression activities."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Ask for H2S monitor/breathing apparatus and adequate briefing",
+      "evidence": {
+        "page": 43,
+        "source_text": "Ask for H2S monitor/breathing apparatus and adequate briefing."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Avoid low-lying areas during stagnant air conditions",
+      "evidence": {
+        "page": 43,
+        "source_text": "Avoid low-lying areas during stagnant air conditions."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Anticipate industry traffic on narrow, unimproved roads",
+      "evidence": {
+        "page": 43,
+        "source_text": "Anticipate industry traffic on narrow, unimproved roads."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Be aware of exposed pipes and utility lines",
+      "evidence": {
+        "page": 43,
+        "source_text": "Be aware of exposed pipes and utility lines."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Park at least 20 feet away from facilities and equipment. Avoid tampering with oil and gas pumping equipment",
+      "evidence": {
+        "page": 43,
+        "source_text": "Park at least 20 feet away from facilities and equipment. Avoid tampering with the oil and gas pumping equipment."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Avoid open pits/dumps",
+      "evidence": {
+        "page": 43,
+        "source_text": "Avoid open pits/dumps."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Before starting dozer operations, notify appropriate utility representative via local dispatch",
+      "evidence": {
+        "page": 43,
+        "source_text": "Before starting dozer operations, ask your local dispatch to notify the appropriate utility representative."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Do not assume pipelines are buried deeply or directly under their markers",
+      "evidence": {
+        "page": 43,
+        "source_text": "Don\u0019t assume pipelines are buried deeply or directly under their markers."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Seek immediate medical care at a hospital if H2S exposure is suspected",
+      "evidence": {
+        "page": 43,
+        "source_text": "Seek immediate medical care at a hospital if H2S exposure is suspected."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "end",
+      "text": "Safety measures implemented",
+      "evidence": {
+        "page": 43,
+        "source_text": "Seek immediate medical care at a hospital if H2S exposure is suspected."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5556,
+    "completion_tokens": 1418,
+    "total_tokens": 6974,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: SPECIFIC HAZARDS > Oil and Gas Site Safety\nRelated sections in this category: Thunderstorm Safety, How to Properly Refuse Risk, Hazard Tree Safety, Powerline Safety, Roadside Response Safety, Unexploded Ordnance Safety, Smoke Hazards and Mitigation, Smoke and Transportation Safety, Last Resort Survival",
+  "_validated": true,
+  "_correction_summary": "Added missing steps for situation awareness and adjusted the order of hazard control steps to reflect parallel actions."
+}

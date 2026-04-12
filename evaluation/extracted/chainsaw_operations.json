@@ -1,0 +1,337 @@
+{
+  "protocol_id": "chainsaw_operations_01",
+  "title": "Chainsaw Operations",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    102
+  ],
+  "protocol_type": "checklist",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Strategy \u0013 Direct Attack",
+    "Strategy \u0013 Indirect Attack",
+    "Fireline Location",
+    "Working with Heavy Equipment",
+    "Water Delivery Information",
+    "NWCG Engine Typing Standard",
+    "NWCG Water Tender Typing Standards",
+    "High Pressure Pump Information",
+    "Troubleshooting a High Pressure Pump",
+    "Average Perimeter in Chains"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Begin Chainsaw Operations",
+      "evidence": {
+        "page": 102,
+        "source_text": "Chainsaw Operations"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Assess the complexity, complete a hazard analysis, and establish cutting area control",
+      "evidence": {
+        "page": 102,
+        "source_text": "Assess the complexity, complete a hazard analysis, and establish cutting area control."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Evaluate sawyer fatigue",
+      "evidence": {
+        "page": 102,
+        "source_text": "Evaluate sawyer fatigue"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Evaluate tree stand health",
+      "evidence": {
+        "page": 102,
+        "source_text": "Evaluate tree stand health"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Evaluate pace of operations",
+      "evidence": {
+        "page": 102,
+        "source_text": "Evaluate pace of operations"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Evaluate effects of terrain",
+      "evidence": {
+        "page": 102,
+        "source_text": "Evaluate effects of terrain"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Evaluate weather factors",
+      "evidence": {
+        "page": 102,
+        "source_text": "Evaluate weather factors"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Evaluate objective difficulty",
+      "evidence": {
+        "page": 102,
+        "source_text": "Evaluate objective difficulty"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Establish cutting area control and brief cutting area resources",
+      "evidence": {
+        "page": 102,
+        "source_text": "Establish cutting area control/brief cutting area resources"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Determine objective\u0013where each cut piece will end up",
+      "evidence": {
+        "page": 102,
+        "source_text": "Determine objective\u0013where each cut piece will end up"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Assess hazards: overhead/ground hazards, species specific hazards",
+      "evidence": {
+        "page": 102,
+        "source_text": "Assess hazards - Overhead/ground hazards - Species specific hazards"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Determine tree soundness or defects",
+      "evidence": {
+        "page": 102,
+        "source_text": "Determine tree soundness or defects"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Measure lean/bind(s), determine good side/bad side",
+      "evidence": {
+        "page": 102,
+        "source_text": "Measure lean/bind(s), determine good side/bad side"
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Develop an escape plan for the cutting situation",
+      "evidence": {
+        "page": 102,
+        "source_text": "Develop an escape plan for the cutting situation"
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Establish complexity of the cutting operation",
+      "evidence": {
+        "page": 102,
+        "source_text": "Establish complexity of the cutting operation"
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Establish cut plan/wedge plan",
+      "evidence": {
+        "page": 102,
+        "source_text": "Establish cut plan/wedge plan"
+      }
+    },
+    {
+      "id": "n17",
+      "type": "decision",
+      "text": "Complete go/no-go decision",
+      "evidence": {
+        "page": 102,
+        "source_text": "Complete go/no-go decision"
+      }
+    },
+    {
+      "id": "n18",
+      "type": "action",
+      "text": "Communicate and execute cut plan",
+      "evidence": {
+        "page": 102,
+        "source_text": "Communicate and execute cut plan"
+      }
+    },
+    {
+      "id": "n19",
+      "type": "action",
+      "text": "Maintain situational awareness while cutting",
+      "evidence": {
+        "page": 102,
+        "source_text": "Maintain situational awareness while cutting"
+      }
+    },
+    {
+      "id": "n20",
+      "type": "action",
+      "text": "Utilize a safe escape path",
+      "evidence": {
+        "page": 102,
+        "source_text": "Utilize a safe escape path"
+      }
+    },
+    {
+      "id": "n21",
+      "type": "action",
+      "text": "Give all-clear",
+      "evidence": {
+        "page": 102,
+        "source_text": "Give all-clear"
+      }
+    },
+    {
+      "id": "n22",
+      "type": "action",
+      "text": "Analyze operation for lessons learned",
+      "evidence": {
+        "page": 102,
+        "source_text": "Analyze operation for lessons learned"
+      }
+    },
+    {
+      "id": "n23",
+      "type": "end",
+      "text": "Chainsaw operation complete",
+      "evidence": {
+        "page": 102,
+        "source_text": "Analyze operation for lessons learned"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18",
+      "condition": "go"
+    },
+    {
+      "from": "n17",
+      "to": "n23",
+      "condition": "no-go"
+    },
+    {
+      "from": "n18",
+      "to": "n19"
+    },
+    {
+      "from": "n19",
+      "to": "n20"
+    },
+    {
+      "from": "n20",
+      "to": "n21"
+    },
+    {
+      "from": "n21",
+      "to": "n22"
+    },
+    {
+      "from": "n22",
+      "to": "n23"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5364,
+    "completion_tokens": 1983,
+    "total_tokens": 7347,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: OTHER REFERENCES > Chainsaw Operations\nRelated sections in this category: Strategy – Direct Attack, Strategy – Indirect Attack, Fireline Location, Working with Heavy Equipment, Water Delivery Information, NWCG Engine Typing Standard, NWCG Water Tender Typing Standards, High Pressure Pump Information, Troubleshooting a High Pressure Pump, Average Perimeter in Chains",
+  "_validated": true,
+  "_correction_summary": "Changed node n17 to a decision node with two branches. Reordered nodes n15 and n16."
+}

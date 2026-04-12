@@ -1,0 +1,246 @@
+{
+  "protocol_id": "division_commanders_01",
+  "title": "Division Commanders",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    35,
+    36
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "transfer of control section on page 37"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Division established",
+      "evidence": {
+        "page": 35,
+        "source_text": "A division may be established in the early stages of an incident at the direction of the Incident Controller."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Provide operational leadership and span of control",
+      "evidence": {
+        "page": 35,
+        "source_text": "The purpose of a division is to provide operational leadership and span of control over a functional or geographical area of an incident."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Manage fireground operations from a forward location",
+      "evidence": {
+        "page": 35,
+        "source_text": "Typically a division will be established when control is transferred from the fireground to an ICC and the Division Commander will then manage fireground operations from a forward location."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "decision",
+      "text": "Has control been transferred from fireground to ICC?",
+      "evidence": {
+        "page": 35,
+        "source_text": "The process of transferring control (refer to transfer of control section on page 37) from the fireground to the ICC can, if poorly handled, cause major confusion in the critical early stages of incident response."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Report directly to Operations Officer or Incident Controller",
+      "evidence": {
+        "page": 36,
+        "source_text": "The Division Commander will: report direct to the Operations Officer or alternatively the Incident Controller (if the Operations Officer role has not been activated)"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Manage implementation of IAP/ISP for division",
+      "evidence": {
+        "page": 36,
+        "source_text": "be accountable to manage the implementation of the IAP/ISP relating to their division, and provide input to the IAP/ISP process managed by the Incident Controller"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Maintain information exchange with Operations Officer",
+      "evidence": {
+        "page": 36,
+        "source_text": "maintaining ongoing exchange of information with the Operations Officer on incident situation, progress towards the achievement of incident objectives and emerging risks"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "decision",
+      "text": "Is IAP/ISP to be modified?",
+      "evidence": {
+        "page": 36,
+        "source_text": "reporting when: the IAP/ISP is to be modified"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Modify IAP/ISP",
+      "evidence": {
+        "page": 36,
+        "source_text": "reporting when: the IAP/ISP is to be modified"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Provide briefings/debriefings to Sector Commanders",
+      "evidence": {
+        "page": 36,
+        "source_text": "providing briefings/debriefings to Sector Commanders within the division"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Review, allocate, and modify specific tasks",
+      "evidence": {
+        "page": 36,
+        "source_text": "reviewing, allocating and modifying specific tasks in relation to their division"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Resolve identified logistics problems",
+      "evidence": {
+        "page": 36,
+        "source_text": "resolving identified logistics problems"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Observe safe work practices",
+      "evidence": {
+        "page": 36,
+        "source_text": "observing safe work practices at the incident within the division"
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Coordinate activities with adjacent divisions",
+      "evidence": {
+        "page": 36,
+        "source_text": "coordinating activities with adjacent divisions"
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Maintain a log of activities",
+      "evidence": {
+        "page": 36,
+        "source_text": "maintaining a log of activities."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "end",
+      "text": "Division management complete",
+      "evidence": {
+        "page": 36,
+        "source_text": "As an incident escalates the Incident Controller/Operations Officer may deploy additional staff to support the Division Commander in these functions."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5",
+      "condition": "Yes"
+    },
+    {
+      "from": "n4",
+      "to": "n6",
+      "condition": "No"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9",
+      "condition": "Yes"
+    },
+    {
+      "from": "n8",
+      "to": "n10",
+      "condition": "No"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 8195,
+    "completion_tokens": 1546,
+    "total_tokens": 9741,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: Incident Management > Division Commanders\nRelated sections in this category: AIIMS Principles and Concepts, AIIMS Structure, Incident Controller, Deputy Incident Controller, Operations Officer, Sector Commanders, Incident Objective, Incident Action Planning, Incident Communications Planning, Briefings",
+  "_validated": true,
+  "_correction_summary": "Corrected decision branches for node n4 and n8, reordered actions to reflect logical sequence, and added missing steps for decision outcomes."
+}

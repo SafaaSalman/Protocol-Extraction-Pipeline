@@ -1,0 +1,174 @@
+{
+  "protocol_id": "smoke_hazards_and_mitigation",
+  "title": "Smoke Hazards and Mitigation",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    44
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Thunderstorm Safety",
+    "How to Properly Refuse Risk",
+    "Hazard Tree Safety",
+    "Powerline Safety",
+    "Roadside Response Safety",
+    "Unexploded Ordnance Safety",
+    "Oil and Gas Site Safety",
+    "Smoke and Transportation Safety",
+    "Last Resort Survival"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Smoke hazard identified",
+      "evidence": {
+        "page": 44,
+        "source_text": "Smoke Hazards and Mitigation"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "text": "Who is affected?",
+      "evidence": {
+        "page": 44,
+        "source_text": "Line Personnel, ICP/Spike Camps, Public"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Use lookouts to monitor and communicate hazardous smoke conditions. Make appropriate notifications",
+      "evidence": {
+        "page": 44,
+        "source_text": "Use lookouts to monitor and communicate hazardous smoke conditions that may impact nearby roads. Make appropriate supervisory and/or safety notifications."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Rotate resources in and out of smoky areas. Consider exposure when developing mop up standards",
+      "evidence": {
+        "page": 44,
+        "source_text": "If needed, rotate resources in and out of smoky areas. Consider exposure when developing mop up standards."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Ensure adequate rest and recovery from on-shift exposure to smoke",
+      "evidence": {
+        "page": 44,
+        "source_text": "Ensure adequate rest and recovery from on-shift exposure to smoke."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Ensure adequate rest and recovery from smoke exposure. Avoid locating camps in areas where smoke can concentrate",
+      "evidence": {
+        "page": 44,
+        "source_text": "Ensure adequate rest and recovery from on-shift exposure to smoke. Avoid locating fire camps in drainages, valleys, or low-lying areas where smoke can concentrate at night or under inversion conditions."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Provide mitigation for smoke exposure (e.g., clean-air sleeping trailer or hotel rooms)",
+      "evidence": {
+        "page": 44,
+        "source_text": "If camps can\u0019t be moved, provide appropriate mitigation to ensure adequate rest and recovery from smoke exposure (e.g., clean-air sleeping trailer or hotel rooms)."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Identify smoke sensitive areas and monitor smoke impacts",
+      "evidence": {
+        "page": 44,
+        "source_text": "Identify possible smoke sensitive areas (roads, communities, schools, hospitals, etc.) that may be impacted by smoke. Monitor smoke impacts."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Notify authorities if heavy smoke is expected or present",
+      "evidence": {
+        "page": 44,
+        "source_text": "When heavy smoke is expected or present, notify authorities such as the air regulatory agency, health department, or public safety, either directly or through dispatch."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "end",
+      "text": "Smoke hazard mitigated",
+      "evidence": {
+        "page": 44,
+        "source_text": "Notify authorities such as the air regulatory agency, health department, or public safety, either directly or through dispatch."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": "Line Personnel"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n10"
+    },
+    {
+      "from": "n2",
+      "to": "n6",
+      "condition": "ICP/Spike Camps"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n10"
+    },
+    {
+      "from": "n2",
+      "to": "n8",
+      "condition": "Public"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 6600,
+    "completion_tokens": 1106,
+    "total_tokens": 7706,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: SPECIFIC HAZARDS > Smoke Hazards and Mitigation\nRelated sections in this category: Thunderstorm Safety, How to Properly Refuse Risk, Hazard Tree Safety, Powerline Safety, Roadside Response Safety, Unexploded Ordnance Safety, Oil and Gas Site Safety, Smoke and Transportation Safety, Last Resort Survival",
+  "_validated": true,
+  "_correction_summary": "Added missing step for Line Personnel, reordered actions for Line Personnel, and added missing branch for monitoring smoke conditions."
+}

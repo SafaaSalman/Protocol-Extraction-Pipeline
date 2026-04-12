@@ -1,0 +1,318 @@
+{
+  "protocol_id": "fire_assessment_process",
+  "title": "Fire Assessment Process",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    49
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Look Up, Down, and Around",
+    "Interpret the Smoke Column",
+    "Fire Danger Ratings and Interpretations",
+    "Critical Fire Weather",
+    "Important Winds for Interpreting Forecasts",
+    "Visual Estimate of Surface Windspeed",
+    "Fine Fuel Moisture (FFM) and Probability of Ignition (PIG)",
+    "Fine Fuel Moisture and Fire Behavior",
+    "Fire Behavior Observations & Interpretations",
+    "In Your Fire Weather Forecast"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Begin Fire Assessment Process",
+      "evidence": {
+        "page": 49,
+        "source_text": "Fire Assessment Process"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Review fire weather forecast, noting NWS Watches and Warnings and key discussion terminology",
+      "evidence": {
+        "page": 49,
+        "source_text": "Review fire weather forecast, noting National Weather Service (NWS) Watches and Warnings and key discussion terminology."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Review recent fire activity and notable fire behavior",
+      "evidence": {
+        "page": 49,
+        "source_text": "Review recent fire activity and notable fire behavior."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Compare current fire danger levels to historic trends and thresholds on local PocketCard to assess season severity",
+      "evidence": {
+        "page": 49,
+        "source_text": "Compare current fire danger levels to historic trends and thresholds on local PocketCard to assess season severity."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Consider critical fire weather patterns with fire weather forecast and predictive services 7-day outlook",
+      "evidence": {
+        "page": 49,
+        "source_text": "Consider critical fire weather patterns with fire weather forecast and predictive services 7-day outlook."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Take weather forecast along; consider spot forecast needs",
+      "evidence": {
+        "page": 49,
+        "source_text": "Take weather forecast along; consider spot forecast needs."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Recall weather from yesterday, overnight, and now",
+      "evidence": {
+        "page": 49,
+        "source_text": "Recall weather from yesterday, overnight, and now."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Utilize maps of the fire area to evaluate what has burned and what may be ahead",
+      "evidence": {
+        "page": 49,
+        "source_text": "Utilize maps of the fire area to evaluate what has burned and what may be ahead."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Interpret sky and smoke conditions for stability, wind speed and direction, and signs of intense burning",
+      "evidence": {
+        "page": 49,
+        "source_text": "Interpret sky and smoke conditions for stability, wind speed and direction, and signs of intense burning."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Validate forecast with current on-site weather conditions, especially windspeed and direction",
+      "evidence": {
+        "page": 49,
+        "source_text": "Validate forecast with current on-site weather conditions, especially windspeed and direction."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Determine where, what, and how the fire is burning",
+      "evidence": {
+        "page": 49,
+        "source_text": "Determine where, what, and how the fire is burning."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Identify hazardous fuels and significant terrain ahead of the fire",
+      "evidence": {
+        "page": 49,
+        "source_text": "Identify hazardous fuels and significant terrain ahead of the fire."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Anticipate rapidly changing fire behavior",
+      "evidence": {
+        "page": 49,
+        "source_text": "Anticipate rapidly changing fire behavior."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Continue to monitor the sky for cloud and smoke indicators",
+      "evidence": {
+        "page": 49,
+        "source_text": "Continue to monitor the sky for cloud and smoke indicators."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Recognize how changes impact objectives, strategies, and tactics",
+      "evidence": {
+        "page": 49,
+        "source_text": "Recognize how changes impact objectives, strategies, and tactics."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Establish escape routes, time frames, and triggers for escape to safety zones",
+      "evidence": {
+        "page": 49,
+        "source_text": "Establish escape routes, time frames, and triggers for escape to safety zones."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "action",
+      "text": "Identify best lookout locations to monitor for changes",
+      "evidence": {
+        "page": 49,
+        "source_text": "Identify best lookout locations to monitor for changes."
+      }
+    },
+    {
+      "id": "n18",
+      "type": "action",
+      "text": "Communicate weather and fire behavior observations",
+      "evidence": {
+        "page": 49,
+        "source_text": "Communicate weather and fire behavior observations."
+      }
+    },
+    {
+      "id": "n19",
+      "type": "action",
+      "text": "Determine Decision Thresholds and Ensure LCES",
+      "evidence": {
+        "page": 49,
+        "source_text": "Determine Decision Thresholds and Ensure LCES"
+      }
+    },
+    {
+      "id": "n20",
+      "type": "action",
+      "text": "Record your observations and assumptions",
+      "evidence": {
+        "page": 49,
+        "source_text": "Record your observations and assumptions."
+      }
+    },
+    {
+      "id": "n21",
+      "type": "action",
+      "text": "Include assessments and decisions in personal logs",
+      "evidence": {
+        "page": 49,
+        "source_text": "Include assessments and decisions in personal logs."
+      }
+    },
+    {
+      "id": "n22",
+      "type": "end",
+      "text": "Fire assessment process complete",
+      "evidence": {
+        "page": 49,
+        "source_text": "Document Your Assessment"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18"
+    },
+    {
+      "from": "n18",
+      "to": "n19"
+    },
+    {
+      "from": "n19",
+      "to": "n20"
+    },
+    {
+      "from": "n20",
+      "to": "n21"
+    },
+    {
+      "from": "n21",
+      "to": "n22"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5530,
+    "completion_tokens": 2027,
+    "total_tokens": 7557,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: FIRE ENVIRONMENT > Fire Assessment Process\nRelated sections in this category: Look Up, Down, and Around, Interpret the Smoke Column, Fire Danger Ratings and Interpretations, Critical Fire Weather, Important Winds for Interpreting Forecasts, Visual Estimate of Surface Windspeed, Fine Fuel Moisture (FFM) and  Probability of Ignition (PIG), Fine Fuel Moisture and Fire Behavior, Fire Behavior Observations & Interpretations, In Your Fire Weather Forecast",
+  "_validated": true,
+  "_correction_summary": "Added missing step for 'Determine Decision Thresholds and Ensure LCES' and corrected the node type for 'Document Your Assessment'."
+}

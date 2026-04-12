@@ -1,0 +1,421 @@
+{
+  "protocol_id": "last_resort_survival",
+  "title": "Last Resort Survival",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    46,
+    47,
+    48
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Thunderstorm Safety",
+    "How to Properly Refuse Risk",
+    "Hazard Tree Safety",
+    "Powerline Safety",
+    "Roadside Response Safety",
+    "Unexploded Ordnance Safety",
+    "Oil and Gas Site Safety",
+    "Smoke Hazards and Mitigation",
+    "Smoke and Transportation Safety"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Last Resort Survival initiated",
+      "evidence": {
+        "page": 46,
+        "source_text": "Last Resort Survival"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Escape if you can using PPE and best option",
+      "evidence": {
+        "page": 46,
+        "source_text": "Escape if you can. • Utilize all your Personal Protective Equipment (PPE) and act immediately on your best option."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Drop gear to increase escape speed, keep fire shelter, hand tool, water, and radio if time allows",
+      "evidence": {
+        "page": 46,
+        "source_text": "• Drop your gear to increase escape speed. Keep your fire shelter and, if time allows, your hand tool, water, and radio."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Use fire shelter as heat shield while moving",
+      "evidence": {
+        "page": 46,
+        "source_text": "• You may be able to use the fire shelter for a heat shield as you move."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "In light fuels, move through flames into the black",
+      "evidence": {
+        "page": 46,
+        "source_text": "• In LIGHT FUELS, you may be able to move through the flames into the black."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "If on the flank, try to get below the fire",
+      "evidence": {
+        "page": 46,
+        "source_text": "• If you are on the flank of the fire, try to get below the fire."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Consider vehicles or helicopters for escape",
+      "evidence": {
+        "page": 46,
+        "source_text": "• Consider vehicles or helicopters for escape."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Find a survivable area, stay out of hazardous terrain features",
+      "evidence": {
+        "page": 46,
+        "source_text": "Find a survivable area. • Stay out of hazardous terrain features."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Use bodies of water",
+      "evidence": {
+        "page": 46,
+        "source_text": "• Use bodies of water."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "In light fuels, light an escape fire; in other fuels, light a backfire",
+      "evidence": {
+        "page": 46,
+        "source_text": "• In LIGHT FUELS, you may be able to light an escape fire. In other fuels, you may be able to light a backfire."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Call for helicopter or retardant drops",
+      "evidence": {
+        "page": 46,
+        "source_text": "• Call for helicopter or retardant drops."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Cut and scatter fuels if there is time",
+      "evidence": {
+        "page": 46,
+        "source_text": "• Cut and scatter fuels if there is time."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Use available heat barriers like large rocks and dozer berms",
+      "evidence": {
+        "page": 46,
+        "source_text": "• Use any available heat barriers such as large rocks and dozer berms."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Consider vehicle traffic hazards on roads",
+      "evidence": {
+        "page": 46,
+        "source_text": "• Consider vehicle traffic hazards on roads."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Structures and vehicles may be an option for temporary refuge",
+      "evidence": {
+        "page": 46,
+        "source_text": "• Structures and vehicles may be an option for temporary refuge."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Pick a fire shelter deployment site, maximize distance from surface fuels",
+      "evidence": {
+        "page": 47,
+        "source_text": "Pick a fire shelter deployment site. • Your first priority is to maximize distance from nearest surface fuels."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "action",
+      "text": "Find the lowest point available",
+      "evidence": {
+        "page": 47,
+        "source_text": "• Find the lowest point available."
+      }
+    },
+    {
+      "id": "n18",
+      "type": "action",
+      "text": "Pick a surface that allows fire shelter to seal, remove ground fuels",
+      "evidence": {
+        "page": 47,
+        "source_text": "• If possible, pick a surface that allows the fire shelter to seal, and remove ground fuels."
+      }
+    },
+    {
+      "id": "n19",
+      "type": "action",
+      "text": "Get into fire shelter before flame front hits",
+      "evidence": {
+        "page": 47,
+        "source_text": "• Get into the fire shelter before the flame front hits."
+      }
+    },
+    {
+      "id": "n20",
+      "type": "action",
+      "text": "Position feet toward fire, hold down fire shelter",
+      "evidence": {
+        "page": 47,
+        "source_text": "• Position your feet toward the fire and hold down the fire shelter."
+      }
+    },
+    {
+      "id": "n21",
+      "type": "action",
+      "text": "Keep face pressed into ground, protect airway",
+      "evidence": {
+        "page": 47,
+        "source_text": "• Keep your face pressed into the ground and protect your airway."
+      }
+    },
+    {
+      "id": "n22",
+      "type": "action",
+      "text": "Deploy next to each other, keep talking",
+      "evidence": {
+        "page": 47,
+        "source_text": "• Deploy next to each other and keep talking."
+      }
+    },
+    {
+      "id": "n23",
+      "type": "action",
+      "text": "Expect extremely heavy ember showers",
+      "evidence": {
+        "page": 47,
+        "source_text": "Expect: • Extremely heavy ember showers."
+      }
+    },
+    {
+      "id": "n24",
+      "type": "action",
+      "text": "Expect superheated air blast before flame front",
+      "evidence": {
+        "page": 47,
+        "source_text": "• Superheated air blast to hit before the flame front."
+      }
+    },
+    {
+      "id": "n25",
+      "type": "action",
+      "text": "Expect noise and turbulent, powerful winds hitting fire shelter",
+      "evidence": {
+        "page": 47,
+        "source_text": "• Noise and turbulent, powerful winds hitting the fire shelter."
+      }
+    },
+    {
+      "id": "n26",
+      "type": "action",
+      "text": "Expect heat and fire glow inside fire shelter",
+      "evidence": {
+        "page": 47,
+        "source_text": "• Heat and fire glow inside the fire shelter."
+      }
+    },
+    {
+      "id": "n27",
+      "type": "action",
+      "text": "Expect long deployment times, when in doubt, wait it out",
+      "evidence": {
+        "page": 47,
+        "source_text": "• Long deployment times…WHEN IN DOUBT, WAIT IT OUT."
+      }
+    },
+    {
+      "id": "n28",
+      "type": "action",
+      "text": "Do not expect radio communication capabilities",
+      "evidence": {
+        "page": 47,
+        "source_text": "• Do not expect radio communication capabilities."
+      }
+    },
+    {
+      "id": "n29",
+      "type": "action",
+      "text": "Do not expect water or retardant from aerial resources",
+      "evidence": {
+        "page": 47,
+        "source_text": "• Do not expect water or retardant from aerial resources."
+      }
+    },
+    {
+      "id": "n30",
+      "type": "end",
+      "text": "Survival actions complete",
+      "evidence": {
+        "page": 48,
+        "source_text": "NOTES"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18"
+    },
+    {
+      "from": "n18",
+      "to": "n19"
+    },
+    {
+      "from": "n19",
+      "to": "n20"
+    },
+    {
+      "from": "n20",
+      "to": "n21"
+    },
+    {
+      "from": "n21",
+      "to": "n22"
+    },
+    {
+      "from": "n22",
+      "to": "n23"
+    },
+    {
+      "from": "n23",
+      "to": "n24"
+    },
+    {
+      "from": "n24",
+      "to": "n25"
+    },
+    {
+      "from": "n25",
+      "to": "n26"
+    },
+    {
+      "from": "n26",
+      "to": "n27"
+    },
+    {
+      "from": "n27",
+      "to": "n28"
+    },
+    {
+      "from": "n28",
+      "to": "n29"
+    },
+    {
+      "from": "n29",
+      "to": "n30"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5659,
+    "completion_tokens": 2800,
+    "total_tokens": 8459,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: SPECIFIC HAZARDS > Last Resort Survival\nRelated sections in this category: Thunderstorm Safety, How to Properly Refuse Risk, Hazard Tree Safety, Powerline Safety, Roadside Response Safety, Unexploded Ordnance Safety, Oil and Gas Site Safety, Smoke Hazards and Mitigation, Smoke and Transportation Safety"
+}

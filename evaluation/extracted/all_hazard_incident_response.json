@@ -1,0 +1,184 @@
+{
+  "protocol_id": "all_hazard_incident_response",
+  "title": "All Hazard Incident Response",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    74
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Vehicle Accident Operations",
+    "HazMat Incident Operations",
+    "HazMat Isolation Distances",
+    "HazMat Classification for Fixed Facilities",
+    "Local Disaster Response",
+    "Structure Hazard Marking System"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate All Hazard Incident Response",
+      "evidence": {
+        "page": 74,
+        "source_text": "All Hazard Incident Response"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Plan to be self-sufficient for 24 to 48 hours",
+      "evidence": {
+        "page": 74,
+        "source_text": "Plan to be self-sufficient for 24 to 48 hours."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Bring a GPS unit if possible",
+      "evidence": {
+        "page": 74,
+        "source_text": "Bring a GPS unit if possible."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Be prepared for extreme weather conditions associated with storm disasters",
+      "evidence": {
+        "page": 74,
+        "source_text": "Be prepared for extreme weather conditions associated with storm disasters."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Establish central rally points for assigned responders",
+      "evidence": {
+        "page": 74,
+        "source_text": "Establish central rally points for assigned responders."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Develop local contacts for information gathering",
+      "evidence": {
+        "page": 74,
+        "source_text": "Develop local contacts for information gathering."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Be aware that dust and debris may interfere with respiration and visibility",
+      "evidence": {
+        "page": 74,
+        "source_text": "Dust and debris may interfere with respiration and visibility."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Be cautious of weakened structures, fires, leaking hazardous materials, raw sewage contamination, and waterborne diseases",
+      "evidence": {
+        "page": 74,
+        "source_text": "Weakened structures, fires, leaking hazardous materials, raw sewage contamination, and waterborne diseases may pose additional risks."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Expect mobility and access to be impaired by critical infrastructure damage, disrupted utilities, structural collapse, flooding, ice covered roads, or other barriers",
+      "evidence": {
+        "page": 74,
+        "source_text": "Mobility and access may be impaired by critical infrastructure damage, disrupted utilities, structural collapse, flooding, ice covered roads, or other barriers."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "In the case of natural disasters, be aware of additional threats following the initial storm or earthquake",
+      "evidence": {
+        "page": 74,
+        "source_text": "In the case of natural disasters, be aware of the additional threats following the initial storm or earthquake."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Be considerate of those impacted by the disaster",
+      "evidence": {
+        "page": 74,
+        "source_text": "Be considerate of those impacted by the disaster."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "end",
+      "text": "Complete All Hazard Incident Response preparation",
+      "evidence": {
+        "page": 74,
+        "source_text": "All Hazard Incident Response"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5415,
+    "completion_tokens": 1119,
+    "total_tokens": 6534,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: ALL HAZARD RESPONSE > All Hazard Incident Response\nRelated sections in this category: Vehicle Accident Operations, HazMat Incident Operations, HazMat Isolation Distances, HazMat Classification for Fixed Facilities, Local Disaster Response, Structure Hazard Marking System",
+  "_validated": true,
+  "_correction_summary": "Changed node n11 to an action node and added a new end node to properly conclude the protocol."
+}

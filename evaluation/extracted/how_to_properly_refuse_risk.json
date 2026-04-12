@@ -1,0 +1,176 @@
+{
+  "protocol_id": "how_to_properly_refuse_risk",
+  "title": "How to Properly Refuse Risk",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    34,
+    35
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Thunderstorm Safety",
+    "Hazard Tree Safety",
+    "Powerline Safety",
+    "Roadside Response Safety",
+    "Unexploded Ordnance Safety",
+    "Oil and Gas Site Safety",
+    "Smoke Hazards and Mitigation",
+    "Smoke and Transportation Safety",
+    "Last Resort Survival"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Identify unsafe assignment",
+      "evidence": {
+        "page": 34,
+        "source_text": "When an individual feels an assignment is unsafe..."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Identify safe alternatives for completing the assignment",
+      "evidence": {
+        "page": 34,
+        "source_text": "they also have the obligation to identify, to the degree possible, safe alternatives for completing that assignment."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Assess risks and ability to control them",
+      "evidence": {
+        "page": 34,
+        "source_text": "The turn down of an assignment must be based on an assessment of risks and the ability of the individual or organization to control those risks."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Inform supervisor of turn down using Risk Management Process criteria",
+      "evidence": {
+        "page": 35,
+        "source_text": "The individual directly informs their supervisor they are turning down the assignment as given..."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "decision",
+      "text": "Is there a violation of safe work practices, unsafe environmental conditions, lack of qualifications, or defective equipment?",
+      "evidence": {
+        "page": 34,
+        "source_text": "Individuals may turn down an assignment as unsafe when..."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Supervisor notifies Safety Officer or appropriate authority",
+      "evidence": {
+        "page": 35,
+        "source_text": "The supervisor notifies the Safety Officer immediately..."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "If another resource is assigned, inform them of the turn down and reasons",
+      "evidence": {
+        "page": 35,
+        "source_text": "If the supervisor asks another resource to perform the assignment..."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "decision",
+      "text": "Does an unresolved safety hazard exist or was an unsafe act committed?",
+      "evidence": {
+        "page": 35,
+        "source_text": "If an unresolved safety hazard exists or an unsafe act was committed..."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Document turn down with SAFENET or SAFECOM form",
+      "evidence": {
+        "page": 35,
+        "source_text": "the individual should also document the turn down by submitting a SAFENET..."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "end",
+      "text": "Risk refusal process complete",
+      "evidence": {
+        "page": 35,
+        "source_text": "These actions do not stop an operation from being carried out..."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6",
+      "condition": "Yes"
+    },
+    {
+      "from": "n5",
+      "to": "n10",
+      "condition": "No"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9",
+      "condition": "Yes"
+    },
+    {
+      "from": "n8",
+      "to": "n10",
+      "condition": "No"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 7936,
+    "completion_tokens": 922,
+    "total_tokens": 8858,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: SPECIFIC HAZARDS > How to Properly Refuse Risk\nRelated sections in this category: Thunderstorm Safety, Hazard Tree Safety, Powerline Safety, Roadside Response Safety, Unexploded Ordnance Safety, Oil and Gas Site Safety, Smoke Hazards and Mitigation, Smoke and Transportation Safety, Last Resort Survival",
+  "_validated": true,
+  "_correction_summary": "Added missing steps for identifying safe alternatives and assessing risks. Reordered nodes to reflect the correct sequence of actions."
+}

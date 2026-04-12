@@ -1,0 +1,186 @@
+{
+  "protocol_id": "indicators_of_incident_complexity",
+  "title": "Indicators of Incident Complexity",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    24,
+    25,
+    26
+  ],
+  "protocol_type": "hybrid",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Risk Management Process",
+    "Planning for Medical Emergencies",
+    "Common Denominators of Fire Behavior on Tragedy Fires",
+    "Common Tactical Hazards",
+    "LCES",
+    "Safety Zones",
+    "Downhill Fireline Construction Checklist",
+    "Wildland Urban Interface (WUI) Firefighting"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Begin assessment of incident complexity",
+      "evidence": {
+        "page": 24,
+        "source_text": "Indicators of Incident Complexity"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "text": "Determine incident type based on complexity indicators",
+      "evidence": {
+        "page": 24,
+        "source_text": "Type 5 Incident Complexity Indicators"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Type 5: Incident typically terminated quickly, minimal resources needed, no formal planning process",
+      "evidence": {
+        "page": 24,
+        "source_text": "Incident is typically terminated or concluded (objective met) within a short time once resources arrive on scene. Formal Incident Planning Process not needed."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Type 4: Incident objectives met within one operational period, limited resources, no formal planning process",
+      "evidence": {
+        "page": 24,
+        "source_text": "Incident objectives are typically met within one operational period once resources arrive on scene, but resources may remain on scene for multiple operational periods. Formal Incident Planning Process not needed."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Type 3: Incident extends into multiple operational periods, numerous resources needed, formal planning process initiated",
+      "evidence": {
+        "page": 25,
+        "source_text": "Incident typically extends into multiple operational periods. Formal Incident Planning Process is initiated and followed."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "decision",
+      "text": "Assess span of control and resource supervision",
+      "evidence": {
+        "page": 24,
+        "source_text": "Span of Control Indicators"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Type 5: IC position filled, single resources supervised by IC",
+      "evidence": {
+        "page": 24,
+        "source_text": "Incident Commander (IC) position filled. Single resources are directly supervised by the IC."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Type 4: IC role filled, resources supervised by IC or ICS Leader",
+      "evidence": {
+        "page": 24,
+        "source_text": "IC role filled. Resources either directly supervised by the IC or supervised through an ICS Leader position."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Type 3: IC role filled, resources supervised through Operations Section",
+      "evidence": {
+        "page": 25,
+        "source_text": "IC role filled. Numerous resources supervised indirectly through the establishment and expansion of the Operations Section and its subordinate positions."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "end",
+      "text": "Incident complexity assessment complete",
+      "evidence": {
+        "page": 25,
+        "source_text": "If multiple Type 3 Incident Complexity Indicators are exceeded, consider the next level of incident management support."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": "Indicators match Type 5"
+    },
+    {
+      "from": "n2",
+      "to": "n4",
+      "condition": "Indicators match Type 4"
+    },
+    {
+      "from": "n2",
+      "to": "n5",
+      "condition": "Indicators match Type 3"
+    },
+    {
+      "from": "n3",
+      "to": "n6"
+    },
+    {
+      "from": "n4",
+      "to": "n6"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7",
+      "condition": "Span of control matches Type 5"
+    },
+    {
+      "from": "n6",
+      "to": "n8",
+      "condition": "Span of control matches Type 4"
+    },
+    {
+      "from": "n6",
+      "to": "n9",
+      "condition": "Span of control matches Type 3"
+    },
+    {
+      "from": "n7",
+      "to": "n10"
+    },
+    {
+      "from": "n8",
+      "to": "n10"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 10332,
+    "completion_tokens": 1191,
+    "total_tokens": 11523,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: OPERATIONAL ENGAGEMENT > Indicators of Incident Complexity\nRelated sections in this category: Risk Management Process, Planning for Medical Emergencies, Common Denominators of Fire Behavior on Tragedy Fires, Common Tactical Hazards, LCES, Safety Zones, Downhill Fireline Construction Checklist, Wildland Urban Interface (WUI) Firefighting",
+  "_validated": true,
+  "_correction_summary": "Added missing steps for each incident type, corrected conditions for decision nodes, and split merged steps into finer granularity."
+}

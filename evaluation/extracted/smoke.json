@@ -1,0 +1,141 @@
+{
+  "protocol_id": "smoke_01",
+  "title": "Smoke",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    80
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Standard for Managing significant CO",
+    "Bushfire Smoke Air quality and health",
+    "State Smoke Framework"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Significant smoke or emissions identified",
+      "evidence": {
+        "page": 80,
+        "source_text": "Significant smoke or emissions from fires or hazardous materials incidents need consideration..."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "text": "Is the composition of smoke known?",
+      "evidence": {
+        "page": 80,
+        "source_text": "Smoke is harmful and early in any incident the composition will be unknown..."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Avoid exposure, minimize exposure, use personal protective respiratory protection",
+      "evidence": {
+        "page": 80,
+        "source_text": "basic protective actions i.e. avoid exposure, minimise exposure, personal protective respiratory protection, should be considered."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "decision",
+      "text": "Is the density of smoke predicted to last a considerable time?",
+      "evidence": {
+        "page": 80,
+        "source_text": "If the density of smoke or emissions is predicted to last a considerable time..."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Provide advice to protect workers and the community",
+      "evidence": {
+        "page": 80,
+        "source_text": "provision of advice to protect both workers and the community"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Deploy monitoring equipment to the incident site",
+      "evidence": {
+        "page": 80,
+        "source_text": "deployment of monitoring equipment to the incident site to monitor composition and exposure of workforce"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Deploy monitoring within the community if significant",
+      "evidence": {
+        "page": 80,
+        "source_text": "if significant, potentially deploy monitoring within the community that is impacted by smoke or emissions."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "end",
+      "text": "Monitoring and protective actions in place",
+      "evidence": {
+        "page": 80,
+        "source_text": "Early consideration for the need for monitoring to significant events..."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": "No (composition unknown)"
+    },
+    {
+      "from": "n2",
+      "to": "n4",
+      "condition": "Yes (composition known)"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5",
+      "condition": "Yes (lasting considerable time)"
+    },
+    {
+      "from": "n4",
+      "to": "n8",
+      "condition": "No (not lasting considerable time)"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 6721,
+    "completion_tokens": 887,
+    "total_tokens": 7608,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: Safety > Smoke\nRelated sections in this category: Safe Person Approach, Dynamic Risk Assessment, Safety First Approach, OHS Incident Reporting, LACES, WATCHOUT, Red Flag Warnings, Fireground Information Update, Hydration, Fatigue"
+}

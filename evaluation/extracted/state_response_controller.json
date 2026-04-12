@@ -1,0 +1,130 @@
+{
+  "protocol_id": "state_response_controller",
+  "title": "State Response Controller",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    15
+  ],
+  "protocol_type": "reference",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Tiers of Emergency Response Management",
+    "Major Emergencies",
+    "Emergency Management Commissioner",
+    "Control, Command and Coordination"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "State Response Controller appointed",
+      "evidence": {
+        "page": 15,
+        "source_text": "State Response Controller is the person appointed by the EMC to exercise control over the response to a major fire."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Ensure safety of responders and community",
+      "evidence": {
+        "page": 15,
+        "source_text": "the safety of responders and the community is a priority"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Manage consequences of the emergency",
+      "evidence": {
+        "page": 15,
+        "source_text": "the consequences of the emergency are managed"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Communicate to meet information needs",
+      "evidence": {
+        "page": 15,
+        "source_text": "there is communication to meet the information needs of communities, Government, agencies and business"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Integrate relief and recovery with emergency response",
+      "evidence": {
+        "page": 15,
+        "source_text": "relief and recovery are integrated with emergency response activities."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Exercise control over the response to a major fire",
+      "evidence": {
+        "page": 15,
+        "source_text": "State Response Controller is the person appointed by the EMC to exercise control over the response to a major fire."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "May have powers and authority of the Chief Officer of the control agency",
+      "evidence": {
+        "page": 15,
+        "source_text": "The State Response Controller, when appointed for a class 1 emergencies has the powers and authority of the Chief Officer of the control agency, provided for under the control agency relevant Act."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "end",
+      "text": "State Response Controller role executed",
+      "evidence": {
+        "page": 15,
+        "source_text": "The State Response Controller, when appointed for a class 1 emergencies has the powers and authority of the Chief Officer of the control agency, provided for under the control agency relevant Act."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5447,
+    "completion_tokens": 508,
+    "total_tokens": 5955,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Victorian Emergency Management Arrangements > State Response Controller\nRelated sections in this category: Tiers of Emergency Response Management, Major Emergencies, Emergency Management Commissioner, Control, Command and Coordination",
+  "_validated": true,
+  "_correction_summary": "Added missing steps related to control, command, and coordination functions and their responsibilities. Reordered actions for logical sequence."
+}

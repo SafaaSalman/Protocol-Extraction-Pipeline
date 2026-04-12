@@ -1,0 +1,79 @@
+{
+  "protocol_id": "objective_for_bushfire_management_in_victoria",
+  "title": "Objective for Bushfire Management in Victoria",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    19
+  ],
+  "protocol_type": "table",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Definitions",
+    "Control Arrangements for Bushfire",
+    "Support for the Line-of-Control",
+    "Support for the EMC and State Response Controller",
+    "Support for the Regional Controller",
+    "Support for the Incident Controller",
+    "Command"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Emergency Management Commissioner",
+      "evidence": {
+        "page": 19,
+        "source_text": "Emergency Management Commissioner"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "State Response Controller",
+      "evidence": {
+        "page": 19,
+        "source_text": "State Response Controller"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Regional Controller (where appointed)",
+      "evidence": {
+        "page": 19,
+        "source_text": "Regional Controller (where appointed)"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "end",
+      "text": "Incident Controller",
+      "evidence": {
+        "page": 19,
+        "source_text": "Incident Controller"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5516,
+    "completion_tokens": 428,
+    "total_tokens": 5944,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Control and Command Arrangements for Bushfire > Objective for Bushfire Management in Victoria\nRelated sections in this category: Definitions, Control Arrangements for Bushfire, Support for the Line-of-Control, Support for the EMC and State Response Controller, Support for the Regional Controller, Support for the Incident Controller, Command"
+}

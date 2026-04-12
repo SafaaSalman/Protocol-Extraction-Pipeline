@@ -1,0 +1,177 @@
+{
+  "protocol_id": "uas_wildland_fire_operations",
+  "title": "Unmanned Aircraft Systems (UAS) in Wildland Fire Operations",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    96,
+    97,
+    98
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Aviation User Checklist",
+    "Aviation Watch Out Situations",
+    "Helicopter Passenger Briefing and PPE",
+    "Helicopter Landing Area Selection",
+    "One-Way Helispot",
+    "Two-Way Helispot",
+    "Longline Mission",
+    "Helicopter Hand Signals",
+    "Paracargo Operations Safety",
+    "Weight Estimates",
+    "https://uas.nifc.gov/",
+    "NWCG Standards for Fire UAS Operations, PMS 515"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate UAS operations in wildland fire",
+      "evidence": {
+        "page": 96,
+        "source_text": "Unmanned Aircraft Systems (UAS) in Wildland Fire Operations"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Be aware of UAS presence and role in providing aerial support",
+      "evidence": {
+        "page": 96,
+        "source_text": "Awareness: Be aware of the presence of UAS in the operational area and their role in providing aerial support to firefighting efforts."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Follow established protocols for interacting with UAS",
+      "evidence": {
+        "page": 96,
+        "source_text": "Prioritize safety by following established protocols for interacting with UAS and respecting their operational space."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Ensure UAS operations are authorized and comply with policies and regulations",
+      "evidence": {
+        "page": 96,
+        "source_text": "Compliance: All UAS operations must be authorized and comply with agency aviation/UAS policies, Federal carding requirements, and Federal Aviation Administration (FAA) regulations."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Ensure UAS/Remote Pilots possess current FAA Airmen Certificate and agency approved Pilot Card",
+      "evidence": {
+        "page": 96,
+        "source_text": "All UAS/Remote Pilots are required to possess current FAA Airmen Certificate and agency approved Pilot Card for the assigned mission."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Establish positive communication on approved FM frequencies before UAS launch",
+      "evidence": {
+        "page": 96,
+        "source_text": "Communication: Communications with UAS are conducted on approved FM frequencies, UAS will not launch until positive communication has been established."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Select launch and recovery sites with clear operational view and outside heavily traveled areas",
+      "evidence": {
+        "page": 96,
+        "source_text": "Launch and Recovery Sites: Type 3 and 4 UAS can be launched from multiple locations based on mission type. When possible, find sites with a clear operational view and outside of heavily traveled areas."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Consider mission objective, timing, product delivery, and location of line personnel before requesting UAS",
+      "evidence": {
+        "page": 96,
+        "source_text": "Prior to requesting UAS consider the following: Mission Objective, Mission Timing, Product Delivery, Location of Line Personnel."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Ensure dedicated firing boss/aerial ignition supervisor for UAS aerial ignitions",
+      "evidence": {
+        "page": 97,
+        "source_text": "UAS Aerial Ignitions (Ai): Ai operations require a dedicated firing boss/aerial ignition supervisor to direct UAS ignitions and coordinate with ground resources."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Understand UAS aerial ignition capabilities: flight time, sphere capacity, camera, and visual line of sight requirements",
+      "evidence": {
+        "page": 97,
+        "source_text": "UAS Aerial Ignition (Ai) Capabilities: Flight Time, Sphere Capacity, Camera, Within a TFR UAS can fly beyond visual line of sight (BVLOS). Without a TFR UAS need to remain within sight or extended line of site (ELOS)."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "end",
+      "text": "Refer to additional resources for further information on UAS operations",
+      "evidence": {
+        "page": 97,
+        "source_text": "Refer to https://uas.nifc.gov/ and the NWCG Standards for Fire UAS Operations, PMS 515, for further information on UAS operations."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5728,
+    "completion_tokens": 1402,
+    "total_tokens": 7130,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: AVIATION > Unmanned Aircraft Systems (UAS) in Wildland Fire Operations\nRelated sections in this category: Aviation User Checklist, Aviation Watch Out Situations, Helicopter Passenger Briefing and PPE, Helicopter Landing Area Selection, One-Way Helispot, Two-Way Helispot, Longline Mission, Helicopter Hand Signals, Paracargo Operations Safety, Weight Estimates"
+}

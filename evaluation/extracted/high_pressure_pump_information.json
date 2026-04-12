@@ -1,0 +1,279 @@
+{
+  "protocol_id": "high_pressure_pump_information",
+  "title": "High Pressure Pump Information",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    106,
+    107
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Strategy \u0013 Direct Attack",
+    "Strategy \u0013 Indirect Attack",
+    "Fireline Location",
+    "Chainsaw Operations",
+    "Working with Heavy Equipment",
+    "Water Delivery Information",
+    "NWCG Engine Typing Standard",
+    "NWCG Water Tender Typing Standards",
+    "Troubleshooting a High Pressure Pump",
+    "Average Perimeter in Chains"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "High Pressure Pump Information",
+      "evidence": {
+        "page": 106,
+        "source_text": "High Pressure Pump Information"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Verify correct fuel/oil mixture in fuel tank. Attach fuel line to tank and pump",
+      "evidence": {
+        "page": 106,
+        "source_text": "Verify correct fuel/oil mixture in fuel tank. Attach fuel line to tank and pump."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Open fuel supply line valve and fuel tank vent",
+      "evidence": {
+        "page": 106,
+        "source_text": "Open fuel supply line valve and fuel tank vent."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Attach discharge and suction hose with foot valve and prime pump head",
+      "evidence": {
+        "page": 106,
+        "source_text": "Attach discharge and suction hose with foot valve and prime pump head."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Move throttle lever to Start and Warm Up position (center)",
+      "evidence": {
+        "page": 106,
+        "source_text": "Move throttle lever to Start and Warm Up position (center)."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Slowly pump fuel bulb until fuel mixture is just touching the bottom of carburetor",
+      "evidence": {
+        "page": 106,
+        "source_text": "Slowly pump fuel bulb until fuel mixture is just touching the bottom of carburetor."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "If pump is equipped with on/off switch, turn it on",
+      "evidence": {
+        "page": 106,
+        "source_text": "If pump is equipped with on/off switch, turn it on."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "decision",
+      "text": "Is it a Mark 3 pump?",
+      "evidence": {
+        "page": 106,
+        "source_text": "On Mark 3 pump, ensure over-speed reset rod is pushed in."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Ensure over-speed reset rod is pushed in",
+      "evidence": {
+        "page": 106,
+        "source_text": "On Mark 3 pump, ensure over-speed reset rod is pushed in."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "decision",
+      "text": "Is the engine cold?",
+      "evidence": {
+        "page": 106,
+        "source_text": "Close choke if engine is cold."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Close choke",
+      "evidence": {
+        "page": 106,
+        "source_text": "Close choke if engine is cold."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Pull starter rope with short quick pulls until engine pops",
+      "evidence": {
+        "page": 107,
+        "source_text": "Pull starter rope with short quick pulls until engine pops."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Immediately set choke lever to run position",
+      "evidence": {
+        "page": 107,
+        "source_text": "Immediately set choke lever to run position."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Pull starter rope approximately 1 to 3 more times and engine should start",
+      "evidence": {
+        "page": 107,
+        "source_text": "Pull starter rope approximately 1 to 3 more times and engine should start."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Allow engine to warm up for at least 2 minutes before moving throttle to run position",
+      "evidence": {
+        "page": 107,
+        "source_text": "Allow engine to warm up for at least 2 minutes before moving the throttle to the run position."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Ensure water flows through pump head at all times. Run pump at full throttle, open check and bleeder valve to maintain flow and control pressure",
+      "evidence": {
+        "page": 107,
+        "source_text": "Water must flow through the pump head at all times. Run pump at full throttle, open check, and bleeder valve to maintain flow through pump and to control pressure."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "action",
+      "text": "Use 1\u001d port on check and bleeder valve to re-circulate water back to water source",
+      "evidence": {
+        "page": 107,
+        "source_text": "Use 1\u001d port on check and bleeder valve to re-circulate water back to water source."
+      }
+    },
+    {
+      "id": "n18",
+      "type": "end",
+      "text": "High pressure pump operational",
+      "evidence": {
+        "page": 107,
+        "source_text": "Use 1\u001d port on check and bleeder valve to re-circulate water back to water source."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9",
+      "condition": "Yes"
+    },
+    {
+      "from": "n8",
+      "to": "n10",
+      "condition": "No"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11",
+      "condition": "Yes"
+    },
+    {
+      "from": "n10",
+      "to": "n12",
+      "condition": "No"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5595,
+    "completion_tokens": 1658,
+    "total_tokens": 7253,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: OTHER REFERENCES > High Pressure Pump Information\nRelated sections in this category: Strategy – Direct Attack, Strategy – Indirect Attack, Fireline Location, Chainsaw Operations, Working with Heavy Equipment, Water Delivery Information, NWCG Engine Typing Standard, NWCG Water Tender Typing Standards, Troubleshooting a High Pressure Pump, Average Perimeter in Chains",
+  "_validated": true,
+  "_correction_summary": "Converted nodes 'n8' and 'n9' to decision nodes with appropriate branching."
+}

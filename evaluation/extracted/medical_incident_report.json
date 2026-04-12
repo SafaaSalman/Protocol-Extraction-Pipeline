@@ -1,0 +1,267 @@
+{
+  "protocol_id": "medical_incident_report_01",
+  "title": "Medical Incident Report",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    136,
+    137,
+    138,
+    139,
+    140
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Emergency Medical Care Guidelines",
+    "Patient Assessment",
+    "Specific Treatments",
+    "CPR",
+    "Heat-Related Injury",
+    "Burn Injuries",
+    "Multi-Casualty Triage System",
+    "Fatality Procedures",
+    "Helicopter Extraction Operations"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Medical incident identified",
+      "evidence": {
+        "page": 136,
+        "source_text": "Medical Incident Report"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "For non-emergency, work through chain of command to report and transport injured personnel",
+      "evidence": {
+        "page": 136,
+        "source_text": "FOR A NON-EMERGENCY INCIDENT, WORK THROUGH CHAIN OF COMMAND TO REPORT AND TRANSPORT INJURED PERSONNEL AS NECESSARY."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "For medical emergency, identify on-scene incident commander and announce 'Medical Emergency'",
+      "evidence": {
+        "page": 136,
+        "source_text": "FOR A MEDICAL EMERGENCY: IDENTIFY ON-SCENE INCIDENT COMMANDER BY NAME AND POSITION AND ANNOUNCE \"MEDICAL EMERGENCY\" TO INITIATE RESPONSE FROM IMT COMMUNICATIONS/DISPATCH."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Contact communications/dispatch and verify correct frequency",
+      "evidence": {
+        "page": 136,
+        "source_text": "1. CONTACT COMMUNICATIONS / DISPATCH (Verify correct frequency prior to starting report)"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Provide incident status: summary, number of patients, command structure",
+      "evidence": {
+        "page": 136,
+        "source_text": "2. INCIDENT STATUS: Provide incident summary (including number of patients) and command structure."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Determine severity of emergency and transport priority",
+      "evidence": {
+        "page": 136,
+        "source_text": "Severity of Emergency / Transport Priority"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Describe nature of injury or illness and mechanism of injury",
+      "evidence": {
+        "page": 136,
+        "source_text": "Nature of Injury or Illness and Mechanism of Injury"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Request evacuation: Air Ambulance, Short-Haul/Hoist, Ground Ambulance, or Other",
+      "evidence": {
+        "page": 136,
+        "source_text": "Evacuation Request"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Provide patient location: descriptive location and Lat./Long.",
+      "evidence": {
+        "page": 136,
+        "source_text": "Patient Location"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Identify incident name and on-scene incident commander",
+      "evidence": {
+        "page": 137,
+        "source_text": "Incident Name, On-Scene Incident Commander"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Identify patient care provider",
+      "evidence": {
+        "page": 137,
+        "source_text": "Patient Care"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Conduct initial patient assessment",
+      "evidence": {
+        "page": 137,
+        "source_text": "3. INITIAL PATIENT ASSESSMENT: Complete this section for each patient as applicable"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Develop evacuation plan: location, helispot/extraction site size and hazards",
+      "evidence": {
+        "page": 137,
+        "source_text": "4. EVACUATION PLAN"
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Identify additional resources/equipment needs",
+      "evidence": {
+        "page": 137,
+        "source_text": "5. ADDITIONAL RESOURCES / EQUIPMENT NEEDS"
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Establish communications: State Air/Ground EMS Frequencies and Hospital Contacts",
+      "evidence": {
+        "page": 137,
+        "source_text": "6. COMMUNICATIONS"
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Consider contingency plans if primary options fail",
+      "evidence": {
+        "page": 137,
+        "source_text": "7. CONTINGENCY"
+      }
+    },
+    {
+      "id": "n17",
+      "type": "action",
+      "text": "Provide additional information: updates/changes",
+      "evidence": {
+        "page": 137,
+        "source_text": "8. ADDITIONAL INFORMATION"
+      }
+    },
+    {
+      "id": "n18",
+      "type": "end",
+      "text": "Medical incident report complete",
+      "evidence": {
+        "page": 137,
+        "source_text": "REMEMBER: Confirm ETAs of resources ordered."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n1",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 7521,
+    "completion_tokens": 1731,
+    "total_tokens": 9252,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: EMERGENCY MEDICAL CARE > Medical Incident Report\nRelated sections in this category: Emergency Medical Care Guidelines, Patient Assessment, Specific Treatments, CPR, Heat-Related Injury, Burn Injuries, Multi-Casualty Triage System, Fatality Procedures, Helicopter Extraction Operations"
+}

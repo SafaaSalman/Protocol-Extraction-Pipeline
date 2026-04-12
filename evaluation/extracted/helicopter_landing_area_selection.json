@@ -1,0 +1,246 @@
+{
+  "protocol_id": "helicopter_landing_area_selection",
+  "title": "Helicopter Landing Area Selection",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    82
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Aviation User Checklist",
+    "Aviation Watch Out Situations",
+    "Helicopter Passenger Briefing and PPE",
+    "One-Way Helispot",
+    "Two-Way Helispot",
+    "Longline Mission",
+    "Helicopter Hand Signals",
+    "Paracargo Operations Safety",
+    "Weight Estimates",
+    "Directing Retardant and Bucket Drops"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Begin Helicopter Landing Area Selection",
+      "evidence": {
+        "page": 82,
+        "source_text": "Helicopter Landing Area Selection"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "text": "Is the area reasonably flat and clear of obstructions?",
+      "evidence": {
+        "page": 82,
+        "source_text": "Locate a reasonably flat area clear of people, vehicles, and obstructions such as trees, poles, and overhead wires."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Ensure area is free of stumps, brush, posts, large rocks, and anything over 18 inches high",
+      "evidence": {
+        "page": 82,
+        "source_text": "The area must be free of stumps, brush, posts, large rocks, and anything over 18 inches high."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Consider the wind direction",
+      "evidence": {
+        "page": 82,
+        "source_text": "Consider the wind direction. Helicopters land and take off into the wind."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Choose an approach free of obstructions",
+      "evidence": {
+        "page": 82,
+        "source_text": "Choose an approach free of obstructions."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Relay any obstruction to the helicopter crew on initial radio contact",
+      "evidence": {
+        "page": 82,
+        "source_text": "Any obstruction should be relayed to the helicopter crew on initial radio contact."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Remove or secure any loose items in and around the landing area",
+      "evidence": {
+        "page": 82,
+        "source_text": "Remove or secure any loose items in and around the landing area such as trash, blankets, hats, or equipment."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Wet down the landing area if dusty conditions are present",
+      "evidence": {
+        "page": 82,
+        "source_text": "Wet down the landing area if dusty conditions are present."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Address LCES prior to staffing existing or proposed helicopter landing areas",
+      "evidence": {
+        "page": 82,
+        "source_text": "Address LCES prior to staffing existing or proposed helicopter landing areas."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "decision",
+      "text": "Select helicopter type for helispot",
+      "evidence": {
+        "page": 82,
+        "source_text": "Fixed Helispots"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Type 1 Helicopters: Safety circle 110', Touchdown pad 30' x 30', clear and level",
+      "evidence": {
+        "page": 82,
+        "source_text": "Type 1 Helicopters - Safety circle: 110\u0019 - Touchdown pad: 30\u0019 x 30\u0019, clear and level"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Type 2 Helicopters: Safety circle 90', Touchdown pad 20' x 20', clear and level",
+      "evidence": {
+        "page": 82,
+        "source_text": "Type 2 Helicopters - Safety circle: 90\u0019 - Touchdown pad: 20\u0019 x 20\u0019, clear and level"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Type 3 Helicopters: Safety circle 75', Touchdown pad 15' x 15', clear and level",
+      "evidence": {
+        "page": 82,
+        "source_text": "Type 3 Helicopters - Safety circle: 75\u0019 - Touchdown Pad: 15\u0019 x 15\u0019 clear and level"
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Ensure items needed are available: 40 BC fire extinguisher, wind indicator, compatible radio, pad marker, allowable payloads, manifest book, dust abatement",
+      "evidence": {
+        "page": 82,
+        "source_text": "Items Needed \u0012 40 BC fire extinguisher (20 lb.) \u0012 Wind indicator \u0012 Radio (compatible with helicopter) \u0012 Pad marker \u0012 Allowable payloads (HIGE and HOGE) for all helicopters using helispot \u0012 Passenger/cargo manifest book \u0012 Dust abatement, as needed"
+      }
+    },
+    {
+      "id": "n15",
+      "type": "end",
+      "text": "Helicopter landing area ready",
+      "evidence": {
+        "page": 82,
+        "source_text": "Dust abatement, as needed"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": "Yes"
+    },
+    {
+      "from": "n2",
+      "to": "n15",
+      "condition": "No"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11",
+      "condition": "Type 1"
+    },
+    {
+      "from": "n10",
+      "to": "n12",
+      "condition": "Type 2"
+    },
+    {
+      "from": "n10",
+      "to": "n13",
+      "condition": "Type 3"
+    },
+    {
+      "from": "n11",
+      "to": "n14"
+    },
+    {
+      "from": "n12",
+      "to": "n14"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 6675,
+    "completion_tokens": 1794,
+    "total_tokens": 8469,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: AVIATION > Helicopter Landing Area Selection\nRelated sections in this category: Aviation User Checklist, Aviation Watch Out Situations, Helicopter Passenger Briefing and PPE, One-Way Helispot, Two-Way Helispot, Longline Mission, Helicopter Hand Signals, Paracargo Operations Safety, Weight Estimates, Directing Retardant and Bucket Drops",
+  "_validated": true,
+  "_correction_summary": "Added missing step for considering wind direction, corrected decision logic for wind consideration, and reordered LCES addressing step."
+}

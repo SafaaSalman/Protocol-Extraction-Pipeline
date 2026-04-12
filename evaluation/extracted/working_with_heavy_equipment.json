@@ -1,0 +1,241 @@
+{
+  "protocol_id": "working_with_heavy_equipment",
+  "title": "Working with Heavy Equipment",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    103
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "NWCG Dozer Typing Standard",
+    "NWCG Standards for Wildfire Resource Typing, PMS 200"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Working with Heavy Equipment",
+      "evidence": {
+        "page": 103,
+        "source_text": "Working with Heavy Equipment"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Stay at least 100 feet in front and 50 feet behind heavy equipment. In timber, increase distance to 2\u001d times the canopy height",
+      "evidence": {
+        "page": 103,
+        "source_text": "When working around heavy equipment, stay at least 100 feet in front and 50 feet behind the equipment. In timber, distances should be increased to 2\u001d times the canopy height."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "No one but the operator should ride on the equipment",
+      "evidence": {
+        "page": 103,
+        "source_text": "No one but the operator should ride on the equipment."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Never approach equipment until you have eye contact with the operator, all implements have been lowered to the ground, and equipment is idled down",
+      "evidence": {
+        "page": 103,
+        "source_text": "Never approach equipment until you have eye contact with the operator, all implements have been lowered to the ground, and equipment is idled down."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Avoid working downhill from equipment where rolling material could jeopardize your safety",
+      "evidence": {
+        "page": 103,
+        "source_text": "Avoid working downhill from equipment where rolling material could jeopardize your safety."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Night work is more dangerous due to reduced visibility. Use headlamp and/or glow sticks so the operator can see you",
+      "evidence": {
+        "page": 103,
+        "source_text": "Night work is more dangerous due to reduced visibility. Use headlamp and/or glow sticks so the operator can see you."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Establish visual and radio communication methods prior to engaging",
+      "evidence": {
+        "page": 103,
+        "source_text": "Establish visual and radio communication methods prior to engaging."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Communicate all hazards to the operator (spot fires, firing operations, and obstacles)",
+      "evidence": {
+        "page": 103,
+        "source_text": "Communicate all hazards to the operator (spot fires, firing operations, and obstacles)."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Equipment operators have difficulty seeing ground personnel; take responsibility for your safety and all those around you",
+      "evidence": {
+        "page": 103,
+        "source_text": "Equipment operators have difficulty seeing ground personnel; take responsibility for your safety and all those around you."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "end",
+      "text": "End of Working with Heavy Equipment protocol",
+      "evidence": {
+        "page": 103,
+        "source_text": "Source: NWCG Standards for Wildfire Resource Typing, PMS 200"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "start",
+      "text": "Dozer Typing Standard",
+      "evidence": {
+        "page": 103,
+        "source_text": "NWCG Dozer Typing Standard"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Type 1: Net HP Range >240, Min Base Weight 60,000 lbs",
+      "evidence": {
+        "page": 103,
+        "source_text": "Type 1 Net HP Range >240 Min Base Weight (lbs) 60,000"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Type 2: Net HP Range 150-250, Min Base Weight 35,000 lbs",
+      "evidence": {
+        "page": 103,
+        "source_text": "Type 2 Net HP Range 150-250 Min Base Weight (lbs) 35,000"
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Type 3: Net HP Range 99-165, Min Base Weight 20,000 lbs",
+      "evidence": {
+        "page": 103,
+        "source_text": "Type 3 Net HP Range 99-165 Min Base Weight (lbs) 20,000"
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Type 4: Net HP Range 50-110, Min Base Weight 10,000 lbs",
+      "evidence": {
+        "page": 103,
+        "source_text": "Type 4 Net HP Range 50-110 Min Base Weight (lbs) 10,000"
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Dozer must meet both weight and horsepower criteria",
+      "evidence": {
+        "page": 103,
+        "source_text": "Dozer must meet both weight and horsepower criteria."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "end",
+      "text": "End of Dozer Typing Standard",
+      "evidence": {
+        "page": 103,
+        "source_text": "Source: NWCG Standards for Wildfire Resource Typing, PMS 200"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5595,
+    "completion_tokens": 1618,
+    "total_tokens": 7213,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: OTHER REFERENCES > Working with Heavy Equipment\nRelated sections in this category: Strategy – Direct Attack, Strategy – Indirect Attack, Fireline Location, Chainsaw Operations, Water Delivery Information, NWCG Engine Typing Standard, NWCG Water Tender Typing Standards, High Pressure Pump Information, Troubleshooting a High Pressure Pump, Average Perimeter in Chains",
+  "_validated": true,
+  "_correction_summary": "Changed protocol type to 'sequential', separated Dozer Typing Standard steps, and added missing step about criteria."
+}

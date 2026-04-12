@@ -1,0 +1,86 @@
+{
+  "protocol_id": "firefighter_stress_management",
+  "title": "Firefighter Stress Management",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    15
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "page xi"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Firefighter Stress Management protocol initiated",
+      "evidence": {
+        "page": 15,
+        "source_text": "Firefighter Stress Management"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Awareness: Identify stress injuries caused by life threat, loss injury, moral injury, cumulative stress",
+      "evidence": {
+        "page": 15,
+        "source_text": "AWARENESS – Stress Injuries can be caused by: • A Life Threat: Due to an experience of death-provoking terror, horror, or helplessness. • A Loss Injury: A grief injury due to the loss of cherished people, things, or parts of oneself. • A Moral Injury: Due to behaviors or the witnessing of behaviors that violate moral values. • Cumulative Stress: Due to the accumulation of stress from all sources over time without sufficient rest and recovery."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Recognition: Conduct stress sizeup by monitoring for hazardous attitudes, behavior changes, troubling feelings, thoughts of self-harm",
+      "evidence": {
+        "page": 15,
+        "source_text": "RECOGNITION – Stress Sizeup: Monitor yourself and others for: • Hazardous attitudes and stress reactions (see page xi). • Behavior changes (not talking, isolating, outbursts, increased use of substances, making mistakes). • Troubling feelings (fear, anger, anxiety, sadness, guilt, shame). • Thoughts or mention of self-harm or suicide."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Mitigation: Apply stress first aid by shrinking stigma, providing calming opportunities, getting help, reaching out for support",
+      "evidence": {
+        "page": 15,
+        "source_text": "MITIGATION – Stress First Aid: • Shrink the stigma – talk about it! • Provide opportunities to calm: ○ Take a tactical stress pause. ○ Refocus; identify what really matters. ○ Try tactical breathing or similar techniques. ○ Get additional time off if needed. • Get help: just like in a medical incident, a higher level of care may be necessary. • Reach out to friends, peers, loved ones, etc., for support."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "end",
+      "text": "Stress management actions completed",
+      "evidence": {
+        "page": 15,
+        "source_text": "Reach out to friends, peers, loved ones, etc., for support."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5462,
+    "completion_tokens": 764,
+    "total_tokens": 6226,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Firefighter Stress Management > Firefighter Stress Management"
+}

@@ -1,0 +1,275 @@
+{
+  "protocol_id": "hazmat_incident_operations_01",
+  "title": "HazMat Incident Operations",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    70
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Vehicle Accident Operations",
+    "HazMat Isolation Distances",
+    "HazMat Classification for Fixed Facilities",
+    "Local Disaster Response",
+    "All Hazard Incident Response",
+    "Structure Hazard Marking System"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate HazMat Incident Operations",
+      "evidence": {
+        "page": 70,
+        "source_text": "HazMat Incident Operations"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Think Safety",
+      "evidence": {
+        "page": 70,
+        "source_text": "Think Safety"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Assess situation",
+      "evidence": {
+        "page": 70,
+        "source_text": "Assess situation."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Safe approach: upwind/upgrade/upstream",
+      "evidence": {
+        "page": 70,
+        "source_text": "Safe approach: upwind/upgrade/upstream."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Identify, isolate, establish perimeter, and deny entry",
+      "evidence": {
+        "page": 70,
+        "source_text": "Identify, isolate, establish perimeter, and deny entry."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Notify agency dispatcher with exact location using GPS",
+      "evidence": {
+        "page": 70,
+        "source_text": "Notify agency dispatcher. Exact location, use GPS."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Request needed assistance and identify a safe route",
+      "evidence": {
+        "page": 70,
+        "source_text": "Request needed assistance: identify a safe route."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Scene Management: Protect life, environment, and property",
+      "evidence": {
+        "page": 70,
+        "source_text": "Goal is to protect life, environment, and property."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Attempt to identify substance using Emergency Response Guidebook and other resources",
+      "evidence": {
+        "page": 70,
+        "source_text": "Attempt to identify substance using Emergency Response Guidebook (use binoculars, placards/labels, container shapes/colors, Material Safety Data Sheets, shipping papers, or license plate)."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Assess quantity of material involved",
+      "evidence": {
+        "page": 70,
+        "source_text": "Assess quantity of material involved."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Identify exposures and hazards surrounding the site",
+      "evidence": {
+        "page": 70,
+        "source_text": "Identify exposures and hazards surrounding the site."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Anticipate weather influences",
+      "evidence": {
+        "page": 70,
+        "source_text": "Anticipate weather influences."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Organizational Responsibilities: Establish command including an IC and Safety Officer",
+      "evidence": {
+        "page": 70,
+        "source_text": "Establish command including an IC and Safety Officer."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Develop action plan for area security and evacuation",
+      "evidence": {
+        "page": 70,
+        "source_text": "Develop action plan for area security and evacuation."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Advise all on-scene and responding resources of changes in situation",
+      "evidence": {
+        "page": 70,
+        "source_text": "Advise all on-scene and responding resources of changes in situation."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Keep dispatcher advised of changes",
+      "evidence": {
+        "page": 70,
+        "source_text": "Keep dispatcher advised of changes."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "action",
+      "text": "Document all actions taken",
+      "evidence": {
+        "page": 70,
+        "source_text": "Document all actions taken."
+      }
+    },
+    {
+      "id": "n18",
+      "type": "action",
+      "text": "Make special note of any responder exposures",
+      "evidence": {
+        "page": 70,
+        "source_text": "Make special note of any responder exposures."
+      }
+    },
+    {
+      "id": "n19",
+      "type": "end",
+      "text": "HazMat Incident Operations complete",
+      "evidence": {
+        "page": 70,
+        "source_text": "Make special note of any responder exposures."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18"
+    },
+    {
+      "from": "n18",
+      "to": "n19"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5366,
+    "completion_tokens": 1621,
+    "total_tokens": 6987,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: ALL HAZARD RESPONSE > HazMat Incident Operations\nRelated sections in this category: Vehicle Accident Operations, HazMat Isolation Distances, HazMat Classification for Fixed Facilities, Local Disaster Response, All Hazard Incident Response, Structure Hazard Marking System",
+  "_validated": true,
+  "_correction_summary": "Added a missing step for 'Think Safety' and corrected the evidence text for the end node."
+}

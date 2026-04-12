@@ -1,0 +1,197 @@
+{
+  "protocol_id": "traffic_management_points",
+  "title": "Traffic Management Points",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    51,
+    52,
+    53
+  ],
+  "protocol_type": "hybrid",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "SOP J03.10 \u0013 Traffic Management",
+    "IAOP SO 4.07 \u0013 Firebombing Operations"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Traffic Management Points (TMP) setup initiated",
+      "evidence": {
+        "page": 51,
+        "source_text": "Traffic Management Points (TMP) are set up at the direction of the Incident Controller"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Regulate flow of traffic into fire-affected area",
+      "evidence": {
+        "page": 51,
+        "source_text": "to regulate the flow of traffic into an area where fire has occurred, is occurring or has the potential to occur."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Maintain safety of emergency personnel and public",
+      "evidence": {
+        "page": 51,
+        "source_text": "The purpose is to maintain the safety of emergency personnel and the public"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "decision",
+      "text": "Determine TMP access level and authorize access",
+      "evidence": {
+        "page": 52,
+        "source_text": "To facilitate entry into an area, a TMP will be assigned a particular access level"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Assign Emergency Services Only Access",
+      "evidence": {
+        "page": 52,
+        "source_text": "Emergency Services Only Access"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Assign Restricted Access B",
+      "evidence": {
+        "page": 52,
+        "source_text": "Restricted Access B"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Assign Authorised Access C",
+      "evidence": {
+        "page": 52,
+        "source_text": "Authorised Access C"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Assign Authorised Access D",
+      "evidence": {
+        "page": 52,
+        "source_text": "Authorised Access D"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Open access to all",
+      "evidence": {
+        "page": 52,
+        "source_text": "Open to all"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Issue identifying wristbands for access",
+      "evidence": {
+        "page": 53,
+        "source_text": "people who are to be permitted access may be issued with an identifying wristband"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Media access with CFA/DEPI accreditation",
+      "evidence": {
+        "page": 53,
+        "source_text": "Media representative are permitted access at a TMP designated as Authorised Access \u0013 C"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "end",
+      "text": "TMP operations complete",
+      "evidence": {
+        "page": 53,
+        "source_text": "TMP removed and signed off by road owner"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5",
+      "condition": "Fire status: Going"
+    },
+    {
+      "from": "n4",
+      "to": "n6",
+      "condition": "Fire status: Contained"
+    },
+    {
+      "from": "n4",
+      "to": "n7",
+      "condition": "Fire status: Controlled"
+    },
+    {
+      "from": "n4",
+      "to": "n8",
+      "condition": "Fire agency no longer requires TMP"
+    },
+    {
+      "from": "n4",
+      "to": "n9",
+      "condition": "Road owner satisfied"
+    },
+    {
+      "from": "n5",
+      "to": "n10"
+    },
+    {
+      "from": "n6",
+      "to": "n10"
+    },
+    {
+      "from": "n7",
+      "to": "n11"
+    },
+    {
+      "from": "n8",
+      "to": "n10"
+    },
+    {
+      "from": "n9",
+      "to": "n12"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 10838,
+    "completion_tokens": 1194,
+    "total_tokens": 12032,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: Incident Management > Traffic Management Points\nRelated sections in this category: AIIMS Principles and Concepts, AIIMS Structure, Incident Controller, Deputy Incident Controller, Operations Officer, Division Commanders, Sector Commanders, Incident Objective, Incident Action Planning, Incident Communications Planning",
+  "_validated": true,
+  "_correction_summary": "Added missing steps and corrected conditions for decision node n4. Adjusted node connections for better accuracy."
+}

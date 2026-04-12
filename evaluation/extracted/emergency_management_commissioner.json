@@ -1,0 +1,170 @@
+{
+  "protocol_id": "emergency_management_commissioner",
+  "title": "Emergency Management Commissioner",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    14
+  ],
+  "protocol_type": "reference",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Tiers of Emergency Response Management",
+    "Major Emergencies",
+    "Control, Command and Coordination",
+    "State Response Controller",
+    "Sections 32, 33, 37, 38 of the EM Act 2013"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Emergency Management Commissioner responsibilities",
+      "evidence": {
+        "page": 14,
+        "source_text": "Emergency Management Commissioner"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Definition of Class 1 emergency",
+      "evidence": {
+        "page": 14,
+        "source_text": "A Class 1 emergency is either: a major fire; or any other major emergency for which the control agency is the MFB, CFA or VICSES."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Definition of Class 2 emergency",
+      "evidence": {
+        "page": 14,
+        "source_text": "A Class 2 emergency is a major emergency that is not: a Class 1 emergency; or a warlike act or act of terrorism, whether directed at Victoria or at any other state or territory of the Commonwealth; or a hi jack, siege or riot."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Legislated management responsibilities across major emergencies (except security-related)",
+      "evidence": {
+        "page": 14,
+        "source_text": "Under the EM Act 2013, the EMC has legislated management responsibilities across major emergencies, with the exception of security-related emergencies."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Response coordination",
+      "evidence": {
+        "page": 14,
+        "source_text": "These include response coordination..."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Ensure effective control arrangements are established",
+      "evidence": {
+        "page": 14,
+        "source_text": "ensuring effective control arrangements are established..."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Consequence management",
+      "evidence": {
+        "page": 14,
+        "source_text": "consequence management..."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Recovery coordination",
+      "evidence": {
+        "page": 14,
+        "source_text": "and recovery coordination."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Ensure response to emergencies in Victoria is systematic and coordinated",
+      "evidence": {
+        "page": 14,
+        "source_text": "The EMC functions include accountability for ensuring the response to emergencies in Victoria is systematic and coordinated."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Power to do all things necessary or convenient for the performance of EMC functions",
+      "evidence": {
+        "page": 14,
+        "source_text": "Section 33 of the EM Act 2013 gives the EMC the power to do all things that are necessary or convenient to be done for or in connection with, the performance of the functions of the EMC."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "end",
+      "text": "EMC responsibilities and powers overview complete",
+      "evidence": {
+        "page": 14,
+        "source_text": "Section 33 of the EM Act 2013..."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5589,
+    "completion_tokens": 901,
+    "total_tokens": 6490,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Victorian Emergency Management Arrangements > Emergency Management Commissioner\nRelated sections in this category: Tiers of Emergency Response Management, Major Emergencies, Control, Command and Coordination, State Response Controller",
+  "_validated": true,
+  "_correction_summary": "Added missing steps for Class 1 and Class 2 emergency definitions. Reordered EMC responsibilities to match the source text."
+}

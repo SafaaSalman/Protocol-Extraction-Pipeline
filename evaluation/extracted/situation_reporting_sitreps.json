@@ -1,0 +1,304 @@
+{
+  "protocol_id": "situation_reporting_sitreps",
+  "title": "Situation Reporting (SITREPS)",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    47
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "AIIMS Principles and Concepts",
+    "AIIMS Structure",
+    "Incident Controller",
+    "Deputy Incident Controller",
+    "Operations Officer",
+    "Division Commanders",
+    "Sector Commanders",
+    "Incident Objective",
+    "Incident Action Planning",
+    "Incident Communications Planning",
+    "SOP J03.08"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Initiate Situation Reporting (SITREPS)",
+      "evidence": {
+        "page": 47,
+        "source_text": "Situation Reporting (SITREPS)"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Provide frequent, concise situation reports",
+      "evidence": {
+        "page": 47,
+        "source_text": "Everyone in leadership positions are required to provide frequent, concise situation reports."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Crew Leaders provide sitreps to fireground supervisor",
+      "evidence": {
+        "page": 47,
+        "source_text": "Those on the fireground (for example Crew Leaders) need to recognise that it is an important part of their role to provide sitreps to their fireground supervisor."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Include incident name in sitrep",
+      "evidence": {
+        "page": 47,
+        "source_text": "incident name"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Include fireground/Division Command call sign in sitrep",
+      "evidence": {
+        "page": 47,
+        "source_text": "fireground/Division Command call sign"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Include location of incident in sitrep",
+      "evidence": {
+        "page": 47,
+        "source_text": "location of incident"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Include potential of fire/incident to become a major emergency in sitrep",
+      "evidence": {
+        "page": 47,
+        "source_text": "potential of fire/incident to become a major emergency"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Include advice regarding warnings for the community in sitrep",
+      "evidence": {
+        "page": 47,
+        "source_text": "advice regarding any warnings that should be provided to the community"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Include private and community assets at risk in sitrep",
+      "evidence": {
+        "page": 47,
+        "source_text": "private and community assets at risk"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Include fire status (type/size) in sitrep",
+      "evidence": {
+        "page": 47,
+        "source_text": "fire status (type/size)"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Include damage and loss in sitrep",
+      "evidence": {
+        "page": 47,
+        "source_text": "damage and loss"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Include fire behaviour (flame height, estimated forward rate of spread) in sitrep",
+      "evidence": {
+        "page": 47,
+        "source_text": "fire behaviour (eg flame height and estimated forward rate of spread)"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Include current control objective in sitrep",
+      "evidence": {
+        "page": 47,
+        "source_text": "current control objective"
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Include additional assistance required in sitrep",
+      "evidence": {
+        "page": 47,
+        "source_text": "additional assistance required."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Ensure critical information flow during escalating or major incident",
+      "evidence": {
+        "page": 47,
+        "source_text": "Critical Information Flow During an Escalating or Major Incident"
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "IMT generates, processes, and coordinates information for emergency management",
+      "evidence": {
+        "page": 47,
+        "source_text": "An IMT generates, processes and coordinates much of the information needed for successful emergency management."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "action",
+      "text": "Information flows between fireground and IMT, and from IMT to regional and state levels",
+      "evidence": {
+        "page": 47,
+        "source_text": "Information flows between the fireground and the IMT, and from the IMT to the regional and state levels of control."
+      }
+    },
+    {
+      "id": "n18",
+      "type": "action",
+      "text": "Integrate information with other stakeholders (medical services, critical infrastructure, other agencies, police)",
+      "evidence": {
+        "page": 47,
+        "source_text": "In addition, there is also a need to integrate information with other stakeholders such as providers of medical services, critical infrastructure, other agencies and the police."
+      }
+    },
+    {
+      "id": "n19",
+      "type": "action",
+      "text": "Use AIIMS for effective and efficient control of incidents",
+      "evidence": {
+        "page": 47,
+        "source_text": "AIIMS assists with the effective and efficient control of incidents by providing structures for communication and information flow."
+      }
+    },
+    {
+      "id": "n20",
+      "type": "action",
+      "text": "Use AIIMS tools for common communications framework and integration",
+      "evidence": {
+        "page": 47,
+        "source_text": "There are a variety of tools embedded within AIIMS that provide a common communications framework to enhance integration, including an IAP used to generate and communicate intent."
+      }
+    },
+    {
+      "id": "n21",
+      "type": "end",
+      "text": "SITREPS process complete",
+      "evidence": {
+        "page": 47,
+        "source_text": "including an IAP used to generate and communicate intent."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18"
+    },
+    {
+      "from": "n18",
+      "to": "n19"
+    },
+    {
+      "from": "n19",
+      "to": "n20"
+    },
+    {
+      "from": "n20",
+      "to": "n21"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5534,
+    "completion_tokens": 2028,
+    "total_tokens": 7562,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Incident Management > Situation Reporting (SITREPS)\nRelated sections in this category: AIIMS Principles and Concepts, AIIMS Structure, Incident Controller, Deputy Incident Controller, Operations Officer, Division Commanders, Sector Commanders, Incident Objective, Incident Action Planning, Incident Communications Planning"
+}

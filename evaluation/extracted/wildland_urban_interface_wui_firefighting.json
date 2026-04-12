@@ -1,0 +1,272 @@
+{
+  "protocol_id": "wui_firefighting_01",
+  "title": "Wildland Urban Interface (WUI) Firefighting",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Risk Management Process",
+    "Planning for Medical Emergencies",
+    "Common Denominators of Fire Behavior on Tragedy Fires",
+    "Common Tactical Hazards",
+    "LCES",
+    "Safety Zones",
+    "Downhill Fireline Construction Checklist",
+    "Indicators of Incident Complexity"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Begin WUI Firefighting Protocol",
+      "evidence": {
+        "page": 27,
+        "source_text": "Wildland Urban Interface (WUI) Firefighting"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Do not commit to stay and protect a structure unless a safety zone is identified",
+      "evidence": {
+        "page": 27,
+        "source_text": "Do not commit to stay and protect a structure unless a safety zone for firefighters and equipment has been identified at the structure during sizeup and triage."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Move to the nearest safety zone, let the fire front pass, and return as soon as conditions allow",
+      "evidence": {
+        "page": 27,
+        "source_text": "Move to the nearest safety zone, let the fire front pass, and return as soon as conditions allow."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Base all actions on current and expected fire behavior",
+      "evidence": {
+        "page": 27,
+        "source_text": "Base all actions on current and expected fire behavior \u0013 do this first!"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Estimate approaching fire intensity to determine safety zone adequacy",
+      "evidence": {
+        "page": 27,
+        "source_text": "An estimate must be made of the approaching fire intensity in order to determine if there is an adequate safety zone and time available before the fire arrives."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Consider worst case fire behavior and build contingency actions",
+      "evidence": {
+        "page": 27,
+        "source_text": "It is imperative that firefighters consider the worst case and build contingency actions into their plan to compensate for the unexpected."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Conduct Structure Sizeup considering site and tactical challenges",
+      "evidence": {
+        "page": 28,
+        "source_text": "Structure Sizeup Site Considerations"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Identify tactical challenges and hazards",
+      "evidence": {
+        "page": 28,
+        "source_text": "Tactical Challenges and Hazards"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "decision",
+      "text": "Is the structure defensible?",
+      "evidence": {
+        "page": 29,
+        "source_text": "Structure Triage"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Defensible - Prep and Hold: Implement structure protection tactics during fire front contact",
+      "evidence": {
+        "page": 29,
+        "source_text": "Defensible \u0013 Prep and Hold"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Defensible - Standalone: Patrol following fire front passage",
+      "evidence": {
+        "page": 29,
+        "source_text": "Defensible \u0013 Standalone"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Non-Defensible - Prep and Leave: Set trigger point for safe retreat",
+      "evidence": {
+        "page": 30,
+        "source_text": "Non-Defensible \u0013 Prep and Leave"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Non-Defensible - Rescue Drive-By: Check for people, set trigger point for safe retreat",
+      "evidence": {
+        "page": 30,
+        "source_text": "Non-Defensible \u0013 Rescue Drive-By"
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Perform rapid mitigation measures",
+      "evidence": {
+        "page": 31,
+        "source_text": "Rapid Mitigation Measures"
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Manage equipment and water use effectively",
+      "evidence": {
+        "page": 31,
+        "source_text": "Equipment and Water Use"
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Patrol following the fire front",
+      "evidence": {
+        "page": 31,
+        "source_text": "Patrol Following the Fire Front"
+      }
+    },
+    {
+      "id": "n17",
+      "type": "end",
+      "text": "Complete WUI Firefighting Protocol",
+      "evidence": {
+        "page": 32,
+        "source_text": "NOTES"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10",
+      "condition": "Defensible - Prep and Hold"
+    },
+    {
+      "from": "n9",
+      "to": "n11",
+      "condition": "Defensible - Standalone"
+    },
+    {
+      "from": "n9",
+      "to": "n12",
+      "condition": "Non-Defensible - Prep and Leave"
+    },
+    {
+      "from": "n9",
+      "to": "n13",
+      "condition": "Non-Defensible - Rescue Drive-By"
+    },
+    {
+      "from": "n10",
+      "to": "n14"
+    },
+    {
+      "from": "n11",
+      "to": "n14"
+    },
+    {
+      "from": "n12",
+      "to": "n14"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 6277,
+    "completion_tokens": 1665,
+    "total_tokens": 7942,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: OPERATIONAL ENGAGEMENT > Wildland Urban Interface (WUI) Firefighting\nRelated sections in this category: Risk Management Process, Planning for Medical Emergencies, Common Denominators of Fire Behavior on Tragedy Fires, Common Tactical Hazards, LCES, Safety Zones, Downhill Fireline Construction Checklist, Indicators of Incident Complexity",
+  "_validated": true,
+  "_correction_summary": "Added missing step for moving to safety zone. Corrected decision node conditions. Reordered nodes for logical sequence."
+}

@@ -1,0 +1,219 @@
+{
+  "protocol_id": "unexploded_ordnance_safety",
+  "title": "Unexploded Ordnance Safety",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    41
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Thunderstorm Safety",
+    "How to Properly Refuse Risk",
+    "Hazard Tree Safety",
+    "Powerline Safety",
+    "Roadside Response Safety",
+    "Oil and Gas Site Safety",
+    "Smoke Hazards and Mitigation",
+    "Smoke and Transportation Safety",
+    "Last Resort Survival"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Unexploded ordnance (UXO) identified",
+      "evidence": {
+        "page": 41,
+        "source_text": "Unexploded Ordnance Safety"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Stop and do not move closer to UXO",
+      "evidence": {
+        "page": 41,
+        "source_text": "If you see UXO, stop, and do not move closer."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Isolate and clearly mark the area",
+      "evidence": {
+        "page": 41,
+        "source_text": "Isolate and clearly mark the area."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Deny entry to others",
+      "evidence": {
+        "page": 41,
+        "source_text": "Deny entry to others."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "decision",
+      "text": "Is there a risk of transmitting radio frequencies near UXO?",
+      "evidence": {
+        "page": 41,
+        "source_text": "Never transmit radio frequencies near UXO."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Avoid transmitting radio frequencies",
+      "evidence": {
+        "page": 41,
+        "source_text": "Never transmit radio frequencies near UXO."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "decision",
+      "text": "Is there a risk of removing anything near UXO?",
+      "evidence": {
+        "page": 41,
+        "source_text": "Never remove anything near UXO."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Avoid removing anything near UXO",
+      "evidence": {
+        "page": 41,
+        "source_text": "Never remove anything near UXO."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "decision",
+      "text": "Is there a risk of touching, moving, or disturbing UXO?",
+      "evidence": {
+        "page": 41,
+        "source_text": "Never touch, move, or disturb UXO."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Avoid touching, moving, or disturbing UXO",
+      "evidence": {
+        "page": 41,
+        "source_text": "Never touch, move, or disturb UXO."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Keep a minimum of 1,000 feet away from areas on fire that contain suspected UXO",
+      "evidence": {
+        "page": 41,
+        "source_text": "Keep a minimum of 1,000 feet away from areas on fire that contain suspected UXO."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Report discovery of UXO to immediate supervisor and/or dispatch",
+      "evidence": {
+        "page": 41,
+        "source_text": "Report discovery of UXO to your immediate supervisor and/or dispatch."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Contact U.S. Army Operations Center for incidents involving explosives and ammunition: 1-703-697-0218",
+      "evidence": {
+        "page": 41,
+        "source_text": "U.S. Army Operations Center for incidents involving explosives and ammunition: 1-703-697-0218."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "end",
+      "text": "UXO safety protocol complete",
+      "evidence": {
+        "page": 41,
+        "source_text": "U.S. Army Operations Center for incidents involving explosives and ammunition: 1-703-697-0218."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6",
+      "condition": "Yes"
+    },
+    {
+      "from": "n5",
+      "to": "n7",
+      "condition": "No"
+    },
+    {
+      "from": "n7",
+      "to": "n8",
+      "condition": "Yes"
+    },
+    {
+      "from": "n7",
+      "to": "n9",
+      "condition": "No"
+    },
+    {
+      "from": "n9",
+      "to": "n10",
+      "condition": "Yes"
+    },
+    {
+      "from": "n9",
+      "to": "n11",
+      "condition": "No"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5486,
+    "completion_tokens": 1120,
+    "total_tokens": 6606,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: SPECIFIC HAZARDS > Unexploded Ordnance Safety\nRelated sections in this category: Thunderstorm Safety, How to Properly Refuse Risk, Hazard Tree Safety, Powerline Safety, Roadside Response Safety, Oil and Gas Site Safety, Smoke Hazards and Mitigation, Smoke and Transportation Safety, Last Resort Survival",
+  "_validated": true,
+  "_correction_summary": "Reordered steps and added decision points for conditions related to radio frequencies, removal, and disturbance of UXO."
+}

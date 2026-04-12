@@ -1,0 +1,134 @@
+{
+  "protocol_id": "aviation_user_checklist",
+  "title": "Aviation User Checklist",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    77
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Aviation Watch Out Situations",
+    "Helicopter Passenger Briefing and PPE",
+    "Helicopter Landing Area Selection",
+    "One-Way Helispot",
+    "Two-Way Helispot",
+    "Longline Mission",
+    "Helicopter Hand Signals",
+    "Paracargo Operations Safety",
+    "Weight Estimates",
+    "Directing Retardant and Bucket Drops"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Begin Aviation User Checklist",
+      "evidence": {
+        "page": 77,
+        "source_text": "Aviation User Checklist"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Check Pilot/Aircraft Data Card—Approved and current for aircraft type, contract, and mission",
+      "evidence": {
+        "page": 77,
+        "source_text": "Pilot/Aircraft Data Card—Approved and current for aircraft type, contract, and mission?"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Initiate and confirm Flight Plan/Flight Following with agency/bureau",
+      "evidence": {
+        "page": 77,
+        "source_text": "Flight Plan/Flight Following—Initiated and confirmed with agency/bureau?"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Ensure PPE is available and worn by all passengers and pilot as required for the mission",
+      "evidence": {
+        "page": 77,
+        "source_text": "PPE—Available and worn by all passengers and pilot as required for the mission?"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Brief pilot on mission objectives, flight route, known flight hazards, and aerial hazard map",
+      "evidence": {
+        "page": 77,
+        "source_text": "Pilot briefed on mission objectives, flight route, known flight hazards, and aerial hazard map?"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Provide pilot or flight manager safety briefing to passengers",
+      "evidence": {
+        "page": 77,
+        "source_text": "Pilot or flight manager safety briefing provided to passengers?"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Include in safety briefing: Aircraft hazards, Seatbelt or harness, Fuel and electrical shutoff, ELT and survival kit, Oxygen (if applicable), First aid kit, Gear and cargo storage, Emergency seating position, Emergency exit(s), Fire extinguisher, No smoking",
+      "evidence": {
+        "page": 77,
+        "source_text": "To include: Aircraft hazards, Seatbelt or harness, Fuel and electrical shutoff, ELT and survival kit, Oxygen (if applicable), First aid kit, Gear and cargo storage, Emergency seating position, Emergency exit(s), Fire extinguisher, No smoking"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "end",
+      "text": "Aviation User Checklist complete",
+      "evidence": {
+        "page": 77,
+        "source_text": "Aviation User Checklist"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5342,
+    "completion_tokens": 965,
+    "total_tokens": 6307,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: AVIATION > Aviation User Checklist\nRelated sections in this category: Aviation Watch Out Situations, Helicopter Passenger Briefing and PPE, Helicopter Landing Area Selection, One-Way Helispot, Two-Way Helispot, Longline Mission, Helicopter Hand Signals, Paracargo Operations Safety, Weight Estimates, Directing Retardant and Bucket Drops"
+}

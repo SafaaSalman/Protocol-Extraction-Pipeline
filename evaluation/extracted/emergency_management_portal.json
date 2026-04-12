@@ -1,0 +1,75 @@
+{
+  "protocol_id": "emergency_management_portal",
+  "title": "Emergency Management Portal",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    61
+  ],
+  "protocol_type": "reference",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Emergency Management Drive Business Rules",
+    "Resource Requesting",
+    "Library in EM-COP"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Access Emergency Management Information",
+      "evidence": {
+        "page": 61,
+        "source_text": "The emergency management portal has been superseded by EM-COP. to access http://cop.em.vic.gov.au"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Use EM-COP for accessing emergency management information and systems",
+      "evidence": {
+        "page": 61,
+        "source_text": "The Emergency Management - Common Operating Picture (EM-COP) is a web based entry point for personnel across the emergency management sector to access information and systems using a standard web browser on any internet connected device."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Find previous EM Portal information in EM-COP desktop and library tabs",
+      "evidence": {
+        "page": 61,
+        "source_text": "All the previous information found on the EM Portal is now located within the desktop and library tabs within EM-COP."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "end",
+      "text": "Access information via EM-COP",
+      "evidence": {
+        "page": 61,
+        "source_text": "to access http://cop.em.vic.gov.au"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5448,
+    "completion_tokens": 491,
+    "total_tokens": 5939,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Information Systems > Emergency Management Portal\nRelated sections in this category: Emergency Management Drive Business Rules, Resource Requesting"
+}

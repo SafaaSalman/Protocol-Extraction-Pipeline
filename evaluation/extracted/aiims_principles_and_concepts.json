@@ -1,0 +1,242 @@
+{
+  "protocol_id": "aiims_principles_and_concepts",
+  "title": "AIIMS Principles and Concepts",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    30,
+    31
+  ],
+  "protocol_type": "non-sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "AIIMS Structure",
+    "Incident Controller",
+    "Deputy Incident Controller",
+    "Operations Officer",
+    "Division Commanders",
+    "Sector Commanders",
+    "Incident Objective",
+    "Incident Action Planning",
+    "Incident Communications Planning",
+    "Briefings"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Introduction to AIIMS Principles and Concepts",
+      "evidence": {
+        "page": 30,
+        "source_text": "AIIMS Principles and Concepts"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Flexibility: AIIMS must be adaptable to an all hazards-all agency environment",
+      "evidence": {
+        "page": 30,
+        "source_text": "1. Flexibility AIIMS be adaptable to an all hazards-all agency environment."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Management by Objectives: Incident Controller determines desired outcomes",
+      "evidence": {
+        "page": 30,
+        "source_text": "2. Management by Objectives A process of management where the Incident Controller, consulting as appropriate with the Incident Management Team and supporting agencies, determines the desired outcomes of the incident."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Functional Management: Structure organization into sections based on work type",
+      "evidence": {
+        "page": 30,
+        "source_text": "3. Functional Management The process of structuring an organisation into sections or units based on the type of work to be performed."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Span of Control: Apply principle in structuring and staffing Incident Management Team",
+      "evidence": {
+        "page": 30,
+        "source_text": "4. Span of Control A principle that needs to be applied in both the structuring and staffing of an Incident Management Team."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Unity of Command: One set of common objectives for all responders",
+      "evidence": {
+        "page": 30,
+        "source_text": "5. Unity of Command There is one set of common objectives for all those involved in the response to an incident."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Adaptability and Scalability: Incident Management Team size reflects incident complexity",
+      "evidence": {
+        "page": 31,
+        "source_text": "Adaptability and Scalability \u0013 The size and structure of the Incident Management Team should reflect the size and complexity of the incident."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Uniform Terminology: Agreed terminology for effective communication",
+      "evidence": {
+        "page": 31,
+        "source_text": "Uniform Terminology \u0013 If all agencies are to apply the System there needs to be agreed terminology and definitions."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Defined Management Structure: Clearly defined and agreed management structure",
+      "evidence": {
+        "page": 31,
+        "source_text": "Defined Management Structure \u0013 In adopting a functional management model, there needs to be a clearly defined and agreed management structure."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Common Operating Picture: Shared understanding of the incident",
+      "evidence": {
+        "page": 31,
+        "source_text": "Common Operating Picture \u0013 A description of the shared and consistent understanding the Incident Management Team has of the incident."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Clearly Defined Roles and Responsibilities: Agreed responsibilities for all roles",
+      "evidence": {
+        "page": 31,
+        "source_text": "Clearly Defined Roles and Responsibilities \u0013 In defining the management structure, there needs to be a set of clearly defined and agreed responsibilities for all who are appointed to a role."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Clearly Defined Information Flows: Clear reporting relationships and communication",
+      "evidence": {
+        "page": 31,
+        "source_text": "Clearly Defined Information Flows \u0013 For a functional management structure to operate effectively, it needs to be clear what reporting relationships exist."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "end",
+      "text": "Understanding of AIIMS Principles and Concepts complete",
+      "evidence": {
+        "page": 31,
+        "source_text": "An understanding of these concepts is essential to the effective application of the System."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n1",
+      "to": "n3"
+    },
+    {
+      "from": "n1",
+      "to": "n4"
+    },
+    {
+      "from": "n1",
+      "to": "n5"
+    },
+    {
+      "from": "n1",
+      "to": "n6"
+    },
+    {
+      "from": "n1",
+      "to": "n7"
+    },
+    {
+      "from": "n1",
+      "to": "n8"
+    },
+    {
+      "from": "n1",
+      "to": "n9"
+    },
+    {
+      "from": "n1",
+      "to": "n10"
+    },
+    {
+      "from": "n1",
+      "to": "n11"
+    },
+    {
+      "from": "n1",
+      "to": "n12"
+    },
+    {
+      "from": "n2",
+      "to": "n13"
+    },
+    {
+      "from": "n3",
+      "to": "n13"
+    },
+    {
+      "from": "n4",
+      "to": "n13"
+    },
+    {
+      "from": "n5",
+      "to": "n13"
+    },
+    {
+      "from": "n6",
+      "to": "n13"
+    },
+    {
+      "from": "n7",
+      "to": "n13"
+    },
+    {
+      "from": "n8",
+      "to": "n13"
+    },
+    {
+      "from": "n9",
+      "to": "n13"
+    },
+    {
+      "from": "n10",
+      "to": "n13"
+    },
+    {
+      "from": "n11",
+      "to": "n13"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5826,
+    "completion_tokens": 1430,
+    "total_tokens": 7256,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Incident Management > AIIMS Principles and Concepts\nRelated sections in this category: AIIMS Structure, Incident Controller, Deputy Incident Controller, Operations Officer, Division Commanders, Sector Commanders, Incident Objective, Incident Action Planning, Incident Communications Planning, Briefings",
+  "_validated": true,
+  "_correction_summary": "Changed protocol type to 'non-sequential' and adjusted edges to reflect non-sequential nature of principles and concepts."
+}

@@ -1,0 +1,291 @@
+{
+  "protocol_id": "support_for_incident_controller",
+  "title": "Support for the Incident Controller",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    24,
+    25
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "Definitions",
+    "Objective for Bushfire Management in Victoria",
+    "Control Arrangements for Bushfire",
+    "Support for the Line-of-Control",
+    "Support for the EMC and State Response Controller",
+    "Support for the Regional Controller",
+    "Command"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Incident escalates in size or complexity",
+      "evidence": {
+        "page": 24,
+        "source_text": "As the incident escalates in size or complexity, the Incident Controller will delegate some or all of the incident management functions of AIIMS."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Delegate incident management functions",
+      "evidence": {
+        "page": 24,
+        "source_text": "Delegate some or all of the incident management functions of AIIMS - planning, intelligence, public information, operations, investigation, logistics and finance."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Build a picture of the incident",
+      "evidence": {
+        "page": 24,
+        "source_text": "Build a picture of what has happened, what is happening and what is likely to happen."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Decide actions and prepare a plan",
+      "evidence": {
+        "page": 24,
+        "source_text": "Decide what needs to be done and how it will be done. Prepare a plan that captures those decisions."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Gather necessary resources",
+      "evidence": {
+        "page": 24,
+        "source_text": "Gather the resources necessary."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Implement plan and monitor progress",
+      "evidence": {
+        "page": 24,
+        "source_text": "Implement the plan and monitor its progress."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Keep people and agencies informed",
+      "evidence": {
+        "page": 24,
+        "source_text": "Keep people and agencies informed of all these actions."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Maintain records of deliberations and decisions",
+      "evidence": {
+        "page": 24,
+        "source_text": "Maintain records of their deliberations and decisions."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Manage environmental impacts",
+      "evidence": {
+        "page": 24,
+        "source_text": "Manage environmental impacts and consequences of the response effort."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Initiate and support relief and recovery efforts",
+      "evidence": {
+        "page": 24,
+        "source_text": "Initiate and support the relief and recovery efforts for affected communities."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "decision",
+      "text": "Are two or more agencies responding?",
+      "evidence": {
+        "page": 25,
+        "source_text": "If two or more agencies respond to an incident, the Incident Controller should form and chair an IEMT."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Form and chair an IEMT",
+      "evidence": {
+        "page": 25,
+        "source_text": "The Incident Controller should form and chair an IEMT."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "decision",
+      "text": "Is the Incident Controller unable to attend or are there several disparate emergencies?",
+      "evidence": {
+        "page": 25,
+        "source_text": "If the Incident Controller is unable to attend or there are several disparate emergencies within the municipality, the MERC (or representative) should form and chair the IEMT."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "MERC forms and chairs the IEMT",
+      "evidence": {
+        "page": 25,
+        "source_text": "The MERC (or representative) should form and chair the IEMT."
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "Consider efficacy of potential control strategies",
+      "evidence": {
+        "page": 25,
+        "source_text": "The IEMT considers the efficacy of potential control strategies."
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Task support agency or functional commanders",
+      "evidence": {
+        "page": 25,
+        "source_text": "The Incident Controller will task support agency or functional commanders to implement a strategy or to provide resources in support of these strategies."
+      }
+    },
+    {
+      "id": "n17",
+      "type": "action",
+      "text": "Include strategies and actions in the Incident Action Plan",
+      "evidence": {
+        "page": 25,
+        "source_text": "The Incident Controller includes the strategies and the actions of all agencies in the Incident Action Plan."
+      }
+    },
+    {
+      "id": "n18",
+      "type": "end",
+      "text": "Effective IEMT operation",
+      "evidence": {
+        "page": 25,
+        "source_text": "The effective operation of an IEMT relies heavily upon communication between agencies."
+      }
+    },
+    {
+      "id": "n19",
+      "type": "action",
+      "text": "Support the Regional Controller to develop a regional strategic plan",
+      "evidence": {
+        "page": 24,
+        "source_text": "Support the Regional Controller to develop a regional strategic plan for the management of the emergency, outlining the regional tier actions of all agencies."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12",
+      "condition": "Yes"
+    },
+    {
+      "from": "n11",
+      "to": "n13",
+      "condition": "No"
+    },
+    {
+      "from": "n13",
+      "to": "n14",
+      "condition": "Yes"
+    },
+    {
+      "from": "n13",
+      "to": "n15",
+      "condition": "No"
+    },
+    {
+      "from": "n12",
+      "to": "n15"
+    },
+    {
+      "from": "n14",
+      "to": "n15"
+    },
+    {
+      "from": "n15",
+      "to": "n16"
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    },
+    {
+      "from": "n17",
+      "to": "n18"
+    },
+    {
+      "from": "n2",
+      "to": "n19"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 8110,
+    "completion_tokens": 1776,
+    "total_tokens": 9886,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: Control and Command Arrangements for Bushfire > Support for the Incident Controller\nRelated sections in this category: Definitions, Objective for Bushfire Management in Victoria, Control Arrangements for Bushfire, Support for the Line-of-Control, Support for the EMC and State Response Controller, Support for the Regional Controller, Command",
+  "_validated": true,
+  "_correction_summary": "Added missing branch for decision node n13, corrected condition for edge from n13 to n14, and added missing step for supporting the Regional Controller."
+}

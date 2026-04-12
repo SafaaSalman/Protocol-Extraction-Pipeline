@@ -1,0 +1,752 @@
+{
+  "gold": [
+    {
+      "file": "burn_injuries_01.json",
+      "path": "evaluation/gold/burn_injuries_01.json",
+      "title": "Burn Injuries",
+      "nodes": 14,
+      "edges": 14
+    },
+    {
+      "file": "cpr_01.json",
+      "path": "evaluation/gold/cpr_01.json",
+      "title": "CPR",
+      "nodes": 17,
+      "edges": 19
+    },
+    {
+      "file": "patient_assessment_01.json",
+      "path": "evaluation/gold/patient_assessment_01.json",
+      "title": "Patient Assessment",
+      "nodes": 20,
+      "edges": 21
+    },
+    {
+      "file": "risk_management_01.json",
+      "path": "evaluation/gold/risk_management_01.json",
+      "title": "Risk Management Process",
+      "nodes": 14,
+      "edges": 17
+    },
+    {
+      "file": "triage_01.json",
+      "path": "evaluation/gold/triage_01.json",
+      "title": "Multi-Casualty Triage System",
+      "nodes": 15,
+      "edges": 20
+    }
+  ],
+  "extracted": [
+    {
+      "file": "aiims_principles_and_concepts.json",
+      "path": "evaluation/extracted/aiims_principles_and_concepts.json",
+      "title": "AIIMS Principles and Concepts",
+      "source": "VIC",
+      "nodes": 13,
+      "edges": 22,
+      "validated": true
+    },
+    {
+      "file": "aircraft_mishap_response_actions.json",
+      "path": "evaluation/extracted/aircraft_mishap_response_actions.json",
+      "title": "Aircraft Mishap Response Actions",
+      "source": "IRPG",
+      "nodes": 8,
+      "edges": 7,
+      "validated": false
+    },
+    {
+      "file": "all_hazard_incident_response.json",
+      "path": "evaluation/extracted/all_hazard_incident_response.json",
+      "title": "All Hazard Incident Response",
+      "source": "IRPG",
+      "nodes": 12,
+      "edges": 11,
+      "validated": true
+    },
+    {
+      "file": "aquatic_invasive_species.json",
+      "path": "evaluation/extracted/aquatic_invasive_species.json",
+      "title": "Aquatic Invasive Species",
+      "source": "IRPG",
+      "nodes": 14,
+      "edges": 13,
+      "validated": true
+    },
+    {
+      "file": "aviation_user_checklist.json",
+      "path": "evaluation/extracted/aviation_user_checklist.json",
+      "title": "Aviation User Checklist",
+      "source": "IRPG",
+      "nodes": 8,
+      "edges": 7,
+      "validated": false
+    },
+    {
+      "file": "burn_injuries.json",
+      "path": "evaluation/extracted/burn_injuries.json",
+      "title": "Burn Injuries",
+      "source": "IRPG",
+      "nodes": 14,
+      "edges": 14,
+      "validated": true
+    },
+    {
+      "file": "chainsaw_operations.json",
+      "path": "evaluation/extracted/chainsaw_operations.json",
+      "title": "Chainsaw Operations",
+      "source": "IRPG",
+      "nodes": 23,
+      "edges": 23,
+      "validated": true
+    },
+    {
+      "file": "common_denominators_of_fire_behavior_on_tragedy_fires.json",
+      "path": "evaluation/extracted/common_denominators_of_fire_behavior_on_tragedy_fires.json",
+      "title": "Common Denominators of Fire Behavior on Tragedy Fires",
+      "source": "IRPG",
+      "nodes": 11,
+      "edges": 10,
+      "validated": true
+    },
+    {
+      "file": "cpr.json",
+      "path": "evaluation/extracted/cpr.json",
+      "title": "CPR",
+      "source": "IRPG",
+      "nodes": 17,
+      "edges": 19,
+      "validated": true
+    },
+    {
+      "file": "debriefing.json",
+      "path": "evaluation/extracted/debriefing.json",
+      "title": "Debriefing",
+      "source": "VIC",
+      "nodes": 10,
+      "edges": 9,
+      "validated": false
+    },
+    {
+      "file": "division_commanders.json",
+      "path": "evaluation/extracted/division_commanders.json",
+      "title": "Division Commanders",
+      "source": "VIC",
+      "nodes": 16,
+      "edges": 17,
+      "validated": true
+    },
+    {
+      "file": "downhill_fireline_construction_checklist.json",
+      "path": "evaluation/extracted/downhill_fireline_construction_checklist.json",
+      "title": "Downhill Fireline Construction Checklist",
+      "source": "IRPG",
+      "nodes": 12,
+      "edges": 11,
+      "validated": true
+    },
+    {
+      "file": "dynamic_risk_assessment.json",
+      "path": "evaluation/extracted/dynamic_risk_assessment.json",
+      "title": "Dynamic Risk Assessment",
+      "source": "VIC",
+      "nodes": 11,
+      "edges": 10,
+      "validated": true
+    },
+    {
+      "file": "emergency_management_commissioner.json",
+      "path": "evaluation/extracted/emergency_management_commissioner.json",
+      "title": "Emergency Management Commissioner",
+      "source": "VIC",
+      "nodes": 11,
+      "edges": 10,
+      "validated": true
+    },
+    {
+      "file": "emergency_management_drive_business_rules.json",
+      "path": "evaluation/extracted/emergency_management_drive_business_rules.json",
+      "title": "Emergency Management Drive Business Rules",
+      "source": "VIC",
+      "nodes": 7,
+      "edges": 6,
+      "validated": true
+    },
+    {
+      "file": "emergency_management_portal.json",
+      "path": "evaluation/extracted/emergency_management_portal.json",
+      "title": "Emergency Management Portal",
+      "source": "VIC",
+      "nodes": 4,
+      "edges": 3,
+      "validated": false
+    },
+    {
+      "file": "emergency_medical_care_guidelines.json",
+      "path": "evaluation/extracted/emergency_medical_care_guidelines.json",
+      "title": "Emergency Medical Care Guidelines",
+      "source": "IRPG",
+      "nodes": 16,
+      "edges": 15,
+      "validated": false
+    },
+    {
+      "file": "evacuation.json",
+      "path": "evaluation/extracted/evacuation.json",
+      "title": "Evacuation",
+      "source": "VIC",
+      "nodes": 14,
+      "edges": 13,
+      "validated": false
+    },
+    {
+      "file": "fatality_procedures.json",
+      "path": "evaluation/extracted/fatality_procedures.json",
+      "title": "Fatality Procedures",
+      "source": "IRPG",
+      "nodes": 11,
+      "edges": 11,
+      "validated": true
+    },
+    {
+      "file": "fatigue.json",
+      "path": "evaluation/extracted/fatigue.json",
+      "title": "Fatigue",
+      "source": "VIC",
+      "nodes": 8,
+      "edges": 8,
+      "validated": true
+    },
+    {
+      "file": "fine_fuel_moisture_ffm_and_probability_of_ignition_pig.json",
+      "path": "evaluation/extracted/fine_fuel_moisture_ffm_and_probability_of_ignition_pig.json",
+      "title": "Fine Fuel Moisture (FFM) and Probability of Ignition (PIG)",
+      "source": "IRPG",
+      "nodes": 8,
+      "edges": 8,
+      "validated": false
+    },
+    {
+      "file": "fire_assessment_process.json",
+      "path": "evaluation/extracted/fire_assessment_process.json",
+      "title": "Fire Assessment Process",
+      "source": "IRPG",
+      "nodes": 22,
+      "edges": 21,
+      "validated": true
+    },
+    {
+      "file": "fire_origin_protection_checklist.json",
+      "path": "evaluation/extracted/fire_origin_protection_checklist.json",
+      "title": "Fire Origin Protection Checklist",
+      "source": "IRPG",
+      "nodes": 21,
+      "edges": 20,
+      "validated": true
+    },
+    {
+      "file": "firefighter_stress_management.json",
+      "path": "evaluation/extracted/firefighter_stress_management.json",
+      "title": "Firefighter Stress Management",
+      "source": "IRPG",
+      "nodes": 5,
+      "edges": 4,
+      "validated": false
+    },
+    {
+      "file": "fireground_information_update.json",
+      "path": "evaluation/extracted/fireground_information_update.json",
+      "title": "Fireground Information Update",
+      "source": "VIC",
+      "nodes": 9,
+      "edges": 8,
+      "validated": false
+    },
+    {
+      "file": "hazard_tree_safety.json",
+      "path": "evaluation/extracted/hazard_tree_safety.json",
+      "title": "Hazard Tree Safety",
+      "source": "IRPG",
+      "nodes": 15,
+      "edges": 22,
+      "validated": true
+    },
+    {
+      "file": "hazmat_incident_operations.json",
+      "path": "evaluation/extracted/hazmat_incident_operations.json",
+      "title": "HazMat Incident Operations",
+      "source": "IRPG",
+      "nodes": 19,
+      "edges": 18,
+      "validated": true
+    },
+    {
+      "file": "heatrelated_injury.json",
+      "path": "evaluation/extracted/heatrelated_injury.json",
+      "title": "Heat-Related Injury",
+      "source": "IRPG",
+      "nodes": 11,
+      "edges": 10,
+      "validated": false
+    },
+    {
+      "file": "helicopter_extraction_operations.json",
+      "path": "evaluation/extracted/helicopter_extraction_operations.json",
+      "title": "Helicopter Extraction Operations",
+      "source": "IRPG",
+      "nodes": 14,
+      "edges": 14,
+      "validated": true
+    },
+    {
+      "file": "helicopter_landing_area_selection.json",
+      "path": "evaluation/extracted/helicopter_landing_area_selection.json",
+      "title": "Helicopter Landing Area Selection",
+      "source": "IRPG",
+      "nodes": 15,
+      "edges": 17,
+      "validated": true
+    },
+    {
+      "file": "high_pressure_pump_information.json",
+      "path": "evaluation/extracted/high_pressure_pump_information.json",
+      "title": "High Pressure Pump Information",
+      "source": "IRPG",
+      "nodes": 18,
+      "edges": 19,
+      "validated": true
+    },
+    {
+      "file": "how_to_properly_refuse_risk.json",
+      "path": "evaluation/extracted/how_to_properly_refuse_risk.json",
+      "title": "How to Properly Refuse Risk",
+      "source": "IRPG",
+      "nodes": 10,
+      "edges": 11,
+      "validated": true
+    },
+    {
+      "file": "hydration.json",
+      "path": "evaluation/extracted/hydration.json",
+      "title": "Hydration",
+      "source": "VIC",
+      "nodes": 7,
+      "edges": 7,
+      "validated": true
+    },
+    {
+      "file": "impact_assessment.json",
+      "path": "evaluation/extracted/impact_assessment.json",
+      "title": "Impact Assessment",
+      "source": "VIC",
+      "nodes": 14,
+      "edges": 16,
+      "validated": true
+    },
+    {
+      "file": "indicators_of_incident_complexity.json",
+      "path": "evaluation/extracted/indicators_of_incident_complexity.json",
+      "title": "Indicators of Incident Complexity",
+      "source": "IRPG",
+      "nodes": 10,
+      "edges": 13,
+      "validated": true
+    },
+    {
+      "file": "last_resort_survival.json",
+      "path": "evaluation/extracted/last_resort_survival.json",
+      "title": "Last Resort Survival",
+      "source": "IRPG",
+      "nodes": 30,
+      "edges": 29,
+      "validated": false
+    },
+    {
+      "file": "local_disaster_response.json",
+      "path": "evaluation/extracted/local_disaster_response.json",
+      "title": "Local Disaster Response",
+      "source": "IRPG",
+      "nodes": 18,
+      "edges": 17,
+      "validated": true
+    },
+    {
+      "file": "longline_mission.json",
+      "path": "evaluation/extracted/longline_mission.json",
+      "title": "Longline Mission",
+      "source": "IRPG",
+      "nodes": 16,
+      "edges": 16,
+      "validated": true
+    },
+    {
+      "file": "media_attendance_at_incidentsprotocols.json",
+      "path": "evaluation/extracted/media_attendance_at_incidentsprotocols.json",
+      "title": "Media Attendance at Incidents/Protocols",
+      "source": "VIC",
+      "nodes": 12,
+      "edges": 13,
+      "validated": true
+    },
+    {
+      "file": "medical_incident_report.json",
+      "path": "evaluation/extracted/medical_incident_report.json",
+      "title": "Medical Incident Report",
+      "source": "IRPG",
+      "nodes": 18,
+      "edges": 17,
+      "validated": false
+    },
+    {
+      "file": "mfb_response_capability.json",
+      "path": "evaluation/extracted/mfb_response_capability.json",
+      "title": "MFB Response Capability",
+      "source": "VIC",
+      "nodes": 24,
+      "edges": 23,
+      "validated": true
+    },
+    {
+      "file": "multicasualty_triage_system.json",
+      "path": "evaluation/extracted/multicasualty_triage_system.json",
+      "title": "Multi-Casualty Triage System",
+      "source": "IRPG",
+      "nodes": 11,
+      "edges": 11,
+      "validated": true
+    },
+    {
+      "file": "objective_for_bushfire_management_in_victoria.json",
+      "path": "evaluation/extracted/objective_for_bushfire_management_in_victoria.json",
+      "title": "Objective for Bushfire Management in Victoria",
+      "source": "VIC",
+      "nodes": 4,
+      "edges": 3,
+      "validated": false
+    },
+    {
+      "file": "ohs_incident_reporting.json",
+      "path": "evaluation/extracted/ohs_incident_reporting.json",
+      "title": "OHS Incident Reporting and LACES Process",
+      "source": "VIC",
+      "nodes": 11,
+      "edges": 10,
+      "validated": true
+    },
+    {
+      "file": "oil_and_gas_site_safety.json",
+      "path": "evaluation/extracted/oil_and_gas_site_safety.json",
+      "title": "Oil and Gas Site Safety",
+      "source": "IRPG",
+      "nodes": 17,
+      "edges": 16,
+      "validated": true
+    },
+    {
+      "file": "operational_leadership.json",
+      "path": "evaluation/extracted/operational_leadership.json",
+      "title": "Operational Leadership",
+      "source": "IRPG",
+      "nodes": 8,
+      "edges": 7,
+      "validated": false
+    },
+    {
+      "file": "operations_officer.json",
+      "path": "evaluation/extracted/operations_officer.json",
+      "title": "Operations Officer",
+      "source": "VIC",
+      "nodes": 5,
+      "edges": 4,
+      "validated": false
+    },
+    {
+      "file": "paracargo_operations_safety.json",
+      "path": "evaluation/extracted/paracargo_operations_safety.json",
+      "title": "Paracargo Operations Safety",
+      "source": "IRPG",
+      "nodes": 12,
+      "edges": 11,
+      "validated": true
+    },
+    {
+      "file": "patient_assessment.json",
+      "path": "evaluation/extracted/patient_assessment.json",
+      "title": "Patient Assessment",
+      "source": "IRPG",
+      "nodes": 11,
+      "edges": 16,
+      "validated": true
+    },
+    {
+      "file": "planning_for_medical_emergencies.json",
+      "path": "evaluation/extracted/planning_for_medical_emergencies.json",
+      "title": "Planning for Medical Emergencies",
+      "source": "IRPG",
+      "nodes": 14,
+      "edges": 13,
+      "validated": true
+    },
+    {
+      "file": "powerline_safety.json",
+      "path": "evaluation/extracted/powerline_safety.json",
+      "title": "Powerline Safety",
+      "source": "IRPG",
+      "nodes": 24,
+      "edges": 23,
+      "validated": true
+    },
+    {
+      "file": "principles_of_emergency_management.json",
+      "path": "evaluation/extracted/principles_of_emergency_management.json",
+      "title": "Principles of Emergency Management",
+      "source": "VIC",
+      "nodes": 10,
+      "edges": 9,
+      "validated": false
+    },
+    {
+      "file": "reporting_fire_chemical_misapplication.json",
+      "path": "evaluation/extracted/reporting_fire_chemical_misapplication.json",
+      "title": "Reporting Fire Chemical Misapplication",
+      "source": "IRPG",
+      "nodes": 7,
+      "edges": 6,
+      "validated": true
+    },
+    {
+      "file": "resource_management.json",
+      "path": "evaluation/extracted/resource_management.json",
+      "title": "Resource Management",
+      "source": "VIC",
+      "nodes": 16,
+      "edges": 18,
+      "validated": true
+    },
+    {
+      "file": "response_arrangements.json",
+      "path": "evaluation/extracted/response_arrangements.json",
+      "title": "Response Arrangements",
+      "source": "VIC",
+      "nodes": 11,
+      "edges": 11,
+      "validated": true
+    },
+    {
+      "file": "risk_management_process.json",
+      "path": "evaluation/extracted/risk_management_process.json",
+      "title": "Risk Management Process",
+      "source": "IRPG",
+      "nodes": 21,
+      "edges": 25,
+      "validated": true
+    },
+    {
+      "file": "roadside_response_safety.json",
+      "path": "evaluation/extracted/roadside_response_safety.json",
+      "title": "Roadside Response Safety",
+      "source": "IRPG",
+      "nodes": 11,
+      "edges": 18,
+      "validated": true
+    },
+    {
+      "file": "safecom_reporting_system.json",
+      "path": "evaluation/extracted/safecom_reporting_system.json",
+      "title": "SAFECOM Reporting System",
+      "source": "IRPG",
+      "nodes": 9,
+      "edges": 8,
+      "validated": true
+    },
+    {
+      "file": "safety_first_approach.json",
+      "path": "evaluation/extracted/safety_first_approach.json",
+      "title": "Safety First Approach",
+      "source": "VIC",
+      "nodes": 9,
+      "edges": 8,
+      "validated": true
+    },
+    {
+      "file": "safety_zones.json",
+      "path": "evaluation/extracted/safety_zones.json",
+      "title": "Safety Zones",
+      "source": "IRPG",
+      "nodes": 10,
+      "edges": 9,
+      "validated": true
+    },
+    {
+      "file": "situation_reporting_sitreps.json",
+      "path": "evaluation/extracted/situation_reporting_sitreps.json",
+      "title": "Situation Reporting (SITREPS)",
+      "source": "VIC",
+      "nodes": 21,
+      "edges": 20,
+      "validated": false
+    },
+    {
+      "file": "smoke.json",
+      "path": "evaluation/extracted/smoke.json",
+      "title": "Smoke",
+      "source": "VIC",
+      "nodes": 8,
+      "edges": 9,
+      "validated": false
+    },
+    {
+      "file": "smoke_and_transportation_safety.json",
+      "path": "evaluation/extracted/smoke_and_transportation_safety.json",
+      "title": "Smoke and Transportation Safety",
+      "source": "IRPG",
+      "nodes": 10,
+      "edges": 10,
+      "validated": true
+    },
+    {
+      "file": "smoke_hazards_and_mitigation.json",
+      "path": "evaluation/extracted/smoke_hazards_and_mitigation.json",
+      "title": "Smoke Hazards and Mitigation",
+      "source": "IRPG",
+      "nodes": 10,
+      "edges": 11,
+      "validated": true
+    },
+    {
+      "file": "specific_treatments.json",
+      "path": "evaluation/extracted/specific_treatments.json",
+      "title": "Specific Treatments",
+      "source": "IRPG",
+      "nodes": 18,
+      "edges": 25,
+      "validated": true
+    },
+    {
+      "file": "state_response_controller.json",
+      "path": "evaluation/extracted/state_response_controller.json",
+      "title": "State Response Controller",
+      "source": "VIC",
+      "nodes": 8,
+      "edges": 7,
+      "validated": true
+    },
+    {
+      "file": "structure_hazard_marking_system.json",
+      "path": "evaluation/extracted/structure_hazard_marking_system.json",
+      "title": "Structure Hazard Marking System",
+      "source": "IRPG",
+      "nodes": 12,
+      "edges": 13,
+      "validated": true
+    },
+    {
+      "file": "support_for_the_emc_and_state_response_controller.json",
+      "path": "evaluation/extracted/support_for_the_emc_and_state_response_controller.json",
+      "title": "Support for the EMC and State Response Controller",
+      "source": "VIC",
+      "nodes": 9,
+      "edges": 8,
+      "validated": false
+    },
+    {
+      "file": "support_for_the_incident_controller.json",
+      "path": "evaluation/extracted/support_for_the_incident_controller.json",
+      "title": "Support for the Incident Controller",
+      "source": "VIC",
+      "nodes": 19,
+      "edges": 20,
+      "validated": true
+    },
+    {
+      "file": "thunderstorm_safety.json",
+      "path": "evaluation/extracted/thunderstorm_safety.json",
+      "title": "Thunderstorm Safety",
+      "source": "IRPG",
+      "nodes": 17,
+      "edges": 16,
+      "validated": true
+    },
+    {
+      "file": "tiers_of_emergency_response_management.json",
+      "path": "evaluation/extracted/tiers_of_emergency_response_management.json",
+      "title": "Tiers of Emergency Response Management",
+      "source": "VIC",
+      "nodes": 6,
+      "edges": 6,
+      "validated": true
+    },
+    {
+      "file": "traffic_management_points.json",
+      "path": "evaluation/extracted/traffic_management_points.json",
+      "title": "Traffic Management Points",
+      "source": "VIC",
+      "nodes": 12,
+      "edges": 13,
+      "validated": true
+    },
+    {
+      "file": "transition_from_response_to_recovery.json",
+      "path": "evaluation/extracted/transition_from_response_to_recovery.json",
+      "title": "Transition from response to recovery",
+      "source": "VIC",
+      "nodes": 11,
+      "edges": 14,
+      "validated": false
+    },
+    {
+      "file": "tree_hazard.json",
+      "path": "evaluation/extracted/tree_hazard.json",
+      "title": "Tree Hazard",
+      "source": "VIC",
+      "nodes": 12,
+      "edges": 12,
+      "validated": true
+    },
+    {
+      "file": "unexploded_ordnance_safety.json",
+      "path": "evaluation/extracted/unexploded_ordnance_safety.json",
+      "title": "Unexploded Ordnance Safety",
+      "source": "IRPG",
+      "nodes": 14,
+      "edges": 13,
+      "validated": true
+    },
+    {
+      "file": "unmanned_aircraft_systems_uas_in_wildland_fire_operations.json",
+      "path": "evaluation/extracted/unmanned_aircraft_systems_uas_in_wildland_fire_operations.json",
+      "title": "Unmanned Aircraft Systems (UAS) in Wildland Fire Operations",
+      "source": "IRPG",
+      "nodes": 11,
+      "edges": 10,
+      "validated": false
+    },
+    {
+      "file": "vehicle_accident_operations.json",
+      "path": "evaluation/extracted/vehicle_accident_operations.json",
+      "title": "Vehicle Accident Operations",
+      "source": "IRPG",
+      "nodes": 19,
+      "edges": 18,
+      "validated": true
+    },
+    {
+      "file": "wildland_urban_interface_wui_firefighting.json",
+      "path": "evaluation/extracted/wildland_urban_interface_wui_firefighting.json",
+      "title": "Wildland Urban Interface (WUI) Firefighting",
+      "source": "IRPG",
+      "nodes": 17,
+      "edges": 19,
+      "validated": true
+    },
+    {
+      "file": "working_with_heavy_equipment.json",
+      "path": "evaluation/extracted/working_with_heavy_equipment.json",
+      "title": "Working with Heavy Equipment",
+      "source": "IRPG",
+      "nodes": 17,
+      "edges": 15,
+      "validated": true
+    }
+  ]
+}

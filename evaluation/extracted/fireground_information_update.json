@@ -1,0 +1,149 @@
+{
+  "protocol_id": "fireground_information_update",
+  "title": "Fireground Information Update",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    78
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": [
+    "Safe Person Approach",
+    "Dynamic Risk Assessment",
+    "Safety First Approach",
+    "OHS Incident Reporting",
+    "LACES",
+    "WATCHOUT",
+    "Red Flag Warnings",
+    "Hydration",
+    "Fatigue",
+    "Smoke"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Operations Officer initiates Red Flag Warning",
+      "evidence": {
+        "page": 78,
+        "source_text": "Step 1: For example, if the Operations Officer initiates a Red Flag Warning, they issue it to Division Commanders."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Operations Officer advises Incident Controller",
+      "evidence": {
+        "page": 78,
+        "source_text": "The Operations Officer then advises the Incident Controller."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Division Commanders acknowledge receipt and repeat back key points",
+      "evidence": {
+        "page": 78,
+        "source_text": "Step 2: Division Commanders acknowledge receipt and repeat back the key points of the Warning to demonstrate understanding."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Division Commanders issue Red Flag Warning to Sector Commanders",
+      "evidence": {
+        "page": 78,
+        "source_text": "Step 3: Division Commanders issue the Red Flag Warning to Sector Commanders."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Sector Commanders acknowledge receipt and repeat back key points",
+      "evidence": {
+        "page": 78,
+        "source_text": "Step 4: Sector Commanders acknowledge receipt and repeat back the key points of the Warning to demonstrate understanding."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Sector Commanders issue Warning to Strike Team/Task Force Leaders",
+      "evidence": {
+        "page": 78,
+        "source_text": "Step 5: Sector Commanders issue Warning to Strike Team/Task Force Leaders and any others they are supervising."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Strike Team/Task Force Leaders acknowledge receipt",
+      "evidence": {
+        "page": 78,
+        "source_text": "who acknowledge receipt (Step 6)."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Strike Team/Task Force Leaders issue Warning to crew members",
+      "evidence": {
+        "page": 78,
+        "source_text": "and issue the Warning to their crew members (Step 7)."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "end",
+      "text": "Crew members acknowledge the Warning",
+      "evidence": {
+        "page": 78,
+        "source_text": "who acknowledge the Warning (Step 8)."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 6658,
+    "completion_tokens": 954,
+    "total_tokens": 7612,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  },
+  "_toc_context": "Document context: Safety > Fireground Information Update\nRelated sections in this category: Safe Person Approach, Dynamic Risk Assessment, Safety First Approach, OHS Incident Reporting, LACES, WATCHOUT, Red Flag Warnings, Hydration, Fatigue, Smoke"
+}

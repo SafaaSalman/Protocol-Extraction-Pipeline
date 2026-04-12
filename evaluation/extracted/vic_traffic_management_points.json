@@ -1,0 +1,199 @@
+{
+  "protocol_id": "traffic_management_points",
+  "title": "Traffic Management Points",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    51,
+    52,
+    53
+  ],
+  "protocol_type": "hybrid",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "SOP J03.10 – Traffic Management",
+    "IAOP SO 4.07 – Firebombing Operations"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Traffic Management Points (TMP) setup initiated",
+      "evidence": {
+        "page": 51,
+        "source_text": "Traffic Management Points (TMP) are set up at the direction of the Incident Controller"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Regulate flow of traffic into fire-affected area",
+      "evidence": {
+        "page": 51,
+        "source_text": "to regulate the flow of traffic into an area where fire has occurred, is occurring or has the potential to occur."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Maintain safety of emergency personnel and public",
+      "evidence": {
+        "page": 51,
+        "source_text": "The purpose is to maintain the safety of emergency personnel and the public"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "Monitor and adjust TMP conditions as needed",
+      "evidence": {
+        "page": 51,
+        "source_text": "the conditions of TMP may change over the course of and incident, and at any time."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "Develop Incident Traffic Management Plan (ITMP)",
+      "evidence": {
+        "page": 51,
+        "source_text": "development of an Incident Traffic Management Plan (ITMP) and associated forms."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "decision",
+      "text": "Determine TMP access level",
+      "evidence": {
+        "page": 52,
+        "source_text": "To facilitate entry into an area, a TMP will be assigned a particular access level"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Emergency Services Only Access",
+      "evidence": {
+        "page": 52,
+        "source_text": "Emergency Services Only Access"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Restricted Access B",
+      "evidence": {
+        "page": 52,
+        "source_text": "Restricted Access B"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Authorised Access C",
+      "evidence": {
+        "page": 52,
+        "source_text": "Authorised Access C"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Authorised Access D",
+      "evidence": {
+        "page": 52,
+        "source_text": "Authorised Access D"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "Open Access",
+      "evidence": {
+        "page": 52,
+        "source_text": "Open"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Issue identifying wristbands for access",
+      "evidence": {
+        "page": 53,
+        "source_text": "people who are to be permitted access may be issued with an identifying wristband."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "end",
+      "text": "TMP access managed",
+      "evidence": {
+        "page": 53,
+        "source_text": "TMP access managed"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6"
+    },
+    {
+      "from": "n6",
+      "to": "n7",
+      "condition": "Emergency Services Only"
+    },
+    {
+      "from": "n6",
+      "to": "n8",
+      "condition": "Restricted Access B"
+    },
+    {
+      "from": "n6",
+      "to": "n9",
+      "condition": "Authorised Access C"
+    },
+    {
+      "from": "n6",
+      "to": "n10",
+      "condition": "Authorised Access D"
+    },
+    {
+      "from": "n6",
+      "to": "n11",
+      "condition": "Open Access"
+    },
+    {
+      "from": "n9",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 10838,
+    "completion_tokens": 1225,
+    "total_tokens": 12063,
+    "few_shot": true,
+    "multimodal": true,
+    "dpi": 200
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "protocol_id": "multi_casualty_triage_system",
+  "title": "Multi-Casualty Triage System",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [
+    132
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": [],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Begin triage assessment",
+      "evidence": {
+        "page": 132,
+        "source_text": "Multi-Casualty Triage System"
+      }
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "text": "Is the patient breathing?",
+      "evidence": {
+        "page": 132,
+        "source_text": "No respirations after repositioning airway."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "end",
+      "text": "Black: Deceased/Dying - No respirations after repositioning airway",
+      "evidence": {
+        "page": 132,
+        "source_text": "Black Deceased/ Dying Dead or with injuries not compatible with life. No respirations after repositioning airway."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "decision",
+      "text": "Is the patient breathing but unconscious, or respirations more than 30/minute?",
+      "evidence": {
+        "page": 132,
+        "source_text": "Breathing but unconscious; respirations more than 30/minute."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "decision",
+      "text": "Is radial pulse absent or capillary refill more than 2 seconds?",
+      "evidence": {
+        "page": 132,
+        "source_text": "Radial pulse absent, capillary refill more than 2 seconds."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "decision",
+      "text": "Can the patient follow simple commands?",
+      "evidence": {
+        "page": 132,
+        "source_text": "Or can’t follow simple commands."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "end",
+      "text": "Red: Immediate - Serious, life-threatening injury",
+      "evidence": {
+        "page": 132,
+        "source_text": "Red Immediate Serious, life-threatening injury."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "decision",
+      "text": "Are respirations less than 30/minute?",
+      "evidence": {
+        "page": 132,
+        "source_text": "Respirations less than 30/minute."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "decision",
+      "text": "Is radial pulse present and capillary refill less than 2 seconds?",
+      "evidence": {
+        "page": 132,
+        "source_text": "Radial pulse present, capillary refill less than 2 seconds."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "decision",
+      "text": "Can the patient follow simple commands?",
+      "evidence": {
+        "page": 132,
+        "source_text": "And can follow simple commands."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "end",
+      "text": "Yellow: Delayed - Treatment and transport delayed",
+      "evidence": {
+        "page": 132,
+        "source_text": "Yellow Delayed Treatment and transport delayed."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "end",
+      "text": "Green: Minor - All walking wounded; treatment can be delayed",
+      "evidence": {
+        "page": 132,
+        "source_text": "Green Minor All walking wounded; treatment can be delayed."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": "No"
+    },
+    {
+      "from": "n2",
+      "to": "n4",
+      "condition": "Yes"
+    },
+    {
+      "from": "n4",
+      "to": "n7",
+      "condition": "Yes"
+    },
+    {
+      "from": "n4",
+      "to": "n5",
+      "condition": "No"
+    },
+    {
+      "from": "n5",
+      "to": "n7",
+      "condition": "Yes"
+    },
+    {
+      "from": "n5",
+      "to": "n6",
+      "condition": "No"
+    },
+    {
+      "from": "n6",
+      "to": "n7",
+      "condition": "No"
+    },
+    {
+      "from": "n6",
+      "to": "n8",
+      "condition": "Yes"
+    },
+    {
+      "from": "n8",
+      "to": "n9",
+      "condition": "Yes"
+    },
+    {
+      "from": "n8",
+      "to": "n7",
+      "condition": "No"
+    },
+    {
+      "from": "n9",
+      "to": "n10",
+      "condition": "Yes"
+    },
+    {
+      "from": "n9",
+      "to": "n7",
+      "condition": "No"
+    },
+    {
+      "from": "n10",
+      "to": "n11",
+      "condition": "Yes"
+    },
+    {
+      "from": "n10",
+      "to": "n7",
+      "condition": "No"
+    },
+    {
+      "from": "n11",
+      "to": "n12",
+      "condition": "All walking wounded"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5259,
+    "completion_tokens": 1323,
+    "total_tokens": 6582,
+    "few_shot": true
+  }
+}

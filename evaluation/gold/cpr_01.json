@@ -1,0 +1,134 @@
+{
+  "protocol_id": "cpr_01",
+  "title": "CPR",
+  "source_pdf": "IRPG-2025.pdf",
+  "pages": [127],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": [],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "CPR protocol initiated",
+      "evidence": { "page": 127, "source_text": "CPR" }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Scene Safety: Look for any dangers or hazards",
+      "evidence": { "page": 127, "source_text": "1. Scene Safety: Look for any dangers or hazards." }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Determine Responsiveness: Tap on the patient's shoulders and shout 'Are you OK?' Look for chest rise and fall",
+      "evidence": { "page": 127, "source_text": "2. Determine Responsiveness: Tap on the patient\u2019s shoulders and shout, \u201cAre you OK?\u201d Look for chest rise and fall." }
+    },
+    {
+      "id": "n4",
+      "type": "decision",
+      "text": "Is the patient breathing?",
+      "evidence": { "page": 127, "source_text": "If the patient is not breathing, continue with steps 3 and 4. If the patient is breathing and no spinal injury is suspected, place patient on their side." }
+    },
+    {
+      "id": "n5",
+      "type": "decision",
+      "text": "Is spinal injury suspected?",
+      "evidence": { "page": 127, "source_text": "If the patient is breathing and no spinal injury is suspected, place patient on their side." }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Place patient on their side. Continue to monitor breathing",
+      "evidence": { "page": 127, "source_text": "place patient on their side. Continue to monitor breathing." }
+    },
+    {
+      "id": "n7",
+      "type": "end",
+      "text": "Monitor breathing (patient breathing, no spinal injury)",
+      "evidence": { "page": 127, "source_text": "Continue to monitor breathing." }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Call for Help: Activate emergency response. If possible, obtain an AED",
+      "evidence": { "page": 127, "source_text": "3. Call for Help: Activate emergency response. If possible, obtain an automated external defibrillator (AED)." }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Chest Compressions: Place heel of one hand on center of patient's chest, other hand over first, interlock fingers. Perform compressions at 100-120/min, at least 2 inches deep. Perform 30 compressions",
+      "evidence": { "page": 127, "source_text": "4. Chest Compressions: Place the heel of one hand on the center of the patient\u2019s chest. Place the other hand over the first and interlock the fingers. Perform compressions at a rate of 100 to 120 per minute, compressing the patient\u2019s chest at least two inches. Push hard and fast. Perform 30 compressions." }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Airway: Open the patient's airway by tilting the head back and lifting the chin. If trauma suspected and trained, use the jaw thrust",
+      "evidence": { "page": 127, "source_text": "5. Airway: Open the patient\u2019s airway by tilting the head back and lifting the chin. If trauma is suspected and you are trained, use the jaw thrust." }
+    },
+    {
+      "id": "n11",
+      "type": "decision",
+      "text": "Is a barrier device available?",
+      "evidence": { "page": 127, "source_text": "If possible, use a barrier device. ... If no barrier device is available, perform continuous compressions with no breaks or perform mouth-to-mouth." }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "Breathing: Place barrier device over patient's nose and mouth. Pinch nose and give 2 breaths, making chest rise",
+      "evidence": { "page": 127, "source_text": "Place the barrier device over the patient\u2019s nose and mouth. Pinch the patient\u2019s nose and give 2 breaths, making the chest rise." }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "Breathing: Perform continuous compressions with no breaks, or perform mouth-to-mouth (pinch nose, cover mouth, form airtight seal, give 2 breaths)",
+      "evidence": { "page": 127, "source_text": "If no barrier device is available, perform continuous compressions with no breaks or perform mouth-to-mouth." }
+    },
+    {
+      "id": "n14",
+      "type": "action",
+      "text": "Continue CPR: Alternate 30 compressions and 2 breaths. If second rescuer arrives, one performs ventilations, one performs compressions. Maintain 30:2 ratio",
+      "evidence": { "page": 127, "source_text": "7. Continue CPR: Continue alternating 30 compressions and 2 breaths. If a second rescuer arrives, one person can perform ventilations and one person can perform compressions. Maintain the same 30:2 ratio." }
+    },
+    {
+      "id": "n15",
+      "type": "decision",
+      "text": "Has an AED arrived?",
+      "evidence": { "page": 127, "source_text": "8. AED: If an AED arrives, turn the AED on and follow the instructions provided." }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "Turn AED on and follow the instructions provided",
+      "evidence": { "page": 127, "source_text": "turn the AED on and follow the instructions provided." }
+    },
+    {
+      "id": "n17",
+      "type": "end",
+      "text": "AED in use / CPR cycle continues",
+      "evidence": { "page": 127, "source_text": "8. AED: If an AED arrives, turn the AED on and follow the instructions provided." }
+    }
+  ],
+  "edges": [
+    { "from": "n1", "to": "n2" },
+    { "from": "n2", "to": "n3" },
+    { "from": "n3", "to": "n4" },
+    { "from": "n4", "to": "n5", "condition": "Yes (breathing)" },
+    { "from": "n4", "to": "n8", "condition": "No (not breathing)" },
+    { "from": "n5", "to": "n6", "condition": "No (no spinal injury)" },
+    { "from": "n5", "to": "n8", "condition": "Yes (spinal injury suspected)" },
+    { "from": "n6", "to": "n7" },
+    { "from": "n8", "to": "n9" },
+    { "from": "n9", "to": "n10" },
+    { "from": "n10", "to": "n11" },
+    { "from": "n11", "to": "n12", "condition": "Yes (barrier device available)" },
+    { "from": "n11", "to": "n13", "condition": "No (no barrier device)" },
+    { "from": "n12", "to": "n14" },
+    { "from": "n13", "to": "n14" },
+    { "from": "n14", "to": "n15" },
+    { "from": "n15", "to": "n16", "condition": "Yes (AED arrived)" },
+    { "from": "n15", "to": "n14", "condition": "No (continue CPR cycle)" },
+    { "from": "n16", "to": "n17" }
+  ]
+}

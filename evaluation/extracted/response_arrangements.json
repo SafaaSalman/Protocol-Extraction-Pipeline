@@ -1,0 +1,173 @@
+{
+  "protocol_id": "response_arrangements_01",
+  "title": "Response Arrangements",
+  "source_pdf": "VIC-BushfireHandbook.pdf",
+  "pages": [
+    28
+  ],
+  "protocol_type": "reference",
+  "extraction_confidence": 0.9,
+  "cross_references": [
+    "SOP J03.15 \u0013 Transfer of Control and IMT relocation for Class 1 emergencies",
+    "SOP J02.03 \u0013 Incident Management Teams \u0013 Readiness Arrangements"
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "Notification of bushfire",
+      "evidence": {
+        "page": 28,
+        "source_text": "The responder agencies respond to the notification of bushfires according to their agency arrangements."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "Field-based Incident Controller communicates to their agency",
+      "evidence": {
+        "page": 28,
+        "source_text": "In first response, the field-based Incident Controller communicates to their agency through their agency command arrangements."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "Communicate effectiveness of incident control arrangements, potential risks, need for specialist resources",
+      "evidence": {
+        "page": 28,
+        "source_text": "the information communicated should include: the effectiveness of the incident control arrangements, potential risks or consequences, the need for specialist resources, including people or equipment."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "EMC, State Response Controller, and Regional Controller maintain overview",
+      "evidence": {
+        "page": 28,
+        "source_text": "The EMC, State Response Controller and Regional Controller maintain an overview of the emergency situation, through contact with Agency Commanders."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "decision",
+      "text": "Is the incident a major emergency or likely to become one?",
+      "evidence": {
+        "page": 28,
+        "source_text": "Where the incident is a major emergency or has the potential to become a major emergency:"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "Agency Commanders notify the Regional Controller",
+      "evidence": {
+        "page": 28,
+        "source_text": "Agency Commanders notify the Regional Controller"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "Transfer incident control to ICC-based Incident Controller supported by IMT",
+      "evidence": {
+        "page": 28,
+        "source_text": "the field-based Incident Controller transfers incident control to an ICC-based Incident Controller supported by an IMT."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Preposition Incident Controllers and IMTs ready to control bushfires",
+      "evidence": {
+        "page": 28,
+        "source_text": "During the bushfire season, the EMC and Regional Controllers preposition Incident Controllers and IMTs ready to control bushfires transferred from field-based Incident Controllers."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "Immediate transfer of control of all bushfires if conditions indicate potential for major bushfires",
+      "evidence": {
+        "page": 28,
+        "source_text": "Where conditions indicate that all bushfires could become major bushfires, the EMC, State Response Controller and Regional Controllers may arrange for the immediate transfer of control of all bushfires."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "EMC, State Response Controller, and Regional Controller may issue directions",
+      "evidence": {
+        "page": 28,
+        "source_text": "This may include issuing directions."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "end",
+      "text": "Management of major emergencies by EMC, State Response Controller, and Regional Controller",
+      "evidence": {
+        "page": 28,
+        "source_text": "The EMC, State Response Controller and Regional Controller will become involved in the management of emergencies that are or are likely to become major emergencies."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    },
+    {
+      "from": "n5",
+      "to": "n6",
+      "condition": "Yes, major emergency or potential"
+    },
+    {
+      "from": "n5",
+      "to": "n11",
+      "condition": "No"
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    },
+    {
+      "from": "n8",
+      "to": "n9"
+    },
+    {
+      "from": "n9",
+      "to": "n10"
+    },
+    {
+      "from": "n10",
+      "to": "n11"
+    }
+  ],
+  "_extraction_meta": {
+    "model": "gpt-4o",
+    "prompt_tokens": 5501,
+    "completion_tokens": 1143,
+    "total_tokens": 6644,
+    "few_shot": true
+  },
+  "_toc_context": "Document context: Readiness and Response to Bushfire > Response Arrangements\nRelated sections in this category: Preparedness Arrangements, Readiness Arrangements, Resource Management",
+  "_validated": true,
+  "_correction_summary": "Added missing step for issuing directions. Clarified decision condition and adjusted sequence for prepositioning and immediate transfer."
+}
