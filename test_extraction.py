@@ -12,7 +12,7 @@ sys.path.insert(0, ".")
 
 from src.ingestion.pdf_ingest import ingest_pdf
 from src.extraction.section_detector import detect_sections
-from src.extraction.protocol_extractor import extract_protocol, save_extraction
+from src.extraction.protocol_extractor import extract_protocol, review_edges, save_extraction
 
 # Ingest and detect
 print("Ingesting PDF...")
@@ -43,6 +43,22 @@ for section in target_sections:
     print(f"{'='*60}")
 
     extracted = extract_protocol(section, doc, model="gpt-4o", use_few_shot=True)
+
+    # Run edge review pass
+    section_text_parts = []
+    for pg in range(section.start_page, section.end_page + 1):
+        if pg < 1 or pg > len(doc.pages):
+            continue
+        page = doc.pages[pg - 1]
+        section_text_parts.append(page.full_text)
+        for table in page.tables:
+            for row in table.cells:
+                section_text_parts.append(" | ".join(row))
+    section_text = "\n".join(section_text_parts)
+
+    extracted = review_edges(extracted, section_text, model="gpt-4o-mini")
+    edge_accepted = extracted.get("_extraction_meta", {}).get("edge_review", {}).get("accepted", False)
+    print(f"  Edge review: {'corrections accepted' if edge_accepted else 'original kept'}")
 
     # Save
     slug = section.title.lower().replace(" ", "_").replace("-", "_")

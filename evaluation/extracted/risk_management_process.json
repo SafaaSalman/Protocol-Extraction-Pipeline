@@ -1,22 +1,13 @@
 {
-  "protocol_id": "risk_management_process",
+  "protocol_id": "risk_management_process_01",
   "title": "Risk Management Process",
   "source_pdf": "IRPG-2025.pdf",
   "pages": [
     17
   ],
   "protocol_type": "sequential",
-  "extraction_confidence": 1.0,
-  "cross_references": [
-    "Planning for Medical Emergencies",
-    "Common Denominators of Fire Behavior on Tragedy Fires",
-    "Common Tactical Hazards",
-    "LCES",
-    "Safety Zones",
-    "Downhill Fireline Construction Checklist",
-    "Indicators of Incident Complexity",
-    "Wildland Urban Interface (WUI) Firefighting"
-  ],
+  "extraction_confidence": 0.9,
+  "cross_references": [],
   "nodes": [
     {
       "id": "n1",
@@ -30,178 +21,61 @@
     {
       "id": "n2",
       "type": "action",
-      "text": "Identify Hazards (Situation Awareness)",
+      "text": "Identify Hazards: Gather Information (Objective(s), Communication, Who's in Charge, Previous Fire Behavior, Weather Forecast, Local Factors), Scout the Fire",
       "evidence": {
         "page": 17,
-        "source_text": "Identify Hazards (Situation Awareness)"
+        "source_text": "Identify Hazards (Situation Awareness) \u0000 Gather Information \u0000 Objective(s) \u0000 Communication \u0000 Who\u0000s in Charge \u0000 Previous Fire Behavior \u0000 Weather Forecast \u0000 Local Factors \u0000 Scout the Fire"
       }
     },
     {
       "id": "n3",
       "type": "action",
-      "text": "Gather Information: Objective(s), Communication, Who's in Charge, Previous Fire Behavior, Weather Forecast, Local Factors",
+      "text": "Assess Hazards: Estimate Potential Fire Behavior Hazards (Look Up, Down, and Around Indicators), Identify Tactical Hazards (Watch Outs), Consider changing conditions and probability versus severity",
       "evidence": {
         "page": 17,
-        "source_text": " Gather Information \n Objective(s) \n Communication \n Whos in Charge \n Previous Fire Behavior \n Weather Forecast \n Local Factors"
+        "source_text": "Assess Hazards \u0000 Estimate Potential Fire Behavior Hazards \u0000 Look Up, Down, and Around Indicators \u0000 Identify Tactical Hazards \u0000 Watch Outs \u0000 As conditions change, what other safety hazards are likely to exist? \u0000 Consider probability versus severity?"
       }
     },
     {
       "id": "n4",
       "type": "action",
-      "text": "Scout the Fire",
+      "text": "Develop Controls and Make Risk Decisions: Develop control measures (Firefighting Orders, LCES, Anchor Point, Downhill Checklist), Emergency Medevac Procedures/Plan, Ensure controls mitigate risk, Evaluate tactics based on expected fire behavior, Ensure instructions are given and understood, Consider risk versus gain",
       "evidence": {
         "page": 17,
-        "source_text": " Scout the Fire"
+        "source_text": "Develop Controls and Make Risk Decisions \u0000 Develop control measures that reduce risk: \u0000 Firefighting Orders \u0000 LCES - Anchor Point - Downhill Checklist (if applicable) \u0000 What other controls are necessary? - Engineering/Administrative - Personal Protective Equipment (PPE) - Educational - Avoidance \u0000 Emergency Medevac Procedures/Plan \u0000 Are controls in place to mitigate risk? \u0000 NO \u0000 Reassess situation \u0000 YES \u0000 Next question \u0000 Are selected tactics based on expected fire behavior? \u0000 NO \u0000 Reassess situation \u0000 YES \u0000 Next question \u0000 Have instructions been given and understood? \u0000 NO \u0000 Reassess situation \u0000 YES \u0000 Next question \u0000 Consider risk versus gain"
       }
     },
     {
       "id": "n5",
       "type": "action",
-      "text": "Assess Hazards",
+      "text": "Implement Controls: Ensure controls are in place and being implemented by personnel, Ensure controls are integrated into operational plan and understood at all levels",
       "evidence": {
         "page": 17,
-        "source_text": "Assess Hazards"
+        "source_text": "Implement Controls \u0000 Ensure controls are in place and being implemented by personnel. \u0000 Ensure controls are integrated into operational plan and understood at all levels."
       }
     },
     {
       "id": "n6",
-      "type": "action",
-      "text": "Estimate Potential Fire Behavior Hazards: Look Up, Down, and Around Indicators",
+      "type": "decision",
+      "text": "Are controls adequately mitigating the hazards?",
       "evidence": {
         "page": 17,
-        "source_text": " Estimate Potential Fire Behavior Hazards \n Look Up, Down, and Around Indicators"
+        "source_text": "Supervise and Evaluate \u0000 Are controls adequately mitigating the hazards?"
       }
     },
     {
       "id": "n7",
       "type": "action",
-      "text": "Identify Tactical Hazards: Watch Outs",
+      "text": "Reassess and consider Human Factors (Low experience level, Distracted from primary tasks, Fatigue or stress reaction, Unsafe attitude) and The Situation (What is changing?, Are strategy and tactics working?)",
       "evidence": {
         "page": 17,
-        "source_text": " Identify Tactical Hazards \n Watch Outs"
+        "source_text": "\u0000 NO \u0000 Reassess and consider: - Human Factors: o Low experience level? o Distracted from primary tasks? o Fatigue or stress reaction? o Unsafe attitude? - The Situation: o What is changing? o Are strategy and tactics working?"
       }
     },
     {
       "id": "n8",
-      "type": "action",
-      "text": "Consider changing conditions and other safety hazards",
-      "evidence": {
-        "page": 17,
-        "source_text": " As conditions change, what other safety hazards are likely to exist?"
-      }
-    },
-    {
-      "id": "n9",
-      "type": "decision",
-      "text": "Consider probability versus severity",
-      "evidence": {
-        "page": 17,
-        "source_text": " Consider probability versus severity?"
-      }
-    },
-    {
-      "id": "n10",
-      "type": "action",
-      "text": "Develop Controls and Make Risk Decisions",
-      "evidence": {
-        "page": 17,
-        "source_text": "Develop Controls and Make Risk Decisions"
-      }
-    },
-    {
-      "id": "n11",
-      "type": "action",
-      "text": "Develop control measures: Firefighting Orders, LCES, Anchor Point, Downhill Checklist, other controls (Engineering/Administrative, PPE, Educational, Avoidance), Emergency Medevac Procedures/Plan",
-      "evidence": {
-        "page": 17,
-        "source_text": " Develop control measures that reduce risk: \n Firefighting Orders \u000e LCES \n- Anchor Point \n- Downhill Checklist (if applicable) \n What other controls are necessary? \n- Engineering/Administrative \n- Personal Protective Equipment (PPE) \n- Educational \n- Avoidance \n Emergency Medevac Procedures/Plan"
-      }
-    },
-    {
-      "id": "n12",
-      "type": "decision",
-      "text": "Are controls in place to mitigate risk?",
-      "evidence": {
-        "page": 17,
-        "source_text": " Are controls in place to mitigate risk? \n NO  Reassess situation \n YES  Next question"
-      }
-    },
-    {
-      "id": "n13",
-      "type": "decision",
-      "text": "Are selected tactics based on expected fire behavior?",
-      "evidence": {
-        "page": 17,
-        "source_text": " Are selected tactics based on expected fire behavior? \n NO  Reassess situation \n YES  Next question"
-      }
-    },
-    {
-      "id": "n14",
-      "type": "decision",
-      "text": "Have instructions been given and understood?",
-      "evidence": {
-        "page": 17,
-        "source_text": " Have instructions been given and understood? \n NO  Reassess situation \n YES  Next question"
-      }
-    },
-    {
-      "id": "n15",
-      "type": "action",
-      "text": "Consider risk versus gain",
-      "evidence": {
-        "page": 17,
-        "source_text": " Consider risk versus gain"
-      }
-    },
-    {
-      "id": "n16",
-      "type": "action",
-      "text": "Implement Controls",
-      "evidence": {
-        "page": 17,
-        "source_text": "Implement Controls"
-      }
-    },
-    {
-      "id": "n17",
-      "type": "action",
-      "text": "Ensure controls are in place and being implemented by personnel",
-      "evidence": {
-        "page": 17,
-        "source_text": " Ensure controls are in place and being implemented by personnel."
-      }
-    },
-    {
-      "id": "n18",
-      "type": "action",
-      "text": "Ensure controls are integrated into operational plan and understood at all levels",
-      "evidence": {
-        "page": 17,
-        "source_text": " Ensure controls are integrated into operational plan and understood at all levels."
-      }
-    },
-    {
-      "id": "n19",
-      "type": "action",
-      "text": "Supervise and Evaluate",
-      "evidence": {
-        "page": 17,
-        "source_text": "Supervise and Evaluate"
-      }
-    },
-    {
-      "id": "n20",
-      "type": "decision",
-      "text": "Are controls adequately mitigating the hazards?",
-      "evidence": {
-        "page": 17,
-        "source_text": " Are controls adequately mitigating the hazards? \n NO  Reassess and consider: \n- Human Factors: \no Low experience level? \no Distracted from primary tasks? \no Fatigue or stress reaction? \no Unsafe attitude? \n- The Situation: \no What is changing? \no Are strategy and tactics working?"
-      }
-    },
-    {
-      "id": "n21",
       "type": "end",
-      "text": "If situation changes significantly, restart Risk Management Process at appropriate step",
+      "text": "Risk Management Process complete or restart if situation changes significantly",
       "evidence": {
         "page": 17,
         "source_text": "If the situation changes significantly, restart Risk Management Process at the appropriate step."
@@ -231,103 +105,31 @@
     },
     {
       "from": "n6",
-      "to": "n7"
+      "to": "n7",
+      "condition": "No"
+    },
+    {
+      "from": "n6",
+      "to": "n8",
+      "condition": "Yes"
     },
     {
       "from": "n7",
-      "to": "n8"
-    },
-    {
-      "from": "n8",
-      "to": "n9"
-    },
-    {
-      "from": "n9",
-      "to": "n10",
-      "condition": "Yes"
-    },
-    {
-      "from": "n9",
-      "to": "n10",
-      "condition": "No"
-    },
-    {
-      "from": "n10",
-      "to": "n11"
-    },
-    {
-      "from": "n11",
-      "to": "n12"
-    },
-    {
-      "from": "n12",
-      "to": "n13",
-      "condition": "Yes"
-    },
-    {
-      "from": "n12",
-      "to": "n10",
-      "condition": "No"
-    },
-    {
-      "from": "n13",
-      "to": "n14",
-      "condition": "Yes"
-    },
-    {
-      "from": "n13",
-      "to": "n10",
-      "condition": "No"
-    },
-    {
-      "from": "n14",
-      "to": "n15",
-      "condition": "Yes"
-    },
-    {
-      "from": "n14",
-      "to": "n10",
-      "condition": "No"
-    },
-    {
-      "from": "n15",
-      "to": "n16"
-    },
-    {
-      "from": "n16",
-      "to": "n17"
-    },
-    {
-      "from": "n17",
-      "to": "n18"
-    },
-    {
-      "from": "n18",
-      "to": "n19"
-    },
-    {
-      "from": "n19",
-      "to": "n20"
-    },
-    {
-      "from": "n20",
-      "to": "n21",
-      "condition": "Yes"
-    },
-    {
-      "from": "n20",
-      "to": "n10",
-      "condition": "No"
+      "to": "n6"
     }
   ],
   "_extraction_meta": {
     "model": "gpt-4o",
-    "prompt_tokens": 5563,
-    "completion_tokens": 2245,
-    "total_tokens": 7808,
-    "few_shot": true
-  },
-  "_toc_context": "Document context: OPERATIONAL ENGAGEMENT > Risk Management Process\nRelated sections in this category: Planning for Medical Emergencies, Common Denominators of Fire Behavior on Tragedy Fires, Common Tactical Hazards, LCES, Safety Zones, Downhill Fireline Construction Checklist, Indicators of Incident Complexity, Wildland Urban Interface (WUI) Firefighting",
-  "_validated": true,
-  "_correction_summary": "Converted node 'n9' to a decision node with branches. Added missing branch for node 'n20'."
+    "prompt_tokens": 7852,
+    "completion_tokens": 1168,
+    "total_tokens": 9020,
+    "few_shot": true,
+    "edge_review": {
+      "model": "gpt-4o-mini",
+      "original_issues": 0,
+      "reviewed_issues": 0,
+      "accepted": true,
+      "review_tokens": 3214
+    }
+  }
 }

@@ -26,10 +26,19 @@ from src.extraction.section_detector import (
 )
 from src.extraction.protocol_extractor import (
     extract_protocol,
+    extract_protocol_from_text,
     extract_protocol_multimodal,
+    review_edges,
     save_extraction,
 )
 from src.extraction.validator import validate_protocol, ValidationResult
+
+# Optional Docling import — falls back to PyMuPDF if unavailable
+try:
+    from src.ingestion.docling_loader import extract_with_docling
+    HAS_DOCLING = True
+except ImportError:
+    HAS_DOCLING = False
 
 
 # ── Confidence thresholds ────────────────────────────────────────────
@@ -47,6 +56,9 @@ class BatchConfig:
     use_multimodal: bool = False       # Use page images for all sections
     multimodal_formats: tuple = ("hybrid", "decision_tree")  # Formats that get multimodal
     use_few_shot: bool = True
+    use_edge_review: bool = True       # Run edge-focused review pass after extraction
+    edge_review_model: str = "gpt-4o-mini"  # Cheap model for edge review
+    use_docling_for_tables: bool = True  # Use Docling for table-format sections (if installed)
     use_validator: bool = False        # Run semantic validation after extraction
     validator_model: str = "gpt-4o"    # Model for validation (can differ from extraction)
     model: str = "gpt-4o"
@@ -291,30 +303,67 @@ def run_batch(
 
         start_time = time.time()
         try:
-            # Decide text-only vs multimodal
-            use_mm = (
-                config.use_multimodal
-                or section.format_hint in config.multimodal_formats
+            # ── Docling routing for table-format sections ────────────
+            use_docling = (
+                config.use_docling_for_tables
+                and HAS_DOCLING
+                and section.format_hint == "table"
             )
 
-            if use_mm:
-                graph = extract_protocol_multimodal(
-                    section, doc, pdf_path,
+            if use_docling:
+                # Use Docling for better table structure preservation
+                docling_text = extract_with_docling(
+                    str(pdf_path), section.start_page, section.end_page
+                )
+                graph = extract_protocol_from_text(
+                    title=section.title,
+                    section_text=docling_text,
+                    pages=list(range(section.start_page, section.end_page + 1)),
+                    source_pdf=pdf_path.name,
+                    format_hint="table",
                     model=config.model,
                     use_few_shot=config.use_few_shot,
-                    dpi=config.dpi,
-                    toc_context=toc_context,
                 )
+                print(f"    -> Docling table extraction ({len(docling_text)} chars)")
             else:
-                graph = extract_protocol(
-                    section, doc,
-                    model=config.model,
-                    use_few_shot=config.use_few_shot,
-                    toc_context=toc_context,
+                # Decide text-only vs multimodal
+                use_mm = (
+                    config.use_multimodal
+                    or section.format_hint in config.multimodal_formats
                 )
+
+                if use_mm:
+                    graph = extract_protocol_multimodal(
+                        section, doc, pdf_path,
+                        model=config.model,
+                        use_few_shot=config.use_few_shot,
+                        dpi=config.dpi,
+                        toc_context=toc_context,
+                    )
+                else:
+                    graph = extract_protocol(
+                        section, doc,
+                        model=config.model,
+                        use_few_shot=config.use_few_shot,
+                        toc_context=toc_context,
+                    )
 
             # Inject TOC context metadata
             graph["_toc_context"] = toc_context
+
+            # ── Optional: Edge-focused review ────────────────────────
+            if config.use_edge_review:
+                section_text_for_review = _gather_section_text_for_validation(section, doc)
+                graph = review_edges(
+                    graph,
+                    section_text_for_review,
+                    model=config.edge_review_model,
+                )
+                edge_accepted = graph.get("_extraction_meta", {}).get("edge_review", {}).get("accepted", False)
+                if edge_accepted:
+                    print(f"    -> edge review: corrections accepted")
+                else:
+                    print(f"    -> edge review: original kept (no improvement)")
 
             elapsed = time.time() - start_time
             tokens = graph.get("_extraction_meta", {}).get("total_tokens", 0)

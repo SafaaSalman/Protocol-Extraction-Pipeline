@@ -1,0 +1,245 @@
+{
+  "protocol_id": "doc-1.2",
+  "title": "doc-1.2",
+  "source_pdf": "PET_dataset",
+  "pages": [
+    1
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": [],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "doc-1.2 process started"
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "brings in",
+      "evidence": {
+        "page": 1,
+        "source_text": "brings in"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "checks",
+      "evidence": {
+        "page": 1,
+        "source_text": "checks"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "hands out",
+      "evidence": {
+        "page": 1,
+        "source_text": "hands out"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "decision",
+      "text": "If",
+      "evidence": {
+        "page": 1,
+        "source_text": "If"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "decision",
+      "text": "otherwise",
+      "evidence": {
+        "page": 1,
+        "source_text": "otherwise"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "takes",
+      "evidence": {
+        "page": 1,
+        "source_text": "takes"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "check",
+      "evidence": {
+        "page": 1,
+        "source_text": "check"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "repair",
+      "evidence": {
+        "page": 1,
+        "source_text": "repair"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "whereas",
+      "evidence": {
+        "page": 1,
+        "source_text": "whereas"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "checks",
+      "evidence": {
+        "page": 1,
+        "source_text": "checks"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "configures",
+      "evidence": {
+        "page": 1,
+        "source_text": "configures"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "tested",
+      "evidence": {
+        "page": 1,
+        "source_text": "tested"
+      }
+    },
+    {
+      "id": "n14",
+      "type": "decision",
+      "text": "If",
+      "evidence": {
+        "page": 1,
+        "source_text": "If"
+      }
+    },
+    {
+      "id": "n15",
+      "type": "action",
+      "text": "executed",
+      "evidence": {
+        "page": 1,
+        "source_text": "executed"
+      }
+    },
+    {
+      "id": "n16",
+      "type": "decision",
+      "text": "otherwise",
+      "evidence": {
+        "page": 1,
+        "source_text": "otherwise"
+      }
+    },
+    {
+      "id": "n17",
+      "type": "end",
+      "text": "Process complete"
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": ""
+    },
+    {
+      "from": "n3",
+      "to": "n4",
+      "condition": ""
+    },
+    {
+      "from": "n4",
+      "to": "n5",
+      "condition": ""
+    },
+    {
+      "from": "n6",
+      "to": "n7",
+      "condition": ""
+    },
+    {
+      "from": "n8",
+      "to": "n9",
+      "condition": ""
+    },
+    {
+      "from": "n9",
+      "to": "n13",
+      "condition": ""
+    },
+    {
+      "from": "n10",
+      "to": "n8",
+      "condition": ""
+    },
+    {
+      "from": "n10",
+      "to": "n11",
+      "condition": ""
+    },
+    {
+      "from": "n11",
+      "to": "n12",
+      "condition": ""
+    },
+    {
+      "from": "n12",
+      "to": "n13",
+      "condition": ""
+    },
+    {
+      "from": "n13",
+      "to": "n14",
+      "condition": ""
+    },
+    {
+      "from": "n16",
+      "to": "n17"
+    }
+  ],
+  "enrichment": {
+    "entities": {
+      "roles": [
+        "a customer",
+        "she",
+        "the crs"
+      ],
+      "equipment": [
+        "a repair cost calculation",
+        "another arbitrary repair activity",
+        "her computer",
+        "the defect",
+        "the hardware",
+        "the proper system functionality",
+        "the software"
+      ],
+      "hazards": [],
+      "conditions": [],
+      "incident_types": []
+    },
+    "node_annotations": {}
+  }
+}

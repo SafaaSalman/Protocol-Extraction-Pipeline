@@ -1,0 +1,113 @@
+{
+  "protocol_id": "doc-10.1",
+  "title": "doc-10.1",
+  "source_pdf": "PET_dataset",
+  "pages": [
+    1
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": [],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "doc-10.1 process started"
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "sents",
+      "evidence": {
+        "page": 1,
+        "source_text": "sents"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "reviews",
+      "evidence": {
+        "page": 1,
+        "source_text": "reviews"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "opposes",
+      "evidence": {
+        "page": 1,
+        "source_text": "opposes"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "decision",
+      "text": "or",
+      "evidence": {
+        "page": 1,
+        "source_text": "or"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "confirmes",
+      "evidence": {
+        "page": 1,
+        "source_text": "confirmes"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "end",
+      "text": "Process complete"
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": ""
+    },
+    {
+      "from": "n3",
+      "to": "n5",
+      "condition": ""
+    },
+    {
+      "from": "n5",
+      "to": "n4",
+      "condition": ""
+    },
+    {
+      "from": "n5",
+      "to": "n6",
+      "condition": ""
+    },
+    {
+      "from": "n6",
+      "to": "n7"
+    }
+  ],
+  "enrichment": {
+    "entities": {
+      "roles": [
+        "the mpon",
+        "the mpoo"
+      ],
+      "equipment": [
+        "the dismissal"
+      ],
+      "hazards": [],
+      "conditions": [],
+      "incident_types": []
+    },
+    "node_annotations": {}
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "protocol_id": "doc-10.12",
+  "title": "doc-10.12",
+  "source_pdf": "PET_dataset",
+  "pages": [
+    1
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": [],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "doc-10.12 process started"
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "tells",
+      "evidence": {
+        "page": 1,
+        "source_text": "tells"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "notifies",
+      "evidence": {
+        "page": 1,
+        "source_text": "notifies"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "checks",
+      "evidence": {
+        "page": 1,
+        "source_text": "checks"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "confirmes",
+      "evidence": {
+        "page": 1,
+        "source_text": "confirmes"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "decision",
+      "text": "or",
+      "evidence": {
+        "page": 1,
+        "source_text": "or"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "rejectes",
+      "evidence": {
+        "page": 1,
+        "source_text": "rejectes"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "end",
+      "text": "Process complete"
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": ""
+    },
+    {
+      "from": "n3",
+      "to": "n4",
+      "condition": ""
+    },
+    {
+      "from": "n4",
+      "to": "n6",
+      "condition": ""
+    },
+    {
+      "from": "n6",
+      "to": "n5",
+      "condition": ""
+    },
+    {
+      "from": "n6",
+      "to": "n7",
+      "condition": ""
+    },
+    {
+      "from": "n7",
+      "to": "n8"
+    }
+  ],
+  "enrichment": {
+    "entities": {
+      "roles": [
+        "the ec",
+        "the inq",
+        "the ip"
+      ],
+      "equipment": [
+        "about the change of his master data",
+        "the change",
+        "the changes of the inq"
+      ],
+      "hazards": [],
+      "conditions": [],
+      "incident_types": []
+    },
+    "node_annotations": {}
+  }
+}
