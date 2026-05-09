@@ -15,6 +15,8 @@
 \usepackage{enumitem}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, backgrounds, calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage{caption}
 \usepackage{float}
 
@@ -60,11 +62,13 @@
 \newcommand{\titlepagecontent}{
     \begin{titlepage}
         \begin{center}
-            \includegraphics[width=0.4\textwidth]{AUB.png}\\[1.5cm]
+            \IfFileExists{AUB.png}{%
+                \includegraphics[width=0.4\textwidth]{AUB.png}\\[1.5cm]%
+            }{\vspace*{1.5cm}}
 
-            \textit{\huge\bfseries Protocol Extraction Pipeline}\\[0.5cm]
+            {\huge\bfseries Protocol Extraction Pipeline}\\[0.5cm]
 
-            \textit{\Large\textbf{Code Documentation}}\\[0.4cm]
+            {\Large\bfseries Code Documentation}\\[0.4cm]
             \textit{\large An LLM-Based System for Constructing Protocol Knowledge
             Graphs from Emergency Response PDFs}\\[0.4cm]
 
@@ -74,11 +78,11 @@
             \makebox[\textwidth]{\textcolor{deepred}{\rule{0.3\textwidth}{1.5pt}}}
 
             \vspace{5cm}
-            {\Large\textbf{Safaa Salman}}\\[0.2cm]
+            {\Large\bfseries Safaa Salman}\\[0.2cm]
             \textit{American University of Beirut}\\[1cm]
 
             \vfill
-            {\large \today}
+            {\large May, 2026}
             \vspace{1cm}
         \end{center}
     \end{titlepage}
@@ -202,6 +206,71 @@ came from. Each edge optionally carries a condition label describing
 the branch it represents. The schema is enforced as a JSON Schema
 document and is the single contract that every component in the
 pipeline reads from or writes to.
+
+Figure~\ref{fig:cpr-example} shows what the schema looks like once it
+is rendered as a graph. The example is an abbreviated view of the
+gold standard CPR protocol from IRPG 2025. The full annotation has
+seventeen nodes and nineteen edges; three further decision points
+(spinal injury, barrier device availability and the inner CPR loop)
+are omitted from the figure for clarity but are present in
+\texttt{evaluation/gold/cpr\_01.json}.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=0.7cm and 1.4cm,
+    startnode/.style={draw=darkblue, thick, circle, fill=darkblue!25,
+                      minimum size=1cm, inner sep=1pt,
+                      font=\scriptsize\bfseries, align=center},
+    endnode/.style={draw=deepred, thick, rectangle, fill=deepred!30,
+                    minimum width=1.6cm, minimum height=0.75cm,
+                    inner sep=2pt, font=\scriptsize\bfseries,
+                    align=center},
+    actionnode/.style={draw=darkblue!70, rounded corners=4pt,
+                       fill=darkblue!10,
+                       minimum width=2.4cm, minimum height=0.75cm,
+                       inner sep=2pt, font=\scriptsize, align=center},
+    decisionnode/.style={draw=deepred, diamond, aspect=2.2,
+                         fill=deepred!15, inner sep=1pt,
+                         font=\scriptsize, align=center},
+    arr/.style={-{Stealth[length=2.2mm]}, thick, color=gray!70},
+    cond/.style={font=\scriptsize\itshape, fill=white, inner sep=1pt},
+]
+    \node[startnode] (n1) {Start: \\ CPR};
+    \node[actionnode, below=of n1] (n2) {Scene Safety};
+    \node[actionnode, below=of n2] (n3) {Determine\\Responsiveness};
+    \node[decisionnode, below=of n3] (n4) {Breathing?};
+    \node[actionnode, right=2.2cm of n4] (n6) {Place on side};
+    \node[endnode, below=of n6] (n7) {End:\\Monitor};
+    \node[actionnode, below=of n4] (n5) {Call for Help};
+    \node[actionnode, below=of n5] (n9) {Chest\\Compressions};
+    \node[decisionnode, below=of n9] (n15) {AED\\arrived?};
+    \node[actionnode, right=2.2cm of n15] (n16) {Use AED};
+    \node[endnode, below=of n16] (n17) {End:\\CPR cycle};
+    \node[actionnode, below=of n15] (n14) {Continue CPR};
+
+    \draw[arr] (n1) -- (n2);
+    \draw[arr] (n2) -- (n3);
+    \draw[arr] (n3) -- (n4);
+    \draw[arr] (n4) -- node[cond, above]{Yes} (n6);
+    \draw[arr] (n4) -- node[cond, right]{No} (n5);
+    \draw[arr] (n6) -- (n7);
+    \draw[arr] (n5) -- (n9);
+    \draw[arr] (n9) -- (n15);
+    \draw[arr] (n15) -- node[cond, above]{Yes} (n16);
+    \draw[arr] (n15) -- node[cond, right]{No} (n14);
+    \draw[arr] (n16) -- (n17);
+    \draw[arr] (n14.east) to[bend right=55] node[cond, right]{loop} (n15.east);
+\end{tikzpicture}
+\caption{Abbreviated view of the gold standard CPR protocol graph.
+The start node is a dark blue circle, action nodes are light blue
+rounded rectangles, decision nodes are deep red diamonds and end
+nodes are deep red rectangles. Edge labels carry the condition under
+which the branch is taken. \texttt{visualize.py} and the interactive
+viewer use the same node shapes with a brighter palette
+(green / blue / orange / red).}
+\label{fig:cpr-example}
+\end{figure}
 
 \subsection{What This Document Covers}
 
@@ -338,11 +407,11 @@ root and compose these layers.
     \node[layer, fill=lightbeige, below=2.0cm of gr, minimum height=0.7cm] (ben)
         {\textbf{Benchmarks} (evaluation): pet\_benchmark.py, brex\_benchmark.py, parser\_benchmark.py};
 
-    \draw[arr] (ent.south) -- (ext.north);
-    \draw[arr] (ext.south) -- (ing.north);
-    \draw[arr] (ent.south) to [bend left=45] (gr.east);
-    \draw[arr] (ext.south) to [bend right=45] (gr.west);
-    \draw[arr] (ben.north) -- (gr.south);
+    \draw[arr] (ent) -- (ext);
+    \draw[arr] (ext) -- (ing);
+    \draw[arr] (ent.east) -- ++(0.4cm,0) |- (gr.east);
+    \draw[arr] (ext.west) -- ++(-0.4cm,0) |- (gr.west);
+    \draw[arr] (ben) -- (gr);
 \end{tikzpicture}
 \caption{Module layout and dependency direction. Arrows indicate which
 layer imports from which. The ingestion layer has no internal
@@ -398,26 +467,67 @@ confidence score is the input to the next stage.
 
 \subsubsection{Confidence Score Composition}
 
-The confidence assigned to a section is the product of a base score
-and a format multiplier. The base score starts at 0.5 and accumulates
-bonuses for the markers a real protocol typically exhibits.
+The confidence assigned to a section is a sum of weighted bonuses for
+the markers a real protocol typically exhibits, capped at one. Each
+marker is itself a thresholded match against the section text.
 
 \begin{align}
-c_{\text{base}} &= 0.5
-    + 0.20 \cdot \mathbb{1}[\text{numbered steps}]
-    + 0.15 \cdot \mathbb{1}[\text{decision logic}] \notag \\
-    &\quad + 0.10 \cdot \mathbb{1}[\text{tables}]
-    + 0.05 \cdot \mathbb{1}[\text{cross references}]
+c &= \min\!\Big(\;
+      0.25 \cdot \mathbf{1}[\text{title keyword}]
+    + 0.20 \cdot \mathbf{1}[\text{numbered steps}] \notag \\
+    &\quad + 0.20 \cdot \mathbf{1}[\text{decision logic}]
+    + 0.10 \cdot \mathbf{1}[\text{tables}] \notag \\
+    &\quad + f_{\text{length}}
+    + 0.10 \cdot \mathbf{1}[\text{imperative language}]
+    \;,\; 1\Big)
 \end{align}
-\begin{equation}
-c = c_{\text{base}} \times f_{\text{format}}, \quad
-f_{\text{format}} \in \{1.00, 0.95, 0.85, 0.75\}
-\end{equation}
 
-The multipliers correspond to the four format hints
-\texttt{text\_steps}, \texttt{decision\_tree}, \texttt{table} and
-\texttt{hybrid} respectively. Sections classified as \texttt{reference}
-are forced to a low confidence and never reach extraction.
+The length term $f_{\text{length}}$ is 0.15 when the section spans
+between one and ten pages and 0.05 when it spans more. The indicator
+flags fire only when their underlying patterns cross a count
+threshold: \texttt{numbered steps} requires at least two matches of
+the \texttt{NUMBERED\_STEP\_PATTERN} regular expression,
+\texttt{decision logic} requires at least one match of
+\texttt{DECISION\_PATTERNS} and \texttt{imperative language} requires
+at least one match of \texttt{IMPERATIVE\_PATTERN}. Sections marked
+\texttt{is\_protocol = false} -- because their title matches the
+non protocol filter described below or because they are level one
+TOC entries with children -- are forced to confidence zero and never
+reach extraction.
+
+\subsubsection{Format Hint Assignment}
+
+The format hint is decided by a small priority cascade over the same
+flags. The first matching rule wins.
+
+\begin{enumerate}[leftmargin=2em]
+    \item Tables and decisions present $\Rightarrow$ \texttt{hybrid}.
+    \item Tables only $\Rightarrow$ \texttt{table}.
+    \item Numbered steps and decisions $\Rightarrow$
+        \texttt{decision\_tree}.
+    \item Numbered steps only $\Rightarrow$ \texttt{sequential}.
+    \item At least three imperative bullets and no numbered steps
+        $\Rightarrow$ \texttt{checklist}.
+    \item Decisions only $\Rightarrow$ \texttt{decision\_tree}.
+    \item Otherwise $\Rightarrow$ \texttt{reference}.
+\end{enumerate}
+
+The \texttt{reference} hint is the typical destination for tables of
+contents, glossaries and similar non procedural pages, and combines
+with the low confidence score to keep them out of the extractor.
+
+\subsubsection{Non Protocol Title Filter}
+
+Before scoring, section titles are filtered against the
+\texttt{NON\_PROTOCOL\_TITLES} regular expression, which matches the
+words \emph{notes}, \emph{glossary}, \emph{index},
+\emph{table of contents}, \emph{appendix}, \emph{references},
+\emph{abbreviations}, \emph{acknowledgments}, \emph{foreword},
+\emph{preface} and \emph{introduction}. Matching titles have
+\texttt{is\_protocol} set to false and are dropped from confidence
+scoring. The heuristic heading detector additionally skips PDF chrome
+such as the literal \texttt{IRPG} prefix and
+\texttt{Page \textbackslash d+ of \textbackslash d+} running heads.
 
 \subsection{Stage 3. Confidence Gating}
 
@@ -529,11 +639,13 @@ Sections whose format hint is \texttt{decision\_tree} or
 \texttt{hybrid} are extracted with both their text and a rendering of
 the page image. Before being fed to the main extractor, the page image
 is converted into a Mermaid diagram by a dedicated GPT 4o call. The
-Mermaid representation makes arrow direction and branch reconnection
-explicit, which the raw image alone often does not. The Mermaid text
-is injected into the prompt under the heading
-\texttt{FLOWCHART~STRUCTURE} together with the instruction that it is
-more reliable than the raw text for arrow directions.
+pipeline follows the \emph{TextFlow} intermediate representation
+approach (Ye et al. 2024): rather than asking a single multimodal call
+to produce the protocol graph from raw pixels, the image is first
+turned into a structured text artefact and only then handed to the
+extractor. The Mermaid text is injected into the prompt under the
+heading \texttt{FLOWCHART~STRUCTURE} together with the instruction
+that it is more reliable than the raw text for arrow directions.
 
 \subsection{Stage 5. Edge Review}
 
@@ -692,9 +804,11 @@ one.
 A multimodal LLM call that takes a page image as input often produces
 graphs in which arrow direction or branch reconnection is wrong.
 Producing an explicit Mermaid representation first turns the visual
-into text the extractor can read precisely. The Mermaid step is
-therefore an intermediate representation that exists purely to make
-the second call more reliable.
+into text the extractor can read precisely. This is the
+\emph{TextFlow} intermediate representation approach (Ye et al.
+2024): image $\rightarrow$ structured text $\rightarrow$ downstream
+extraction. The Mermaid step exists purely to make the second call
+more reliable.
 \end{conceptbox}
 
 \begin{conceptbox}
@@ -716,6 +830,227 @@ interesting. Decoupling storage from extraction means the pipeline
 can run end to end without Neo4j installed and that the JSON files
 remain the canonical source of truth.
 \end{conceptbox}
+
+\subsection{Empirical Results}
+\label{sec:results}
+
+The pipeline is evaluated against three reference points: the five
+hand annotated IRPG protocols, the PET dataset (Neuberger et al.
+2024) and the BREX dataset (Yang et al. 2025). The PET and BREX
+results are taken directly from
+\texttt{evaluation/pet\_benchmark\_results.json} and
+\texttt{evaluation/brex\_benchmark\_results.json}.
+
+\subsubsection{IRPG Gold Standard Protocols}
+
+The five IRPG protocols are evaluated by \texttt{eval\_batch.py}
+against the gold annotations stored in \texttt{evaluation/gold/}.
+Table~\ref{tab:gold-sizes} lists the annotated graph sizes.
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{X c c c}
+\toprule
+\textbf{Protocol} & \textbf{Nodes} & \textbf{Edges} & \textbf{Decision points} \\
+\midrule
+Burn Injuries        & 14 & 14 & 1 \\
+CPR                  & 17 & 19 & 4 \\
+Patient Assessment   & 20 & 21 & 3 \\
+Risk Management      & 14 & 17 & 3 \\
+Multi Casualty Triage & 15 & 20 & 5 \\
+\bottomrule
+\end{tabularx}
+\caption{Gold standard annotation sizes for the five IRPG protocols
+used as the quantitative evaluation set.}
+\label{tab:gold-sizes}
+\end{table}
+
+The pipeline reached its current quality through four incremental
+stages of work. Figure~\ref{fig:irpg-progression} traces the average
+Node F1 and Edge F1 across those stages on the same five gold
+protocols. Edge F1 is the metric that moved most dramatically: the
+edge prompt and edge review pass alone lifted it from 0.43 to 0.69,
+the single largest jump in the pipeline's history, and the anti over
+extraction round closed the remaining gap. By the final round the
+two metrics meet at the same level, which is the signal the pipeline
+is no longer mis-shaping graphs at the edge level.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=14cm, height=7.2cm,
+    xlabel={Pipeline Stage},
+    ylabel={F1 Score},
+    ymin=0, ymax=1,
+    xtick=data,
+    symbolic x coords={Initial Baseline,
+                       {+ Confidence Gating + Validator},
+                       {+ Edge Prompt + Review (Rnd 1)},
+                       {+ Anti-Over-Extraction (Rnd 2)}},
+    xticklabel style={align=center, font=\footnotesize, text width=2.8cm},
+    legend pos=north west,
+    legend style={font=\small, draw=none, fill=white, fill opacity=0.9,
+                  text opacity=1},
+    grid=major,
+    grid style={dashed, gray!30},
+    label style={font=\small},
+    tick label style={font=\footnotesize},
+    every axis plot/.append style={thick, mark size=3pt},
+]
+\addplot[color=darkblue, mark=square*, mark options={fill=darkblue}]
+    coordinates {
+        (Initial Baseline, 0.692)
+        ({+ Confidence Gating + Validator}, 0.72)
+        ({+ Edge Prompt + Review (Rnd 1)}, 0.79)
+        ({+ Anti-Over-Extraction (Rnd 2)}, 0.80)
+    };
+\addplot[color=orange!85!black, mark=triangle*,
+         mark options={fill=orange!85!black, scale=1.2}]
+    coordinates {
+        (Initial Baseline, 0.357)
+        ({+ Confidence Gating + Validator}, 0.43)
+        ({+ Edge Prompt + Review (Rnd 1)}, 0.69)
+        ({+ Anti-Over-Extraction (Rnd 2)}, 0.80)
+    };
+\legend{Node F1, Edge F1}
+\node[font=\footnotesize\itshape, color=orange!70!black]
+    at (axis cs:{+ Edge Prompt + Review (Rnd 1)}, 0.55) {largest jump};
+\draw[->, thick, orange!70!black, shorten >=2pt]
+    (axis cs:{+ Confidence Gating + Validator}, 0.46)
+    -- (axis cs:{+ Edge Prompt + Review (Rnd 1)}, 0.66);
+\end{axis}
+\end{tikzpicture}
+\caption{Average Node F1 and Edge F1 on the five IRPG gold standard
+protocols across the four iterations of the pipeline. The
+\emph{Initial Baseline} stage uses the figures hardcoded in
+\texttt{eval\_batch.py} (Node F1 0.69, Edge F1 0.36). Edge F1
+gains the most from adding the edge prompt and the GPT 4o mini edge
+review pass, which the arrow highlights as the single largest jump.
+The final round of anti over extraction rules closes the remaining
+gap and brings the two metrics together.}
+\label{fig:irpg-progression}
+\end{figure}
+
+\subsubsection{PET Cross Domain Benchmark}
+
+The PET benchmark (\texttt{evaluation/pet\_benchmark.py}) runs the
+pipeline on ten PET documents and compares Activity F1 against the
+gold action node spans and Edge F1 against the gold sequence flows.
+Figure~\ref{fig:pet-results} compares the run to the published
+baselines. The pipeline reports zero extraction errors on PET.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    bar width=14pt,
+    width=13.5cm, height=6.5cm,
+    enlarge x limits=0.35,
+    ymin=0, ymax=1,
+    ylabel={F1 score},
+    symbolic x coords={Activity F1, Edge / Relation F1},
+    xtick=data,
+    nodes near coords,
+    nodes near coords style={font=\tiny,
+        /pgf/number format/.cd, fixed, zerofill, precision=2},
+    legend style={at={(0.5,-0.18)}, anchor=north, legend columns=3,
+                  font=\small, draw=none},
+    every axis plot/.append style={draw=black, thick},
+    tick label style={font=\small},
+    label style={font=\small},
+]
+\addplot[fill=darkblue!55] coordinates {
+    (Activity F1, 0.728)
+    (Edge / Relation F1, 0.293)
+};
+\addplot[fill=deepred!55] coordinates {
+    (Activity F1, 0.74)
+    (Edge / Relation F1, 0.89)
+};
+\addplot[fill=gray!50] coordinates {
+    (Activity F1, 0.69)
+    (Edge / Relation F1, 0.72)
+};
+\legend{Ours (n=10), Neuberger 2024 GPT-4o (3-shot), Neuberger 2023 ML baseline}
+\end{axis}
+\end{tikzpicture}
+\caption{PET benchmark. Activity F1 measures action node extraction
+and is on par with the published GPT 4o three shot baseline. Edge
+F1 trails the published Relation F1 because PET edges are
+token level relation spans whereas the pipeline produces graph
+edges between summarised action nodes; the two are not strictly
+like for like and the gap is the expected mismatch flagged in the
+benchmark docstring. Branching accuracy on the same run is 0.75
+and node type accuracy is 0.76.}
+\label{fig:pet-results}
+\end{figure}
+
+\subsubsection{BREX Cross Lingual Benchmark}
+
+The BREX benchmark (\texttt{evaluation/brex\_benchmark.py}) runs the
+pipeline on Chinese business rules using the English system prompt.
+Figure~\ref{fig:brex-results} compares the run to the four published
+baselines from Yang et al. 2025. The recorded run completed two
+documents successfully and lost the remaining eight to upstream
+connection errors, so the bar marked \emph{Ours} is reported with
+$n = 2$ and should be read as a directional signal rather than a
+confident estimate.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    bar width=8pt,
+    width=14cm, height=6.8cm,
+    enlarge x limits=0.25,
+    ymin=0, ymax=1,
+    ylabel={F1 score},
+    symbolic x coords={Rule NER F1, Dependency F1},
+    xtick=data,
+    nodes near coords,
+    nodes near coords style={font=\tiny,
+        /pgf/number format/.cd, fixed, zerofill, precision=2},
+    legend style={at={(0.5,-0.20)}, anchor=north, legend columns=3,
+                  font=\small, draw=none},
+    every axis plot/.append style={draw=black, thick},
+    tick label style={font=\small},
+    label style={font=\small},
+]
+\addplot[fill=darkblue!55] coordinates {
+    (Rule NER F1, 0.694)
+    (Dependency F1, 0.455)
+};
+\addplot[fill=deepred!55] coordinates {
+    (Rule NER F1, 0.85)
+    (Dependency F1, 0.53)
+};
+\addplot[fill=deepred!30] coordinates {
+    (Rule NER F1, 0.84)
+    (Dependency F1, 0.51)
+};
+\addplot[fill=gray!60] coordinates {
+    (Rule NER F1, 0.90)
+    (Dependency F1, 0.72)
+};
+\addplot[fill=gray!35] coordinates {
+    (Rule NER F1, 0.88)
+    (Dependency F1, 0.76)
+};
+\legend{Ours (n=2), Yang 2025 GPT-4o, Yang 2025 Claude 3.7,
+        Yang 2025 DeepSeek R1, Yang 2025 Gemini 2.5 Pro}
+\end{axis}
+\end{tikzpicture}
+\caption{BREX benchmark. Rule NER F1 corresponds to node matching
+and Dependency F1 to edge matching. The pipeline trails the GPT 4o
+baseline on Rule NER and lands between Claude 3.7 and Gemini 2.5
+Pro on Dependency F1, on a sample of two. The eight connection
+errors in the recorded run are kept in the JSON results file so
+they remain visible.}
+\label{fig:brex-results}
+\end{figure}
 
 \subsection{What Each Component Owns}
 
@@ -900,11 +1235,11 @@ lazily inside the public functions.
 \textbf{Public functions.}
 
 \begin{description}[leftmargin=2em, style=nextline]
-\item[\texttt{extract\_with\_docling(pdf\_path, start\_page=None, end\_page=None)}]
+\item[\texttt{extract\_with\_docling(pdf\_path,\allowbreak{} start\_page=None,\allowbreak{} end\_page=None)}]
 Convert the PDF to Markdown with Docling and optionally narrow the
 output to a page range. The Markdown contains pipe delimited tables
 with headers and row separators preserved.
-\item[\texttt{extract\_tables\_from\_pages(pdf\_path, start\_page, end\_page)}]
+\item[\texttt{extract\_tables\_from\_pages(pdf\_path,\allowbreak{} start\_page,\allowbreak{} end\_page)}]
 Iterate over Docling's table items, parse each one into headers and
 rows and return a list of \texttt{\{page, headers, rows, markdown\}}
 dictionaries. Used when the caller needs structured access to table
@@ -967,15 +1302,19 @@ Pretty print categories, sections and per format counts for manual
 inspection.
 \end{description}
 
-\textbf{Confidence formula in code.} The base score starts at 0.5 and
-adds 0.20 for numbered steps, 0.15 for decision logic, 0.10 for
-tables and 0.05 for cross references. The base score is then
-multiplied by a format factor in
-\{1.00, 0.95, 0.85, 0.75\} for \texttt{text\_steps},
-\texttt{decision\_tree}, \texttt{table} and \texttt{hybrid}
-respectively. Sections matching the
-\texttt{NON\_PROTOCOL\_TITLES} regular expression are forced to a low
-confidence.
+\textbf{Confidence formula in code.} The score adds 0.25 for a
+protocol keyword in the title, 0.20 each for numbered steps and
+decision logic, 0.10 for tables, 0.15 for sections of one to ten
+pages (0.05 for longer sections) and 0.10 for imperative action
+language, capped at 1.0. The flag thresholds are at least two
+numbered step matches, at least one decision pattern match and at
+least one imperative match (three are required to trigger the
+\texttt{checklist} format). Sections matching the
+\texttt{NON\_PROTOCOL\_TITLES} regular expression have
+\texttt{is\_protocol} set to false and are forced to confidence
+zero. The full breakdown, including the format hint cascade and the
+non protocol title list, is in
+Section~\ref{sec:architecture}.
 
 \textbf{How the rest of the system uses it.} The batch extractor calls
 \texttt{detect\_sections} once per PDF. The resulting list drives both
@@ -993,11 +1332,13 @@ validator together. It is the single function that
 \end{codeconceptbox}
 
 \textbf{Internal dependencies.}
-\texttt{src.ingestion.pdf\_ingest},
-\texttt{src.ingestion.docling\_loader} (optional),
-\texttt{src.extraction.section\_detector},
-\texttt{src.extraction.protocol\_extractor},
-\texttt{src.extraction.validator}.
+\begin{itemize}[leftmargin=2em, nosep, label={--}]
+\item \texttt{src.ingestion.pdf\_ingest}
+\item \texttt{src.ingestion.docling\_loader} (optional)
+\item \texttt{src.extraction.section\_detector}
+\item \texttt{src.extraction.protocol\_extractor}
+\item \texttt{src.extraction.validator}
+\end{itemize}
 
 \textbf{Public types.}
 
@@ -1032,7 +1373,10 @@ total tokens and total time alongside the per section
 \textbf{Public functions.}
 
 \begin{description}[leftmargin=2em, style=nextline]
-\item[\texttt{pre\_classify\_section(section, doc, client, model="gpt-4o-mini")}]
+\item[\texttt{pre\_classify\_section}]
+Full call:
+\texttt{pre\_classify\_section(section,\allowbreak{} doc,\allowbreak{}
+client,\allowbreak{} model="gpt-4o-mini")}.
 Send the first 1500 characters of a borderline section to GPT 4o mini
 with the \texttt{PRE\_CLASSIFY\_PROMPT} and parse the
 \texttt{is\_extractable} field from the JSON response.
@@ -1068,30 +1412,47 @@ representation and the edge review pass.
 \end{codeconceptbox}
 
 \textbf{Internal dependencies.}
-\texttt{src.ingestion.pdf\_ingest} for
-\texttt{DocumentContent} and \texttt{render\_page\_image},
-\texttt{src.extraction.section\_detector} for \texttt{ProtocolSection}.
+\begin{itemize}[leftmargin=2em, nosep, label={--}]
+\item \texttt{src.ingestion.pdf\_ingest}
+  (for \texttt{DocumentContent} and \texttt{render\_page\_image})
+\item \texttt{src.extraction.section\_detector}
+  (for \texttt{ProtocolSection})
+\end{itemize}
 
 \textbf{Public functions.}
 
 \begin{description}[leftmargin=2em, style=nextline]
-\item[\texttt{extract\_protocol(section, doc, model="gpt-4o", use\_few\_shot=True, toc\_context=None)}]
+\item[\texttt{extract\_protocol}]
+Full call:
+\texttt{extract\_protocol(section,\allowbreak{} doc,\allowbreak{}
+model="gpt-4o",\allowbreak{} use\_few\_shot=True,\allowbreak{}
+toc\_context=None)}.
 Build the prompt with the system instructions, the few shot
 exchanges, the TOC context, the format hint and the section text.
 Send to GPT 4o with temperature 0.1 and JSON object response format.
 Return the parsed graph with attached
 \texttt{\_extraction\_meta}.
-\item[\texttt{extract\_protocol\_from\_text(title, section\_text, pages, source\_pdf, format\_hint="unknown", model="gpt-4o", use\_few\_shot=True)}]
+\item[\texttt{extract\_protocol\_from\_text}]
+Full call:
+\texttt{extract\_protocol\_from\_text(title,\allowbreak{}
+section\_text,\allowbreak{} pages,\allowbreak{} source\_pdf,\allowbreak{}
+format\_hint="unknown",\allowbreak{} model="gpt-4o",\allowbreak{}
+use\_few\_shot=True)}.
 Variant that operates on raw text rather than a
 \texttt{ProtocolSection}. Used by the PET and BREX benchmarks where
 no real PDF section exists.
-\item[\texttt{extract\_protocol\_multimodal(section, doc, pdf\_path, model="gpt-4o", use\_few\_shot=True, dpi=200, toc\_context=None)}]
+\item[\texttt{extract\_protocol\_multimodal}]
+Full call:
+\texttt{extract\_protocol\_multimodal(section,\allowbreak{}
+doc,\allowbreak{} pdf\_path,\allowbreak{} model="gpt-4o",\allowbreak{}
+use\_few\_shot=True,\allowbreak{} dpi=200,\allowbreak{}
+toc\_context=None)}.
 Render every page in the section, encode them as base64 PNG and pass
 both text and images to the model. For \texttt{decision\_tree} and
 \texttt{hybrid} formats, run \texttt{\_image\_to\_mermaid} first and
 inject the resulting Mermaid block into the prompt under the heading
 \texttt{FLOWCHART STRUCTURE}.
-\item[\texttt{review\_edges(extracted, source\_text, model="gpt-4o-mini")}]
+\item[\texttt{review\_edges(extracted,\allowbreak{} source\_text,\allowbreak{} model="gpt-4o-mini")}]
 Send the graph and source text to GPT 4o mini with the
 \texttt{EDGE\_REVIEW\_PROMPT} and replace the graph if the reviewed
 version reports fewer issues. The check uses
@@ -1101,6 +1462,19 @@ graph is returned unchanged.
 \item[\texttt{save\_extraction(graph, path)}]
 Write the graph to a JSON file with indentation.
 \end{description}
+
+\textbf{Two system prompts.} The default \texttt{SYSTEM\_PROMPT}
+contains the 21 rules summarised in Table~\ref{tab:prompt-rules}. A
+shorter \texttt{TABLE\_EXTRACTION\_PROMPT} is selected automatically
+when the section's \texttt{format\_hint} equals \texttt{"table"}.
+The table prompt instructs the model to model each row as a
+condition $\rightarrow$ action pair when both columns are present,
+as a sequential checklist when only an action column is present and
+to use any grouping or severity column as decision branches. It
+asks the model to preserve cell text verbatim rather than
+paraphrase, and repeats a compact subset of the structural rules
+(single start, decision branching, sequential ids, evidence per
+node).
 
 \textbf{Internal helpers worth knowing about.}
 
@@ -1167,12 +1541,15 @@ edges, no orphan nodes, decision nodes with at least two outgoing
 edges, decision edges with conditions, no incoming edges to start
 nodes, no outgoing edges from end nodes. Plus warnings for non
 sequential ids and duplicate edges.
-\item[\texttt{validate\_semantic(graph, section\_text, model="gpt-4o")}]
+\item[\texttt{validate\_semantic(graph,\allowbreak{} section\_text,\allowbreak{} model="gpt-4o")}]
 Send the graph and source text to GPT 4o with the
 \texttt{VALIDATOR\_SYSTEM\_PROMPT}. Returns a dictionary with
 \texttt{review\_passed}, \texttt{issues}, \texttt{corrections\_made},
 \texttt{correction\_summary} and \texttt{corrected\_graph}.
-\item[\texttt{validate\_protocol(graph, section\_text, run\_semantic=True, model="gpt-4o")}]
+\item[\texttt{validate\_protocol}]
+Full call:
+\texttt{validate\_protocol(graph,\allowbreak{} section\_text,\allowbreak{}
+run\_semantic=True,\allowbreak{} model="gpt-4o")}.
 Run the structural checks first. Run the semantic pass when enabled.
 If a corrected graph is returned, accept it only when its structural
 issue count is no worse than the original. Return a single
@@ -1211,20 +1588,42 @@ statistics query for inspection.
 \textbf{Schema produced in Neo4j.}
 
 \begin{description}[leftmargin=2em, style=nextline]
-\item[\textbf{Node labels:}]
+\item[\textbf{Core node labels.}]
 \texttt{Protocol} for the top level metadata,
-\texttt{Step} for nodes typed start, end or action,
+\texttt{Step} for nodes typed start, end or action and
 \texttt{Decision} for decision nodes.
-\item[\textbf{Relationship types:}]
+\item[\textbf{Entity node labels (when enrichment is present).}]
+\texttt{Role}, \texttt{Equipment}, \texttt{Hazard},
+\texttt{Condition} and \texttt{IncidentType}. One node is created
+per distinct lowercased entity name and shared across every
+protocol that mentions it.
+\item[\textbf{Core relationship types.}]
 \texttt{HAS\_STEP} from a \texttt{Protocol} to each of its
 \texttt{Step} or \texttt{Decision} nodes,
 \texttt{NEXT} from one \texttt{Step} to the next sequential
 \texttt{Step},
 \texttt{BRANCHES\_TO} from a \texttt{Decision} to a \texttt{Step}
-with the condition stored as a property,
+with the condition stored as a property and
 \texttt{CROSS\_REFERENCES} from a \texttt{Protocol} to another
 referenced \texttt{Protocol}.
+\item[\textbf{Entity relationship types.}]
+\texttt{PERFORMED\_BY} to \texttt{Role},
+\texttt{REQUIRES} to \texttt{Equipment},
+\texttt{INVOLVES\_HAZARD} to \texttt{Hazard},
+\texttt{HAS\_CONDITION} to \texttt{Condition} and
+\texttt{APPLIES\_TO} to \texttt{IncidentType}. These edges are
+emitted both at the \texttt{Protocol} level (for entities listed
+in the global \texttt{enrichment.entities} dictionary) and at the
+\texttt{Step} or \texttt{Decision} level (for entities listed in
+\texttt{enrichment.node\_annotations} for that node).
 \end{description}
+
+\textbf{Entity loading is conditional.} The exporter creates entity
+nodes and entity relationships only when the protocol JSON contains
+an \texttt{enrichment} key. Plain extracted graphs without
+enrichment load just the core schema, so running
+\texttt{load\_neo4j.py} without \texttt{--enrich} produces a graph
+with \texttt{Protocol}, \texttt{Step} and \texttt{Decision} only.
 
 \textbf{Public class.} \texttt{Neo4jExporter} is a context manager.
 
@@ -1274,7 +1673,7 @@ dictionary with five entity buckets and a per node annotation map.
 Build a compact representation of the protocol, send it to GPT 4o
 mini with the \texttt{ENRICHMENT\_PROMPT} and attach the resulting
 entity dictionary under \texttt{protocol["enrichment"]}.
-\item[\texttt{enrich\_batch(directory, output\_dir=None, model="gpt-4o-mini")}]
+\item[\texttt{enrich\_batch(directory,\allowbreak{} output\_dir=None,\allowbreak{} model="gpt-4o-mini")}]
 Iterate every JSON file in a directory, skip already enriched files
 and write the enriched version either back in place or into
 \texttt{output\_dir}.
@@ -1435,13 +1834,29 @@ Lowercase, strip punctuation and collapse whitespace.
 Wrap \texttt{difflib.SequenceMatcher} on the normalised strings.
 Used as the default node matcher for the IRPG gold standards.
 \item[\texttt{token\_overlap\_similarity(gold\_text, extracted\_text)}]
-Token level fuzzy matcher with a per token threshold of 0.75 and
-recall dominated scoring for short gold spans of one or two tokens.
-This is what makes evaluation against PET's short verb spans work.
-\item[\texttt{match\_nodes(gold\_nodes, extracted\_nodes, threshold=0.5, similarity\_fn=None)}]
+Token level fuzzy matcher. Each gold token is matched to its best
+extracted token via \texttt{SequenceMatcher} with a 0.75 ratio
+cutoff, which absorbs typos like \emph{sents} versus \emph{sends}.
+For gold spans of three or more tokens the score is the standard
+token level F1 of precision and recall on matched tokens. For short
+spans of one or two tokens, where any match is strong evidence, the
+score is recall dominated as
+$0.5 + 0.3 \cdot (\text{matched} / |\text{gold}|)$ and lands in the
+0.65 to 0.80 band. When no token match is found, a single fallback
+checks whether the normalised gold text is a substring of the
+extracted text and returns 0.8, or 0.6 for a fuzzy single word
+substring. This is what makes evaluation against PET's short verb
+span gold annotations work.
+\item[\texttt{match\_nodes}]
+Full call:
+\texttt{match\_nodes(gold\_nodes,\allowbreak{} extracted\_nodes,\allowbreak{}
+threshold=0.5,\allowbreak{} similarity\_fn=None)}.
 Greedy assignment based on the chosen similarity function. Returns
 matched pairs, unmatched gold and unmatched extracted lists.
-\item[\texttt{evaluate\_nodes(gold, extracted, threshold=0.5, similarity\_fn=None)}]
+\item[\texttt{evaluate\_nodes}]
+Full call:
+\texttt{evaluate\_nodes(gold,\allowbreak{} extracted,\allowbreak{}
+threshold=0.5,\allowbreak{} similarity\_fn=None)}.
 Compute precision, recall and F1 from the match lists.
 \item[\texttt{evaluate\_edges(gold, extracted, node\_mapping)}]
 Map gold edges through the node id mapping and count true positives,
@@ -1709,43 +2124,15 @@ proceeds as follows.
     side with their gold standards.
     \item \textbf{Optional: load Neo4j.}
     \texttt{docker compose up -d} starts the database, then
-    \texttt{python load\_neo4j.py --password protocol123 --stats}
-    loads every extracted protocol and prints the node and
-    relationship counts.
+    \texttt{python load\_neo4j.py}\allowbreak{}
+    \texttt{--password protocol123}\allowbreak{}
+    \texttt{--stats} loads every extracted protocol and prints the
+    node and relationship counts.
     \item \textbf{Optional: run external benchmarks.}
-    \texttt{python evaluation/pet\_benchmark.py} and
-    \texttt{python evaluation/brex\_benchmark.py} compare the pipeline
-    against the PET and BREX datasets.
+    \texttt{python evaluation/pet\_benchmark.py}\allowbreak{} and
+    \texttt{python evaluation/brex\_benchmark.py}\allowbreak{}
+    compare the pipeline against the PET and BREX datasets.
 \end{enumerate}
-
-% =====================================================================
-\subsection{Cleanup Performed for This Documentation}
-
-The following files were removed during preparation of this
-documentation. Each was verified to have no remaining callers in the
-pipeline. The deletions are recorded here for traceability.
-
-\begin{table}[H]
-\centering
-\small
-\begin{tabularx}{\textwidth}{l X}
-\toprule
-\textbf{File} & \textbf{Reason for removal} \\
-\midrule
-\texttt{\_test}              & Stray three line Graphviz fragment, not a directory and not referenced from any module. \\
-\texttt{explore\_vic.py}     & One off TOC inspection script for the VIC handbook. \\
-\texttt{explore\_vic2.py}    & Continuation of the previous script with the same purpose. \\
-\texttt{test\_batch.py}      & Pre batch smoke test of the batch extractor. Superseded by \texttt{run\_full\_batch.py}. \\
-\texttt{test\_extraction.py} & Single protocol extraction sanity check. Superseded by the batch pipeline. \\
-\texttt{test\_multimodal.py} & One off Triage multimodal test. The multimodal path is now built into the batch extractor. \\
-\texttt{test\_pet.py}        & PET adapter smoke test. Superseded by \texttt{evaluation/pet\_benchmark.py}. \\
-\texttt{test\_structure.py}  & Manual demo of the structural validator. Same logic now runs inside the batch pipeline. \\
-\texttt{test\_validator.py}  & Manual demo of the two stage validator. Same logic now runs inside the batch pipeline. \\
-\texttt{src/graph/pyreason\_engine.py} & Standalone temporal logic reasoner with no callers anywhere in the codebase. \\
-\bottomrule
-\end{tabularx}
-\caption{Files removed during the documentation pass.}
-\end{table}
 
 % =====================================================================
 
