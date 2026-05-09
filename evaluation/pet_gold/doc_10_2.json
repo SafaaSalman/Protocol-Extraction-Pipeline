@@ -1,0 +1,355 @@
+{
+  "protocol_id": "doc-10.2",
+  "title": "doc-10.2",
+  "source_pdf": "PET_dataset",
+  "pages": [
+    1
+  ],
+  "protocol_type": "decision_tree",
+  "extraction_confidence": 1.0,
+  "cross_references": [],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "doc-10.2 process started"
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "reports",
+      "evidence": {
+        "page": 1,
+        "source_text": "reports"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "examines",
+      "evidence": {
+        "page": 1,
+        "source_text": "examines"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "rejects",
+      "evidence": {
+        "page": 1,
+        "source_text": "rejects"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "decision",
+      "text": "or",
+      "evidence": {
+        "page": 1,
+        "source_text": "or"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "confirmes",
+      "evidence": {
+        "page": 1,
+        "source_text": "confirmes"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "informs",
+      "evidence": {
+        "page": 1,
+        "source_text": "informs"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "informs",
+      "evidence": {
+        "page": 1,
+        "source_text": "informs"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "perform",
+      "evidence": {
+        "page": 1,
+        "source_text": "perform"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "informs",
+      "evidence": {
+        "page": 1,
+        "source_text": "informs"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "decision",
+      "text": "or",
+      "evidence": {
+        "page": 1,
+        "source_text": "or"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "informs",
+      "evidence": {
+        "page": 1,
+        "source_text": "informs"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "informs",
+      "evidence": {
+        "page": 1,
+        "source_text": "informs"
+      }
+    },
+    {
+      "id": "n14",
+      "type": "decision",
+      "text": "if",
+      "evidence": {
+        "page": 1,
+        "source_text": "if"
+      }
+    },
+    {
+      "id": "n15",
+      "type": "decision",
+      "text": "If",
+      "evidence": {
+        "page": 1,
+        "source_text": "If"
+      }
+    },
+    {
+      "id": "n16",
+      "type": "action",
+      "text": "confirms",
+      "evidence": {
+        "page": 1,
+        "source_text": "confirms"
+      }
+    },
+    {
+      "id": "n17",
+      "type": "decision",
+      "text": "If",
+      "evidence": {
+        "page": 1,
+        "source_text": "If"
+      }
+    },
+    {
+      "id": "n18",
+      "type": "action",
+      "text": "assigns",
+      "evidence": {
+        "page": 1,
+        "source_text": "assigns"
+      }
+    },
+    {
+      "id": "n19",
+      "type": "action",
+      "text": "confirms",
+      "evidence": {
+        "page": 1,
+        "source_text": "confirms"
+      }
+    },
+    {
+      "id": "n20",
+      "type": "action",
+      "text": "informs",
+      "evidence": {
+        "page": 1,
+        "source_text": "informs"
+      }
+    },
+    {
+      "id": "n21",
+      "type": "action",
+      "text": "informs",
+      "evidence": {
+        "page": 1,
+        "source_text": "informs"
+      }
+    },
+    {
+      "id": "n22",
+      "type": "action",
+      "text": "informs",
+      "evidence": {
+        "page": 1,
+        "source_text": "informs"
+      }
+    },
+    {
+      "id": "n23",
+      "type": "action",
+      "text": "informs",
+      "evidence": {
+        "page": 1,
+        "source_text": "informs"
+      }
+    },
+    {
+      "id": "n24",
+      "type": "action",
+      "text": "informs",
+      "evidence": {
+        "page": 1,
+        "source_text": "informs"
+      }
+    },
+    {
+      "id": "n25",
+      "type": "end",
+      "text": "Process complete"
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": ""
+    },
+    {
+      "from": "n3",
+      "to": "n5",
+      "condition": ""
+    },
+    {
+      "from": "n5",
+      "to": "n4",
+      "condition": ""
+    },
+    {
+      "from": "n5",
+      "to": "n6",
+      "condition": ""
+    },
+    {
+      "from": "n6",
+      "to": "n7",
+      "condition": ""
+    },
+    {
+      "from": "n7",
+      "to": "n8",
+      "condition": ""
+    },
+    {
+      "from": "n8",
+      "to": "n9",
+      "condition": ""
+    },
+    {
+      "from": "n9",
+      "to": "n11",
+      "condition": ""
+    },
+    {
+      "from": "n11",
+      "to": "n10",
+      "condition": ""
+    },
+    {
+      "from": "n11",
+      "to": "n12",
+      "condition": ""
+    },
+    {
+      "from": "n12",
+      "to": "n14",
+      "condition": ""
+    },
+    {
+      "from": "n16",
+      "to": "n20",
+      "condition": ""
+    },
+    {
+      "from": "n18",
+      "to": "n19",
+      "condition": ""
+    },
+    {
+      "from": "n19",
+      "to": "n21",
+      "condition": ""
+    },
+    {
+      "from": "n20",
+      "to": "n22",
+      "condition": ""
+    },
+    {
+      "from": "n21",
+      "to": "n23",
+      "condition": ""
+    },
+    {
+      "from": "n23",
+      "to": "n24",
+      "condition": ""
+    },
+    {
+      "from": "n24",
+      "to": "n25"
+    }
+  ],
+  "enrichment": {
+    "entities": {
+      "roles": [
+        "the go",
+        "the mpon",
+        "the mpoo",
+        "the mspo",
+        "the sp"
+      ],
+      "equipment": [
+        "about the assignment of the mpon",
+        "about the failure of the assignment of the mpon",
+        "about the failure of the entire process",
+        "about the failure of the overall transaction by deadline",
+        "about the registration confirmation of the mpon",
+        "about the successful completion of the entire process",
+        "the application",
+        "the application of the mpon",
+        "the assignment",
+        "the equipment acquisition and / or equipment changes",
+        "the failure of the assignment",
+        "the meter operation",
+        "the mpon"
+      ],
+      "hazards": [],
+      "conditions": [],
+      "incident_types": []
+    },
+    "node_annotations": {}
+  }
+}

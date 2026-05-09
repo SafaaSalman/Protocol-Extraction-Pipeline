@@ -38,3 +38,7 @@ build/
 
 # Byte-compiled
 *.pyc
+
+# Local docs and Claude Code config
+code_documentation.tex
+.claude/

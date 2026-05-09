@@ -6,13 +6,13 @@
     132
   ],
   "protocol_type": "decision_tree",
-  "extraction_confidence": 0.9,
+  "extraction_confidence": 1.0,
   "cross_references": [],
   "nodes": [
     {
       "id": "n1",
       "type": "start",
-      "text": "Begin triage assessment",
+      "text": "Start triage",
       "evidence": {
         "page": 132,
         "source_text": "Multi-Casualty Triage System"
@@ -21,68 +21,41 @@
     {
       "id": "n2",
       "type": "decision",
-      "text": "Is the patient breathing?",
-      "evidence": {
-        "page": 132,
-        "source_text": "No respirations after repositioning airway."
-      }
-    },
-    {
-      "id": "n3",
-      "type": "end",
-      "text": "Black - Deceased/Dying: No respirations after repositioning airway",
-      "evidence": {
-        "page": 132,
-        "source_text": "Black Deceased/ Dying Dead or with injuries not compatible with life. No respirations after repositioning airway."
-      }
-    },
-    {
-      "id": "n4",
-      "type": "decision",
-      "text": "Is the patient walking wounded?",
-      "evidence": {
-        "page": 132,
-        "source_text": "All walking wounded; treatment can be delayed."
-      }
-    },
-    {
-      "id": "n5",
-      "type": "end",
-      "text": "Green - Minor: All walking wounded; treatment can be delayed",
-      "evidence": {
-        "page": 132,
-        "source_text": "Green Minor All walking wounded; treatment can be delayed."
-      }
-    },
-    {
-      "id": "n6",
-      "type": "decision",
-      "text": "Respirations more than 30/minute?",
+      "text": "Breathing but unconscious; respirations more than 30/minute?",
       "evidence": {
         "page": 132,
         "source_text": "Breathing but unconscious; respirations more than 30/minute."
       }
     },
     {
-      "id": "n7",
-      "type": "end",
-      "text": "Red - Immediate: Serious, life-threatening injury",
+      "id": "n3",
+      "type": "action",
+      "text": "Classify RED (Immediate): Serious, life-threatening injury",
       "evidence": {
         "page": 132,
-        "source_text": "Red Immediate Serious, life-threatening injury. Breathing but unconscious; respirations more than 30/minute."
+        "source_text": "Red Immediate Serious, life-threatening injury."
       }
     },
     {
-      "id": "n8",
+      "id": "n4",
       "type": "decision",
-      "text": "Radial pulse present and capillary refill less than 2 seconds?",
+      "text": "Respirations less than 30/minute?",
+      "evidence": {
+        "page": 132,
+        "source_text": "Respirations less than 30/minute."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "decision",
+      "text": "Radial pulse present, capillary refill less than 2 seconds?",
       "evidence": {
         "page": 132,
         "source_text": "Radial pulse present, capillary refill less than 2 seconds."
       }
     },
     {
-      "id": "n9",
+      "id": "n6",
       "type": "decision",
       "text": "Can follow simple commands?",
       "evidence": {
@@ -91,12 +64,39 @@
       }
     },
     {
-      "id": "n10",
-      "type": "end",
-      "text": "Yellow - Delayed: Treatment and transport delayed",
+      "id": "n7",
+      "type": "action",
+      "text": "Classify YELLOW (Delayed): Treatment and transport delayed",
       "evidence": {
         "page": 132,
         "source_text": "Yellow Delayed Treatment and transport delayed."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "Classify GREEN (Minor): All walking wounded; treatment can be delayed",
+      "evidence": {
+        "page": 132,
+        "source_text": "Green Minor All walking wounded; treatment can be delayed."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "decision",
+      "text": "Dead or with injuries not compatible with life?",
+      "evidence": {
+        "page": 132,
+        "source_text": "Dead or with injuries not compatible with life."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "Classify BLACK (Deceased/Dying): No respirations after repositioning airway",
+      "evidence": {
+        "page": 132,
+        "source_text": "Black Deceased/Dying No respirations after repositioning airway."
       }
     }
   ],
@@ -108,12 +108,17 @@
     {
       "from": "n2",
       "to": "n3",
-      "condition": "No"
+      "condition": "Yes"
     },
     {
       "from": "n2",
       "to": "n4",
-      "condition": "Yes"
+      "condition": "No"
+    },
+    {
+      "from": "n4",
+      "to": "n3",
+      "condition": "No"
     },
     {
       "from": "n4",
@@ -121,8 +126,18 @@
       "condition": "Yes"
     },
     {
-      "from": "n4",
+      "from": "n5",
+      "to": "n3",
+      "condition": "No"
+    },
+    {
+      "from": "n5",
       "to": "n6",
+      "condition": "Yes"
+    },
+    {
+      "from": "n6",
+      "to": "n3",
       "condition": "No"
     },
     {
@@ -131,19 +146,12 @@
       "condition": "Yes"
     },
     {
-      "from": "n6",
-      "to": "n8",
-      "condition": "No"
+      "from": "n1",
+      "to": "n8"
     },
     {
-      "from": "n8",
-      "to": "n9",
-      "condition": "Yes"
-    },
-    {
-      "from": "n8",
-      "to": "n7",
-      "condition": "No"
+      "from": "n1",
+      "to": "n9"
     },
     {
       "from": "n9",
@@ -152,17 +160,18 @@
     },
     {
       "from": "n9",
-      "to": "n7",
+      "to": "n2",
       "condition": "No"
     }
   ],
   "_extraction_meta": {
     "model": "gpt-4o",
-    "prompt_tokens": 6424,
-    "completion_tokens": 1054,
-    "total_tokens": 7478,
+    "prompt_tokens": 8979,
+    "completion_tokens": 1091,
+    "total_tokens": 10070,
     "few_shot": true,
     "multimodal": true,
-    "dpi": 200
+    "dpi": 200,
+    "textflow": true
   }
 }

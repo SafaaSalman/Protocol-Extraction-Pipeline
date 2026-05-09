@@ -15,7 +15,7 @@
     {
       "id": "n1",
       "type": "start",
-      "text": "Begin Patient Assessment",
+      "text": "Begin patient assessment",
       "evidence": {
         "page": 124,
         "source_text": "Patient Assessment"
@@ -27,88 +27,115 @@
       "text": "Initial Patient Assessment: General impression, major bleeding control, airway, breathing, circulation, wrist or neck pulse",
       "evidence": {
         "page": 124,
-        "source_text": "Initial Patient Assessment  General impression of patient  Major bleeding control  Airway  Breathing  Circulation  Wrist or neck pulse"
+        "source_text": "Initial Patient Assessment \u0000 General impression of patient \u0000 Major bleeding control \u0000 Airway \u0000 Breathing \u0000 Circulation \u0000 Wrist or neck pulse"
       }
     },
     {
       "id": "n3",
       "type": "action",
-      "text": "Gather Patient Information: Chief complaint, age, and weight",
+      "text": "Collect Patient Information: Chief complaint, age, and weight",
       "evidence": {
         "page": 124,
-        "source_text": "Patient Information  Chief complaint  Age and weight"
+        "source_text": "Patient Information \u0000 Chief complaint \u0000 Age and weight"
       }
     },
     {
       "id": "n4",
       "type": "decision",
-      "text": "Assess Level of Consciousness",
+      "text": "Level of Consciousness: Alert and oriented, verbal, pain, unresponsive",
       "evidence": {
         "page": 124,
-        "source_text": "Level of Consciousness  Alert and oriented  Verbal (responds to voice)  Pain (responds to painful stimuli)  Unresponsive"
+        "source_text": "Level of Consciousness \u0000 Alert and oriented \u0000 Verbal (responds to voice) \u0000 Pain (responds to painful stimuli) \u0000 Unresponsive"
       }
     },
     {
       "id": "n5",
       "type": "decision",
-      "text": "Assess Breathing",
+      "text": "Breathing: Normal, difficult/labored, not breathing?",
       "evidence": {
         "page": 124,
-        "source_text": "Breathing  Normal  Difficult/labored breathing  Not breathing?  Start rescue breathing."
+        "source_text": "Breathing \u0000 Normal \u0000 Difficult/labored breathing \u0000 Not breathing? \u0000 Start rescue breathing."
       }
     },
     {
       "id": "n6",
-      "type": "decision",
-      "text": "Check Pulse",
+      "type": "action",
+      "text": "Start rescue breathing",
       "evidence": {
         "page": 124,
-        "source_text": "Pulse  Present  Absent  Start CPR (page 111)"
+        "source_text": "Not breathing? \u0000 Start rescue breathing."
       }
     },
     {
       "id": "n7",
-      "type": "action",
-      "text": "Evaluate Skin Color: Normal, pale, bluish, flushed/red",
+      "type": "decision",
+      "text": "Pulse: Present or absent?",
       "evidence": {
         "page": 124,
-        "source_text": "Skin Color  Normal  Pale  Bluish  Flushed/red"
+        "source_text": "Pulse \u0000 Present \u0000 Absent \u0000 Start CPR (page 111)"
       }
     },
     {
       "id": "n8",
       "type": "action",
-      "text": "Evaluate Skin Moisture: Normal, dry, moist/clammy, profuse sweating",
+      "text": "Start CPR",
       "evidence": {
         "page": 124,
-        "source_text": "Skin Moisture  Normal  Dry  Moist/clammy  Profuse sweating"
+        "source_text": "Absent \u0000 Start CPR (page 111)"
       }
     },
     {
       "id": "n9",
       "type": "action",
-      "text": "Evaluate Skin Temperature: Normal/warm, hot, cool, cold",
+      "text": "Assess Skin Color: Normal, pale, bluish, flushed/red",
       "evidence": {
         "page": 124,
-        "source_text": "Skin Temperature  Normal/warm  Hot  Cool  Cold"
+        "source_text": "Skin Color \u0000 Normal \u0000 Pale \u0000 Bluish \u0000 Flushed/red"
       }
     },
     {
       "id": "n10",
-      "type": "decision",
-      "text": "Check Pupils",
+      "type": "action",
+      "text": "Assess Skin Moisture: Normal, dry, moist/clammy, profuse sweating",
       "evidence": {
         "page": 124,
-        "source_text": "Pupils  Equal or unequal?  Reactive to light  Fixed or slow response  Dilated or constricted"
+        "source_text": "Skin Moisture \u0000 Normal \u0000 Dry \u0000 Moist/clammy \u0000 Profuse sweating"
       }
     },
     {
       "id": "n11",
-      "type": "end",
+      "type": "action",
+      "text": "Assess Skin Temperature: Normal/warm, hot, cool, cold",
+      "evidence": {
+        "page": 124,
+        "source_text": "Skin Temperature \u0000 Normal/warm \u0000 Hot \u0000 Cool \u0000 Cold"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "decision",
+      "text": "Pupils: Equal or unequal, reactive to light, fixed or slow response, dilated or constricted?",
+      "evidence": {
+        "page": 124,
+        "source_text": "Pupils \u0000 Equal or unequal? \u0000 Reactive to light \u0000 Fixed or slow response \u0000 Dilated or constricted"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
       "text": "Make a transport decision",
       "evidence": {
         "page": 124,
         "source_text": "Make a transport decision."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "end",
+      "text": "Patient assessment complete",
+      "evidence": {
+        "page": 125,
+        "source_text": "NOTES"
       }
     }
   ],
@@ -127,52 +154,31 @@
     },
     {
       "from": "n4",
-      "to": "n5",
-      "condition": "Alert and oriented"
-    },
-    {
-      "from": "n4",
-      "to": "n5",
-      "condition": "Verbal"
-    },
-    {
-      "from": "n4",
-      "to": "n5",
-      "condition": "Pain"
-    },
-    {
-      "from": "n4",
-      "to": "n5",
-      "condition": "Unresponsive"
+      "to": "n5"
     },
     {
       "from": "n5",
       "to": "n6",
-      "condition": "Normal"
-    },
-    {
-      "from": "n5",
-      "to": "n6",
-      "condition": "Difficult/labored breathing"
-    },
-    {
-      "from": "n5",
-      "to": "n11",
       "condition": "Not breathing"
     },
     {
-      "from": "n6",
+      "from": "n5",
       "to": "n7",
-      "condition": "Pulse present"
+      "condition": "Breathing"
     },
     {
       "from": "n6",
-      "to": "n11",
-      "condition": "Pulse absent"
+      "to": "n7"
     },
     {
       "from": "n7",
-      "to": "n8"
+      "to": "n8",
+      "condition": "Absent"
+    },
+    {
+      "from": "n7",
+      "to": "n9",
+      "condition": "Present"
     },
     {
       "from": "n8",
@@ -185,18 +191,32 @@
     {
       "from": "n10",
       "to": "n11"
+    },
+    {
+      "from": "n11",
+      "to": "n12"
+    },
+    {
+      "from": "n12",
+      "to": "n13"
+    },
+    {
+      "from": "n13",
+      "to": "n14"
     }
   ],
   "_extraction_meta": {
     "model": "gpt-4o",
-    "prompt_tokens": 7667,
-    "completion_tokens": 1144,
-    "total_tokens": 8811,
+    "prompt_tokens": 7699,
+    "completion_tokens": 1417,
+    "total_tokens": 9116,
     "few_shot": true,
-    "multimodal": true,
-    "dpi": 200
-  },
-  "_toc_context": "Document context: EMERGENCY MEDICAL CARE > Patient Assessment\nRelated sections in this category: Emergency Medical Care Guidelines, Specific Treatments, CPR, Heat-Related Injury, Burn Injuries, Multi-Casualty Triage System, Fatality Procedures, Helicopter Extraction Operations, Medical Incident Report",
-  "_validated": true,
-  "_correction_summary": "Added missing branches for decision nodes 'Assess Breathing' and 'Assess Level of Consciousness'. Corrected the order of 'Assess Breathing' and 'Check Pulse'."
+    "edge_review": {
+      "model": "gpt-4o-mini",
+      "original_issues": 2,
+      "reviewed_issues": 2,
+      "accepted": true,
+      "review_tokens": 3513
+    }
+  }
 }

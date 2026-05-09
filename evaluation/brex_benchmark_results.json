@@ -1,0 +1,150 @@
+{
+  "config": {
+    "num_samples": 10,
+    "use_edge_review": true,
+    "model": "gpt-4o",
+    "edge_review_model": "gpt-4o-mini",
+    "matching": "token_overlap_similarity",
+    "threshold": 0.3,
+    "note": "Cross-lingual: Chinese source text, English system prompt"
+  },
+  "baselines": {
+    "yang_2025_gpt4o": {
+      "rule_ner_f1": 0.85,
+      "dependency_f1": 0.53
+    },
+    "yang_2025_deepseek_r1": {
+      "rule_ner_f1": 0.9,
+      "dependency_f1": 0.72
+    },
+    "yang_2025_gemini_25_pro": {
+      "rule_ner_f1": 0.88,
+      "dependency_f1": 0.76
+    },
+    "yang_2025_claude_37": {
+      "rule_ner_f1": 0.84,
+      "dependency_f1": 0.51
+    }
+  },
+  "summary": {
+    "num_evaluated": 2,
+    "num_errors": 8,
+    "avg_node_f1": 0.694,
+    "avg_edge_f1": 0.455,
+    "avg_type_accuracy": 0.55,
+    "avg_action_f1": 0.367,
+    "avg_decision_f1": 0.619,
+    "avg_cond_similarity": 0.0,
+    "avg_branching_accuracy": 0.75,
+    "total_time_s": 311.6,
+    "total_tokens": 16652
+  },
+  "per_document": [
+    {
+      "document": "餐饮业_快餐店点餐",
+      "domain": "餐饮业",
+      "gold_nodes": 9,
+      "ext_nodes": 8,
+      "gold_edges": 12,
+      "ext_edges": 8,
+      "node_f1": 0.588,
+      "node_precision": 0.625,
+      "node_recall": 0.556,
+      "type_accuracy": 0.6,
+      "edge_f1": 0.545,
+      "edge_precision": 0.375,
+      "edge_recall": 1.0,
+      "cond_similarity": 0.0,
+      "branching_acc": 1.0,
+      "action_f1": 0.333,
+      "action_p": 1.0,
+      "action_r": 0.2,
+      "decision_f1": 0.571,
+      "decision_p": 0.4,
+      "decision_r": 1.0,
+      "gold_actions": 5,
+      "ext_actions": 1,
+      "gold_decisions": 2,
+      "ext_decisions": 5,
+      "time_s": 22.3,
+      "tokens": 8367
+    },
+    {
+      "document": "医疗_体检预约",
+      "domain": "医疗",
+      "gold_nodes": 8,
+      "ext_nodes": 7,
+      "gold_edges": 11,
+      "ext_edges": 7,
+      "node_f1": 0.8,
+      "node_precision": 0.857,
+      "node_recall": 0.75,
+      "type_accuracy": 0.5,
+      "edge_f1": 0.364,
+      "edge_precision": 0.286,
+      "edge_recall": 0.5,
+      "cond_similarity": 0.0,
+      "branching_acc": 0.5,
+      "action_f1": 0.4,
+      "action_p": 1.0,
+      "action_r": 0.25,
+      "decision_f1": 0.667,
+      "decision_p": 0.5,
+      "decision_r": 1.0,
+      "gold_actions": 4,
+      "ext_actions": 1,
+      "gold_decisions": 2,
+      "ext_decisions": 4,
+      "time_s": 289.3,
+      "tokens": 8285
+    },
+    {
+      "document": "医疗_疫苗接种",
+      "domain": "医疗",
+      "error": "Connection error.",
+      "time_s": 364.4
+    },
+    {
+      "document": "医疗_远程问诊",
+      "domain": "医疗",
+      "error": "Connection error.",
+      "time_s": 1.6
+    },
+    {
+      "document": "医疗_处方药购买",
+      "domain": "医疗",
+      "error": "Connection error.",
+      "time_s": 1.5
+    },
+    {
+      "document": "医疗_康复治疗申请",
+      "domain": "医疗",
+      "error": "Connection error.",
+      "time_s": 1.6
+    },
+    {
+      "document": "医疗_体检报告解读预约",
+      "domain": "医疗",
+      "error": "Connection error.",
+      "time_s": 1.5
+    },
+    {
+      "document": "医疗_慢性病管理申请",
+      "domain": "医疗",
+      "error": "Connection error.",
+      "time_s": 1.5
+    },
+    {
+      "document": "医疗_远程心电监测申请",
+      "domain": "医疗",
+      "error": "Connection error.",
+      "time_s": 1.6
+    },
+    {
+      "document": "医疗_中医调理申请",
+      "domain": "医疗",
+      "error": "Connection error.",
+      "time_s": 1.6
+    }
+  ]
+}

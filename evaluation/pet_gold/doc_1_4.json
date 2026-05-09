@@ -1,0 +1,226 @@
+{
+  "protocol_id": "doc-1.4",
+  "title": "doc-1.4",
+  "source_pdf": "PET_dataset",
+  "pages": [
+    1
+  ],
+  "protocol_type": "sequential",
+  "extraction_confidence": 1.0,
+  "cross_references": [],
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "start",
+      "text": "doc-1.4 process started"
+    },
+    {
+      "id": "n2",
+      "type": "action",
+      "text": "makes",
+      "evidence": {
+        "page": 1,
+        "source_text": "makes"
+      }
+    },
+    {
+      "id": "n3",
+      "type": "action",
+      "text": "select",
+      "evidence": {
+        "page": 1,
+        "source_text": "select"
+      }
+    },
+    {
+      "id": "n4",
+      "type": "action",
+      "text": "prepare",
+      "evidence": {
+        "page": 1,
+        "source_text": "prepare"
+      }
+    },
+    {
+      "id": "n5",
+      "type": "action",
+      "text": "check",
+      "evidence": {
+        "page": 1,
+        "source_text": "check"
+      }
+    },
+    {
+      "id": "n6",
+      "type": "action",
+      "text": "While",
+      "evidence": {
+        "page": 1,
+        "source_text": "While"
+      }
+    },
+    {
+      "id": "n7",
+      "type": "action",
+      "text": "awaiting",
+      "evidence": {
+        "page": 1,
+        "source_text": "awaiting"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "action",
+      "text": "firm up",
+      "evidence": {
+        "page": 1,
+        "source_text": "firm up"
+      }
+    },
+    {
+      "id": "n9",
+      "type": "action",
+      "text": "arrange",
+      "evidence": {
+        "page": 1,
+        "source_text": "arrange"
+      }
+    },
+    {
+      "id": "n10",
+      "type": "action",
+      "text": "receive",
+      "evidence": {
+        "page": 1,
+        "source_text": "receive"
+      }
+    },
+    {
+      "id": "n11",
+      "type": "action",
+      "text": "fix",
+      "evidence": {
+        "page": 1,
+        "source_text": "fix"
+      }
+    },
+    {
+      "id": "n12",
+      "type": "action",
+      "text": "enter",
+      "evidence": {
+        "page": 1,
+        "source_text": "enter"
+      }
+    },
+    {
+      "id": "n13",
+      "type": "action",
+      "text": "offer",
+      "evidence": {
+        "page": 1,
+        "source_text": "offer"
+      }
+    },
+    {
+      "id": "n14",
+      "type": "end",
+      "text": "Process complete"
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "condition": ""
+    },
+    {
+      "from": "n3",
+      "to": "n4",
+      "condition": ""
+    },
+    {
+      "from": "n4",
+      "to": "n5",
+      "condition": ""
+    },
+    {
+      "from": "n5",
+      "to": "n6",
+      "condition": ""
+    },
+    {
+      "from": "n6",
+      "to": "n7",
+      "condition": ""
+    },
+    {
+      "from": "n6",
+      "to": "n8",
+      "condition": ""
+    },
+    {
+      "from": "n7",
+      "to": "n10",
+      "condition": ""
+    },
+    {
+      "from": "n8",
+      "to": "n9",
+      "condition": ""
+    },
+    {
+      "from": "n9",
+      "to": "n10",
+      "condition": ""
+    },
+    {
+      "from": "n10",
+      "to": "n11",
+      "condition": ""
+    },
+    {
+      "from": "n11",
+      "to": "n12",
+      "condition": ""
+    },
+    {
+      "from": "n12",
+      "to": "n13",
+      "condition": ""
+    },
+    {
+      "from": "n13",
+      "to": "n14"
+    }
+  ],
+  "enrichment": {
+    "entities": {
+      "roles": [
+        "a company",
+        "the public",
+        "they",
+        "underwriters"
+      ],
+      "equipment": [
+        "a registration statement for the approval of the securities and exchange commission ( sec )",
+        "a road show",
+        "approval",
+        "clearance",
+        "into a firm commitment to buy the stock",
+        "it",
+        "the decision to go public",
+        "the issue price",
+        "the underwriters"
+      ],
+      "hazards": [],
+      "conditions": [],
+      "incident_types": []
+    },
+    "node_annotations": {}
+  }
+}

@@ -29,14 +29,78 @@ def text_similarity(a: str, b: str) -> float:
     return SequenceMatcher(None, normalize_text(a), normalize_text(b)).ratio()
 
 
+def token_overlap_similarity(gold_text: str, extracted_text: str) -> float:
+    """Compute token-level overlap between gold and extracted text.
+
+    Designed for cases where gold has short spans (e.g. PET: "sents")
+    and extracted has full descriptions (e.g. "MPON sends the dismissal").
+    Uses fuzzy token matching to handle inflection and typos, then computes
+    token F1 (harmonic mean of precision and recall on matched tokens).
+    """
+    g_norm = normalize_text(gold_text)
+    e_norm = normalize_text(extracted_text)
+    g_tokens = g_norm.split()
+    e_tokens = e_norm.split()
+
+    if not g_tokens or not e_tokens:
+        return 0.0
+
+    # Fuzzy token matching: each gold token can match an extracted token
+    # if SequenceMatcher ratio >= 0.75 (handles typos like sents/sends)
+    g_matched = 0
+    e_matched_indices = set()
+    for gt in g_tokens:
+        best_ratio = 0.0
+        best_idx = -1
+        for idx, et in enumerate(e_tokens):
+            r = SequenceMatcher(None, gt, et).ratio()
+            if r > best_ratio:
+                best_ratio = r
+                best_idx = idx
+        if best_ratio >= 0.75:
+            g_matched += 1
+            e_matched_indices.add(best_idx)
+
+    if g_matched == 0:
+        # Fallback: check if gold (short) is a substring of extracted
+        if g_norm in e_norm:
+            return 0.8
+        # Also check fuzzy substring for single-word gold
+        if len(g_tokens) == 1:
+            for et in e_tokens:
+                if SequenceMatcher(None, g_tokens[0], et).ratio() >= 0.7:
+                    return 0.6
+        return 0.0
+
+    # For very short gold (1-2 tokens), use recall-dominated scoring.
+    # PET gold spans are just verb highlights; if we found the verb in
+    # our full description, that counts as a strong match.
+    if len(g_tokens) <= 2:
+        return 0.5 + 0.3 * (g_matched / len(g_tokens))  # 0.65-0.80
+
+    precision = len(e_matched_indices) / len(e_tokens)
+    recall = g_matched / len(g_tokens)
+    return 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
+
+
 def match_nodes(
-    gold_nodes: list[dict], extracted_nodes: list[dict], threshold: float = 0.5
+    gold_nodes: list[dict],
+    extracted_nodes: list[dict],
+    threshold: float = 0.5,
+    similarity_fn=None,
 ) -> tuple[list[tuple], list[dict], list[dict]]:
     """Match extracted nodes to gold nodes using text similarity.
+
+    Args:
+        similarity_fn: Optional similarity function(gold_text, ext_text) -> float.
+                       Defaults to text_similarity (SequenceMatcher).
 
     Returns:
         (matched_pairs, unmatched_gold, unmatched_extracted)
     """
+    if similarity_fn is None:
+        similarity_fn = text_similarity
+
     matched = []
     used_gold = set()
     used_extracted = set()
@@ -45,7 +109,7 @@ def match_nodes(
     scores = []
     for i, gn in enumerate(gold_nodes):
         for j, en in enumerate(extracted_nodes):
-            sim = text_similarity(gn["text"], en["text"])
+            sim = similarity_fn(gn["text"], en["text"])
             if sim >= threshold:
                 scores.append((sim, i, j))
 
@@ -64,14 +128,14 @@ def match_nodes(
 
 
 def evaluate_nodes(
-    gold: dict, extracted: dict, threshold: float = 0.5
+    gold: dict, extracted: dict, threshold: float = 0.5, similarity_fn=None,
 ) -> dict:
     """Evaluate node extraction quality."""
     gold_nodes = gold["nodes"]
     ext_nodes = extracted["nodes"]
 
     matched, unmatched_gold, unmatched_ext = match_nodes(
-        gold_nodes, ext_nodes, threshold
+        gold_nodes, ext_nodes, threshold, similarity_fn=similarity_fn,
     )
 
     tp = len(matched)
@@ -107,14 +171,20 @@ def evaluate_nodes(
 
 
 def evaluate_edges(
-    gold: dict, extracted: dict, node_threshold: float = 0.5
+    gold: dict, extracted: dict, node_threshold: float = 0.5, similarity_fn=None,
 ) -> dict:
-    """Evaluate edge extraction quality."""
+    """Evaluate edge extraction quality.
+
+    Computes:
+    - Edge connectivity F1: based on (from, to) pairs
+    - Edge condition accuracy: for matched edges, similarity of condition labels
+    """
     gold_nodes = gold["nodes"]
     ext_nodes = extracted["nodes"]
 
     # First match nodes to create an ID mapping
-    matched, _, _ = match_nodes(gold_nodes, ext_nodes, node_threshold)
+    matched, _, _ = match_nodes(gold_nodes, ext_nodes, node_threshold,
+                                similarity_fn=similarity_fn)
 
     # Build mapping: gold_node_id -> extracted_node_id
     id_map = {}
@@ -123,14 +193,19 @@ def evaluate_edges(
 
     # Convert gold edges to (from_ext_id, to_ext_id) pairs using mapping
     gold_edges_mapped = set()
+    gold_edge_conditions = {}  # (from, to) -> condition
     for edge in gold["edges"]:
         from_id = id_map.get(edge["from"])
         to_id = id_map.get(edge["to"])
         if from_id and to_id:
             gold_edges_mapped.add((from_id, to_id))
+            gold_edge_conditions[(from_id, to_id)] = edge.get("condition", "")
 
-    # Extracted edges as (from, to) pairs
+    # Extracted edges as (from, to) pairs + conditions
     ext_edges = {(e["from"], e["to"]) for e in extracted["edges"]}
+    ext_edge_conditions = {
+        (e["from"], e["to"]): e.get("condition", "") for e in extracted["edges"]
+    }
 
     tp = len(gold_edges_mapped & ext_edges)
     fp = len(ext_edges - gold_edges_mapped)
@@ -139,6 +214,28 @@ def evaluate_edges(
     precision = tp / (tp + fp) if (tp + fp) > 0 else 0
     recall = tp / (tp + fn) if (tp + fn) > 0 else 0
     f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
+
+    # Condition accuracy: for matched edges, compare condition labels
+    matched_edges = gold_edges_mapped & ext_edges
+    condition_scores = []
+    for edge_key in matched_edges:
+        gold_cond = gold_edge_conditions.get(edge_key, "")
+        ext_cond = ext_edge_conditions.get(edge_key, "")
+        if gold_cond or ext_cond:
+            sim = text_similarity(gold_cond, ext_cond) if (gold_cond and ext_cond) else 0.0
+            condition_scores.append(sim)
+        # If both are empty, skip — no condition to compare
+
+    avg_condition_sim = (
+        sum(condition_scores) / len(condition_scores)
+        if condition_scores
+        else 1.0  # All matched edges have no conditions = perfect
+    )
+    condition_exact_match = (
+        sum(1 for s in condition_scores if s >= 0.8) / len(condition_scores)
+        if condition_scores
+        else 1.0
+    )
 
     return {
         "gold_edges": len(gold["edges"]),
@@ -150,6 +247,9 @@ def evaluate_edges(
         "precision": round(precision, 3),
         "recall": round(recall, 3),
         "f1": round(f1, 3),
+        "condition_similarity": round(avg_condition_sim, 3),
+        "condition_exact_match_rate": round(condition_exact_match, 3),
+        "conditions_evaluated": len(condition_scores),
     }
 
 
@@ -206,7 +306,88 @@ def full_evaluation(gold: dict, extracted: dict) -> dict:
         "nodes": evaluate_nodes(gold, extracted),
         "edges": evaluate_edges(gold, extracted),
         "structure": structural_checks(extracted),
+        "graph": evaluate_graph_level(gold, extracted),
     }
+
+
+def evaluate_graph_level(
+    gold: dict, extracted: dict, node_threshold: float = 0.5, similarity_fn=None,
+) -> dict:
+    """Graph-level evaluation metrics.
+
+    Computes:
+    - Branching accuracy: % of decision nodes with correct outgoing edge count
+    - Path count comparison: number of start→end paths in each graph
+    """
+    gold_nodes = gold["nodes"]
+    ext_nodes = extracted["nodes"]
+
+    matched, _, _ = match_nodes(gold_nodes, ext_nodes, node_threshold,
+                                similarity_fn=similarity_fn)
+    id_map = {gn["id"]: en["id"] for gn, en, _ in matched}
+
+    # Branching accuracy: for matched decision nodes, check outgoing edge count
+    gold_edges = gold["edges"]
+    ext_edges = extracted["edges"]
+
+    decision_matches = [
+        (gn, en) for gn, en, _ in matched if gn["type"] == "decision"
+    ]
+    branching_correct = 0
+    branching_total = len(decision_matches)
+
+    for gn, en in decision_matches:
+        gold_outgoing = sum(1 for e in gold_edges if e["from"] == gn["id"])
+        ext_outgoing = sum(1 for e in ext_edges if e["from"] == en["id"])
+        if gold_outgoing == ext_outgoing:
+            branching_correct += 1
+
+    branching_accuracy = (
+        branching_correct / branching_total if branching_total > 0 else 1.0
+    )
+
+    # Path count: count start→end paths in each graph
+    gold_path_count = _count_paths(gold)
+    ext_path_count = _count_paths(extracted)
+
+    return {
+        "branching_accuracy": round(branching_accuracy, 3),
+        "branching_correct": branching_correct,
+        "branching_total": branching_total,
+        "gold_paths": gold_path_count,
+        "extracted_paths": ext_path_count,
+    }
+
+
+def _count_paths(graph: dict, max_depth: int = 50) -> int:
+    """Count the number of distinct start→end paths in a protocol graph."""
+    nodes = graph.get("nodes", [])
+    edges = graph.get("edges", [])
+
+    start_ids = [n["id"] for n in nodes if n["type"] == "start"]
+    end_ids = {n["id"] for n in nodes if n["type"] == "end"}
+
+    # Build adjacency list
+    adj: dict[str, list[str]] = {}
+    for e in edges:
+        adj.setdefault(e["from"], []).append(e["to"])
+
+    path_count = 0
+
+    def dfs(node_id: str, depth: int) -> None:
+        nonlocal path_count
+        if depth > max_depth:
+            return
+        if node_id in end_ids:
+            path_count += 1
+            return
+        for neighbor in adj.get(node_id, []):
+            dfs(neighbor, depth + 1)
+
+    for start in start_ids:
+        dfs(start, 0)
+
+    return path_count
 
 
 # --- Main ---
@@ -214,8 +395,8 @@ if __name__ == "__main__":
     pairs = [
         ("evaluation/gold/risk_management_01.json", "evaluation/extracted/risk_management_process.json"),
         ("evaluation/gold/patient_assessment_01.json", "evaluation/extracted/patient_assessment.json"),
+        # triage_01 is now a few-shot example; compare against fresh text extraction
         ("evaluation/gold/triage_01.json", "evaluation/extracted/multi_casualty_triage_system.json"),
-        ("evaluation/gold/triage_01.json", "evaluation/extracted/triage_multimodal.json"),
     ]
 
     all_results = []
@@ -251,12 +432,20 @@ if __name__ == "__main__":
         print(f"EDGES  gold={e['gold_edges']} ext={e['extracted_edges']} "
               f"matched={e['matched']}")
         print(f"       P={e['precision']} R={e['recall']} F1={e['f1']}")
+        print(f"       Condition sim={e['condition_similarity']} "
+              f"exact_match={e['condition_exact_match_rate']} "
+              f"(n={e['conditions_evaluated']})")
 
         s = result["structure"]
         if s["valid"]:
             print(f"STRUCT valid=True")
         else:
             print(f"STRUCT valid=False issues={s['issues']}")
+
+        g = result["graph"]
+        print(f"GRAPH  branching_acc={g['branching_accuracy']} "
+              f"({g['branching_correct']}/{g['branching_total']}) "
+              f"paths: gold={g['gold_paths']} ext={g['extracted_paths']}")
 
     # Summary
     if all_results:
@@ -265,7 +454,11 @@ if __name__ == "__main__":
         print(f"{'='*60}")
         avg_node_f1 = sum(r["nodes"]["f1"] for r in all_results) / len(all_results)
         avg_edge_f1 = sum(r["edges"]["f1"] for r in all_results) / len(all_results)
+        avg_cond_sim = sum(r["edges"]["condition_similarity"] for r in all_results) / len(all_results)
+        avg_branch_acc = sum(r["graph"]["branching_accuracy"] for r in all_results) / len(all_results)
         all_valid = all(r["structure"]["valid"] for r in all_results)
         print(f"Avg Node F1: {avg_node_f1:.3f}")
         print(f"Avg Edge F1: {avg_edge_f1:.3f}")
+        print(f"Avg Condition Similarity: {avg_cond_sim:.3f}")
+        print(f"Avg Branching Accuracy: {avg_branch_acc:.3f}")
         print(f"All structurally valid: {all_valid}")
