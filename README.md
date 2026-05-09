@@ -8,10 +8,10 @@ node links back to the source page and text it came from.
 
 The pipeline is exercised on two complete documents:
 
-| Document               | Pages | Protocols extracted |
-| ---------------------- | ----- | ------------------- |
-| IRPG 2025              | 140   | 49 / 99 sections    |
-| VIC Bushfire Handbook  | 100   | 30 / 98 sections    |
+| Document               | Pages | 
+| ---------------------- | ----- | 
+| IRPG 2025              | 140   | 
+| VIC Bushfire Handbook  | 100   | 
 
 A total of 79 protocol graphs are produced across the two documents.
 Five IRPG protocols (CPR, Burn Injuries, Patient Assessment, Risk
